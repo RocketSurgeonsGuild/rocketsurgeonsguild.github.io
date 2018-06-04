@@ -5,4 +5,4 @@ Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
 Settings[Keys.LinksUseHttps] = true;
 Settings[DocsKeys.SourceFiles] = "../release/repo/src/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
 Settings[DocsKeys.IncludeDateInPostPath] = true;
-Settings[DocsKeys.BaseEditUrl] = "https://rocketsurgeonsguild.github.io/blob/dev/input/";
+Settings[DocsKeys.BaseEditUrl] = "https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/";
