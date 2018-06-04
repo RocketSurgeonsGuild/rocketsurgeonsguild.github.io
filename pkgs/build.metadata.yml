@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Build.Metadata
+NuGet: Rocket.Surgery.Build.Metadata
+Assemblies:
+- "/**/Rocket.Surgery.Build.Metadata.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Build
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Build

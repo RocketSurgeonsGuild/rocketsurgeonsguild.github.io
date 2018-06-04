@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Linq.Extensions
+NuGet: Rocket.Surgery.Linq.Extensions
+Assemblies:
+- "/**/Rocket.Surgery.Linq.Extensions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Extensions
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Extensions

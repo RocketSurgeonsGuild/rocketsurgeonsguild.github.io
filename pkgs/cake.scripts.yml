@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Cake.Scripts
+NuGet: Rocket.Surgery.Cake.Scripts
+Assemblies:
+- "/**/Rocket.Surgery.Cake.Scripts.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Cake
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Cake

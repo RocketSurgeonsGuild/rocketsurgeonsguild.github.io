@@ -1,8 +1,31 @@
 #recipe Docs
 
+ContentStreamFactory = new MemoryContentStreamFactory();
+
 Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
 Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
 Settings[Keys.LinksUseHttps] = true;
 Settings[DocsKeys.SourceFiles] = "../release/repo/src/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
 Settings[DocsKeys.IncludeDateInPostPath] = true;
 Settings[DocsKeys.BaseEditUrl] = "https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/";
+
+Pipelines.InsertBefore(Docs.Code, "Package",
+    ReadFiles("../pkgs/*.yml"),
+    Yaml()
+);
+
+Pipelines.InsertAfter("Package", "PackageCategories",
+    GroupByMany(@doc.List<string>("Categories"),
+        Documents("Package")
+    ),
+    Meta(Keys.WritePath, new FilePath("pkgs/" + @doc.String(Keys.GroupKey).ToLower().Replace(" ", "-") + "/index.html")),
+    Meta(Keys.RelativeFilePath, @doc.FilePath(Keys.WritePath)),
+    OrderBy(@doc.String(Keys.GroupKey))
+);
+
+Pipelines.Add("RenderPackage",
+    Documents("PackageCategories"),
+    Razor()
+        .WithLayout("/_PackageLayout.cshtml"),
+    WriteFiles()
+);

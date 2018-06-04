@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Reactive.Extensions
+NuGet: Rocket.Surgery.Reactive.Extensions
+Assemblies:
+- "/**/Rocket.Surgery.Reactive.Extensions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Extensions
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Extensions

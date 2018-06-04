@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Build.Information
+NuGet: Rocket.Surgery.Build.Information
+Assemblies:
+- "/**/Rocket.Surgery.Build.Information.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Build
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Build

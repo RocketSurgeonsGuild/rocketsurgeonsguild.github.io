@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Azure.Functions
+NuGet: Rocket.Surgery.Azure.Functions
+Assemblies:
+- "/**/Rocket.Surgery.Azure.Functions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Azure
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Azure

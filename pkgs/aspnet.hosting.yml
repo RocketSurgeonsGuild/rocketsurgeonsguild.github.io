@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.AspNetCore.Hosting
+NuGet: Rocket.Surgery.AspNetCore.Hosting
+Assemblies:
+- "/**/Rocket.Surgery.AspNetCore.Hosting.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Hosting
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Hosting

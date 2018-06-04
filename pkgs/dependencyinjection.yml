@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.DependencyInjection
+NuGet: Rocket.Surgery.Extensions.DependencyInjection
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.DependencyInjection.dll"
+Repository: https://github.com/RocketSurgeonsGuild/DependencyInjection
+Author: David Driscoll
+Description: "Azure Rocket Surgery"
+Categories:
+- Dependency Injection

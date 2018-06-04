@@ -3,6 +3,8 @@
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&version=1.2.0"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git&version=0.16.1"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu&version=0.5.0"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml&version=2.0.0"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=YamlDotNet&version=4.2.1"
 
 
 //////////////////////////////////////////////////////////////////////
@@ -23,10 +25,11 @@ var deployBranch        = "master";
 // Define directories.
 var releaseDir          = Directory("./release");
 var sourceDir           = releaseDir + Directory("repo");
+var packageDir          = releaseDir + Directory("pkgs");
 var outputPath          = MakeAbsolute(Directory("./output"));
 var rootPublishFolder   = MakeAbsolute(Directory("publish"));
 
-class ProjectSpec
+class PackageSpec
 {
     public string Name { get; set; }
     public string NuGet { get; set; }
@@ -38,7 +41,7 @@ class ProjectSpec
     public List<string> Categories { get; set; }
 }
 
-List<ProjectSpec> projectSpecs = new List<ProjectSpec>();
+List<PackageSpec> packageSpecs = new List<PackageSpec>();
 
 ///////////////////////////////////////////////////////////////////////////////
 // SETUP / TEARDOWN
@@ -79,19 +82,72 @@ Task("GetSource")
         GitClone("https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io.git", sourceDir, new GitCloneSettings{ BranchName = "master" });
     });
 
+Task("CleanNugetPackages")
+    .Does(() =>
+{
+    CleanDirectory(packageDir);
+});
+
+Task("GetPackageSpecs")
+    .Does(() =>
+{
+    var packageSpecFiles = GetFiles("./pkgs/*.yml");
+    packageSpecs
+        .AddRange(packageSpecFiles
+            .Select(x =>
+            {
+                Information("Deserializing package YAML from " + x);
+                return DeserializeYamlFromFile<PackageSpec>(x);
+            })
+        );
+});
+
+Task("GetNugetPackages")
+    .IsDependentOn("CleanNugetPackages")
+    .IsDependentOn("GetPackageSpecs")
+    .Does(() =>
+    {
+        DirectoryPath   packagesPath        = MakeAbsolute(Directory("./output")).Combine("packages");
+        Parallel.ForEach(
+            packageSpecs.Where(x => !string.IsNullOrEmpty(x.NuGet)),
+            packageSpec => {
+                Information("Installing package package " + packageSpec.NuGet);
+                NuGetInstall(packageSpec.NuGet,
+                    new NuGetInstallSettings
+                    {
+                        OutputDirectory = packageDir,
+                        Prerelease = packageSpec.Prerelease,
+                        Verbosity = NuGetVerbosity.Quiet,
+                        Source = new [] { "https://api.nuget.org/v3/index.json" },
+                        NoCache = true,
+                        EnvironmentVariables    = new Dictionary<string, string>{
+                                                        {"EnableNuGetPackageRestore", "true"},
+                                                        {"NUGET_XMLDOC_MODE", "None"},
+                                                        {"NUGET_PACKAGES", packagesPath.FullPath},
+                                                        {"NUGET_EXE",  Context.Tools.Resolve("nuget.exe").FullPath }
+                                                  }
+                    });
+        });
+    });
+
 Task("Build")
-    .IsDependentOn("GetSource")
+    .IsDependentOn("GetArtifacts")
     .Does(() =>
     {
         Wyam(new WyamSettings
         {
             Recipe = "Docs",
             Theme = "Samson",
-            UpdatePackages = true
+            UpdatePackages = true,
+            Settings = new Dictionary<string, object>
+            {
+                { "AssemblyFiles",  packageSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/pkgs" + x) }
+            }
         });
     });
 
 Task("Preview")
+    .IsDependentOn("GetPackageSpecs")
     .Does(() =>
     {
         Wyam(new WyamSettings
@@ -100,7 +156,11 @@ Task("Preview")
             Theme = "Samson",
             UpdatePackages = true,
             Preview = true,
-            Watch = true
+            Watch = true,
+            Settings = new Dictionary<string, object>
+            {
+                { "AssemblyFiles",  packageSpecs.Where(x => x.Assemblies != null).SelectMany(x => x.Assemblies).Select(x => "../release/pkgs" + x) }
+            }
         });
     });
 
@@ -160,6 +220,10 @@ Task("Deploy")
 
 Task("Default")
     .IsDependentOn("Build");
+
+Task("GetArtifacts")
+    .IsDependentOn("GetSource")
+    .IsDependentOn("GetNugetPackages");
 
 Task("AppVeyor")
     .IsDependentOn("Deploy");
