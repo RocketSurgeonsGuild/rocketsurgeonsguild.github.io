@@ -59,6 +59,8 @@
                     <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
                         <ul class="nav navbar-nav">                            
                                     <li class="active"><a href="/docs">Documentation</a></li>
+        <li><a href="/pkgs">Package</a></li>
+        <li><a href="/api">API</a></li>
         <li><a href="/blog">Blog</a></li>
  
                         </ul>       

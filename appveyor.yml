@@ -2,6 +2,10 @@
 init:
   - git config --global core.autocrlf true
 
+# Install
+install:
+  -ps: .\dotnet-install.ps1
+
 # Build script
 build_script:
   - ps: .\build.ps1 -Target=AppVeyor
@@ -19,3 +23,9 @@ branches:
   # Whitelist
   only:
     - dev
+
+#---------------------------------#
+#  Build Cache                    #
+#---------------------------------#
+cache:
+- tools -> build.cake
