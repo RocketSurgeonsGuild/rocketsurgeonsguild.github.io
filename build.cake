@@ -111,7 +111,7 @@ Task("GetNugetPackages")
         Parallel.ForEach(
             packageSpecs.Where(x => !string.IsNullOrEmpty(x.NuGet)),
             packageSpec => {
-                Information("Installing package package " + packageSpec.NuGet);
+                Information("Installing package " + packageSpec.NuGet);
                 NuGetInstall(packageSpec.NuGet,
                     new NuGetInstallSettings
                     {
