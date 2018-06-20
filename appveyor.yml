@@ -1,28 +1,41 @@
-# Build script
+#---------------------------------#
+#  Build Script                   #
+#---------------------------------#
 init:
   - git config --global core.autocrlf true
 
-# Install
+#---------------------------------#
+#  Tool Installs                  #
+#---------------------------------#
 install:
   -ps: .\dotnet-install.ps1
 
-# Build script
+#---------------------------------#
+#  Build Script                   #
+#---------------------------------#
 build_script:
   - ps: .\build.ps1 -Target=AppVeyor
 
-# Tests
+#---------------------------------#
+#        Tests                    #
+#---------------------------------#
 test: off
 
-# Artifacts
+#---------------------------------#
+#        Artifacts                #
+#---------------------------------#
 artifacts:
 # Static website
   - path: output
 
-# Branches to build
+#---------------------------------#
+#        Branches to build        #
+#---------------------------------#
 branches:
   # Whitelist
   only:
     - dev
+    - /feature/.*/
 
 #---------------------------------#
 #  Build Cache                    #
