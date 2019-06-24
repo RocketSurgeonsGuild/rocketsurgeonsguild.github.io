@@ -1,0 +1,16 @@
+{
+  "name": "WebJobs",
+  "path": "src/WebJobs",
+  "sha": "f2e9cb869e3adad7944fb98940f16f867126f73f",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/WebJobs?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/WebJobs",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/f2e9cb869e3adad7944fb98940f16f867126f73f",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/WebJobs?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/f2e9cb869e3adad7944fb98940f16f867126f73f",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/WebJobs"
+  }
+}

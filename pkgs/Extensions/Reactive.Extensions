@@ -1,0 +1,16 @@
+{
+  "name": "Reactive.Extensions",
+  "path": "src/Reactive.Extensions",
+  "sha": "f2d3b8b578bfc00ad47d43bd339f4a74818041fa",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Reactive.Extensions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Reactive.Extensions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/f2d3b8b578bfc00ad47d43bd339f4a74818041fa",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Reactive.Extensions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/f2d3b8b578bfc00ad47d43bd339f4a74818041fa",
+    "html": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Reactive.Extensions"
+  }
+}

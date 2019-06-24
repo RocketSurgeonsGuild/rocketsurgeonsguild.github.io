@@ -1,0 +1,16 @@
+{
+  "name": "AutoMapper",
+  "path": "src/AutoMapper",
+  "sha": "cb77869b1291053c07fdaed1d7c8fc414d7fdae6",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/AutoMapper.Extensions/contents/src/AutoMapper?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/AutoMapper.Extensions/tree/master/src/AutoMapper",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/AutoMapper.Extensions/git/trees/cb77869b1291053c07fdaed1d7c8fc414d7fdae6",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/AutoMapper.Extensions/contents/src/AutoMapper?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/AutoMapper.Extensions/git/trees/cb77869b1291053c07fdaed1d7c8fc414d7fdae6",
+    "html": "https://github.com/RocketSurgeonsGuild/AutoMapper.Extensions/tree/master/src/AutoMapper"
+  }
+}

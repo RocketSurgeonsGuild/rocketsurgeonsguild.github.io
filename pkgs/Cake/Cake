@@ -1,0 +1,16 @@
+{
+  "name": "Cake",
+  "path": "src/Cake",
+  "sha": "3b62d6bc716bf9d90a99562340a348f9a28c6edc",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Cake/contents/src/Cake?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Cake/tree/master/src/Cake",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Cake/git/trees/3b62d6bc716bf9d90a99562340a348f9a28c6edc",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Cake/contents/src/Cake?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Cake/git/trees/3b62d6bc716bf9d90a99562340a348f9a28c6edc",
+    "html": "https://github.com/RocketSurgeonsGuild/Cake/tree/master/src/Cake"
+  }
+}

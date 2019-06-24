@@ -1,0 +1,16 @@
+{
+  "name": "Hosting.Functions",
+  "path": "src/Hosting.Functions",
+  "sha": "120a4ad0fc998d4aead55381cd5545233e38de24",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Functions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Functions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/120a4ad0fc998d4aead55381cd5545233e38de24",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Functions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/120a4ad0fc998d4aead55381cd5545233e38de24",
+    "html": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Functions"
+  }
+}

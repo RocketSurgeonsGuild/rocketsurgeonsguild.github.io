@@ -1,0 +1,16 @@
+{
+  "name": "Task.Extensions",
+  "path": "src/Task.Extensions",
+  "sha": "7c7cccc07e185eb21a7ee428271f5f45d21a41f8",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Task.Extensions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Task.Extensions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/7c7cccc07e185eb21a7ee428271f5f45d21a41f8",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Task.Extensions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/7c7cccc07e185eb21a7ee428271f5f45d21a41f8",
+    "html": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Task.Extensions"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Essentials",
+  "path": "src/Essentials",
+  "sha": "a2d9d83d106cde26b3c7850bafc049e8fdd6a074",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/a2d9d83d106cde26b3c7850bafc049e8fdd6a074",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/a2d9d83d106cde26b3c7850bafc049e8fdd6a074",
+    "html": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials"
+  }
+}

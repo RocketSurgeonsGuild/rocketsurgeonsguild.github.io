@@ -1,0 +1,16 @@
+{
+  "name": "Logging",
+  "path": "src/Logging",
+  "sha": "d7e023024bbdbfca4bbd697ee2fa7e9c9f872461",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Logging?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Logging",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/d7e023024bbdbfca4bbd697ee2fa7e9c9f872461",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Logging?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/d7e023024bbdbfca4bbd697ee2fa7e9c9f872461",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Logging"
+  }
+}

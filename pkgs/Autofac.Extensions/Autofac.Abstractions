@@ -1,0 +1,16 @@
+{
+  "name": "Autofac.Abstractions",
+  "path": "src/Autofac.Abstractions",
+  "sha": "a73c103108115a08ef6014631ac0f4265a7c4388",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/contents/src/Autofac.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Autofac.Extensions/tree/master/src/Autofac.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/git/trees/a73c103108115a08ef6014631ac0f4265a7c4388",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/contents/src/Autofac.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/git/trees/a73c103108115a08ef6014631ac0f4265a7c4388",
+    "html": "https://github.com/RocketSurgeonsGuild/Autofac.Extensions/tree/master/src/Autofac.Abstractions"
+  }
+}

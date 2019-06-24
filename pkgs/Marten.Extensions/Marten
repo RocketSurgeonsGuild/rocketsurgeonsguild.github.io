@@ -1,0 +1,16 @@
+{
+  "name": "Marten",
+  "path": "src/Marten",
+  "sha": "47f1ae8ec7b088d0117fb216e3c7813e45e2213a",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/contents/src/Marten?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Marten.Extensions/tree/master/src/Marten",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/git/trees/47f1ae8ec7b088d0117fb216e3c7813e45e2213a",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/contents/src/Marten?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/git/trees/47f1ae8ec7b088d0117fb216e3c7813e45e2213a",
+    "html": "https://github.com/RocketSurgeonsGuild/Marten.Extensions/tree/master/src/Marten"
+  }
+}

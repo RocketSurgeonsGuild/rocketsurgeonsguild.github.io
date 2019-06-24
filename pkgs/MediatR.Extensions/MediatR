@@ -1,0 +1,16 @@
+{
+  "name": "MediatR",
+  "path": "src/MediatR",
+  "sha": "34fe15678677bb5d377add567e33b6277272e19e",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/MediatR.Extensions/contents/src/MediatR?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/MediatR.Extensions/tree/master/src/MediatR",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/MediatR.Extensions/git/trees/34fe15678677bb5d377add567e33b6277272e19e",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/MediatR.Extensions/contents/src/MediatR?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/MediatR.Extensions/git/trees/34fe15678677bb5d377add567e33b6277272e19e",
+    "html": "https://github.com/RocketSurgeonsGuild/MediatR.Extensions/tree/master/src/MediatR"
+  }
+}

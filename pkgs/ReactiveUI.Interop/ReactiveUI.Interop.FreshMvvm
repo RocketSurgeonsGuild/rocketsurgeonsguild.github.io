@@ -1,0 +1,16 @@
+{
+  "name": "ReactiveUI.Interop.FreshMvvm",
+  "path": "src/ReactiveUI.Interop.FreshMvvm",
+  "sha": "95bbb56b5c9f73b7566b6ccfbd3ade1f0fdaa716",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/contents/src/ReactiveUI.Interop.FreshMvvm?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop/tree/master/src/ReactiveUI.Interop.FreshMvvm",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/git/trees/95bbb56b5c9f73b7566b6ccfbd3ade1f0fdaa716",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/contents/src/ReactiveUI.Interop.FreshMvvm?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/git/trees/95bbb56b5c9f73b7566b6ccfbd3ade1f0fdaa716",
+    "html": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop/tree/master/src/ReactiveUI.Interop.FreshMvvm"
+  }
+}

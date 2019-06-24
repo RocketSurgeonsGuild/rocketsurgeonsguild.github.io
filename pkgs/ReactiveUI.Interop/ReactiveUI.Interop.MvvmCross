@@ -1,0 +1,16 @@
+{
+  "name": "ReactiveUI.Interop.MvvmCross",
+  "path": "src/ReactiveUI.Interop.MvvmCross",
+  "sha": "7780cce633a27b9eaa8620b6e34e2340b1af6f99",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/contents/src/ReactiveUI.Interop.MvvmCross?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop/tree/master/src/ReactiveUI.Interop.MvvmCross",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/git/trees/7780cce633a27b9eaa8620b6e34e2340b1af6f99",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/contents/src/ReactiveUI.Interop.MvvmCross?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Interop/git/trees/7780cce633a27b9eaa8620b6e34e2340b1af6f99",
+    "html": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop/tree/master/src/ReactiveUI.Interop.MvvmCross"
+  }
+}

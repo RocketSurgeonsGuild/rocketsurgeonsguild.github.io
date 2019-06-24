@@ -1,0 +1,16 @@
+{
+  "name": "Composition",
+  "path": "src/Composition",
+  "sha": "a11a787ca39562de34595c5f27c2beeb2d76d453",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/contents/src/Composition?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions/tree/master/src/Composition",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/git/trees/a11a787ca39562de34595c5f27c2beeb2d76d453",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/contents/src/Composition?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/git/trees/a11a787ca39562de34595c5f27c2beeb2d76d453",
+    "html": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions/tree/master/src/Composition"
+  }
+}

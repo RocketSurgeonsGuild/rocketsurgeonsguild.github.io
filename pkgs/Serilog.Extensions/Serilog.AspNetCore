@@ -1,0 +1,16 @@
+{
+  "name": "Serilog.AspNetCore",
+  "path": "src/Serilog.AspNetCore",
+  "sha": "9798e6b4f26814aac502513e2c3a88436f35264e",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/contents/src/Serilog.AspNetCore?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Serilog.Extensions/tree/master/src/Serilog.AspNetCore",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/git/trees/9798e6b4f26814aac502513e2c3a88436f35264e",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/contents/src/Serilog.AspNetCore?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/git/trees/9798e6b4f26814aac502513e2c3a88436f35264e",
+    "html": "https://github.com/RocketSurgeonsGuild/Serilog.Extensions/tree/master/src/Serilog.AspNetCore"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Builders.Abstractions",
+  "path": "src/Builders.Abstractions",
+  "sha": "15f9c9d5c9b4fcc6767cb574cd8c64918f50415a",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Builders.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Builders.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/15f9c9d5c9b4fcc6767cb574cd8c64918f50415a",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Builders.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/15f9c9d5c9b4fcc6767cb574cd8c64918f50415a",
+    "html": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Builders.Abstractions"
+  }
+}

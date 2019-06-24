@@ -1,0 +1,16 @@
+{
+  "name": "Azure.Storage",
+  "path": "src/Azure.Storage",
+  "sha": "f4845c7eade51a44b9f2ae08e0f0e8445a3889ff",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Azure/contents/src/Azure.Storage?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Azure/tree/master/src/Azure.Storage",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Azure/git/trees/f4845c7eade51a44b9f2ae08e0f0e8445a3889ff",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Azure/contents/src/Azure.Storage?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Azure/git/trees/f4845c7eade51a44b9f2ae08e0f0e8445a3889ff",
+    "html": "https://github.com/RocketSurgeonsGuild/Azure/tree/master/src/Azure.Storage"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Extensions",
+  "path": "src/Extensions",
+  "sha": "7dae8b8fdf0cccf3320810e6a7ac207577dd1a58",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Extensions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Extensions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/7dae8b8fdf0cccf3320810e6a7ac207577dd1a58",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Extensions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/7dae8b8fdf0cccf3320810e6a7ac207577dd1a58",
+    "html": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Extensions"
+  }
+}

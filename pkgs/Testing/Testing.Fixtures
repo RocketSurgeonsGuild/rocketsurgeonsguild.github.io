@@ -1,0 +1,16 @@
+{
+  "name": "Testing.Fixtures",
+  "path": "src/Testing.Fixtures",
+  "sha": "403ac20992600128977829de7dd69b8f9b939711",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Fixtures?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Fixtures",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/403ac20992600128977829de7dd69b8f9b939711",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Fixtures?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/403ac20992600128977829de7dd69b8f9b939711",
+    "html": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Fixtures"
+  }
+}

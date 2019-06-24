@@ -1,0 +1,16 @@
+{
+  "name": "Testing.Coverlet",
+  "path": "src/Testing.Coverlet",
+  "sha": "5f9e02fa977c713228752ec9b9ddb40ea4a5db46",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Coverlet?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Coverlet",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/5f9e02fa977c713228752ec9b9ddb40ea4a5db46",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Coverlet?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/5f9e02fa977c713228752ec9b9ddb40ea4a5db46",
+    "html": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Coverlet"
+  }
+}

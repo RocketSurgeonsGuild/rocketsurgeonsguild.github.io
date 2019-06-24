@@ -1,0 +1,16 @@
+{
+  "name": "Metrics.Abstractions",
+  "path": "src/Metrics.Abstractions",
+  "sha": "b184db8cc92308bd7fef8b469a096d959f00a4be",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/contents/src/Metrics.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Metrics/tree/master/src/Metrics.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/git/trees/b184db8cc92308bd7fef8b469a096d959f00a4be",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/contents/src/Metrics.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/git/trees/b184db8cc92308bd7fef8b469a096d959f00a4be",
+    "html": "https://github.com/RocketSurgeonsGuild/Metrics/tree/master/src/Metrics.Abstractions"
+  }
+}

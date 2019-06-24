@@ -1,0 +1,16 @@
+{
+  "name": "Metadata",
+  "path": "src/Metadata",
+  "sha": "6e8090d051406ee70505ea6752d06c471941fe1c",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Build/contents/src/Metadata?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Build/tree/master/src/Metadata",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Build/git/trees/6e8090d051406ee70505ea6752d06c471941fe1c",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Build/contents/src/Metadata?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Build/git/trees/6e8090d051406ee70505ea6752d06c471941fe1c",
+    "html": "https://github.com/RocketSurgeonsGuild/Build/tree/master/src/Metadata"
+  }
+}

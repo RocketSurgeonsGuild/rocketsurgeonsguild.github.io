@@ -1,0 +1,16 @@
+{
+  "name": "Builders",
+  "path": "src/Builders",
+  "sha": "e1020f5709fca65d5597cfbcb6f181cb0565e00b",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Builders?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Builders",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/e1020f5709fca65d5597cfbcb6f181cb0565e00b",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Builders?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/e1020f5709fca65d5597cfbcb6f181cb0565e00b",
+    "html": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Builders"
+  }
+}

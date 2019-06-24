@@ -1,0 +1,16 @@
+{
+  "name": "Azure.Sync.Abstractions",
+  "path": "src/Azure.Sync.Abstractions",
+  "sha": "55c32cca635716612705977beb92e32408ecdf4c",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Azure.Offline.Sync/contents/src/Azure.Sync.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync/tree/master/src/Azure.Sync.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Azure.Offline.Sync/git/trees/55c32cca635716612705977beb92e32408ecdf4c",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Azure.Offline.Sync/contents/src/Azure.Sync.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Azure.Offline.Sync/git/trees/55c32cca635716612705977beb92e32408ecdf4c",
+    "html": "https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync/tree/master/src/Azure.Sync.Abstractions"
+  }
+}

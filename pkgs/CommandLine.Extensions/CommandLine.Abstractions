@@ -1,0 +1,16 @@
+{
+  "name": "CommandLine.Abstractions",
+  "path": "src/CommandLine.Abstractions",
+  "sha": "67209c81ebb4bdb2229e6579ce48260aab02430b",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/contents/src/CommandLine.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/CommandLine.Extensions/tree/master/src/CommandLine.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/git/trees/67209c81ebb4bdb2229e6579ce48260aab02430b",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/contents/src/CommandLine.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/git/trees/67209c81ebb4bdb2229e6579ce48260aab02430b",
+    "html": "https://github.com/RocketSurgeonsGuild/CommandLine.Extensions/tree/master/src/CommandLine.Abstractions"
+  }
+}

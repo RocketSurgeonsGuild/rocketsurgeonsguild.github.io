@@ -1,0 +1,16 @@
+{
+  "name": "Serilog.Abstractions",
+  "path": "src/Serilog.Abstractions",
+  "sha": "22a286dff53fc7bfa6f2d0fc712f48751fd6533c",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/contents/src/Serilog.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Serilog.Extensions/tree/master/src/Serilog.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/git/trees/22a286dff53fc7bfa6f2d0fc712f48751fd6533c",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/contents/src/Serilog.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Serilog.Extensions/git/trees/22a286dff53fc7bfa6f2d0fc712f48751fd6533c",
+    "html": "https://github.com/RocketSurgeonsGuild/Serilog.Extensions/tree/master/src/Serilog.Abstractions"
+  }
+}

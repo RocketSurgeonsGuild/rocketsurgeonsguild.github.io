@@ -1,0 +1,16 @@
+{
+  "name": "Information",
+  "path": "src/Information",
+  "sha": "728dc3157655f5907d4bd22b129d43daae9f5075",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Build/contents/src/Information?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Build/tree/master/src/Information",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Build/git/trees/728dc3157655f5907d4bd22b129d43daae9f5075",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Build/contents/src/Information?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Build/git/trees/728dc3157655f5907d4bd22b129d43daae9f5075",
+    "html": "https://github.com/RocketSurgeonsGuild/Build/tree/master/src/Information"
+  }
+}

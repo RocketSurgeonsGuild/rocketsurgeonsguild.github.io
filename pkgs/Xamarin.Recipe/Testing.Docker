@@ -1,0 +1,16 @@
+{
+  "name": "Testing.Docker",
+  "path": "src/Testing.Docker",
+  "sha": "277ef7ff5e41cb444e1582d529f15d65d18752e7",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Docker?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Docker",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/277ef7ff5e41cb444e1582d529f15d65d18752e7",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.Docker?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/277ef7ff5e41cb444e1582d529f15d65d18752e7",
+    "html": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.Docker"
+  }
+}

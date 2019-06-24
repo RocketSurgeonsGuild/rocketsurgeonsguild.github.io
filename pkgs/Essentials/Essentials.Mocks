@@ -1,0 +1,16 @@
+{
+  "name": "Essentials.Mocks",
+  "path": "src/Essentials.Mocks",
+  "sha": "0a3742ac94f234f1a48bb905571923c355c74934",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials.Mocks?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials.Mocks",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/0a3742ac94f234f1a48bb905571923c355c74934",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials.Mocks?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/0a3742ac94f234f1a48bb905571923c355c74934",
+    "html": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials.Mocks"
+  }
+}

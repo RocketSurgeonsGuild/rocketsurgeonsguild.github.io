@@ -1,0 +1,16 @@
+{
+  "name": "Testing.AzureStorageEmulator",
+  "path": "src/Testing.AzureStorageEmulator",
+  "sha": "eea3f68414a65036ab46f7be22a229c92b168538",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.AzureStorageEmulator?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.AzureStorageEmulator",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/eea3f68414a65036ab46f7be22a229c92b168538",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/contents/src/Testing.AzureStorageEmulator?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Testing/git/trees/eea3f68414a65036ab46f7be22a229c92b168538",
+    "html": "https://github.com/RocketSurgeonsGuild/Testing/tree/master/src/Testing.AzureStorageEmulator"
+  }
+}

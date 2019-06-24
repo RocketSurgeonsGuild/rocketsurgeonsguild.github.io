@@ -1,0 +1,16 @@
+{
+  "name": "AspNetCore",
+  "path": "src/AspNetCore",
+  "sha": "cd8158702e0dded176495ea56163b6a3ea02511a",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/contents/src/AspNetCore?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Marten.Extensions/tree/master/src/AspNetCore",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/git/trees/cd8158702e0dded176495ea56163b6a3ea02511a",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/contents/src/AspNetCore?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Marten.Extensions/git/trees/cd8158702e0dded176495ea56163b6a3ea02511a",
+    "html": "https://github.com/RocketSurgeonsGuild/Marten.Extensions/tree/master/src/AspNetCore"
+  }
+}

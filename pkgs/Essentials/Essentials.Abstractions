@@ -1,0 +1,16 @@
+{
+  "name": "Essentials.Abstractions",
+  "path": "src/Essentials.Abstractions",
+  "sha": "8ba7e798a2b22afb6beea7434281492f631f3c26",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/8ba7e798a2b22afb6beea7434281492f631f3c26",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/contents/src/Essentials.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Essentials/git/trees/8ba7e798a2b22afb6beea7434281492f631f3c26",
+    "html": "https://github.com/RocketSurgeonsGuild/Essentials/tree/master/src/Essentials.Abstractions"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "Domain.Abstractions",
+  "path": "src/Domain.Abstractions",
+  "sha": "6eecf14794ef4834a531deef6c6f8c9d98dcd1aa",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/contents/src/Domain.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Domain/tree/master/src/Domain.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/git/trees/6eecf14794ef4834a531deef6c6f8c9d98dcd1aa",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/contents/src/Domain.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/git/trees/6eecf14794ef4834a531deef6c6f8c9d98dcd1aa",
+    "html": "https://github.com/RocketSurgeonsGuild/Domain/tree/master/src/Domain.Abstractions"
+  }
+}

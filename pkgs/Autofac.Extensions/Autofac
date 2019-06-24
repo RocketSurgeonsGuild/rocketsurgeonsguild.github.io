@@ -1,0 +1,16 @@
+{
+  "name": "Autofac",
+  "path": "src/Autofac",
+  "sha": "8cbb357c04b2e85d86b44e897e2486457d1fb15f",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/contents/src/Autofac?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Autofac.Extensions/tree/master/src/Autofac",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/git/trees/8cbb357c04b2e85d86b44e897e2486457d1fb15f",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/contents/src/Autofac?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Autofac.Extensions/git/trees/8cbb357c04b2e85d86b44e897e2486457d1fb15f",
+    "html": "https://github.com/RocketSurgeonsGuild/Autofac.Extensions/tree/master/src/Autofac"
+  }
+}

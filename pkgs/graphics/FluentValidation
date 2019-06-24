@@ -1,0 +1,16 @@
+{
+  "name": "FluentValidation",
+  "path": "src/FluentValidation",
+  "sha": "ce890db8f0e3d52b0aaab51f5516c18aee6ffe26",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/contents/src/FluentValidation?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions/tree/master/src/FluentValidation",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/git/trees/ce890db8f0e3d52b0aaab51f5516c18aee6ffe26",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/contents/src/FluentValidation?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/git/trees/ce890db8f0e3d52b0aaab51f5516c18aee6ffe26",
+    "html": "https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions/tree/master/src/FluentValidation"
+  }
+}

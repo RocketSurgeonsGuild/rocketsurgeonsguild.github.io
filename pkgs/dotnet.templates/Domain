@@ -1,0 +1,16 @@
+{
+  "name": "Domain",
+  "path": "src/Domain",
+  "sha": "36b88c52181522ee449e062aaf2e4244ff6d8bcd",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/contents/src/Domain?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Domain/tree/master/src/Domain",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/git/trees/36b88c52181522ee449e062aaf2e4244ff6d8bcd",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/contents/src/Domain?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Domain/git/trees/36b88c52181522ee449e062aaf2e4244ff6d8bcd",
+    "html": "https://github.com/RocketSurgeonsGuild/Domain/tree/master/src/Domain"
+  }
+}

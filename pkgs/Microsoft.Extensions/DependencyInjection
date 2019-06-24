@@ -1,0 +1,16 @@
+{
+  "name": "DependencyInjection",
+  "path": "src/DependencyInjection",
+  "sha": "6998ba5d432da4aba4219e280ebb287186a4c457",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/DependencyInjection?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/DependencyInjection",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/6998ba5d432da4aba4219e280ebb287186a4c457",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/DependencyInjection?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/6998ba5d432da4aba4219e280ebb287186a4c457",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/DependencyInjection"
+  }
+}

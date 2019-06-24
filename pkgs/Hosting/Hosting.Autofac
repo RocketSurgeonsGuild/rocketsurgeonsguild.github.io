@@ -1,0 +1,16 @@
+{
+  "name": "Hosting.Autofac",
+  "path": "src/Hosting.Autofac",
+  "sha": "b7efdfa3798e917806a897f5866f9e68c9859cf3",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Autofac?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Autofac",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/b7efdfa3798e917806a897f5866f9e68c9859cf3",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Autofac?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/b7efdfa3798e917806a897f5866f9e68c9859cf3",
+    "html": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Autofac"
+  }
+}

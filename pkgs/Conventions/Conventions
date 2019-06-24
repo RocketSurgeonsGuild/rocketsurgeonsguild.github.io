@@ -1,0 +1,16 @@
+{
+  "name": "Conventions",
+  "path": "src/Conventions",
+  "sha": "bcbb6da7c1991b0ab75cae8f93b5bd0aca5351d2",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Conventions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Conventions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/bcbb6da7c1991b0ab75cae8f93b5bd0aca5351d2",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/contents/src/Conventions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Conventions/git/trees/bcbb6da7c1991b0ab75cae8f93b5bd0aca5351d2",
+    "html": "https://github.com/RocketSurgeonsGuild/Conventions/tree/master/src/Conventions"
+  }
+}

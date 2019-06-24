@@ -1,0 +1,16 @@
+{
+  "name": "Vue",
+  "path": "src/Vue",
+  "sha": "8d33c151328c91a20d3717da831f99fc3ebff86f",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/contents/src/Vue?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions/tree/master/src/Vue",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/git/trees/8d33c151328c91a20d3717da831f99fc3ebff86f",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/contents/src/Vue?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/FluentValidation.Extensions/git/trees/8d33c151328c91a20d3717da831f99fc3ebff86f",
+    "html": "https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions/tree/master/src/Vue"
+  }
+}

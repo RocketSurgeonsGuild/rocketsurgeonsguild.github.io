@@ -1,0 +1,16 @@
+{
+  "name": "Linq.Extensions",
+  "path": "src/Linq.Extensions",
+  "sha": "62c06f21e7365ba05a4bd109c9432cf439ac7d5f",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Linq.Extensions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Linq.Extensions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/62c06f21e7365ba05a4bd109c9432cf439ac7d5f",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/contents/src/Linq.Extensions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Extensions/git/trees/62c06f21e7365ba05a4bd109c9432cf439ac7d5f",
+    "html": "https://github.com/RocketSurgeonsGuild/Extensions/tree/master/src/Linq.Extensions"
+  }
+}

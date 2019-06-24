@@ -1,0 +1,16 @@
+{
+  "name": "ViewModels",
+  "path": "src/ViewModels",
+  "sha": "2a5418115fad6631c3ba68ffd5cac1b11d2ddb76",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/contents/src/ViewModels?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions/tree/master/src/ViewModels",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/git/trees/2a5418115fad6631c3ba68ffd5cac1b11d2ddb76",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/contents/src/ViewModels?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/ReactiveUI.Abstractions/git/trees/2a5418115fad6631c3ba68ffd5cac1b11d2ddb76",
+    "html": "https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions/tree/master/src/ViewModels"
+  }
+}

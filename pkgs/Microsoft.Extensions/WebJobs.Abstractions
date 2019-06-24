@@ -1,0 +1,16 @@
+{
+  "name": "WebJobs.Abstractions",
+  "path": "src/WebJobs.Abstractions",
+  "sha": "d2b30982b668f4aae1f13fe7ebaf5fed4aaf4b63",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/WebJobs.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/WebJobs.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/d2b30982b668f4aae1f13fe7ebaf5fed4aaf4b63",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/WebJobs.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/d2b30982b668f4aae1f13fe7ebaf5fed4aaf4b63",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/WebJobs.Abstractions"
+  }
+}

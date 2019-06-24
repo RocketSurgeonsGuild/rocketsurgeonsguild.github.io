@@ -1,0 +1,16 @@
+{
+  "name": "Metrics",
+  "path": "src/Metrics",
+  "sha": "9b120ed71184fd3bf896b8784f3c842ae6d9de01",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/contents/src/Metrics?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Metrics/tree/master/src/Metrics",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/git/trees/9b120ed71184fd3bf896b8784f3c842ae6d9de01",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/contents/src/Metrics?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Metrics/git/trees/9b120ed71184fd3bf896b8784f3c842ae6d9de01",
+    "html": "https://github.com/RocketSurgeonsGuild/Metrics/tree/master/src/Metrics"
+  }
+}

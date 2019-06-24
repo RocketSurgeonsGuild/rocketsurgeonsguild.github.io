@@ -1,0 +1,16 @@
+{
+  "name": "Hosting.Abstractions",
+  "path": "src/Hosting.Abstractions",
+  "sha": "2cdb04ccf9501f399e74ca958750cade9aa1b7ec",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/2cdb04ccf9501f399e74ca958750cade9aa1b7ec",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/contents/src/Hosting.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Hosting/git/trees/2cdb04ccf9501f399e74ca958750cade9aa1b7ec",
+    "html": "https://github.com/RocketSurgeonsGuild/Hosting/tree/master/src/Hosting.Abstractions"
+  }
+}

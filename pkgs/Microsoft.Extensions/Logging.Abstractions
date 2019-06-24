@@ -1,0 +1,16 @@
+{
+  "name": "Logging.Abstractions",
+  "path": "src/Logging.Abstractions",
+  "sha": "8cf3d1a1ea893bfdbf107c0fa4eb06e7bc2bec82",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Logging.Abstractions?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Logging.Abstractions",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/8cf3d1a1ea893bfdbf107c0fa4eb06e7bc2bec82",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Logging.Abstractions?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/8cf3d1a1ea893bfdbf107c0fa4eb06e7bc2bec82",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Logging.Abstractions"
+  }
+}

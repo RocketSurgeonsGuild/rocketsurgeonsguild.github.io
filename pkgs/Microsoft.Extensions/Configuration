@@ -1,0 +1,16 @@
+{
+  "name": "Configuration",
+  "path": "src/Configuration",
+  "sha": "895b0d7d2ae17e7803b0066d747b200b4ce6e4c9",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Configuration?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Configuration",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/895b0d7d2ae17e7803b0066d747b200b4ce6e4c9",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/contents/src/Configuration?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/Microsoft.Extensions/git/trees/895b0d7d2ae17e7803b0066d747b200b4ce6e4c9",
+    "html": "https://github.com/RocketSurgeonsGuild/Microsoft.Extensions/tree/master/src/Configuration"
+  }
+}

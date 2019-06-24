@@ -1,0 +1,16 @@
+{
+  "name": "CommandLine",
+  "path": "src/CommandLine",
+  "sha": "9009a1e38c904b12600a46b45cdb23738fc4a4b2",
+  "size": 0,
+  "url": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/contents/src/CommandLine?ref=master",
+  "html_url": "https://github.com/RocketSurgeonsGuild/CommandLine.Extensions/tree/master/src/CommandLine",
+  "git_url": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/git/trees/9009a1e38c904b12600a46b45cdb23738fc4a4b2",
+  "download_url": null,
+  "type": "dir",
+  "_links": {
+    "self": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/contents/src/CommandLine?ref=master",
+    "git": "https://api.github.com/repos/RocketSurgeonsGuild/CommandLine.Extensions/git/trees/9009a1e38c904b12600a46b45cdb23738fc4a4b2",
+    "html": "https://github.com/RocketSurgeonsGuild/CommandLine.Extensions/tree/master/src/CommandLine"
+  }
+}
