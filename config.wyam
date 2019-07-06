@@ -22,7 +22,6 @@ Pipelines.InsertAfter("Package", "PackageCategories",
     Meta(Keys.RelativeFilePath, @doc.FilePath(Keys.WritePath)),
     OrderBy(@doc.String(Keys.GroupKey))
 );
-
 Pipelines.Add("RenderPackage",
     Documents("PackageCategories"),
     Razor()

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.Marten.AspNetCore
+NuGet: Rocket.Surgery.Extensions.Marten.AspNetCore
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.Marten.AspNetCore.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Marten.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

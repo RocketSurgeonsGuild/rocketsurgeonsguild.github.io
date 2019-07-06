@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.Serilog
+NuGet: Rocket.Surgery.Extensions.Serilog
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.Serilog.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Serilog.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

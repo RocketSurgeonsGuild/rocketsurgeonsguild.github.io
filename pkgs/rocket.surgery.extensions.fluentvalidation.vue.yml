@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.FluentValidation.Vue
+NuGet: Rocket.Surgery.Extensions.FluentValidation.Vue
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.FluentValidation.Vue.dll"
+Repository: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Metrics
+NuGet: Rocket.Surgery.Metrics
+Assemblies:
+- "/**/Rocket.Surgery.Metrics.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Metrics
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

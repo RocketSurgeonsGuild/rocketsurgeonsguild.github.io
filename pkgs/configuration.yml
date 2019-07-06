@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Extensions.Configuration 
-NuGet: Rocket.Surgery.Extensions.Configuration 
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Configuration .dll"
-Repository: https://github.com/RocketSurgeonsGuild/Configuration
-Author: David Driscoll
-Description: "Azure Rocket Surgery"
-Categories:
-- Configuration

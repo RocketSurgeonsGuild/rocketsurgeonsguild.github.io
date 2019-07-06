@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Cake
-NuGet: Rocket.Surgery.Cake
-Assemblies:
-- "/**/Rocket.Surgery.Cake.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Cake
-Author: David Driscoll
-Description: "Azure Rocket Surgery"
-Categories:
-- Cake

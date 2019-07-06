@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.AutoMapper
+NuGet: Rocket.Surgery.Extensions.AutoMapper
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.AutoMapper.dll"
+Repository: https://github.com/RocketSurgeonsGuild/AutoMapper.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

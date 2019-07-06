@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Nuke
+NuGet: Rocket.Surgery.Nuke
+Assemblies:
+- "/**/Rocket.Surgery.Nuke.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Nuke
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Hosting
+NuGet: Rocket.Surgery.Hosting
+Assemblies:
+- "/**/Rocket.Surgery.Hosting.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Hosting
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

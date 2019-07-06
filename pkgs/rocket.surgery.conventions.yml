@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Conventions
+NuGet: Rocket.Surgery.Conventions
+Assemblies:
+- "/**/Rocket.Surgery.Conventions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake
