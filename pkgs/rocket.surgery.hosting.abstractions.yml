@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Hosting.Abstractions
+NuGet: Rocket.Surgery.Hosting.Abstractions
+Assemblies:
+- "/**/Rocket.Surgery.Hosting.Abstractions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Hosting
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

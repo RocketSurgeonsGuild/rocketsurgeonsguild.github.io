@@ -151,7 +151,7 @@ Task("Build")
     });
 
 Task("Preview")
-    .IsDependentOn("GetPackageSpecs")
+    .IsDependentOn("GetArtifacts")
     .Does(() =>
     {
         Wyam(new WyamSettings

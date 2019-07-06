@@ -41,10 +41,6 @@ foreach ($repo in $repos) {
                 mkdir $dir;
             }
 
-            if ($projectName -match '.Abstractions') {
-                continue;
-            }
-
             if (-not (Test-Path "$dir/$($projectNameLower).yml")) {
                 Set-Content "$dir/$($projectNameLower).yml" "Name: $projectName
 NuGet: $projectName

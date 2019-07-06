@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Metrics.Abstractions
+NuGet: Rocket.Surgery.Metrics.Abstractions
+Assemblies:
+- "/**/Rocket.Surgery.Metrics.Abstractions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Metrics
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake
