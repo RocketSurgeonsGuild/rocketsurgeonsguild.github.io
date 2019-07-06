@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.WebJobs
+NuGet: Rocket.Surgery.Extensions.WebJobs
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.WebJobs.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Microsoft.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

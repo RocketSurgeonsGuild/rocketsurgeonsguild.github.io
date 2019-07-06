@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Extensions.Logging
-NuGet: Rocket.Surgery.Extensions.Logging
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Logging.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Logging
-Author: David Driscoll
-Description: "Azure Rocket Surgery"
-Categories:
-- Logging

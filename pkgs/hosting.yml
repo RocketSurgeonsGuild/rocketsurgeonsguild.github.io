@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Hosting
-NuGet: Rocket.Surgery.Hosting
-Assemblies:
-- "/**/Rocket.Surgery.Hosting.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Hosting
-Author: David Driscoll
-Description: "Azure Rocket Surgery"
-Categories:
-- Hosting

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.Testing.Docker
+NuGet: Rocket.Surgery.Extensions.Testing.Docker
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.Testing.Docker.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Testing
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

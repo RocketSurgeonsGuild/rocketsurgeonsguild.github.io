@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Task.Extensions
+NuGet: Rocket.Surgery.Task.Extensions
+Assemblies:
+- "/**/Rocket.Surgery.Task.Extensions.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

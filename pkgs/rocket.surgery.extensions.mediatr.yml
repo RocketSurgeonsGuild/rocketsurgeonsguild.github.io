@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.MediatR
+NuGet: Rocket.Surgery.Extensions.MediatR
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.MediatR.dll"
+Repository: https://github.com/RocketSurgeonsGuild/MediatR.Extensions
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

@@ -1,6 +1,6 @@
-#tool "nuget:https://api.nuget.org/v3/index.json?package=KuduSync.NET&version=1.3.1"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&version=1.2.0"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&version=1.2.0"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=KuduSync.NET&version=1.5.2"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&version=2.2.5 "
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&version=2.2.5 "
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git&version=0.16.1"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu&version=0.5.0"
 #addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml&version=2.0.0"
@@ -112,13 +112,14 @@ Task("GetNugetPackages")
             packageSpecs.Where(x => !string.IsNullOrEmpty(x.NuGet)),
             packageSpec => {
                 Information("Installing package package " + packageSpec.NuGet);
+                try {
                 NuGetInstall(packageSpec.NuGet,
                     new NuGetInstallSettings
                     {
                         OutputDirectory = packageDir,
-                        Prerelease = packageSpec.Prerelease,
+                        Prerelease = true,
                         Verbosity = NuGetVerbosity.Quiet,
-                        Source = new [] { "https://api.nuget.org/v3/index.json" },
+                        Source = new [] { "https://www.myget.org/F/rocket-surgeons-guild/api/v3/index.json", "https://api.nuget.org/v3/index.json" },
                         NoCache = true,
                         EnvironmentVariables    = new Dictionary<string, string>{
                                                         {"EnableNuGetPackageRestore", "true"},
@@ -127,6 +128,9 @@ Task("GetNugetPackages")
                                                         {"NUGET_EXE",  Context.Tools.Resolve("nuget.exe").FullPath }
                                                   }
                     });
+                } catch (Exception e) {
+
+                }
         });
     });
 
@@ -147,7 +151,7 @@ Task("Build")
     });
 
 Task("Preview")
-    .IsDependentOn("GetPackageSpecs")
+    .IsDependentOn("GetArtifacts")
     .Does(() =>
     {
         Wyam(new WyamSettings

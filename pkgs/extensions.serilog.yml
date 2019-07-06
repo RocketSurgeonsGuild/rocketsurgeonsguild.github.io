@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Extensions.Serilog 
-NuGet: Rocket.Surgery.Extensions.Serilog 
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Serilog .dll"
-Repository: https://github.com/RocketSurgeonsGuild/Logging
-Author: David Driscoll
-Description: "Azure Rocket Surgery"
-Categories:
-- Logging

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.Testing.Fixtures
+NuGet: Rocket.Surgery.Extensions.Testing.Fixtures
+Assemblies:
+- "/**/Rocket.Surgery.Extensions.Testing.Fixtures.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Testing
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake

@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Hosting.Autofac
+NuGet: Rocket.Surgery.Hosting.Autofac
+Assemblies:
+- "/**/Rocket.Surgery.Hosting.Autofac.dll"
+Repository: https://github.com/RocketSurgeonsGuild/Hosting
+Author: Rocket Surgeons
+Description: "TODO"
+Categories:
+- Cake
