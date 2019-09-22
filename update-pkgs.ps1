@@ -20,6 +20,10 @@ do {
 }
 while ($link);
 
+if (-not (Test-Path .tmp)) {
+    mkdir .tmp;
+}
+
 foreach ($repo in $repos) {
     # mkdir
     $repo.full_name
@@ -34,7 +38,23 @@ foreach ($repo in $repos) {
             $projectContents = Invoke-RestMethod -Uri "https://api.github.com/repos/$($repo.full_name)/contents/$($item.path)" -Headers @{ Authorization = "Bearer $token" };
             $project = $projectContents | where { $_.name.EndsWith(".csproj") } | select -First 1
 
-            $projectName = $project.name.Substring(0, $project.name.Length - ".csproj".Length);
+            if (-not $project) {
+                continue;
+            }
+
+            $content = Invoke-WebRequest -Headers @{ Authorization = "Bearer $token" } -Uri $project.download_url -OutFile ".tmp/project.xml";
+
+            $xml = [xml](get-content  ".tmp/project.xml")
+            # $xml
+
+            $assemblyName = Select-Xml -Xml $xml -XPath "/Project/PropertyGroup/AssemblyName";
+            # $xml.Project.PropertyGroup.AssemblyName;
+            # $assemblyName;
+
+            $projectName = $xml.Project.PropertyGroup.AssemblyName;
+            if (-not $projectName) {
+                $projectName = $project.name.Substring(0, $project.name.Length - ".csproj".Length);
+            }
             $projectNameLower = $projectName.ToLowerInvariant();
 
             if (-not (Test-Path $dir)) {
