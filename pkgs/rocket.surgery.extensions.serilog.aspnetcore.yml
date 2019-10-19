@@ -1,9 +1,0 @@
-Name: Rocket.Surgery.Extensions.Serilog.AspNetCore
-NuGet: Rocket.Surgery.Extensions.Serilog.AspNetCore
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Serilog.AspNetCore.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Serilog.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
-Categories:
-- Cake

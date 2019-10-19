@@ -1,9 +1,9 @@
 Name: Rocket.Surgery.Extensions.Testing
 NuGet: Rocket.Surgery.Extensions.Testing
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Testing.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.Testing.dll
 Repository: https://github.com/RocketSurgeonsGuild/Testing
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- Extensions
+- Testing

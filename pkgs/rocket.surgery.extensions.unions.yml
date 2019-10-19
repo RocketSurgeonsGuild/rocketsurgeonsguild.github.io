@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Extensions.Unions
+NuGet: Rocket.Surgery.Extensions.Unions
+Assemblies: /**/Rocket.Surgery.Extensions.Unions.dll
+Repository: https://github.com/RocketSurgeonsGuild/Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- Extensions
+- Unions

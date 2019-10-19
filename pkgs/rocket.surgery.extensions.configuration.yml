@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.Configuration
 NuGet: Rocket.Surgery.Extensions.Configuration
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Configuration.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Microsoft.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Extensions.Configuration.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Provides the ability to provide configuration to the hosted application by convention.
 Categories:
-- Cake
+- Configuration
+- Conventions
+- Extensions

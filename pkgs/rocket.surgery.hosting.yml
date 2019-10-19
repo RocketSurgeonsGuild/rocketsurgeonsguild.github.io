@@ -1,9 +1,9 @@
 Name: Rocket.Surgery.Hosting
 NuGet: Rocket.Surgery.Hosting
-Assemblies:
-- "/**/Rocket.Surgery.Hosting.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Hosting
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Hosting.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Adds helpers to easily bootstrap an application using conventions by just using the correct extension method.  This adds command line operations, additional configuration, logging and service injections by convention.
 Categories:
-- Cake
+- Conventions
+- Hosting

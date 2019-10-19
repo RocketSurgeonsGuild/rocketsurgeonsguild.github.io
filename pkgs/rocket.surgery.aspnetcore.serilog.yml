@@ -1,0 +1,10 @@
+Name: Rocket.Surgery.AspNetCore.Serilog
+NuGet: Rocket.Surgery.AspNetCore.Serilog
+Assemblies: /**/Rocket.Surgery.AspNetCore.Serilog.dll
+Repository: https://github.com/RocketSurgeonsGuild/Serilog.Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- AspNetCore
+- Extensions
+- Serilog

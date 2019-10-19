@@ -1,9 +1,9 @@
 Name: Rocket.Surgery.Extensions.FluentValidation
 NuGet: Rocket.Surgery.Extensions.FluentValidation
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.FluentValidation.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.FluentValidation.dll
 Repository: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- Extensions
+- FluentValidation

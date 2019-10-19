@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.ReactiveUI.Interop.MvvmCross
+NuGet: Rocket.Surgery.ReactiveUI.Interop.MvvmCross
+Assemblies: /**/Rocket.Surgery.ReactiveUI.Interop.MvvmCross.dll
+Repository: https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop
+Author: RLittlesII
+Description: Package Description
+Categories:
+- MvvmCross
+- ReactiveUI.Interop

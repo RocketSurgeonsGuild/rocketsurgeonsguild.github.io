@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Reflection.Extensions
+NuGet: Rocket.Surgery.Reflection.Extensions
+Assemblies: /**/Rocket.Surgery.Reflection.Extensions.dll
+Repository: https://github.com/RocketSurgeonsGuild/Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- Extensions
+- Reflection

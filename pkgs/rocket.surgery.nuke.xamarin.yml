@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Nuke.Xamarin
+NuGet: Rocket.Surgery.Nuke.Xamarin
+Assemblies: /**/Rocket.Surgery.Nuke.Xamarin.dll
+Repository: https://github.com/RocketSurgeonsGuild/Nuke
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- Nuke
+- Xamarin

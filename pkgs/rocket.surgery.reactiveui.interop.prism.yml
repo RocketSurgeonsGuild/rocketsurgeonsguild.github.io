@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.ReactiveUI.Interop.Prism
+NuGet: Rocket.Surgery.ReactiveUI.Interop.Prism
+Assemblies: /**/Rocket.Surgery.ReactiveUI.Interop.Prism.dll
+Repository: https://github.com/RocketSurgeonsGuild/ReactiveUI.Interop
+Author: RLittlesII
+Description: Package Description
+Categories:
+- Prism
+- ReactiveUI.Interop

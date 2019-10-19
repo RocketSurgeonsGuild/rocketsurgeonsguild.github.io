@@ -1,9 +1,8 @@
 Name: Rocket.Surgery.Conventions
 NuGet: Rocket.Surgery.Conventions
-Assemblies:
-- "/**/Rocket.Surgery.Conventions.dll"
+Assemblies: /**/Rocket.Surgery.Conventions.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Adds support for loading configuration, services, logging, command line and more via simple and easy to setup assembly attributes
 Categories:
-- Cake
+- Conventions

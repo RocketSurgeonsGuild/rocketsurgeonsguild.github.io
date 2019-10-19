@@ -1,9 +1,8 @@
 Name: Rocket.Surgery.Domain
 NuGet: Rocket.Surgery.Domain
-Assemblies:
-- "/**/Rocket.Surgery.Domain.dll"
+Assemblies: /**/Rocket.Surgery.Domain.dll
 Repository: https://github.com/RocketSurgeonsGuild/Domain
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- Domain

@@ -1,0 +1,10 @@
+Name: Rocket.Surgery.Hosting.Serilog
+NuGet: Rocket.Surgery.Hosting.Serilog
+Assemblies: /**/Rocket.Surgery.Hosting.Serilog.dll
+Repository: https://github.com/RocketSurgeonsGuild/Serilog.Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- Extensions
+- Hosting
+- Serilog

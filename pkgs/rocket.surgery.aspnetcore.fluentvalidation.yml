@@ -1,0 +1,10 @@
+Name: Rocket.Surgery.AspNetCore.FluentValidation
+NuGet: Rocket.Surgery.AspNetCore.FluentValidation
+Assemblies: /**/Rocket.Surgery.AspNetCore.FluentValidation.dll
+Repository: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- AspNetCore
+- Extensions
+- FluentValidation

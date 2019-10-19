@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.App.Metrics
 NuGet: Rocket.Surgery.Extensions.App.Metrics
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.App.Metrics.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.App.Metrics.dll
 Repository: https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- App.Metrics
+- Extensions
+- Metrics

@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.Testing.Coverlet
 NuGet: Rocket.Surgery.Extensions.Testing.Coverlet
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Testing.Coverlet.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.Testing.Coverlet.dll
 Repository: https://github.com/RocketSurgeonsGuild/Testing
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- Coverlet
+- Extensions
+- Testing

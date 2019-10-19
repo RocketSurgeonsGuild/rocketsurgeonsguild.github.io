@@ -1,9 +1,11 @@
 Name: Rocket.Surgery.Extensions.App.Metrics.Abstractions
 NuGet: Rocket.Surgery.Extensions.App.Metrics.Abstractions
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.App.Metrics.Abstractions.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.App.Metrics.Abstractions.dll
 Repository: https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- Abstractions
+- App.Metrics
+- Extensions
+- Metrics

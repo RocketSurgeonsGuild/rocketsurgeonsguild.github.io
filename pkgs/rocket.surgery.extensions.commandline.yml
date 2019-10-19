@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.CommandLine
 NuGet: Rocket.Surgery.Extensions.CommandLine
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.CommandLine.dll"
-Repository: https://github.com/RocketSurgeonsGuild/CommandLine.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Extensions.CommandLine.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Provides the ability to provide additional commands to the hosted application by convention.
 Categories:
-- Cake
+- CommandLine
+- Conventions
+- Extensions

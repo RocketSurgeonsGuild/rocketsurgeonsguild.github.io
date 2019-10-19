@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Hosting.Functions
 NuGet: Rocket.Surgery.Hosting.Functions
-Assemblies:
-- "/**/Rocket.Surgery.Hosting.Functions.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Hosting
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Hosting.Functions.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Adds helpers to easily bootstrap into a webjobs or azure functions application by just using the correct extension method.  This adds additional configuration, logging and service injections by convention.
 Categories:
-- Cake
+- Conventions
+- Functions
+- Hosting

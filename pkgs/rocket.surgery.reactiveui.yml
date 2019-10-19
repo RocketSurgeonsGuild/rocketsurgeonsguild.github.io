@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.ReactiveUI
+NuGet: Rocket.Surgery.ReactiveUI
+Assemblies: /**/Rocket.Surgery.ReactiveUI.dll
+Repository: https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions
+Author: RLittlesII
+Description: ReactiveUI base platform abstractions.
+Categories:
+- ReactiveUI
+- ReactiveUI.Abstractions

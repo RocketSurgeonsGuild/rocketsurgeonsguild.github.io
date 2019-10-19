@@ -1,0 +1,10 @@
+Name: Rocket.Surgery.Extensions.FluentValidation.MediatR
+NuGet: Rocket.Surgery.Extensions.FluentValidation.MediatR
+Assemblies: /**/Rocket.Surgery.Extensions.FluentValidation.MediatR.dll
+Repository: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
+Categories:
+- Extensions
+- FluentValidation
+- MediatR

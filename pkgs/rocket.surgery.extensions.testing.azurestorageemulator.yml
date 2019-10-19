@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.Testing.AzureStorageEmulator
 NuGet: Rocket.Surgery.Extensions.Testing.AzureStorageEmulator
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.Testing.AzureStorageEmulator.dll"
+Assemblies: /**/Rocket.Surgery.Extensions.Testing.AzureStorageEmulator.dll
 Repository: https://github.com/RocketSurgeonsGuild/Testing
-Author: Rocket Surgeons
-Description: "TODO"
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Package Description
 Categories:
-- Cake
+- AzureStorageEmulator
+- Extensions
+- Testing

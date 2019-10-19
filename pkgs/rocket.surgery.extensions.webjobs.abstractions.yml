@@ -1,9 +1,11 @@
 Name: Rocket.Surgery.Extensions.WebJobs.Abstractions
 NuGet: Rocket.Surgery.Extensions.WebJobs.Abstractions
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.WebJobs.Abstractions.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Microsoft.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Extensions.WebJobs.Abstractions.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Adds support for configuring web jobs to the hosted application by convention.
 Categories:
-- Cake
+- Abstractions
+- Conventions
+- Extensions
+- WebJobs

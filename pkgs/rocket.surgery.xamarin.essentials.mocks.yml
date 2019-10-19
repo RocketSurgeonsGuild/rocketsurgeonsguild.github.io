@@ -1,0 +1,9 @@
+Name: Rocket.Surgery.Xamarin.Essentials.Mocks
+NuGet: Rocket.Surgery.Xamarin.Essentials.Mocks
+Assemblies: /**/Rocket.Surgery.Xamarin.Essentials.Mocks.dll
+Repository: https://github.com/RocketSurgeonsGuild/Essentials
+Author: Rodney Littles, II
+Description: Reactive mocks for Xamarin.Essentials
+Categories:
+- Essentials
+- Mocks

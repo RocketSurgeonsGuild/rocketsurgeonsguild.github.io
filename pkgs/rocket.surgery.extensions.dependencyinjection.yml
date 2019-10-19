@@ -1,9 +1,10 @@
 Name: Rocket.Surgery.Extensions.DependencyInjection
 NuGet: Rocket.Surgery.Extensions.DependencyInjection
-Assemblies:
-- "/**/Rocket.Surgery.Extensions.DependencyInjection.dll"
-Repository: https://github.com/RocketSurgeonsGuild/Microsoft.Extensions
-Author: Rocket Surgeons
-Description: "TODO"
+Assemblies: /**/Rocket.Surgery.Extensions.DependencyInjection.dll
+Repository: https://github.com/RocketSurgeonsGuild/Conventions
+Author: David Driscoll,Rocket Surgeons Guild contributors
+Description: Adds support for loading services into dependency injection to the hosted application by convention.
 Categories:
-- Cake
+- Conventions
+- DependencyInjection
+- Extensions
