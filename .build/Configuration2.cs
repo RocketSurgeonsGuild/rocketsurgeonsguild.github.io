@@ -41,7 +41,15 @@ class WyamConfiguration : ConfigurationEngineBase
         if (!NukeBuild.IsLocalBuild) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
-        Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
+        Settings[Keys.Host] = "rocketsurgeonsguild.com/";
+        if (build.DeployToBranch == "master")
+        {
+            Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
+        }
+        else if (build.DeployToBranch == "docs")
+        {
+            Settings[Keys.Host] = "rocketsurgeonsguild.com/";
+        }
         Settings[Keys.LinksUseHttps] = true;
         Settings[DocsKeys.Logo] = "/assets/img/logo.png";
         Settings[DocsKeys.IncludeDateInPostPath] = true;

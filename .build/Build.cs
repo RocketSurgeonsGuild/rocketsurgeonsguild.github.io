@@ -33,6 +33,8 @@ partial class Build : NukeBuild
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
+    [Parameter("Branch to deploy to")]
+    public readonly string DeployToBranch = "local";
 
     public IEnumerable<PackageSpec> PackageSpecs => GlobFiles(RootDirectory / "packages", "*.yml", "*.yaml")
         .Select(File.ReadAllText)
