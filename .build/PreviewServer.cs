@@ -26,9 +26,10 @@ internal static class PreviewServer
         // Start the preview server
         DirectoryPath previewPath = (NukeBuild.RootDirectory / "output").ToString();
 
+        var previewServer = PreviewServer.Start(previewPath, 5080, false, null, true, new Dictionary<string, string>());
         var engine = engineFunc();
         engine.Execute();
-        var previewServer = PreviewServer.Start(previewPath, 5080, true, null, true, new Dictionary<string, string>());
+        Trace.Information($"Preview server listening at http://localhost:{5080}");
 
         Trace.Information("Watching paths(s) {0}", string.Join(", ", engine.FileSystem.InputPaths));
         var inputFolderWatcher = new ActionFileSystemWatcher(

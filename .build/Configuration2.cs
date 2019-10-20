@@ -39,7 +39,7 @@ class WyamConfiguration : ConfigurationEngineBase
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
         // Logger.Info(string.Join(", ", assemblyFiles));
 
-        Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
+        if (!NukeBuild.IsLocalBuild) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
         // Settings[DocsKeys.SolutionFiles] = GlobFiles(NukeBuild.TemporaryDirectory, "**/*.sln")
         //     .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 

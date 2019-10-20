@@ -10,20 +10,29 @@
 <meta name="theme-color" content="#ffffff">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
-  var pattern = Trianglify({
-    cell_size: 40,
-    variance: 1,
-    x_colors: ['#E4B931', '#FFFFFF', '#053247', '#FFFFFF', '#E4B931'],
-    //y_colors: false,
-    y_colors: 'match_x',
-    palette: Trianglify.colorbrewer,
-    color_space: 'lab',
-    color_function: false,
-    stroke_width: 1.51,
-    width: document.body.clientWidth,
-    height: document.body.clientHeight,
-    // seed: null,
-  });
-
-document.body.style.background="url(" + pattern.png() + ")";
+    setTimeout(function() {
+        var pattern = Trianglify({
+            cell_size: 60,
+            variance: 1,
+            x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
+            //y_colors: false,
+            y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            // seed: null,
+        });
+        var element = pattern.canvas();
+        element.style.position = 'fixed';
+        element.style.top = 0;
+        element.style.left = 0;
+        element.style.bottom = 0;
+        element.style.right = 0;
+        element.style.zIndex = -1;
+        document.body.appendChild(element);
+        //document.body.style.background="url(" + pattern.png() + ")";
+    }, 1);
 </script>
