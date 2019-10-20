@@ -21,7 +21,7 @@ jobs:
         REPO: self
         BRANCH: master
         FOLDER: output
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RSGBOT_GITHUB_TOKEN }}
 
   netlify:
     runs-on: ubuntu-latest
@@ -38,4 +38,4 @@ jobs:
         REPO: self
         BRANCH: docs
         FOLDER: output
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.RSGBOT_GITHUB_TOKEN }}
