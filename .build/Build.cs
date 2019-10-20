@@ -133,14 +133,13 @@ partial class Build : NukeBuild
                     return (path, repo);
                 });
 
-            var solutions = clonedRepos.SelectMany((x =>
-            {
-                var (path, repo) = x;
-
-                return Directory.EnumerateFiles(path, "*.sln")
-                    .ToObservable()
-                    .Select(solutionFilePath => (path, repo, solutionFilePath));
-            }));
+            var solutions = clonedRepos
+                .Select(x =>
+                    Directory.EnumerateFiles(path, "*.sln")
+                        .ToObservable()
+                        .Select(solutionFilePath => (x.path, x.repo, solutionFilePath));
+                )
+                .Merge();
 
             var projects = solutions
                 .Select(x =>
@@ -153,8 +152,6 @@ partial class Build : NukeBuild
                     var (path, repo, solutionFilePath, analyzerManager) = x;
                     return analyzerManager.Projects
                         .Where(z => z.Key.Contains("/src/") || z.Key.Contains(@"\src\"))
-
-                        //.Where(x => x.Key.Contains("Essentials"))
                         .Select(project =>
                         {
                             return (path, repo, solutionFilePath, analyzerManager, projectFilePath: project.Key, project: project.Value, projectBuild: project.Value.Build().First());

@@ -6,7 +6,7 @@ on:
       - dev
 
 jobs:
-  build:
+  gh-pages:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v1
@@ -22,6 +22,12 @@ jobs:
         BRANCH: master
         FOLDER: output
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  netlify:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+    - run: chmod 755 build.sh
     - name: Build
       run: ./build.sh --deploy-to-branch docs
       env:
