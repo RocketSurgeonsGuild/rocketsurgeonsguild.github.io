@@ -1,0 +1,29 @@
+<link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Rocket Surgeons Guild">
+<meta name="application-name" content="Rocket Surgeons Guild">
+<meta name="msapplication-TileColor" content="#e4b931">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+  var pattern = Trianglify({
+    cell_size: 40,
+    variance: 1,
+    x_colors: ['#E4B931', '#FFFFFF', '#053247', '#FFFFFF', '#E4B931'],
+    //y_colors: false,
+    y_colors: 'match_x',
+    palette: Trianglify.colorbrewer,
+    color_space: 'lab',
+    color_function: false,
+    stroke_width: 1.51,
+    width: document.body.clientWidth,
+    height: document.body.clientHeight,
+    // seed: null,
+  });
+
+document.body.style.background="url(" + pattern.png() + ")";
+</script>

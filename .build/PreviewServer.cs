@@ -18,7 +18,7 @@ using Wyam.Common.Util;
 
 internal static class PreviewServer
 {
-    public static void Preview(Engine engine, NukeBuild build)
+    public static void Preview(Func<Engine> engineFunc, NukeBuild build)
     {
         var _messageEvent = new AutoResetEvent(false);
         var _changedFiles = new ConcurrentQueue<string>();
@@ -26,6 +26,7 @@ internal static class PreviewServer
         // Start the preview server
         DirectoryPath previewPath = (NukeBuild.RootDirectory / "output").ToString();
 
+        var engine = engineFunc();
         engine.Execute();
         var previewServer = PreviewServer.Start(previewPath, 5080, true, null, true, new Dictionary<string, string>());
 
@@ -92,6 +93,7 @@ internal static class PreviewServer
             if (changedFiles.Count > 0)
             {
                 Trace.Information("{0} files have changed, re-executing", changedFiles.Count);
+                engine = engineFunc();
                 engine.Execute();
                 previewServer?.TriggerReloadAsync().GetAwaiter().GetResult();
             }

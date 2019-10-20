@@ -18,6 +18,7 @@ using static Nuke.Common.IO.PathConstruction;
 using Nuke.Common.Tools.DotNet;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using Nuke.Common.Tooling;
+using Wyam.Common.Meta;
 
 [UnsetVisualStudioEnvironmentVariables]
 partial class Build : NukeBuild
@@ -97,9 +98,13 @@ partial class Build : NukeBuild
         {
             Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
             Wyam.Common.Tracing.Trace.Level = SourceLevels.All;
-            var engine = new Engine();
-            new WyamConfiguration(engine, this);
-            PreviewServer.Preview(engine, this);
+            PreviewServer.Preview(() =>
+            {
+                var engine = new Engine();
+                engine.Settings[Keys.CleanOutputPath] = false;
+                new WyamConfiguration(engine, this);
+                return engine;
+            }, this);
         });
 
     [Parameter("Github Token - To use when syncing packages")]

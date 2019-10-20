@@ -34,6 +34,7 @@ class WyamConfiguration : ConfigurationEngineBase
         var assemblyFiles = build.PackageSpecs
             .SelectMany(x => x.Assemblies)
             .SelectMany(x => GlobFiles(NukeBuild.TemporaryDirectory / "_packages", x.TrimStart('/', '\\')))
+            .Where(x => !x.Contains("Mocks"))
             .Distinct()
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
         // Logger.Info(string.Join(", ", assemblyFiles));
@@ -45,8 +46,10 @@ class WyamConfiguration : ConfigurationEngineBase
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
         Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
         Settings[Keys.LinksUseHttps] = true;
+        Settings[DocsKeys.Logo] = "/assets/img/logo.png";
         // Settings[DocsKeys.SourceFiles] = GetRelativePath(NukeBuild.RootDirectory / "input", NukeBuild.TemporaryDirectory).TrimEnd('/') + "/*/src/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
         Settings[DocsKeys.IncludeDateInPostPath] = true;
+        Settings[DocsKeys.IncludeGlobalNamespace] = false;
         Settings[DocsKeys.BaseEditUrl] = "https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/";
 
         Pipelines.InsertBefore(Docs.Code, "Package",
