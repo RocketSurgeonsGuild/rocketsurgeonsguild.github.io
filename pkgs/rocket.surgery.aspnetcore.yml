@@ -1,7 +1,10 @@
 Name: Rocket.Surgery.AspNetCore
 NuGet: Rocket.Surgery.AspNetCore
-Assemblies: /**/Rocket.Surgery.AspNetCore.dll
+Assemblies:
+- /**/Rocket.Surgery.AspNetCore.dll
 Repository: https://github.com/RocketSurgeonsGuild/AspNetCore.Extensions
+GitName: AspNetCore.Extensions
+GitUrl: https://github.com/RocketSurgeonsGuild/AspNetCore.Extensions.git
 Author: David Driscoll,Rocket Surgeons Guild contributors
 Description: Provides feature folders via convention to a Rocket Surgery Web Application
 Categories:

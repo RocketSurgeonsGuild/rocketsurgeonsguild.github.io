@@ -1,7 +1,10 @@
 Name: Rocket.Surgery.Domain
 NuGet: Rocket.Surgery.Domain
-Assemblies: /**/Rocket.Surgery.Domain.dll
+Assemblies:
+- /**/Rocket.Surgery.Domain.dll
 Repository: https://github.com/RocketSurgeonsGuild/Domain
+GitName: Domain
+GitUrl: https://github.com/RocketSurgeonsGuild/Domain.git
 Author: David Driscoll,Rocket Surgeons Guild contributors
 Description: Package Description
 Categories:

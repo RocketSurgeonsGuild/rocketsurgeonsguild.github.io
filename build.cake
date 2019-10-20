@@ -1,10 +1,10 @@
 #tool "nuget:https://api.nuget.org/v3/index.json?package=KuduSync.NET&version=1.5.2"
-#tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&version=2.2.5 "
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&version=2.2.5 "
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git&version=0.16.1"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu&version=0.5.0"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml&version=2.0.0"
-#addin "nuget:https://api.nuget.org/v3/index.json?package=YamlDotNet&version=4.2.1"
+#tool "nuget:https://api.nuget.org/v3/index.json?package=Wyam&version=2.2.9"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Wyam&version=2.2.9"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Git&version=0.21.0"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Kudu&version=0.10.1"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=Cake.Yaml&version=3.1.1"
+#addin "nuget:https://api.nuget.org/v3/index.json?package=YamlDotNet&version=7.0.0"
 
 
 //////////////////////////////////////////////////////////////////////
@@ -24,7 +24,7 @@ var deployBranch        = "master";
 
 // Define directories.
 var releaseDir          = Directory("./release");
-var sourceDir           = releaseDir + Directory("repo");
+var sourcesDir           = releaseDir + Directory("repos");
 var packageDir          = releaseDir + Directory("pkgs");
 var outputPath          = MakeAbsolute(Directory("./output"));
 var rootPublishFolder   = MakeAbsolute(Directory("publish"));
@@ -36,6 +36,8 @@ class PackageSpec
     public bool Prerelease { get; set; }
     public List<string> Assemblies { get; set; }
     public string Repository { get; set; }
+    public string GitName { get; set; }
+    public string GitUrl { get; set; }
     public string Author { get; set; }
     public string Description { get; set; }
     public List<string> Categories { get; set; }
@@ -65,9 +67,9 @@ Teardown(ctx =>
 Task("CleanSource")
     .Does(() =>
     {
-        if(DirectoryExists(sourceDir))
+        if(DirectoryExists(sourcesDir))
         {
-            DeleteDirectory(sourceDir, new DeleteDirectorySettings {
+            DeleteDirectory(sourcesDir, new DeleteDirectorySettings {
                 Recursive = true,
                 Force = true
             });
@@ -76,10 +78,17 @@ Task("CleanSource")
     });
 
 Task("GetSource")
-    .IsDependentOn("CleanSource")
+    // .IsDependentOn("CleanSource")
+    .IsDependentOn("GetPackageSpecs")
     .Does(() =>
     {
-        GitClone("https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io.git", sourceDir, new GitCloneSettings{ BranchName = "master" });
+        EnsureDirectoryExists(sourcesDir.Path);
+        foreach (var packageSpec in packageSpecs)
+        {
+            var repo = sourcesDir.Path.Combine( packageSpec.GitName);
+            if (DirectoryExists(repo)) continue;
+            GitClone(packageSpec.GitUrl, sourcesDir.Path.Combine( packageSpec.GitName), new GitCloneSettings{ BranchName = "master" });
+        }
     });
 
 Task("CleanNugetPackages")
@@ -103,21 +112,21 @@ Task("GetPackageSpecs")
 });
 
 Task("GetNugetPackages")
-    .IsDependentOn("CleanNugetPackages")
+    // .IsDependentOn("CleanNugetPackages")
     .IsDependentOn("GetPackageSpecs")
     .Does(() =>
     {
-        DirectoryPath   packagesPath        = MakeAbsolute(Directory("./output")).Combine("packages");
-        Parallel.ForEach(
-            packageSpecs.Where(x => !string.IsNullOrEmpty(x.NuGet)),
-            packageSpec => {
-                Information("Installing package package " + packageSpec.NuGet);
-                try {
+        DirectoryPath packagesPath = MakeAbsolute(Directory("./output")).Combine("packages");
+
+        foreach (var packageSpec in packageSpecs.Where(x => !string.IsNullOrEmpty(x.NuGet)))
+        {
+            Information("Installing package package " + packageSpec.NuGet);
+            try {
                 NuGetInstall(packageSpec.NuGet,
                     new NuGetInstallSettings
                     {
                         OutputDirectory = packageDir,
-                        Prerelease = true,
+                        // Prerelease = true,
                         Verbosity = NuGetVerbosity.Quiet,
                         Source = new [] { "https://www.myget.org/F/rocket-surgeons-guild/api/v3/index.json", "https://api.nuget.org/v3/index.json" },
                         NoCache = true,
@@ -128,10 +137,10 @@ Task("GetNugetPackages")
                                                         {"NUGET_EXE",  Context.Tools.Resolve("nuget.exe").FullPath }
                                                   }
                     });
-                } catch (Exception e) {
+            } catch (Exception e) {
 
-                }
-        });
+            }
+        }
     });
 
 Task("Build")
