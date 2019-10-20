@@ -127,18 +127,12 @@ partial class Build : NukeBuild
             var clonedRepos = repos
                 .Where(repo => !repo.Archived)
                 .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild)
-                .ToArray()
-                .SelectMany(r => r
-                    .ToObservable()
-                    .Select(repo => Observable.FromAsync(async ct =>
-                    {
-                        await Task.Yield();
-                        var path = TemporaryDirectory / repo.Name;
-                        Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
-                        return (path, repo);
-                    }))
-                    .Merge(4)
-                );
+                .Select(repo =>
+                {
+                    var path = TemporaryDirectory / repo.Name;
+                    Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
+                    return (path, repo);
+                });
 
             var solutions = clonedRepos
                 .SelectMany(x =>
