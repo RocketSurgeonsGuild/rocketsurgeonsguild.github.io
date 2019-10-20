@@ -39,7 +39,6 @@ partial class Build : NukeBuild
         .ToArray();
 
     Target Clean => _ => _
-        .Before(Restore)
         .Executes(() =>
         {
         });
@@ -116,7 +115,7 @@ partial class Build : NukeBuild
 
             var clonedRepos = repos
                 .Where(repo => !repo.Archived)
-                .Where(repo => !(IsLocalBuild && DirectoryExists(TemporaryDirectory / repo.Name)))
+                .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild)
                 .Select(repo =>
                 {
                     var path = TemporaryDirectory / repo.Name;
@@ -204,15 +203,13 @@ partial class Build : NukeBuild
                     Author = x.projectBuild.GetProperty("Authors") ?? "",
                     Description = description,
                     Categories = categories.Concat(new[] {
-            x.repo.Name.Replace(".Extensions", ""),
-            assemblyName.Replace(".Extensions", "").Replace(".Abstractions", "").Split('.').Last()
+                        x.repo.Name.Replace(".Extensions", "").Replace(".Abstractions", ""),
+                        assemblyName.Replace(".Extensions", "").Replace(".Abstractions", "").Split('.').Last()
                     }).Distinct().OrderBy(z => z)
                 });
 
+                EnsureExistingDirectory(RootDirectory / "packages");
                 File.WriteAllText(Path.Combine(RootDirectory / "packages", assemblyName.ToLower() + ".yml"), yaml);
-                Logger.Info(yaml);
-
-                //	new { assemblyTitle, assemblyName, authors, copyright, repositoryUrl, tags, targetFrameworks, description, projectUrl }.Dump();
             });
         });
 }
