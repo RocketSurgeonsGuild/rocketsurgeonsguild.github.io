@@ -2,17 +2,17 @@
 <rss xmlns:content="http://purl.org/rss/1.0/modules/content/" version="2.0">
 	<channel>
 		<title>Rocket Surgeons Guild</title>
-		<link>https://rocketsurgeonsguild.github.io//</link>
+		<link>https://rocketsurgeonsguild.com//</link>
 		<description />
 		<copyright>2019</copyright>
-		<pubDate>Sun, 20 Oct 2019 17:02:35 GMT</pubDate>
-		<lastBuildDate>Sun, 20 Oct 2019 17:02:35 GMT</lastBuildDate>
+		<pubDate>Sun, 20 Oct 2019 18:15:53 GMT</pubDate>
+		<lastBuildDate>Sun, 20 Oct 2019 18:15:53 GMT</lastBuildDate>
 		<item>
 			<title>New Release</title>
-			<link>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</link>
+			<link>https://rocketsurgeonsguild.com//blog/2016/01/new-release</link>
 			<description>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</description>
 			<author>me</author>
-			<guid>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</guid>
+			<guid>https://rocketsurgeonsguild.com//blog/2016/01/new-release</guid>
 			<pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
 			<content:encoded>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
 </content:encoded>
