@@ -16,6 +16,13 @@ jobs:
       uses: s0/git-publish-subdir-action@master
       env:
         REPO: self
-        BRANCH: gh-pages
+        BRANCH: github-pages
+        FOLDER: output
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@master
+      env:
+        REPO: self
+        BRANCH: docs
         FOLDER: output
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
