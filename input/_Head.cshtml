@@ -8,15 +8,16 @@
 <meta name="msapplication-TileColor" content="#e4b931">
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
+<link href="@Context.GetLink("/assets/css/custom.css")" rel="stylesheet" />
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
-    setTimeout(function() {
+    function tify() {
         var pattern = Trianglify({
             cell_size: 60,
             variance: 1,
             x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
             //y_colors: false,
-            y_colors: 'match_x',
+            y_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#FFFFFF'],
             palette: Trianglify.colorbrewer,
             color_space: 'lab',
             color_function: false,
@@ -34,5 +35,7 @@
         element.style.zIndex = -1;
         document.body.appendChild(element);
         //document.body.style.background="url(" + pattern.png() + ")";
-    }, 1);
+    };
+    window.addEventListener('resize', tify);
+    setTimeout(tify, 1);
 </script>

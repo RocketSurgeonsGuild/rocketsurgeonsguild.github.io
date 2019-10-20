@@ -37,17 +37,13 @@ class WyamConfiguration : ConfigurationEngineBase
             .Where(x => !x.Contains("Mocks"))
             .Distinct()
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
-        // Logger.Info(string.Join(", ", assemblyFiles));
 
         if (!NukeBuild.IsLocalBuild) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
-        // Settings[DocsKeys.SolutionFiles] = GlobFiles(NukeBuild.TemporaryDirectory, "**/*.sln")
-        //     .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
         Settings[Keys.Host] = "rocketsurgeonsguild.github.io/";
         Settings[Keys.LinksUseHttps] = true;
         Settings[DocsKeys.Logo] = "/assets/img/logo.png";
-        // Settings[DocsKeys.SourceFiles] = GetRelativePath(NukeBuild.RootDirectory / "input", NukeBuild.TemporaryDirectory).TrimEnd('/') + "/*/src/**/{!bin,!obj,!packages,!*.Tests,}/**/*.cs";
         Settings[DocsKeys.IncludeDateInPostPath] = true;
         Settings[DocsKeys.IncludeGlobalNamespace] = false;
         Settings[DocsKeys.BaseEditUrl] = "https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/";
@@ -68,7 +64,7 @@ class WyamConfiguration : ConfigurationEngineBase
 
         Pipelines.Add("RenderPackage",
             new Documents("PackageCategories"),
-            new Razor().WithLayout("/_PackageLayout.cshtml"),
+            new Razor().WithLayout("/Shared/_PackageLayout.cshtml"),
             new WriteFiles()
         );
     }

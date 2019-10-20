@@ -1,0 +1,14 @@
+@{
+    var baseEditUrl = Context.String(DocsKeys.BaseEditUrl);
+    var editFilePath = Model.FilePath(Wyam.Web.WebKeys.EditFilePath);
+    if(!string.IsNullOrWhiteSpace(baseEditUrl) && editFilePath != null)
+    {
+        if (baseEditUrl[baseEditUrl.Length - 1] != '/')
+        {
+            baseEditUrl += "/";
+        }
+        var editUrl = baseEditUrl + editFilePath.FullPath;
+        <div><h3><a href="@editUrl" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
+    }
+    <div id="infobar-headings"></div>
+}
