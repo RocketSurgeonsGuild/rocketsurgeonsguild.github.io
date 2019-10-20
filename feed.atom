@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+	<id>https://rocketsurgeonsguild.github.io//</id>
+	<title>Rocket Surgeons Guild</title>
+	<link rel="self" href="https://rocketsurgeonsguild.github.io//" />
+	<rights>2019</rights>
+	<updated>2019-10-20T17:02:35Z</updated>
+	<entry>
+		<id>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</id>
+		<title>New Release</title>
+		<author>
+			<name>me</name>
+		</author>
+		<link href="https://rocketsurgeonsguild.github.io//blog/2016/01/new-release" />
+		<updated>2016-01-01T00:00:00Z</updated>
+		<content>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
+</content>
+		<summary>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</summary>
+	</entry>
+</feed>
