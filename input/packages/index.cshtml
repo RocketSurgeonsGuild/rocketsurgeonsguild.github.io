@@ -1,0 +1,11 @@
+Title: Packages
+NoSidebar: false
+---
+@section Infobar {
+}
+
+@section Sidebar {
+    @Html.Partial("Shared/_PackageSidebar")
+}
+
+@Html.Partial("Shared/_PackageList", Documents["Package"])

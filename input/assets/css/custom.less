@@ -1,0 +1,17 @@
+@import "./bootstrap/variables.less";
+@import "./bootstrap/mixins.less";
+@import "./adminlte/variables.less";
+@import "./adminlte/mixins.less";
+
+.sidebar-menu {
+  li.selected {
+    background-color: desaturate(lighten(@brand-primary, 50%), 50%);
+  }
+}
+
+.rocket-surgeon {
+    .make-xs-column(12);
+    .make-sm-column(6);
+    .make-md-column(4);
+    .make-lg-column(4);
+}
