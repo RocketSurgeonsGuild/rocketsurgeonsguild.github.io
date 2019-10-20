@@ -4,6 +4,7 @@ using Nuke.Common.Execution;
 using Nuke.Common.Utilities.Collections;
 using Wyam.Core.Execution;
 using System.Diagnostics;
+using System.Threading.Tasks;
 using Octokit.Reactive;
 using Octokit;
 using System.Reactive.Linq;
@@ -19,6 +20,9 @@ using Nuke.Common.Tools.DotNet;
 using static Nuke.Common.Tools.DotNet.DotNetTasks;
 using Nuke.Common.Tooling;
 using Wyam.Common.Meta;
+using Nuke.Common.Git;
+using Nuke.Common.Tools.Git;
+using static Nuke.Common.Tools.Git.GitTasks;
 
 [UnsetVisualStudioEnvironmentVariables]
 partial class Build : NukeBuild
@@ -123,30 +127,28 @@ partial class Build : NukeBuild
             var clonedRepos = repos
                 .Where(repo => !repo.Archived)
                 .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild)
-                .Select(repo =>
-                {
-                    var path = TemporaryDirectory / repo.Name;
-                    Process.Start(new ProcessStartInfo("git", $"clone --depth 1 --single-branch {repo.CloneUrl} {path }")
+                .ToArray()
+                .SelectMany(r => r
+                    .ToObservable()
+                    .Select(repo => Observable.FromAsync(async ct =>
                     {
-                        CreateNoWindow = true
-                    }).WaitForExit();
-                    return (path, repo);
-                });
+                        await Task.Yield();
+                        var path = TemporaryDirectory / repo.Name;
+                        Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
+                        return (path, repo);
+                    }))
+                    .Merge(4)
+                );
 
             var solutions = clonedRepos
-                .Select(x =>
-                    Directory.EnumerateFiles(path, "*.sln")
+                .SelectMany(x =>
+                    Directory.EnumerateFiles(x.path, "*.sln")
                         .ToObservable()
-                        .Select(solutionFilePath => (x.path, x.repo, solutionFilePath));
-                )
-                .Merge();
+                        .Select(solutionFilePath => (x.path, x.repo, solutionFilePath))
+                );
 
             var projects = solutions
-                .Select(x =>
-                {
-                    var analyzerManager = new AnalyzerManager(x.solutionFilePath);
-                    return (x.path, x.repo, x.solutionFilePath, analyzerManager);
-                })
+                .Select(x => (x.path, x.repo, x.solutionFilePath, new AnalyzerManager(x.solutionFilePath)))
                 .SelectMany(x =>
                 {
                     var (path, repo, solutionFilePath, analyzerManager) = x;
@@ -161,7 +163,7 @@ partial class Build : NukeBuild
                 .Distinct(x => x.projectFilePath);
 
             await projects
-            .SubscribeOn(NewThreadScheduler.Default)
+            .SubscribeOn(TaskPoolScheduler.Default)
             .ForEachAsync(x =>
             {
                 var assemblyTitle = x.projectBuild.GetProperty("AssemblyTitle");

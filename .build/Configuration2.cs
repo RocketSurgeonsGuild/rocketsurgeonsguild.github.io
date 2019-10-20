@@ -38,7 +38,7 @@ class WyamConfiguration : ConfigurationEngineBase
             .Distinct()
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
-        if (!NukeBuild.IsLocalBuild) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
+        if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any()) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
         Settings[Keys.Host] = "rocketsurgeonsguild.com/";
