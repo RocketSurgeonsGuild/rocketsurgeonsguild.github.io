@@ -1,6 +1,6 @@
-Title: New Release
-Published: 1/1/2016
-Category: Release
-Author: me
+Title: Test
+Published: 10/20/2019
+Category: Test
+Author: David Driscoll
 ---
-There is a new release out, go get it now.
+This is a test... just only a test
