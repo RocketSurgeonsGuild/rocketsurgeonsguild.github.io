@@ -109,20 +109,6 @@ class WyamConfiguration : ConfigurationEngineBase
             new OrderBy((ctx, _) => ctx.String("ConventionName"))
         );
 
-        // Pipelines.Add("RenderConventions",
-        //     new Documents("Conventions"),
-        //     new Meta(Keys.WritePath, (doc, _) => new FilePath("conventions/" + doc.String("ConventionName") + "/index.html")),
-        //     new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
-        //     new GenerateJson((doc, _) => new
-        //     {
-        //         QualifiedName = doc.String(CodeAnalysisKeys.QualifiedName),
-        //         Keys = doc.Keys,
-        //         SpecificKind = doc.Get(CodeAnalysisKeys.SpecificKind),
-        //         Kind = doc.Get(CodeAnalysisKeys.Kind),
-        //     }),
-        //     new WriteFiles()
-        // );
-
         Pipelines.Add("RenderConventions",
             new Documents("Conventions"),
             new Razor().WithLayout("/Shared/_ConventonsLayout.cshtml"),
@@ -130,33 +116,6 @@ class WyamConfiguration : ConfigurationEngineBase
             new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
             new WriteFiles()
         );
-
-        // Pipelines.InsertAfter(Docs.Api, "Conventions",
-        //     new GroupByMany((doc, _) => doc.DocumentList(CodeAnalysisKeys.ImplementingTypes)
-        //         // .Where(attr => attr.String(CodeAnalysisKeys.Name) == "CakeAliasCategoryAttribute")
-        //         .Select(attr => {
-        //             var a = attr.Get<Microsoft.CodeAnalysis.INamedTypeSymbol>(CodeAnalysisKeys.ImplementingTypes).Name;
-        //             return a;
-        //         })
-        //         .Distinct(),
-        //         new Documents(Docs.Api),
-        //         new Where((doc, _) => doc.String(CodeAnalysisKeys.Kind) == "NamedType"
-        //             && doc.DocumentList(CodeAnalysisKeys.Attributes)
-        //                 .Any(attr => attr.String(CodeAnalysisKeys.Name) == "CakeAliasCategoryAttribute")
-        //         )
-        //     ),
-        //     new Meta(Keys.WritePath, (doc, _) => new FilePath("dsl/" + doc.String(Keys.GroupKey)?.ToLower().Replace(" ", "-") + "/index.html")),
-        //     new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
-        //     new OrderBy((doc, _) => doc.String(Keys.GroupKey))
-        // );
-
-        // Pipelines.Add("RenderConventions",
-        //     new Documents("Conventions"),
-        //     new Razor().WithLayout("/Shared/_ConventonsLayout.cshtml"),
-        //     new Headings(),
-        //     new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
-        //     new WriteFiles()
-        // );
     }
 }
 
