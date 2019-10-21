@@ -77,19 +77,19 @@ partial class Build : NukeBuild
                 }
             }
 
-            try
-            {
-                DotNetRestore(x => x
-                    .EnableNoDependencies()
-                    .SetPackageDirectory(packagesDirectory)
-                    .SetWorkingDirectory(projectDirectory)
-                );
-            }
-            catch { }
+            // try
+            // {
+            //     DotNetRestore(x => x
+            //         .EnableNoDependencies()
+            //         .SetPackageDirectory(packagesDirectory)
+            //         .SetWorkingDirectory(projectDirectory)
+            //     );
+            // }
+            // catch { }
         });
 
     Target Compile => _ => _
-        .DependsOn(Restore)
+        // .DependsOn(Restore)
         .Executes(() =>
         {
             Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());

@@ -17,6 +17,14 @@ using Wyam.Html;
 using Wyam.Web;
 using Wyam.Feeds;
 using Wyam.CodeAnalysis;
+using Wyam.Common.Modules;
+using Wyam.Json;
+using Microsoft.CodeAnalysis;
+using System;
+using Wyam.Common.Documents;
+using System.Collections.Generic;
+using Wyam.Common.Configuration;
+using Humanizer;
 
 class WyamConfiguration : ConfigurationEngineBase
 {
@@ -38,7 +46,10 @@ class WyamConfiguration : ConfigurationEngineBase
             .Distinct()
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
-        if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any()) Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
+        // if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any())
+        {
+            Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
+        }
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
         Settings[Keys.Host] = "rocketsurgeonsguild.com/";
@@ -75,5 +86,91 @@ class WyamConfiguration : ConfigurationEngineBase
             new Razor().WithLayout("/Shared/_PackageLayout.cshtml"),
             new WriteFiles()
         );
+
+        Pipelines.InsertAfter(Docs.Api, "Conventions",
+            new Documents(Docs.Api)
+                .Where((doc, _) => doc.String(CodeAnalysisKeys.QualifiedName) == "Rocket.Surgery.Conventions.IConvention"),
+            new SelectMany(doc => doc
+                .DocumentList(CodeAnalysisKeys.ImplementingTypes)
+                .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Interface")
+                .Where(x => !x.String(CodeAnalysisKeys.QualifiedName).StartsWith("Rocket.Surgery.Conventions"))
+            ),
+            new Meta("Children", (doc, _) =>
+                doc
+                    .DocumentList(CodeAnalysisKeys.ImplementingTypes)
+                    .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Class")
+                    .OrderBy(x => x.String(CodeAnalysisKeys.Name))
+            ),
+            new Meta("ConventionName", (doc, _) =>
+                doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").TrimStart('I').Titleize()
+            ),
+            new Meta(Keys.WritePath, (doc, _) => new FilePath("conventions/" + doc.String("ConventionName").Camelize() + "/index.html")),
+            new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
+            new OrderBy((ctx, _) => ctx.String("ConventionName"))
+        );
+
+        // Pipelines.Add("RenderConventions",
+        //     new Documents("Conventions"),
+        //     new Meta(Keys.WritePath, (doc, _) => new FilePath("conventions/" + doc.String("ConventionName") + "/index.html")),
+        //     new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
+        //     new GenerateJson((doc, _) => new
+        //     {
+        //         QualifiedName = doc.String(CodeAnalysisKeys.QualifiedName),
+        //         Keys = doc.Keys,
+        //         SpecificKind = doc.Get(CodeAnalysisKeys.SpecificKind),
+        //         Kind = doc.Get(CodeAnalysisKeys.Kind),
+        //     }),
+        //     new WriteFiles()
+        // );
+
+        Pipelines.Add("RenderConventions",
+            new Documents("Conventions"),
+            new Razor().WithLayout("/Shared/_ConventonsLayout.cshtml"),
+            new Headings(),
+            new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
+            new WriteFiles()
+        );
+
+        // Pipelines.InsertAfter(Docs.Api, "Conventions",
+        //     new GroupByMany((doc, _) => doc.DocumentList(CodeAnalysisKeys.ImplementingTypes)
+        //         // .Where(attr => attr.String(CodeAnalysisKeys.Name) == "CakeAliasCategoryAttribute")
+        //         .Select(attr => {
+        //             var a = attr.Get<Microsoft.CodeAnalysis.INamedTypeSymbol>(CodeAnalysisKeys.ImplementingTypes).Name;
+        //             return a;
+        //         })
+        //         .Distinct(),
+        //         new Documents(Docs.Api),
+        //         new Where((doc, _) => doc.String(CodeAnalysisKeys.Kind) == "NamedType"
+        //             && doc.DocumentList(CodeAnalysisKeys.Attributes)
+        //                 .Any(attr => attr.String(CodeAnalysisKeys.Name) == "CakeAliasCategoryAttribute")
+        //         )
+        //     ),
+        //     new Meta(Keys.WritePath, (doc, _) => new FilePath("dsl/" + doc.String(Keys.GroupKey)?.ToLower().Replace(" ", "-") + "/index.html")),
+        //     new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
+        //     new OrderBy((doc, _) => doc.String(Keys.GroupKey))
+        // );
+
+        // Pipelines.Add("RenderConventions",
+        //     new Documents("Conventions"),
+        //     new Razor().WithLayout("/Shared/_ConventonsLayout.cshtml"),
+        //     new Headings(),
+        //     new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
+        //     new WriteFiles()
+        // );
+    }
+}
+
+class SelectMany : IModule
+{
+    private readonly Func<IDocument, IEnumerable<IDocument>> _config;
+
+    public SelectMany(Func<IDocument, IEnumerable<IDocument>> config)
+    {
+        _config = config;
+    }
+
+    public IEnumerable<IDocument> Execute(IReadOnlyList<IDocument> inputs, IExecutionContext context)
+    {
+        return inputs.SelectMany(_config);
     }
 }

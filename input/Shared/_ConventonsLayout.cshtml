@@ -1,0 +1,45 @@
+@{
+	Layout = "/_Master.cshtml";
+
+	ViewData[Keys.Title] = "Convention - " + @Model.String("ConventionName");
+}
+
+@section Infobar {
+	<div id="infobar-headings"></div>
+}
+
+@section Sidebar {
+    @Html.Partial("Shared/_ConventionsSidebar")
+}
+
+<section class="content-header">
+	<h1>@Model.String("ConventionName") Conventions</h1>
+</section>
+<section class="content">
+    @{
+        string summary = Model.String(CodeAnalysisKeys.Summary);
+    }
+    @if(!string.IsNullOrWhiteSpace(summary))
+    {
+        <h1 id="Summary">Summary</h1>
+        <div>@Html.Raw(summary)</div>
+    }
+
+    @foreach (var convention in Model.DocumentList("Children"))
+    {
+        string description = convention.String(CodeAnalysisKeys.Summary);
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h3 class="panel-title"><a href="@Context.GetLink(convention)">@convention.String(CodeAnalysisKeys.Name).Replace("Convention", "")</a></h3>
+            </div>
+            <div class="panel-body">
+                @if(!string.IsNullOrEmpty(description))
+                {
+                    <p>@Html.Raw(description)</p>
+                }
+            </div>
+        </div>
+    }
+
+    @RenderBody()
+</section>

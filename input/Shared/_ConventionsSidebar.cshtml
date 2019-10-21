@@ -1,0 +1,6 @@
+<li class="header">Conventions</li>
+@foreach(var convention in Documents.FromPipeline("Conventions"))
+{
+    string selectedClass = convention.String("ConventionName") == @Model.String("ConventionName") ? "selected" : null;
+    <li class="@selectedClass"><a href="@Context.GetLink(convention)">@convention.String("ConventionName")</a></li>
+}

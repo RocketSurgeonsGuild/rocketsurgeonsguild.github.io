@@ -1,0 +1,20 @@
+@model IEnumerable<IDocument>
+
+<p>This page contain information about the Package provided by the Rocket Surgerons Guild.</p>
+
+@foreach(IDocument convention in Model)
+{
+    string description = convention.String(CodeAnalysisKeys.Summary);
+
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><a href="@Context.GetLink(convention)">@convention.String("ConventionName").Replace("Convention", "")</a></h3>
+        </div>
+        <div class="panel-body">
+            @if(!string.IsNullOrEmpty(description))
+            {
+                <p>@Html.Raw(description)</p>
+            }
+        </div>
+    </div>
+}

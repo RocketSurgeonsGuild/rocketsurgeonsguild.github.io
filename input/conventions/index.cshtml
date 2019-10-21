@@ -1,6 +1,11 @@
 Title: Conventions
 NoSidebar: false
 ---
+@section Infobar {
+}
 
-... TODO ...
-<!-- List out conventions from all assemblies, and their options -->
+@section Sidebar {
+    @Html.Partial("Shared/_ConventionsSidebar")
+}
+
+@Html.Partial("Shared/_ConventionsList", Documents["Conventions"])
