@@ -5,16 +5,16 @@
 		<link>https://rocketsurgeonsguild.github.io//</link>
 		<description />
 		<copyright>2019</copyright>
-		<pubDate>Mon, 21 Oct 2019 03:28:32 GMT</pubDate>
-		<lastBuildDate>Mon, 21 Oct 2019 03:28:32 GMT</lastBuildDate>
+		<pubDate>Mon, 21 Oct 2019 03:31:16 GMT</pubDate>
+		<lastBuildDate>Mon, 21 Oct 2019 03:31:16 GMT</lastBuildDate>
 		<item>
-			<title>New Release</title>
-			<link>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</link>
-			<description>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</description>
-			<author>me</author>
-			<guid>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</guid>
-			<pubDate>Fri, 01 Jan 2016 00:00:00 GMT</pubDate>
-			<content:encoded>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
+			<title>Test</title>
+			<link>https://rocketsurgeonsguild.github.io//blog/2019/10/new-release</link>
+			<description>&lt;p&gt;This is a test... just only a test&lt;/p&gt;</description>
+			<author>David Driscoll</author>
+			<guid>https://rocketsurgeonsguild.github.io//blog/2019/10/new-release</guid>
+			<pubDate>Sun, 20 Oct 2019 00:00:00 GMT</pubDate>
+			<content:encoded>&lt;p&gt;This is a test... just only a test&lt;/p&gt;
 </content:encoded>
 		</item>
 	</channel>

@@ -4,17 +4,17 @@
 	<title>Rocket Surgeons Guild</title>
 	<link rel="self" href="https://rocketsurgeonsguild.github.io//" />
 	<rights>2019</rights>
-	<updated>2019-10-21T03:28:32Z</updated>
+	<updated>2019-10-21T03:31:16Z</updated>
 	<entry>
-		<id>https://rocketsurgeonsguild.github.io//blog/2016/01/new-release</id>
-		<title>New Release</title>
+		<id>https://rocketsurgeonsguild.github.io//blog/2019/10/new-release</id>
+		<title>Test</title>
 		<author>
-			<name>me</name>
+			<name>David Driscoll</name>
 		</author>
-		<link href="https://rocketsurgeonsguild.github.io//blog/2016/01/new-release" />
-		<updated>2016-01-01T00:00:00Z</updated>
-		<content>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;
+		<link href="https://rocketsurgeonsguild.github.io//blog/2019/10/new-release" />
+		<updated>2019-10-20T00:00:00Z</updated>
+		<content>&lt;p&gt;This is a test... just only a test&lt;/p&gt;
 </content>
-		<summary>&lt;p&gt;There is a new release out, go get it now.&lt;/p&gt;</summary>
+		<summary>&lt;p&gt;This is a test... just only a test&lt;/p&gt;</summary>
 	</entry>
 </feed>
