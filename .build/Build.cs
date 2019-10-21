@@ -89,7 +89,7 @@ partial class Build : NukeBuild
         });
 
     Target Compile => _ => _
-        // .DependsOn(Restore)
+        .DependsOn(Restore)
         .Executes(() =>
         {
             Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
