@@ -46,7 +46,7 @@ class WyamConfiguration : ConfigurationEngineBase
             .Distinct()
             .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
-        // if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any())
+        if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any())
         {
             Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
         }

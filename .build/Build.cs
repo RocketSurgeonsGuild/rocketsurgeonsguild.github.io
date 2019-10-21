@@ -77,15 +77,15 @@ partial class Build : NukeBuild
                 }
             }
 
-            // try
-            // {
-            //     DotNetRestore(x => x
-            //         .EnableNoDependencies()
-            //         .SetPackageDirectory(packagesDirectory)
-            //         .SetWorkingDirectory(projectDirectory)
-            //     );
-            // }
-            // catch { }
+            try
+            {
+                DotNetRestore(x => x
+                    .EnableNoDependencies()
+                    .SetPackageDirectory(packagesDirectory)
+                    .SetWorkingDirectory(projectDirectory)
+                );
+            }
+            catch { }
         });
 
     Target Compile => _ => _
