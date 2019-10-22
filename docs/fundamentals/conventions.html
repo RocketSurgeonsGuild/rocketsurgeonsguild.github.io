@@ -1,21 +1,19 @@
-﻿<!DOCTYPE html>
-<html>
-    <head>
+﻿<!DOCTYPE html><html><head>
         <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=Edge" />
-        <meta name="description" />
-        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML" />
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <title>Rocket Surgeons Guild - Conventions</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
-        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
-        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
-        <link href="/assets/css/theme/theme.css" rel="stylesheet" />
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
         <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
         <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-        <link href="/assets/css/override.css" rel="stylesheet" />
+        <link href="/assets/css/override.css" rel="stylesheet">
         <script src="/assets/js/jquery-2.2.3.min.js"></script>
         <script src="/assets/js/bootstrap.min.js"></script>        
         <script src="/assets/js/app.min.js"></script>         
@@ -39,7 +37,7 @@
 <meta name="msapplication-TileColor" content="#e4b931">
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
-<link href="/assets/css/custom.css" rel="stylesheet" />
+<link href="/assets/css/custom.css" rel="stylesheet">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
     function tify() {
@@ -123,7 +121,9 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     
         <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/conventions.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
-    <div id="infobar-headings"></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#what-is-a-convention">What is a convention?</a></p>
+<hr class="infobar-hidden">
+</div>
 
                 </section>
                 <section class="sidebar">    
@@ -148,6 +148,7 @@
                     <ul class="treeview-menu">
                         
                 <li class="selected"><a href="/docs/fundamentals/conventions">Conventions</a></li>
+                <li><a href="/docs/fundamentals/package-reference-versions">Package Reference Versions</a></li>
 
                     </ul>
                 </li>
@@ -168,7 +169,18 @@
 			<h1>Conventions</h1>
 		</section>
 	<section class="content">
-		<h2 id="todo">TODO</h2>
+		<ul>
+<li><a href="#what-is-a-convention">What is a convention?</a></li>
+</ul>
+<p>When ASP.NET Core was released we gained the ability for more fine grained control how our applications are configured and setup.  This allows us the ability to control how our applications work, but with that comes the responsibility to ensure that we configure everything properly. This can cause the configuration code to quickly turn into a mess if you're not careful.</p>
+<ul>
+<li>What if you need to configure a different database for development vs production?</li>
+<li>What assemblies do you need to load to capture all your controllers?</li>
+</ul>
+<p>Now please keep in mind we here at the Rocket Surgeons Guild completely understand that <em>all of what we provide</em> can be done purely with extension methods, custom code and so on.  What we offer with conventions is the ability to make your life just a little bit easier, so you can forget about the glue code and just worry about working on your awesome application.</p>
+<h1 id="what-is-a-convention">What is a convention?</h1>
+<p>A convention is something very similar to something like an <a href="https://autofaccn.readthedocs.io/en/latest/configuration/modules.html">Autofac Module</a> or <a href="https://docs.microsoft.com/en-us/aspnet/aspnet/overview/owin-and-katana/owin-startup-class-detection">Owin Startup Attribute</a>.  In essence it is just a a piece of code that will run a given time.  However we try and make it easier to bring your configuration with you using the new <a href="https://github.com/aspnet/Extensions"><code>Microsoft.Extensions</code> libraries provided by Microsoft</a>.</p>
+<p>These conventions will be run during specific life cycle events of application startup.  For example we have conventions for <a href="/conventions/service/">Dependency Injection</a>, <a href="/conventions/configuration/">Configuration</a> and even <a href="/conventions/commandLine/">Command Line</a>.</p>
 
 	</section>
                 
@@ -278,5 +290,5 @@
                 }, 500);
             });
         </script>
-    </body>
-</html>
+    
+</body></html>
