@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Hosting
 NuGet: Rocket.Surgery.Hosting
 Assemblies:
-- /**/Rocket.Surgery.Hosting.dll
+- /rocket.surgery.hosting/**/Rocket.Surgery.Hosting.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.Unions
 NuGet: Rocket.Surgery.Extensions.Unions
 Assemblies:
-- /**/Rocket.Surgery.Extensions.Unions.dll
+- /rocket.surgery.extensions.unions/**/Rocket.Surgery.Extensions.Unions.dll
 Repository: https://github.com/RocketSurgeonsGuild/Extensions
 GitName: Extensions
 GitUrl: https://github.com/RocketSurgeonsGuild/Extensions.git

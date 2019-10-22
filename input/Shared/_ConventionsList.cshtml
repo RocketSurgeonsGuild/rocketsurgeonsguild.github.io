@@ -4,11 +4,13 @@
 
 @foreach(IDocument convention in Model)
 {
-    string description = convention.String(CodeAnalysisKeys.Summary);
+    var description = convention.String(CodeAnalysisKeys.Summary);
+    var context = convention.Document("Context");
 
     <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><a href="@Context.GetLink(convention)">@convention.String("ConventionName").Replace("Convention", "")</a></h3>
+            <h4><a href="@Context.GetLink(context)">@context.String("Name").Replace("Convention", "")</a></h4>
         </div>
         <div class="panel-body">
             @if(!string.IsNullOrEmpty(description))

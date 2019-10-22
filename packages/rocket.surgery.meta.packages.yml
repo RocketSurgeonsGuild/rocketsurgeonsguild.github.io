@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Meta.Packages
 NuGet: Rocket.Surgery.Meta.Packages
 Assemblies:
-- /**/Rocket.Surgery.Meta.Packages.dll
+- /rocket.surgery.meta.packages/**/Rocket.Surgery.Meta.Packages.dll
 Repository: https://github.com/RocketSurgeonsGuild/Meta
 GitName: Meta
 GitUrl: https://github.com/RocketSurgeonsGuild/Meta.git

@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.Testing.Coverlet
 NuGet: Rocket.Surgery.Extensions.Testing.Coverlet
 Assemblies:
-- /**/Rocket.Surgery.Extensions.Testing.Coverlet.dll
+- /rocket.surgery.extensions.testing.coverlet/**/Rocket.Surgery.Extensions.Testing.Coverlet.dll
 Repository: https://github.com/RocketSurgeonsGuild/Testing
 GitName: Testing
 GitUrl: https://github.com/RocketSurgeonsGuild/Testing.git

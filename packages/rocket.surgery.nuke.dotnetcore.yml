@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Nuke.DotNetCore
 NuGet: Rocket.Surgery.Nuke.DotNetCore
 Assemblies:
-- /**/Rocket.Surgery.Nuke.DotNetCore.dll
+- /rocket.surgery.nuke.dotnetcore/**/Rocket.Surgery.Nuke.DotNetCore.dll
 Repository: https://github.com/RocketSurgeonsGuild/Nuke
 GitName: Nuke
 GitUrl: https://github.com/RocketSurgeonsGuild/Nuke.git

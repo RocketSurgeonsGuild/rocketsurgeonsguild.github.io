@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.CommandLine.Abstractions
 NuGet: Rocket.Surgery.Extensions.CommandLine.Abstractions
 Assemblies:
-- /**/Rocket.Surgery.Extensions.CommandLine.Abstractions.dll
+- /rocket.surgery.extensions.commandline.abstractions/**/Rocket.Surgery.Extensions.CommandLine.Abstractions.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

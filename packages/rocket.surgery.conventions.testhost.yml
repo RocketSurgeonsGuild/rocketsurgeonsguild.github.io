@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Conventions.TestHost
 NuGet: Rocket.Surgery.Conventions.TestHost
 Assemblies:
-- /**/Rocket.Surgery.Conventions.TestHost.dll
+- /rocket.surgery.conventions.testhost/**/Rocket.Surgery.Conventions.TestHost.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

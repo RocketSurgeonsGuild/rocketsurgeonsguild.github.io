@@ -34,21 +34,33 @@ class WyamConfiguration : ConfigurationEngineBase
         configurator.Recipe = new Wyam.Docs.Docs();
         configurator.Theme = "Samson";
         configurator.Configure("");
+
+        engine.ApplicationInput = NukeBuild.RootDirectory / "input";
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(HtmlKeys).Assembly);
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(WebKeys).Assembly);
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(FeedKeys).Assembly);
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(CodeAnalysisKeys).Assembly);
 
         var assemblyFiles = build.PackageSpecs
-            .SelectMany(x => x.Assemblies)
-            .SelectMany(x => GlobFiles(NukeBuild.TemporaryDirectory / "_packages", x.TrimStart('/', '\\')))
-            .Where(x => !x.Contains("Mocks"))
-            .Distinct()
-            .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
+                .SelectMany(x => x.Assemblies.Select(z => z.TrimStart('/', '\\')))
+                .SelectMany(x => GlobFiles(NukeBuild.TemporaryDirectory / "_packages", x))
+                .Where(x => !x.Contains("Mocks"))
+                .Distinct()
+                .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
-        if (!NukeBuild.IsLocalBuild || !GlobDirectories(NukeBuild.RootDirectory / "output/packages/*").Any())
+        if (!NukeBuild.IsLocalBuild)
         {
-            Settings[DocsKeys.AssemblyFiles] = assemblyFiles;
+            Settings[DocsKeys.AssemblyFiles] = assemblyFiles.ToArray();
+        }
+        else
+        {
+            Settings[DocsKeys.AssemblyFiles] = assemblyFiles
+                // .Where(x =>
+                //     x.Contains("Rocket.Surgery.Extensions", StringComparison.OrdinalIgnoreCase) ||
+                //     x.Contains("Rocket.Surgery.AspNetCore", StringComparison.OrdinalIgnoreCase) ||
+                //     x.Contains("Rocket.Surgery.Hosting", StringComparison.OrdinalIgnoreCase)
+                // )
+                .ToArray();
         }
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
@@ -81,41 +93,58 @@ class WyamConfiguration : ConfigurationEngineBase
             new OrderBy((ctx, _) => ctx.String(Keys.GroupKey))
         );
 
+        Pipelines.Add("RenderConventions",
+            new Documents("Conventions"),
+            new Razor().WithLayout("/Shared/_ConventionsLayout.cshtml"),
+            new Headings(),
+            new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
+            new WriteFiles()
+        );
+
         Pipelines.Add("RenderPackage",
             new Documents("PackageCategories"),
             new Razor().WithLayout("/Shared/_PackageLayout.cshtml"),
             new WriteFiles()
         );
 
-        Pipelines.InsertAfter(Docs.Api, "Conventions",
+        Pipelines.InsertAfter(Docs.Api, "AllConventions",
             new Documents(Docs.Api)
-                .Where((doc, _) => doc.String(CodeAnalysisKeys.QualifiedName) == "Rocket.Surgery.Conventions.IConvention"),
-            new SelectMany(doc => doc
-                .DocumentList(CodeAnalysisKeys.ImplementingTypes)
-                .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Interface")
-                .Where(x => !x.String(CodeAnalysisKeys.QualifiedName).StartsWith("Rocket.Surgery.Conventions"))
-            ),
-            new Meta("Children", (doc, _) =>
-                doc
-                    .DocumentList(CodeAnalysisKeys.ImplementingTypes)
-                    .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Class")
-                    .OrderBy(x => x.String(CodeAnalysisKeys.Name))
-            ),
+                .Where((doc, _) => doc.DocumentList(CodeAnalysisKeys.AllInterfaces)?.Any(d => d.String(CodeAnalysisKeys.QualifiedName) == "Rocket.Surgery.Conventions.IConvention") == true)
+                .Where((doc, _) => !doc.String(CodeAnalysisKeys.QualifiedName).StartsWith("Rocket.Surgery.Conventions")),
             new Meta("ConventionName", (doc, _) =>
-                doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").TrimStart('I').Titleize()
+                doc.String(CodeAnalysisKeys.SpecificKind) == "Interface"
+                ? doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").TrimStart('I').Titleize()
+                : doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").Titleize()
+            ),
+            new Meta("Context", (doc, _) =>
+            {
+                Logger.Warn(doc.String(CodeAnalysisKeys.QualifiedName));
+                return doc
+                .DocumentList(CodeAnalysisKeys.AllInterfaces)
+                .First(x => x.String(CodeAnalysisKeys.Name) == "IConvention")
+                .DocumentList(CodeAnalysisKeys.TypeArguments)
+                .First();
+            }
+            )
+        );
+
+        Pipelines.InsertAfter("AllConventions", "Conventions",
+            new Documents("AllConventions")
+                .Where((doc, _) => doc.String(CodeAnalysisKeys.SpecificKind) == "Interface"),
+            new Meta("Children", (doc, e) => Documents.FromPipeline("AllConventions")
+                // .Where(x => { Logger.Info(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
+                .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Class")
+                // .Where(x => { Logger.Warn(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
+                .Where(x => x.DocumentList(CodeAnalysisKeys.AllInterfaces)?.Any(z => z.String(CodeAnalysisKeys.QualifiedName) == doc.String(CodeAnalysisKeys.QualifiedName)) == true)
+                // .Where(x => { Logger.Error(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
+                .OrderBy(x => x.String("ConventionName"))
             ),
             new Meta(Keys.WritePath, (doc, _) => new FilePath("conventions/" + doc.String("ConventionName").Camelize() + "/index.html")),
             new Meta(Keys.RelativeFilePath, (doc, _) => doc.FilePath(Keys.WritePath)),
             new OrderBy((ctx, _) => ctx.String("ConventionName"))
         );
 
-        Pipelines.Add("RenderConventions",
-            new Documents("Conventions"),
-            new Razor().WithLayout("/Shared/_ConventonsLayout.cshtml"),
-            new Headings(),
-            new HtmlInsert("div#infobar-headings", (doc, ctx) => ctx.GenerateInfobarHeadings(doc)),
-            new WriteFiles()
-        );
+
     }
 }
 

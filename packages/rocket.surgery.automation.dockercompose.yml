@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Automation.DockerCompose
 NuGet: Rocket.Surgery.Automation.DockerCompose
 Assemblies:
-- /**/Rocket.Surgery.Automation.DockerCompose.dll
+- /rocket.surgery.automation.dockercompose/**/Rocket.Surgery.Automation.DockerCompose.dll
 Repository: https://github.com/RocketSurgeonsGuild/AutomationCompanion
 GitName: AutomationCompanion
 GitUrl: https://github.com/RocketSurgeonsGuild/AutomationCompanion.git

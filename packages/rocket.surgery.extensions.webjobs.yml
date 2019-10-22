@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.WebJobs
 NuGet: Rocket.Surgery.Extensions.WebJobs
 Assemblies:
-- /**/Rocket.Surgery.Extensions.WebJobs.dll
+- /rocket.surgery.extensions.webjobs/**/Rocket.Surgery.Extensions.WebJobs.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

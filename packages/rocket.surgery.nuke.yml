@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Nuke
 NuGet: Rocket.Surgery.Nuke
 Assemblies:
-- /**/Rocket.Surgery.Nuke.dll
+- /rocket.surgery.nuke/**/Rocket.Surgery.Nuke.dll
 Repository: https://github.com/RocketSurgeonsGuild/Nuke
 GitName: Nuke
 GitUrl: https://github.com/RocketSurgeonsGuild/Nuke.git

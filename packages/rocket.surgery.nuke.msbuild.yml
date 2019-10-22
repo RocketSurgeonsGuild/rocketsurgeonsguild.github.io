@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Nuke.MsBuild
 NuGet: Rocket.Surgery.Nuke.MsBuild
 Assemblies:
-- /**/Rocket.Surgery.Nuke.MsBuild.dll
+- /rocket.surgery.nuke.msbuild/**/Rocket.Surgery.Nuke.MsBuild.dll
 Repository: https://github.com/RocketSurgeonsGuild/Nuke
 GitName: Nuke
 GitUrl: https://github.com/RocketSurgeonsGuild/Nuke.git

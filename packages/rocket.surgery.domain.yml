@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Domain
 NuGet: Rocket.Surgery.Domain
 Assemblies:
-- /**/Rocket.Surgery.Domain.dll
+- /rocket.surgery.domain/**/Rocket.Surgery.Domain.dll
 Repository: https://github.com/RocketSurgeonsGuild/Domain
 GitName: Domain
 GitUrl: https://github.com/RocketSurgeonsGuild/Domain.git

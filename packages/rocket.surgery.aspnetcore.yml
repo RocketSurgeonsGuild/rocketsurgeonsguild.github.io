@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.AspNetCore
 NuGet: Rocket.Surgery.AspNetCore
 Assemblies:
-- /**/Rocket.Surgery.AspNetCore.dll
+- /rocket.surgery.aspnetcore/**/Rocket.Surgery.AspNetCore.dll
 Repository: https://github.com/RocketSurgeonsGuild/AspNetCore.Extensions
 GitName: AspNetCore.Extensions
 GitUrl: https://github.com/RocketSurgeonsGuild/AspNetCore.Extensions.git

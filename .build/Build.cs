@@ -51,7 +51,7 @@ partial class Build : NukeBuild
         });
 
     Target Restore => _ => _
-        .DependsOn(RefreshPackages)
+        // .DependsOn(RefreshPackages)
         .Executes(() =>
         {
             var projectDirectory = TemporaryDirectory / "_project";
@@ -122,19 +122,21 @@ partial class Build : NukeBuild
             var client = string.IsNullOrWhiteSpace(GithubToken)
                 ? new ObservableGitHubClient(new ProductHeaderValue("internaltooling.to.update.repo"))
                 : new ObservableGitHubClient(new ProductHeaderValue("internaltooling.to.update.repo"), new Octokit.Internal.InMemoryCredentialStore(new Credentials(GithubToken)));
-            var repos = client.Repository.GetAllForOrg("RocketSurgeonsGuild");
-
-            var clonedRepos = repos
+            var repos = client.Repository.GetAllForOrg("RocketSurgeonsGuild")
                 .Where(repo => !repo.Archived)
-                .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild)
+                .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild);
+
+            await repos
                 .Select(repo =>
                 {
                     var path = TemporaryDirectory / repo.Name;
                     Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
                     return (path, repo);
-                });
+                })
+                .ForEachAsync(x => {});
 
-            var solutions = clonedRepos
+            var solutions = repos
+                .Select(repo => (path: TemporaryDirectory / repo.Name, repo))
                 .SelectMany(x =>
                     Directory.EnumerateFiles(x.path, "*.sln")
                         .ToObservable()
@@ -196,7 +198,7 @@ partial class Build : NukeBuild
                 {
                     Name = assemblyName,
                     NuGet = assemblyName,
-                    Assemblies = new[] { $"/**/{assemblyName}.dll" },
+                    Assemblies = new[] { $"/{assemblyName.ToLowerInvariant()}/**/{assemblyName}.dll" },
                     Repository = x.repo.HtmlUrl,
                     GitName = x.repo.Name,
                     GitUrl = x.repo.CloneUrl,

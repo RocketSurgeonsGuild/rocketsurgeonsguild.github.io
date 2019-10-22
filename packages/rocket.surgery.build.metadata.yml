@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Build.Metadata
 NuGet: Rocket.Surgery.Build.Metadata
 Assemblies:
-- /**/Rocket.Surgery.Build.Metadata.dll
+- /rocket.surgery.build.metadata/**/Rocket.Surgery.Build.Metadata.dll
 Repository: https://github.com/RocketSurgeonsGuild/Build
 GitName: Build
 GitUrl: https://github.com/RocketSurgeonsGuild/Build.git

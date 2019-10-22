@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Azure.Sync
 NuGet: Rocket.Surgery.Azure.Sync
 Assemblies:
-- /**/Rocket.Surgery.Azure.Sync.dll
+- /rocket.surgery.azure.sync/**/Rocket.Surgery.Azure.Sync.dll
 Repository: https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync
 GitName: Azure.Offline.Sync
 GitUrl: https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync.git

@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.ReactiveUI
 NuGet: Rocket.Surgery.ReactiveUI
 Assemblies:
-- /**/Rocket.Surgery.ReactiveUI.dll
+- /rocket.surgery.reactiveui/**/Rocket.Surgery.ReactiveUI.dll
 Repository: https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions
 GitName: ReactiveUI.Abstractions
 GitUrl: https://github.com/RocketSurgeonsGuild/ReactiveUI.Abstractions.git

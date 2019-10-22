@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Conventions.Diagnostics
 NuGet: Rocket.Surgery.Conventions.Diagnostics
 Assemblies:
-- /**/Rocket.Surgery.Conventions.Diagnostics.dll
+- /rocket.surgery.conventions.diagnostics/**/Rocket.Surgery.Conventions.Diagnostics.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

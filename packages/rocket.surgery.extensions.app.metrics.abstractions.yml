@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.App.Metrics.Abstractions
 NuGet: Rocket.Surgery.Extensions.App.Metrics.Abstractions
 Assemblies:
-- /**/Rocket.Surgery.Extensions.App.Metrics.Abstractions.dll
+- /rocket.surgery.extensions.app.metrics.abstractions/**/Rocket.Surgery.Extensions.App.Metrics.Abstractions.dll
 Repository: https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions
 GitName: App.Metrics.Extensions
 GitUrl: https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions.git

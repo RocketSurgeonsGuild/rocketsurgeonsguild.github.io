@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.Logging
 NuGet: Rocket.Surgery.Extensions.Logging
 Assemblies:
-- /**/Rocket.Surgery.Extensions.Logging.dll
+- /rocket.surgery.extensions.logging/**/Rocket.Surgery.Extensions.Logging.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

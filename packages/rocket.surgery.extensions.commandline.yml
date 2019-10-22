@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.CommandLine
 NuGet: Rocket.Surgery.Extensions.CommandLine
 Assemblies:
-- /**/Rocket.Surgery.Extensions.CommandLine.dll
+- /rocket.surgery.extensions.commandline/**/Rocket.Surgery.Extensions.CommandLine.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

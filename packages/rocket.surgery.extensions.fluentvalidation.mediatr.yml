@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.FluentValidation.MediatR
 NuGet: Rocket.Surgery.Extensions.FluentValidation.MediatR
 Assemblies:
-- /**/Rocket.Surgery.Extensions.FluentValidation.MediatR.dll
+- /rocket.surgery.extensions.fluentvalidation.mediatr/**/Rocket.Surgery.Extensions.FluentValidation.MediatR.dll
 Repository: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions
 GitName: FluentValidation.Extensions
 GitUrl: https://github.com/RocketSurgeonsGuild/FluentValidation.Extensions.git

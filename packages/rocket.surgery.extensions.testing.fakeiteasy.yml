@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.Testing.FakeItEasy
 NuGet: Rocket.Surgery.Extensions.Testing.FakeItEasy
 Assemblies:
-- /**/Rocket.Surgery.Extensions.Testing.FakeItEasy.dll
+- /rocket.surgery.extensions.testing.fakeiteasy/**/Rocket.Surgery.Extensions.Testing.FakeItEasy.dll
 Repository: https://github.com/RocketSurgeonsGuild/Testing
 GitName: Testing
 GitUrl: https://github.com/RocketSurgeonsGuild/Testing.git

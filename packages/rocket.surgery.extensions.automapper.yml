@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.AutoMapper
 NuGet: Rocket.Surgery.Extensions.AutoMapper
 Assemblies:
-- /**/Rocket.Surgery.Extensions.AutoMapper.dll
+- /rocket.surgery.extensions.automapper/**/Rocket.Surgery.Extensions.AutoMapper.dll
 Repository: https://github.com/RocketSurgeonsGuild/AutoMapper.Extensions
 GitName: AutoMapper.Extensions
 GitUrl: https://github.com/RocketSurgeonsGuild/AutoMapper.Extensions.git

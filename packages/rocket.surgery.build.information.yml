@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Build.Information
 NuGet: Rocket.Surgery.Build.Information
 Assemblies:
-- /**/Rocket.Surgery.Build.Information.dll
+- /rocket.surgery.build.information/**/Rocket.Surgery.Build.Information.dll
 Repository: https://github.com/RocketSurgeonsGuild/Build
 GitName: Build
 GitUrl: https://github.com/RocketSurgeonsGuild/Build.git

@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Extensions.DependencyInjection
 NuGet: Rocket.Surgery.Extensions.DependencyInjection
 Assemblies:
-- /**/Rocket.Surgery.Extensions.DependencyInjection.dll
+- /rocket.surgery.extensions.dependencyinjection/**/Rocket.Surgery.Extensions.DependencyInjection.dll
 Repository: https://github.com/RocketSurgeonsGuild/Conventions
 GitName: Conventions
 GitUrl: https://github.com/RocketSurgeonsGuild/Conventions.git

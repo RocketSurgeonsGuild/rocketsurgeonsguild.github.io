@@ -1,7 +1,7 @@
 Name: Rocket.Surgery.Cake.Library
 NuGet: Rocket.Surgery.Cake.Library
 Assemblies:
-- /**/Rocket.Surgery.Cake.Library.dll
+- /rocket.surgery.cake.library/**/Rocket.Surgery.Cake.Library.dll
 Repository: https://github.com/RocketSurgeonsGuild/Cake
 GitName: Cake
 GitUrl: https://github.com/RocketSurgeonsGuild/Cake.git
