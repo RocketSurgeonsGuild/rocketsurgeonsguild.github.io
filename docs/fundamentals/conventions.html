@@ -38,7 +38,7 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <link href="/assets/css/custom.css" rel="stylesheet">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
     function tify() {
         var pattern = Trianglify({
@@ -68,6 +68,27 @@
     window.addEventListener('resize', tify);
     setTimeout(tify, 1);
 </script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
 
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
@@ -121,7 +142,8 @@
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     
         <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/conventions.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#what-is-a-convention">What is a convention?</a></p>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#why-do-we-think-conventions-are-helpful">Why do we think conventions are helpful?</a></p>
+<p><a href="#what-is-a-convention">What is a convention?</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -148,7 +170,8 @@
                     <ul class="treeview-menu">
                         
                 <li class="selected"><a href="/docs/fundamentals/conventions">Conventions</a></li>
-                <li><a href="/docs/fundamentals/package-reference-versions">Package Reference Versions</a></li>
+                <li><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
+                <li><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
 
                     </ul>
                 </li>
@@ -169,9 +192,8 @@
 			<h1>Conventions</h1>
 		</section>
 	<section class="content">
-		<ul>
-<li><a href="#what-is-a-convention">What is a convention?</a></li>
-</ul>
+		<h1 id="why-do-we-think-conventions-are-helpful">Why do we think conventions are helpful?</h1>
+<p>| general agreement or consent; accepted usage, especially as a standard of procedure.</p>
 <p>When ASP.NET Core was released we gained the ability for more fine grained control how our applications are configured and setup.  This allows us the ability to control how our applications work, but with that comes the responsibility to ensure that we configure everything properly. This can cause the configuration code to quickly turn into a mess if you're not careful.</p>
 <ul>
 <li>What if you need to configure a different database for development vs production?</li>
@@ -181,6 +203,7 @@
 <h1 id="what-is-a-convention">What is a convention?</h1>
 <p>A convention is something very similar to something like an <a href="https://autofaccn.readthedocs.io/en/latest/configuration/modules.html">Autofac Module</a> or <a href="https://docs.microsoft.com/en-us/aspnet/aspnet/overview/owin-and-katana/owin-startup-class-detection">Owin Startup Attribute</a>.  In essence it is just a a piece of code that will run a given time.  However we try and make it easier to bring your configuration with you using the new <a href="https://github.com/aspnet/Extensions"><code>Microsoft.Extensions</code> libraries provided by Microsoft</a>.</p>
 <p>These conventions will be run during specific life cycle events of application startup.  For example we have conventions for <a href="/conventions/service/">Dependency Injection</a>, <a href="/conventions/configuration/">Configuration</a> and even <a href="/conventions/commandLine/">Command Line</a>.</p>
+<p>While your convention is registering you get access a <a href="/api/Rocket.Surgery.Conventions/IConventionContext/">Convention Context</a>.  This context has properties that allow you to make intelligent decisions about what services to register, logging providers to add or command line operations are available.  The properties vary by convention, for example the <a href="/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext/">Command Line Convention</a> does not expose the <a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment/"><code>IRocketEnvironment</code></a> because the outcome of the execution of the command line could affect the environment.</p>
 
 	</section>
                 
