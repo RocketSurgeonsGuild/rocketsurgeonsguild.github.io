@@ -2,6 +2,11 @@
 	Layout = "/_Master.cshtml";
 
 	ViewData[Keys.Title] = "Convention - " + @Model.String("ConventionName");
+    var context = Model.Document("Context");
+}
+
+@section Search {
+	@Html.Partial("_ApiSearch")
 }
 
 @section Infobar {
@@ -13,7 +18,7 @@
 }
 
 <section class="content-header">
-	<h1>@Model.String("ConventionName") Conventions</h1>
+	<h1>@Model.String("ConventionName") Convention</h1>
 </section>
 <section class="content">
     @{
@@ -25,23 +30,29 @@
         <div>@Html.Raw(summary)</div>
     }
 
-    @foreach (var convention in Model.DocumentList("Children"))
-    {
-        var description = convention.String(CodeAnalysisKeys.Summary);
-        var context = convention.Document("Context");
+    @Html.Partial("/Shared/Section/_Properties.cshtml", context)
 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h3 class="panel-title"><a href="@Context.GetLink(convention)">@convention.String(CodeAnalysisKeys.Name).Replace("Convention", "")</a></h3>
-                <h4><a href="@Context.GetLink(context)">@context.String("Name").Replace("Convention", "")</a></h4>
+    @if (Model.DocumentList("Children").Any())
+    {
+        <h1 id="Available">Available Conventions</h1>
+        @foreach (var convention in Model.DocumentList("Children"))
+        {
+            var description = convention.String(CodeAnalysisKeys.Summary);
+
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        <a href="@Context.GetLink(convention)">@convention.String(CodeAnalysisKeys.Name).Replace("Convention", "")</a>
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    @if(!string.IsNullOrEmpty(description))
+                    {
+                        <p>@Html.Raw(description)</p>
+                    }
+                </div>
             </div>
-            <div class="panel-body">
-                @if(!string.IsNullOrEmpty(description))
-                {
-                    <p>@Html.Raw(description)</p>
-                }
-            </div>
-        </div>
+        }
     }
 
     @RenderBody()

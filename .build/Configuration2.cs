@@ -25,6 +25,8 @@ using Wyam.Common.Documents;
 using System.Collections.Generic;
 using Wyam.Common.Configuration;
 using Humanizer;
+using System.IO;
+using Wyam.Highlight;
 
 class WyamConfiguration : ConfigurationEngineBase
 {
@@ -40,12 +42,12 @@ class WyamConfiguration : ConfigurationEngineBase
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(WebKeys).Assembly);
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(FeedKeys).Assembly);
         configurator.AssemblyLoader.DirectAssemblies.Add(typeof(CodeAnalysisKeys).Assembly);
+        configurator.AssemblyLoader.DirectAssemblies.Add(typeof(Highlight).Assembly);
 
         var assemblyFiles = build.PackageSpecs
                 .SelectMany(x => x.Assemblies.Select(z => z.TrimStart('/', '\\')))
                 .SelectMany(x => GlobFiles(NukeBuild.TemporaryDirectory / "_packages", x))
                 .Where(x => !x.Contains("Mocks"))
-                .Distinct()
                 .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
         if (!NukeBuild.IsLocalBuild)
@@ -54,13 +56,7 @@ class WyamConfiguration : ConfigurationEngineBase
         }
         else
         {
-            Settings[DocsKeys.AssemblyFiles] = assemblyFiles
-                // .Where(x =>
-                //     x.Contains("Rocket.Surgery.Extensions", StringComparison.OrdinalIgnoreCase) ||
-                //     x.Contains("Rocket.Surgery.AspNetCore", StringComparison.OrdinalIgnoreCase) ||
-                //     x.Contains("Rocket.Surgery.Hosting", StringComparison.OrdinalIgnoreCase)
-                // )
-                .ToArray();
+            Settings[DocsKeys.AssemblyFiles] = Array.Empty<string>();
         }
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
@@ -116,15 +112,11 @@ class WyamConfiguration : ConfigurationEngineBase
                 ? doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").TrimStart('I').Titleize()
                 : doc.String(CodeAnalysisKeys.Name).Replace("Convention", "").Titleize()
             ),
-            new Meta("Context", (doc, _) =>
-            {
-                Logger.Warn(doc.String(CodeAnalysisKeys.QualifiedName));
-                return doc
+            new Meta("Context", (doc, _) => doc
                 .DocumentList(CodeAnalysisKeys.AllInterfaces)
                 .First(x => x.String(CodeAnalysisKeys.Name) == "IConvention")
                 .DocumentList(CodeAnalysisKeys.TypeArguments)
-                .First();
-            }
+                .First()
             )
         );
 
@@ -132,11 +124,8 @@ class WyamConfiguration : ConfigurationEngineBase
             new Documents("AllConventions")
                 .Where((doc, _) => doc.String(CodeAnalysisKeys.SpecificKind) == "Interface"),
             new Meta("Children", (doc, e) => Documents.FromPipeline("AllConventions")
-                // .Where(x => { Logger.Info(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
                 .Where(x => x.String(CodeAnalysisKeys.SpecificKind) == "Class")
-                // .Where(x => { Logger.Warn(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
                 .Where(x => x.DocumentList(CodeAnalysisKeys.AllInterfaces)?.Any(z => z.String(CodeAnalysisKeys.QualifiedName) == doc.String(CodeAnalysisKeys.QualifiedName)) == true)
-                // .Where(x => { Logger.Error(x.String(CodeAnalysisKeys.QualifiedName)); return true; })
                 .OrderBy(x => x.String("ConventionName"))
             ),
             new Meta(Keys.WritePath, (doc, _) => new FilePath("conventions/" + doc.String("ConventionName").Camelize() + "/index.html")),
@@ -145,6 +134,19 @@ class WyamConfiguration : ConfigurationEngineBase
         );
 
 
+    }
+}
+
+class FileNameComparer : EqualityComparer<string>
+{
+    public override bool Equals(string x, string y)
+    {
+        return Path.GetFileNameWithoutExtension(x) == Path.GetFileNameWithoutExtension(y);
+    }
+
+    public override int GetHashCode(string obj)
+    {
+        return obj == null ? 0 : Path.GetFileNameWithoutExtension(obj).GetHashCode();
     }
 }
 
