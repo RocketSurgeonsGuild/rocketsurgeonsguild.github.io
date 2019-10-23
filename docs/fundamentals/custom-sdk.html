@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - PackageReferences and Versions</title>
+        <title>Rocket Surgeons Guild - Custom Sdk</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -141,9 +141,9 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     
-        <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/package-reference-versions.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
-    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#versioning-is-hard">Versioning is hard...</a></p>
-<p><a href="#what-we-recommend">What we recommend</a></p>
+        <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/custom-sdk.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
+    <div id="infobar-headings"><h6>On This Page</h6><p><a href="#what-is-an-sdk">What is an SDK?</a></p>
+<p><a href="#our-custom-sdks">Our custom SDKs</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -170,8 +170,8 @@
                     <ul class="treeview-menu">
                         
                 <li><a href="/docs/fundamentals/conventions">Conventions</a></li>
-                <li class="selected"><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
-                <li><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
+                <li><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
+                <li class="selected"><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
 
                     </ul>
                 </li>
@@ -189,30 +189,117 @@
 
 
 		<section class="content-header">
-			<h1>PackageReferences and Versions</h1>
+			<h1>Custom Sdk</h1>
 		</section>
 	<section class="content">
-		<h1 id="versioning-is-hard">Versioning is hard...</h1>
-<p>As Developers we have discovered that versioning is difficult even in the best of circumstances.  With the new project system available in .NET Core, this has gotten much easier beyond the days where you could have incorrect references to your packages directory if an upgrade or merge conflict went wrong.  Sending into hours (or days!) of NuGet pain and suffering.</p>
-<h1 id="what-we-recommend">What we recommend</h1>
-<p>We recommend using <a href="https://www.nuget.org/packages/Microsoft.Build.CentralPackageVersions/" title="Microsoft.Build.CentralPackageVersions">Microsoft.Build.CentralPackageVersions</a>.</p>
-<p>This Sdk does a few things for you:</p>
-<ul>
-<li>Allows you to use a central <code>Packages.props</code> file with all of your versions defined</li>
-<li>Enforces versions are only defined in <code>Pacakges.props</code>.</li>
-<li>Adds support for <code>GlobalPackageReference</code> which can be used to apply common package references across all the projects in your solution, for example ensuring that Source Link is enabled on all projects.</li>
-</ul>
-<p>This Sdk breaks a few things:</p>
-<ul>
-<li>After adding a package through the Visual Studio NuGet UI you might get some complaints or failures building.  This is due to the version being the project file, and not in <code>Packages.props</code>
-<ul>
-<li>You can override the version if you want to.</li>
-</ul>
-</li>
-<li>This break also applies to <code>dotnet restore</code> or Visual Studio Code as well.</li>
-</ul>
-<p>The one con is usually a deal breaker for a lot of people, but we really think this method is valuable because it isolates your version changes to one single location, which makes reviewing pull requests easier, and whenever you need to reference a package you don't have to go look up the version (if you manage the file directly).</p>
-<p>NOTE: Also keep in mind we have additional tooling that plays off of this behavior, where we have our own SDK that allows you to easily include Rocket Surgery dependencies by a simple <code>PropertyGroup</code> change.</p>
+		<h1 id="what-is-an-sdk">What is an SDK?</h1>
+<p>MSBuild has added support for defining <a href="https://docs.microsoft.com/en-us/visualstudio/msbuild/how-to-use-project-sdk?view=vs-2019">custom SDKs</a> that allow you to include additional build functionality when you're building your applications.</p>
+<h1 id="our-custom-sdks">Our custom SDKs</h1>
+<p>We currently have one SDK that we ship today, with potentially more to come.</p>
+<h2 id="rocket.surgery.meta.packages"><a href="https://www.nuget.org/packages/Rocket.Surgery.Meta.Packages/">Rocket.Surgery.Meta.Packages</a></h2>
+<p>This package allows you to inside of a project automatically include all the Rocket Surgery assemblies you need based on your needs.</p>
+<p>The following examples are examples of this in action.  We understand if you choose not use this functionality, because it does add a certain level of automagic behavior.  However it does allow you to emphasize dependencies that are specific to the project, and avoid confusing them with the "plumbing" dependencies.</p>
+<h3 id="asp.net-core-3-example">Asp.Net Core 3 Example</h3>
+<pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+    &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
+        &lt;IncludeRocketSurgeryAspNetCore&gt;true&lt;/IncludeRocketSurgeryAspNetCore&gt;
+    &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>This will passively add references for...</p>
+<pre><code class="language-xml">&lt;PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.AspNetCore" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation.MediatR" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.AspNetCore.Serilog" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Conventions.Diagnostics" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.MediatR" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting" /&gt;
+
+</code></pre>
+<h3 id="hosting-example">Hosting Example</h3>
+<pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+    &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
+        &lt;IncludeRocketSurgeryHosting&gt;true&lt;/IncludeRocketSurgeryHosting&gt;
+    &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>This will passively add references for...</p>
+<pre><code class="language-xml">&lt;PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.MediatR" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting.Serilog" /&gt;
+
+</code></pre>
+<h3 id="library-example">Library Example</h3>
+<pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+    &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
+        &lt;IncludeRocketSurgery&gt;true&lt;/IncludeRocketSurgery&gt;
+    &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>This will passively add references for...</p>
+<pre><code class="language-xml">&lt;PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Configuration" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Logging" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.MediatR" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting.Serilog" /&gt;
+</code></pre>
+<h3 id="include-example">Include Example</h3>
+<pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+    &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
+        &lt;IncludeRocketSurgery&gt;true&lt;/IncludeRocketSurgery&gt;
+        &lt;EnableCommandLine&gt;true&lt;/EnableCommandLine&gt;
+    &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>This will passively add references for...</p>
+<pre><code class="language-xml">&lt;PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Configuration" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.CommandLine" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Logging" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.MediatR" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting.Serilog" /&gt;
+</code></pre>
+<h3 id="include-example-1">Include Example</h3>
+<pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
+    &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
+    &lt;PropertyGroup&gt;
+        &lt;TargetFramework&gt;netcoreapp3.0&lt;/TargetFramework&gt;
+        &lt;IncludeRocketSurgery&gt;true&lt;/IncludeRocketSurgery&gt;
+        &lt;EnableMediatR&gt;false&lt;/EnableMediatR&gt;
+    &lt;/PropertyGroup&gt;
+&lt;/Project&gt;
+</code></pre>
+<p>This will passively add references for...</p>
+<pre><code class="language-xml">&lt;PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Configuration" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Extensions.Logging" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting" /&gt;
+&lt;PackageReference Include="Rocket.Surgery.Hosting.Serilog" /&gt;
+</code></pre>
 
 	</section>
                 

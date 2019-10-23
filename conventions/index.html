@@ -40,7 +40,7 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <link href="/assets/css/custom.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
     function tify() {
         var pattern = Trianglify({
@@ -70,6 +70,27 @@
     window.addEventListener('resize', tify);
     setTimeout(tify, 1);
 </script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
 
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
@@ -129,19 +150,58 @@
                                      
                     
 
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+
+
                     <ul class="sidebar-menu">
                         
 
     <li class="header">Conventions</li>
-<li><a href="/conventions/appMetrics">App Metrics</a></li>
-<li><a href="/conventions/autofac">Autofac</a></li>
-<li><a href="/conventions/commandLine">Command Line</a></li>
-<li><a href="/conventions/configuration">Configuration</a></li>
-<li><a href="/conventions/hosting">Hosting</a></li>
-<li><a href="/conventions/logging">Logging</a></li>
-<li><a href="/conventions/serilog">Serilog</a></li>
-<li><a href="/conventions/service">Service</a></li>
-<li><a href="/conventions/webJobs">Web Jobs</a></li>
 
 
                     </ul>
@@ -162,115 +222,9 @@
 		
 
 
+
 <p>This page contain information about the Conventions provided by the Rocket Surgerons Guild.</p>
 
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/appMetrics">App Metrics</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.App.Metrics/IAppMetricsConventionContext">IAppMetricsContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             IAppMetricsConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/autofac">Autofac</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.Autofac/IAutofacConventionContext">IAutofacContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-            IAutofacConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/commandLine">Command Line</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext">ICommandLineContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             ILoggingConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/configuration">Configuration</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.Configuration/IConfigurationConventionContext">IConfigurationContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             ILoggingConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/hosting">Hosting</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Hosting/IHostingConventionContext">IHostingContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             IHostingConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/logging">Logging</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext">ILoggingContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             ILoggingConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/serilog">Serilog</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.Serilog/ISerilogConventionContext">ISerilogContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/service">Service</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">IServiceContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             IServiceConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
-    <div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><a href="/conventions/webJobs">Web Jobs</a></h3>
-            <h4><a href="/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionContext">IWebJobsContext</a></h4>
-        </div>
-        <div class="panel-body">
-                <p>
-             IWebJobsConvention
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
-            </p>
-        </div>
-    </div>
 
 
 	</section>

@@ -40,7 +40,7 @@
 <meta name="msapplication-config" content="/assets/img/browserconfig.xml">
 <meta name="theme-color" content="#ffffff">
 <link href="/assets/css/custom.css" rel="stylesheet" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
 <script>
     function tify() {
         var pattern = Trianglify({
@@ -70,6 +70,27 @@
     window.addEventListener('resize', tify);
     setTimeout(tify, 1);
 </script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
 
     </head>
     <body class="hold-transition wyam layout-boxed  ">    
@@ -148,7 +169,8 @@
                     <ul class="treeview-menu">
                         
                 <li><a href="/docs/fundamentals/conventions">Conventions</a></li>
-                <li><a href="/docs/fundamentals/package-reference-versions">Package Reference Versions</a></li>
+                <li><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
+                <li><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
 
                     </ul>
                 </li>
@@ -181,9 +203,14 @@
 What is a &quot;Convention&quot;?									</td>
 								</tr>
 								<tr>
-									<td><strong><a href="/docs/fundamentals/package-reference-versions">Package Reference Versions</a></strong></td>
+									<td><strong><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></strong></td>
 									<td>
 How are versions handled in a typical project									</td>
+								</tr>
+								<tr>
+									<td><strong><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></strong></td>
+									<td>
+Custom Sdk&#x27;s									</td>
 								</tr>
 						</tbody>				
 					</table>
