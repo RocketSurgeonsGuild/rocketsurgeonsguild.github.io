@@ -16,11 +16,11 @@ The following examples are examples of this in action.  We understand if you cho
 
 # Properties
 
-`IncludeRocketSurgeryAbstractions`: Include the `PackageReference`s for just the abstractions (convention interfaces, etc.
-`IncludeRocketSurgeryAspNetCore`: Include the `PackageReference`s for working with AspNetCore 3+/
-`IncludeRocketSurgery`: Include the `PackageReference`s for the base extensions.
-`IncludeRocketSurgeryFunctions`: Include the required assemblies working with Azure Functions.
-`IncludeRocketSurgeryHosting`: Include the required assemblies for working with a project that uses the new Hosting Abstraction layer.
+* `IncludeRocketSurgeryAbstractions`: Include the `PackageReference`s for just the abstractions (convention interfaces, etc.
+* `IncludeRocketSurgeryAspNetCore`: Include the `PackageReference`s for working with AspNetCore 3+/
+* `IncludeRocketSurgery`: Include the `PackageReference`s for the base extensions.
+* `IncludeRocketSurgeryFunctions`: Include the required assemblies working with Azure Functions.
+* `IncludeRocketSurgeryHosting`: Include the required assemblies for working with a project that uses the new Hosting Abstraction layer.
 
 ## Options
 
