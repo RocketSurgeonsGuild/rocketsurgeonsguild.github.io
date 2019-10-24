@@ -50,14 +50,14 @@ class WyamConfiguration : ConfigurationEngineBase
                 .Where(x => !x.Contains("Mocks"))
                 .Select(x => GetRelativePath(NukeBuild.RootDirectory / "input", x));
 
-        // if (!NukeBuild.IsLocalBuild)
-        // {
+        if (!NukeBuild.IsLocalBuild)
+        {
             Settings[DocsKeys.AssemblyFiles] = assemblyFiles.ToArray();
-        // }
-        // else
-        // {
-        //     Settings[DocsKeys.AssemblyFiles] = Array.Empty<string>();
-        // }
+        }
+        else
+        {
+            Settings[DocsKeys.AssemblyFiles] = Array.Empty<string>();
+        }
 
         Settings[DocsKeys.Title] = "Rocket Surgeons Guild";
         Settings[Keys.Host] = "rocketsurgeonsguild.com/";

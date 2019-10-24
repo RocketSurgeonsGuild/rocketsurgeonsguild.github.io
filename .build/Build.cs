@@ -51,7 +51,7 @@ partial class Build : NukeBuild
         });
 
     Target Restore => _ => _
-        // .DependsOn(RefreshPackages)
+        .DependsOn(RefreshPackages)
         .Executes(() =>
         {
             var projectDirectory = TemporaryDirectory / "_project";
