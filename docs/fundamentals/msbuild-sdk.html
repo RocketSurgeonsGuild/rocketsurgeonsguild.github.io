@@ -202,11 +202,13 @@
 <p>This package allows you to inside of a project automatically include all the Rocket Surgery assemblies you need based on your needs.</p>
 <p>The following examples are examples of this in action.  We understand if you choose not use this functionality, because it does add a certain level of automagic behavior.  However it does allow you to emphasize dependencies that are specific to the project, and avoid confusing them with the "plumbing" dependencies.</p>
 <h1 id="properties">Properties</h1>
-<p><code>IncludeRocketSurgeryAbstractions</code>: Include the <code>PackageReference</code>s for just the abstractions (convention interfaces, etc.
-<code>IncludeRocketSurgeryAspNetCore</code>: Include the <code>PackageReference</code>s for working with AspNetCore 3+/
-<code>IncludeRocketSurgery</code>: Include the <code>PackageReference</code>s for the base extensions.
-<code>IncludeRocketSurgeryFunctions</code>: Include the required assemblies working with Azure Functions.
-<code>IncludeRocketSurgeryHosting</code>: Include the required assemblies for working with a project that uses the new Hosting Abstraction layer.</p>
+<ul>
+<li><code>IncludeRocketSurgeryAbstractions</code>: Include the <code>PackageReference</code>s for just the abstractions (convention interfaces, etc.</li>
+<li><code>IncludeRocketSurgeryAspNetCore</code>: Include the <code>PackageReference</code>s for working with AspNetCore 3+/</li>
+<li><code>IncludeRocketSurgery</code>: Include the <code>PackageReference</code>s for the base extensions.</li>
+<li><code>IncludeRocketSurgeryFunctions</code>: Include the required assemblies working with Azure Functions.</li>
+<li><code>IncludeRocketSurgeryHosting</code>: Include the required assemblies for working with a project that uses the new Hosting Abstraction layer.</li>
+</ul>
 <h2 id="options">Options</h2>
 <ul>
 <li><code>EnableAutofac</code> (default: <code>false</code>): Enables <a href="https://www.nuget.org/packages/Autofac/">Autofac</a> support.</li>
