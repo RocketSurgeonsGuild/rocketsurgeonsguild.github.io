@@ -1,4 +1,4 @@
-Title: PackageReferences and Versions
+Title: Package References and Versions
 Description: How are versions handled in a typical project
 Order: 200
 ---
@@ -21,6 +21,6 @@ This Sdk breaks a few things:
 
 The one con is usually a deal breaker for a lot of people, but we really think this method is valuable because it isolates your version changes to one single location, which makes reviewing pull requests easier, and whenever you need to reference a package you don't have to go look up the version (if you manage the file directly).
 
-NOTE: Also keep in mind we have additional tooling that plays off of this behavior, where we have our own SDK that allows you to easily include Rocket Surgery dependencies by a simple `PropertyGroup` change.
+NOTE: Also keep in mind we have additional tooling that plays off of this behavior, where we have our own MSBuild Sdk that allows you to easily include Rocket Surgery dependencies by a simple `PropertyGroup` change.
 
 [CentralPackagingVersions]: https://www.nuget.org/packages/Microsoft.Build.CentralPackageVersions/ "Microsoft.Build.CentralPackageVersions"
