@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - Custom Sdk</title>
+        <title>Rocket Surgeons Guild - MSBuild Sdks</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -141,9 +141,11 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     
-        <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/custom-sdk.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
+        <div><h3><a href="https://github.com/RocketSurgeonsGuild/rocketsurgeonsguild.github.io/blob/dev/input/docs/fundamentals/msbuild-sdk.md" class="label label-default" style="margin: 0;"><i class="fa fa-pencil-square" aria-hidden="true"></i> Edit Content</a></h3></div>
     <div id="infobar-headings"><h6>On This Page</h6><p><a href="#what-is-an-sdk">What is an SDK?</a></p>
 <p><a href="#our-custom-sdks">Our custom SDKs</a></p>
+<p><a href="#properties">Properties</a></p>
+<p><a href="#examples">Examples</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -170,8 +172,8 @@
                     <ul class="treeview-menu">
                         
                 <li><a href="/docs/fundamentals/conventions">Conventions</a></li>
-                <li><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
-                <li class="selected"><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
+                <li><a href="/docs/fundamentals/package-reference-versions">Package References and Versions</a></li>
+                <li class="selected"><a href="/docs/fundamentals/msbuild-sdk">MSBuild Sdks</a></li>
 
                     </ul>
                 </li>
@@ -189,7 +191,7 @@
 
 
 		<section class="content-header">
-			<h1>Custom Sdk</h1>
+			<h1>MSBuild Sdks</h1>
 		</section>
 	<section class="content">
 		<h1 id="what-is-an-sdk">What is an SDK?</h1>
@@ -199,7 +201,30 @@
 <h2 id="rocket.surgery.meta.packages"><a href="https://www.nuget.org/packages/Rocket.Surgery.Meta.Packages/">Rocket.Surgery.Meta.Packages</a></h2>
 <p>This package allows you to inside of a project automatically include all the Rocket Surgery assemblies you need based on your needs.</p>
 <p>The following examples are examples of this in action.  We understand if you choose not use this functionality, because it does add a certain level of automagic behavior.  However it does allow you to emphasize dependencies that are specific to the project, and avoid confusing them with the "plumbing" dependencies.</p>
-<h3 id="asp.net-core-3-example">Asp.Net Core 3 Example</h3>
+<h1 id="properties">Properties</h1>
+<p><code>IncludeRocketSurgeryAbstractions</code>: Include the <code>PackageReference</code>s for just the abstractions (convention interfaces, etc.
+<code>IncludeRocketSurgeryAspNetCore</code>: Include the <code>PackageReference</code>s for working with AspNetCore 3+/
+<code>IncludeRocketSurgery</code>: Include the <code>PackageReference</code>s for the base extensions.
+<code>IncludeRocketSurgeryFunctions</code>: Include the required assemblies working with Azure Functions.
+<code>IncludeRocketSurgeryHosting</code>: Include the required assemblies for working with a project that uses the new Hosting Abstraction layer.</p>
+<h2 id="options">Options</h2>
+<ul>
+<li><code>EnableAutofac</code> (default: <code>false</code>): Enables <a href="https://www.nuget.org/packages/Autofac/">Autofac</a> support.</li>
+<li><code>EnableAutoMapper</code> (default: <code>true</code>): Enables <a href="https://www.nuget.org/packages/AutoMapper/">AutoMapper</a> support.</li>
+<li><code>EnableCommandLine</code> (default: <code>false</code>): Enables <a href="https://www.nuget.org/packages/McMaster.Extensions.CommandLineUtils/">CommandLine</a> support.</li>
+<li><code>EnableConfiguration</code> (default: <code>true</code>): Enables <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/configuration/">Configuration</a> support.</li>
+<li><code>EnableDependencyInjection</code> (default: <code>true</code>): Enables <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection">DependencyInjection</a> support.</li>
+<li><code>EnableDiagnostics</code> (default: <code>true</code>): Enables Diagnostics which are little helpful commands or other features that can be used to get an idea of the behavior of your application.</li>
+<li><code>EnableExtensions</code> (default: <code>true</code>): Enables Rocket Surgeon Extensions that adds some helpful methods, but are not required.</li>
+<li><code>EnableFluentValidation</code> (default: <code>true</code>): Enables <a href="https://www.nuget.org/packages/FluentValidation/">FluentValidation</a> support.</li>
+<li><code>EnableLogging</code> (default: <code>true</code>): Enables <a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/logging/">Logging</a> support with Microsoft Extensions</li>
+<li><code>EnableMediatR</code> (default: <code>true</code>): Enables <a href="https://www.nuget.org/packages/MediatR/">MediatR</a> support.</li>
+<li><code>EnableNewtonsoftJson</code> (default: <code>true</code>): Enables <a href="https://www.nuget.org/packages/Newtonsoft.Json/">Newtonsoft.Json</a> support for Asp Net Core 3</li>
+<li><code>EnableSerilog</code> (default: <code>true</code>): Enables <a href="https://www.nuget.org/packages/Serilog/">Serilog</a> support.</li>
+<li><code>EnableWebJobs</code> (default: <code>false</code>): Enables <a href="https://www.nuget.org/packages/Microsoft.Azure.WebJobs/">WebJobs</a> (Azure Functions) support.</li>
+</ul>
+<h1 id="examples">Examples</h1>
+<h2 id="asp-net-core-3-example">Asp Net Core 3 Example</h2>
 <pre><code class="language-xml">&lt;Project Sdk="Microsoft.NET.Sdk.Web"&gt;
     &lt;Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" /&gt;
     &lt;PropertyGroup&gt;
