@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - PackageReferences and Versions</title>
+        <title>Rocket Surgeons Guild - Package References and Versions</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -170,8 +170,8 @@
                     <ul class="treeview-menu">
                         
                 <li><a href="/docs/fundamentals/conventions">Conventions</a></li>
-                <li class="selected"><a href="/docs/fundamentals/package-reference-versions">PackageReferences and Versions</a></li>
-                <li><a href="/docs/fundamentals/custom-sdk">Custom Sdk</a></li>
+                <li class="selected"><a href="/docs/fundamentals/package-reference-versions">Package References and Versions</a></li>
+                <li><a href="/docs/fundamentals/msbuild-sdk">MSBuild Sdks</a></li>
 
                     </ul>
                 </li>
@@ -189,7 +189,7 @@
 
 
 		<section class="content-header">
-			<h1>PackageReferences and Versions</h1>
+			<h1>Package References and Versions</h1>
 		</section>
 	<section class="content">
 		<h1 id="versioning-is-hard">Versioning is hard...</h1>
@@ -212,7 +212,7 @@
 <li>This break also applies to <code>dotnet restore</code> or Visual Studio Code as well.</li>
 </ul>
 <p>The one con is usually a deal breaker for a lot of people, but we really think this method is valuable because it isolates your version changes to one single location, which makes reviewing pull requests easier, and whenever you need to reference a package you don't have to go look up the version (if you manage the file directly).</p>
-<p>NOTE: Also keep in mind we have additional tooling that plays off of this behavior, where we have our own SDK that allows you to easily include Rocket Surgery dependencies by a simple <code>PropertyGroup</code> change.</p>
+<p>NOTE: Also keep in mind we have additional tooling that plays off of this behavior, where we have our own MSBuild Sdk that allows you to easily include Rocket Surgery dependencies by a simple <code>PropertyGroup</code> change.</p>
 
 	</section>
                 
