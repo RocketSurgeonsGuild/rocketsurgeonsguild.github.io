@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - LoggerTest.Logger Field</title>
+        <title>Rocket Surgeons Guild - API - AutoMockTest.AutoMockTest(ITestOutputHelper, MockBehavior, string, Action&lt;LoggerConfiguration&gt;) Constructor</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -143,6 +143,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -202,20 +204,29 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Testing.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.dll</a></li>
+		<li><a href="/api/Rocket.Surgery.Extensions.Testing.Moq.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.Moq<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Extensions.Testing">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></li>
+		<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/F48D07E4">LoggerTest<wbr>(ITestOutputHelper, <wbr>LogLevel, <wbr>ILoggerFactory)<wbr></a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/7B0AEC70">AutoMockTest<wbr>(ITestOutputHelper, <wbr>MockBehavior, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/13C6BCD2">AutoMockTest<wbr>(ITestOutputHelper, <wbr>LogLevel, <wbr>MockBehavior, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/0BA16E96">AutoMockTest<wbr>(ITestOutputHelper, <wbr>LogEventLevel, <wbr>MockBehavior, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/E66C10BB">BuildContainer<wbr>(ContainerBuilder)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/6147D450">Populate<wbr>(ValueTuple<wbr>&lt;IConfiguration, <wbr>I<wbr>Service<wbr>Collection&gt;<wbr>)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/7D0072DD">AutoMock</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/4F43F5F1">Configuration</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/5999B696">DiagnosticSource</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/50E2D14C">Logger</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/37C58529">LoggerFactory</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/F6C4F733">Moq</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/34A95613">SerilogLogger</a></li>
 			<li class="header">Field Members</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/D75F0DA5">DiagnosticSource</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/A170A33F">Disposable</a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/83583C11">Logger</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/ED38DCE1">LoggerFactory</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/301BF55C">Provider</a></li>
 
 
                     </ul>
@@ -230,39 +241,92 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a>.</h3>
-	<h1>Logger <small>Field</small></h1>
+			<h3><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a>.</h3>
+	<h1>AutoMockTest<wbr>(ITestOutputHelper, <wbr>MockBehavior, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            The <code class="cs">Microsoft.Extensions.Logging.ILogger</code>
+            The default constructor with available logging level
             </div>
 
 		<div class="panel panel-default">
-			<div class="panel-body">
-				<dl class="dl-horizontal">				
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Testing.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.dll</a></dd>
-
+						<dd><a href="/api/Rocket.Surgery.Extensions.Testing.Moq.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.Moq<wbr>.dll</a></dd>
+						
 						<dt>Namespace</dt>
 						<dd><a href="/api/Rocket.Surgery.Extensions.Testing">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></dd>		
+						<dd><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a></dd>		
+					
 				</dl>
-			</div>
+  			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>protected readonly ILogger Logger</code></pre>
+	<pre><code>protected AutoMockTest(ITestOutputHelper outputHelper, MockBehavior mockBehavior = 1, string logFormat = "[{Timestamp:HH:mm:ss} {Level:w4}] {Message}{NewLine}{Exception}", Action&lt;LoggerConfiguration&gt; configureLogger = null)</code></pre>
 
 
 
 
 
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>outputHelper</td>
+						<td>ITestOutputHelper</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>mockBehavior</td>
+						<td>MockBehavior</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>logFormat</td>
+						<td>string</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>configureLogger</td>
+						<td>Action<wbr>&lt;LoggerConfiguration&gt;<wbr></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 	
