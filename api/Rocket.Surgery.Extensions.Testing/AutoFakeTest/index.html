@@ -217,10 +217,7 @@
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/TestDiagnosticListenerLoggingAdapter">Test<wbr>Diagnostic<wbr>Listener<wbr>Logging<wbr>Adapter</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/TestDiagnosticLogger">TestDiagnosticLogger</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/TheoryData_1">TheoryData<wbr>&lt;T&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger">XunitLogger</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLoggerProvider">XunitLoggerProvider</a></li>
 
 
                     </ul>
@@ -331,9 +328,21 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/A16C7D61">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>LogLevel)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/951AF503">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>LogEventLevel, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></td>
 									<td>
-            Create the auto test class
+            The default constructor with available logging level
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/610F3C5F">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>LogLevel, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+									<td>
+            The default constructor with available logging level
+            </td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/C868F1E4">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></td>
+									<td>
+            The default constructor with available logging level
             </td>
 							</tr>
 					</tbody></table>
@@ -354,51 +363,11 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/D75F0DA5">DiagnosticSource</a></td>
-								<td></td>
-								<td>
-									<div>
-            The <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/D75F0DA5">DiagnosticSource</a></code>
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/A170A33F">Disposable</a></td>
 								<td></td>
 								<td>
 									<div>
             The <code class="cs">System.Reactive.Disposables.CompositeDisposable</code>
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/83583C11">Logger</a></td>
-								<td></td>
-								<td>
-									<div>
-            The <code class="cs">Microsoft.Extensions.Logging.ILogger</code>
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/ED38DCE1">LoggerFactory</a></td>
-								<td></td>
-								<td>
-									<div>
-            The <code class="cs">Microsoft.Extensions.Logging.ILoggerFactory</code>
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/301BF55C">Provider</a></td>
-								<td></td>
-								<td>
-									<div>
-            The <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLoggerProvider">XunitLoggerProvider</a></code>
             </div>
 											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
 								</td>
@@ -438,12 +407,52 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/5999B696">DiagnosticSource</a></td>
+								<td>DiagnosticSource</td>
+								<td>
+									<div>
+            The <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/5999B696">DiagnosticSource</a></code>
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/2C37777C">Fake</a></td>
 								<td>AutoFake</td>
 								<td>
 									<div>
             The AutoFake instance
             </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/50E2D14C">Logger</a></td>
+								<td>ILogger</td>
+								<td>
+									<div>
+            The <code class="cs">Microsoft.Extensions.Logging.ILogger</code>
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/37C58529">LoggerFactory</a></td>
+								<td>ILoggerFactory</td>
+								<td>
+									<div>
+            The <code class="cs">Microsoft.Extensions.Logging.ILoggerFactory</code>
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/34A95613">SerilogLogger</a></td>
+								<td>ILogger</td>
+								<td>
+									<div>
+            The <code class="cs">Microsoft.Extensions.Logging.ILogger</code>
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>

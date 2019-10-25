@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - XunitLogger.IsEnabled(LogLevel) Method</title>
+        <title>Rocket Surgeons Guild - API - AutoFakeTest.AutoFakeTest(ITestOutputHelper, string, Action&lt;LoggerConfiguration&gt;) Constructor</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -141,7 +141,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -203,18 +204,29 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Testing.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.dll</a></li>
+		<li><a href="/api/Rocket.Surgery.Extensions.Testing.FakeItEasy.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.FakeItEasy<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Extensions.Testing">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger">XunitLogger</a></li>
+		<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger/BEBB5405">XunitLogger<wbr>(ITestOutputHelper, <wbr>string, <wbr>XunitLoggerProvider)<wbr></a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/C868F1E4">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/610F3C5F">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>LogLevel, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/951AF503">AutoFakeTest<wbr>(ITestOutputHelper, <wbr>LogEventLevel, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr></a></li>
 			<li class="header">Method Members</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger/C5F4992B">BeginScope<wbr>&lt;TState&gt;<wbr><wbr>(TState)<wbr></a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger/AA41AF1C">IsEnabled<wbr>(LogLevel)<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger/00D1068A">Log<wbr>&lt;TState&gt;<wbr><wbr>(LogLevel, <wbr>EventId, <wbr>TState, <wbr>Exception, <wbr>Func<wbr>&lt;TState, <wbr>Exception, <wbr>string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/7EA47485">BuildContainer<wbr>(ContainerBuilder)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/0CCA3440">Populate<wbr>(ValueTuple<wbr>&lt;IConfiguration, <wbr>I<wbr>Service<wbr>Collection&gt;<wbr>)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/CF7696BE">AutoFake</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/9B04A7AB">Configuration</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/5999B696">DiagnosticSource</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest/2C37777C">Fake</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/50E2D14C">Logger</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/37C58529">LoggerFactory</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/34A95613">SerilogLogger</a></li>
+			<li class="header">Field Members</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/A170A33F">Disposable</a></li>
 
 
                     </ul>
@@ -229,31 +241,35 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger">XunitLogger</a>.</h3>
-	<h1>IsEnabled<wbr>(LogLevel)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a>.</h3>
+	<h1>AutoFakeTest<wbr>(ITestOutputHelper, <wbr>string, <wbr>Action<wbr>&lt;<wbr>Logger<wbr>Configuration&gt;<wbr>)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            The default constructor with available logging level
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Testing.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.dll</a></dd>
+						<dd><a href="/api/Rocket.Surgery.Extensions.Testing.FakeItEasy.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing<wbr>.FakeItEasy<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
 						<dd><a href="/api/Rocket.Surgery.Extensions.Testing">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Testing/XunitLogger">XunitLogger</a></dd>		
+						<dd><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public bool IsEnabled(LogLevel logLevel)</code></pre>
+	<pre><code>protected AutoFakeTest(ITestOutputHelper outputHelper, string logFormat = "[{Timestamp:HH:mm:ss} {Level:w4}] {Message}{NewLine}{Exception}", Action&lt;LoggerConfiguration&gt; configureLogger = null)</code></pre>
 
 
 
@@ -271,8 +287,18 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>logLevel</td>
-						<td>LogLevel</td>
+						<td>outputHelper</td>
+						<td>ITestOutputHelper</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>logFormat</td>
+						<td>string</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>configureLogger</td>
+						<td>Action<wbr>&lt;LoggerConfiguration&gt;<wbr></td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -290,7 +316,7 @@
 					</tr>
 				</thead>
 				<tbody><tr>
-					<td>bool</td>
+					<td>void</td>
 					<td></td>
 				</tr>
 			</tbody></table>
