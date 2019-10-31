@@ -218,6 +218,8 @@
 				<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/SolutionExtensions">SolutionExtensions</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Nuke/ToolSettingsExtensions">Tool<wbr>Settings<wbr>Extensions</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild">IRocketBoosterBuild</a></li>
 
 
                     </ul>
@@ -343,6 +345,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/ToolSettingsExtensions/094B234F">SetDefaultLoggers<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>PathConstruction<wbr>.AbsolutePath)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Configures binary and file logging for MSBuild
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Nuke/ToolSettingsExtensions/22691A37">SetFileLogger<wbr>&lt;T&gt;<wbr><wbr>(T, <wbr>PathConstruction<wbr>.AbsolutePath)<wbr></a></td>
 								<td>T</td>
 								<td>
@@ -358,6 +370,17 @@ class Type type-node
 								<td>
 									<div>
             Ensures all the gitversion values are available as environment values (GITVERISON_*)
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/ToolSettingsExtensions/DF6D0E6B">With<wbr>&lt;T&gt;<wbr><wbr>(ITargetDefinition, <wbr>Func<wbr>&lt;<wbr>I<wbr>Target<wbr>Definition, <wbr>T, <wbr>I<wbr>Target<wbr>Definition&gt;<wbr>, <wbr>T)<wbr></a></td>
+								<td>ITargetDefinition</td>
+								<td>
+									<div>
+            <p>Call a target definition in context of a build script</p>
+            <p>if the build scripts aren't setup correctly the nuke extensions will not detect them.</p>
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
