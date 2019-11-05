@@ -336,21 +336,21 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Linq/AsyncLinqExtensions/DE1C995B">Map<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>IAsyncEnumerable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of a sequence into a new form.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/System.Linq/AsyncLinqExtensions/A74A5F81">Map<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IAsyncEnumerable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
             Projects each element of a sequence into a new form by incorporating the element's index.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Linq/AsyncLinqExtensions/DE1C995B">Map<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IAsyncEnumerable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of a sequence into a new form.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -396,17 +396,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Linq/AsyncLinqExtensions/7293F050">ReduceAsync<wbr>&lt;TSource, <wbr>TAccumulate, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>TAccumulate, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TSource, <wbr>TAccumulate&gt;<wbr>, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>ValueTask<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Applies an accumulator function over an async sequence, returning the result of the aggregation as a single element in the result sequence. The specified seed value is used as the initial accumulator value,
-            and the specified result selector function is used to select the result value.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/System.Linq/AsyncLinqExtensions/53FAAC2E">ReduceAsync<wbr>&lt;TSource, <wbr>TAccumulate, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>TAccumulate, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TSource, <wbr>TAccumulate&gt;<wbr>, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TResult&gt;<wbr>, <wbr>CancellationToken)<wbr></a></td>
 								<td>ValueTask<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -418,12 +407,12 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Linq/AsyncLinqExtensions/2A9536AF">ReduceAsync<wbr>&lt;TSource, <wbr>TAccumulate&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>TAccumulate, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TSource, <wbr>TAccumulate&gt;<wbr>)<wbr></a></td>
-								<td>ValueTask<wbr>&lt;TAccumulate&gt;<wbr></td>
+								<td><a href="/api/System.Linq/AsyncLinqExtensions/7293F050">ReduceAsync<wbr>&lt;TSource, <wbr>TAccumulate, <wbr>TResult&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>TAccumulate, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TSource, <wbr>TAccumulate&gt;<wbr>, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>ValueTask<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Applies an accumulator function over an async sequence, returning the result of the aggregation as a single element in the result sequence. The specified seed value is used as the initial accumulator value.
-            For aggregation behavior with incremental intermediate results.
+            Applies an accumulator function over an async sequence, returning the result of the aggregation as a single element in the result sequence. The specified seed value is used as the initial accumulator value,
+            and the specified result selector function is used to select the result value.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -440,7 +429,18 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Linq/AsyncLinqExtensions/80B54BA1">ReduceAsync<wbr>&lt;TSource&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TSource, <wbr>TSource&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Linq/AsyncLinqExtensions/2A9536AF">ReduceAsync<wbr>&lt;TSource, <wbr>TAccumulate&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>TAccumulate, <wbr>Func<wbr>&lt;TAccumulate, <wbr>TSource, <wbr>TAccumulate&gt;<wbr>)<wbr></a></td>
+								<td>ValueTask<wbr>&lt;TAccumulate&gt;<wbr></td>
+								<td>
+									<div>
+            Applies an accumulator function over an async sequence, returning the result of the aggregation as a single element in the result sequence. The specified seed value is used as the initial accumulator value.
+            For aggregation behavior with incremental intermediate results.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Linq/AsyncLinqExtensions/A8BFFB6B">ReduceAsync<wbr>&lt;TSource&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TSource, <wbr>TSource&gt;<wbr>, <wbr>CancellationToken)<wbr></a></td>
 								<td>ValueTask<wbr>&lt;TSource&gt;<wbr></td>
 								<td>
 									<div>
@@ -451,7 +451,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Linq/AsyncLinqExtensions/A8BFFB6B">ReduceAsync<wbr>&lt;TSource&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TSource, <wbr>TSource&gt;<wbr>, <wbr>CancellationToken)<wbr></a></td>
+								<td><a href="/api/System.Linq/AsyncLinqExtensions/80B54BA1">ReduceAsync<wbr>&lt;TSource&gt;<wbr><wbr>(IAsyncEnumerable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TSource, <wbr>TSource&gt;<wbr>)<wbr></a></td>
 								<td>ValueTask<wbr>&lt;TSource&gt;<wbr></td>
 								<td>
 									<div>

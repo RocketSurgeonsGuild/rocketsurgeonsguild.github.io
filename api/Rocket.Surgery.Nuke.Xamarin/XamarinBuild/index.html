@@ -214,9 +214,9 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild">IMacBuild</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild">IXamarinBuild</a></li>
@@ -273,9 +273,9 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -291,12 +291,12 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["XamarinBuild"]
 class Type type-node
-	Derived0["iOSBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
-	Derived1["FormsBuild"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
-	Derived2["AndroidBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
+	Derived0["AndroidBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
+	Derived1["iOSBuild"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
+	Derived2["FormsBuild"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
 
 						</div>
 					</div>
@@ -427,21 +427,21 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/1AD24DE6">GenerateReadme</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            Loops through the Readme to update sections that are automated to give nuget packages, build histories and more, while keeping the rest of the readme correct.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/DED59DBB">Generate_<wbr>Code_<wbr>Coverage_<wbr>Reports</a></td>
 								<td>Target</td>
 								<td>
 									<div>
             This will generate code coverage reports from emitted coverage data
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/1AD24DE6">GenerateReadme</a></td>
+								<td>Target</td>
+								<td>
+									<div>
+            Loops through the Readme to update sections that are automated to give nuget packages, build histories and more, while keeping the rest of the readme correct.
             </div>
 											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
 								</td>

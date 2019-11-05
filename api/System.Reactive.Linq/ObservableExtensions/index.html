@@ -325,16 +325,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9F519FFA">ConcatMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/B6D270D4">ConcatMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IEnumerable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TCollection, <wbr>int, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -355,6 +345,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9F519FFA">ConcatMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/A1B185EC">ConcatMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -370,26 +370,6 @@ class Type type-node
 								<td>
 									<div>
             Projects each element of an observable sequence to an enumerable sequence and concatenates the resulting enumerable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/BE524559">ConcatMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/C0CA6199">ConcatMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -435,21 +415,31 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/F50F7789">ConcatMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/BE524559">ConcatMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/21764F17">ConcatMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/C0CA6199">ConcatMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/F50F7789">ConcatMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -475,11 +465,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/57113B1B">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IEnumerable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/21764F17">ConcatMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an enumerable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -495,21 +485,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9E50E0C7">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/57113B1B">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IEnumerable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/FCBBCFD0">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>, <wbr>int)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to an enumerable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -525,16 +505,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6700CEB2">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TCollection, <wbr>int, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence by incorporating the element's index, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/865835B5">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TCollection, <wbr>int, <wbr>TResult&gt;<wbr>, <wbr>int)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -545,11 +515,31 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/047D518E">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6700CEB2">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TCollection, <wbr>int, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task with cancellation support and merges all of the task results into one observable sequence.
+            Projects each element of an observable sequence to an observable sequence by incorporating the element's index, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/FCBBCFD0">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>, <wbr>int)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9E50E0C7">MergeMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -565,11 +555,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9B700DF7">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IEnumerable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/047D518E">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an enumerable sequence and concatenates the resulting enumerable sequences into one observable sequence.
+            Projects each element of an observable sequence to a task with cancellation support and merges all of the task results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -585,51 +575,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6FE1DFE7">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9B700DF7">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IEnumerable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6B92430C">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>, <wbr>int)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/89151CA9">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/F61A8CFD">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>, <wbr>int)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/4ACD8CF0">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task by incorporating the element's index with cancellation support and merges all of the task results into one observable sequence.
+            Projects each element of an observable sequence to an enumerable sequence and concatenates the resulting enumerable sequences into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -645,11 +595,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9237C81D">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IEnumerable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/4ACD8CF0">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an enumerable sequence by incorporating the element's index and concatenates the resulting enumerable sequences into one observable sequence.
+            Projects each element of an observable sequence to a task by incorporating the element's index with cancellation support and merges all of the task results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -665,11 +615,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/8406CEEF">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/9237C81D">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IEnumerable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to an observable sequence by incorporating the element's index and merges the resulting observable sequences into one observable sequence.
+            Projects each element of an observable sequence to an enumerable sequence by incorporating the element's index and concatenates the resulting enumerable sequences into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -685,11 +635,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/D03390B5">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/8406CEEF">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task by incorporating the element's index and merges all of the task results into one observable sequence.
+            Projects each element of an observable sequence to an observable sequence by incorporating the element's index and merges the resulting observable sequences into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -705,11 +655,51 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/5A73DA79">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/D03390B5">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task by incorporating the element's index and merges all of the task results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6B92430C">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>, <wbr>int)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/6FE1DFE7">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/F61A8CFD">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>, <wbr>int)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/89151CA9">MergeMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -725,31 +715,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/4DD65A6E">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/5A73DA79">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/480876A3">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>, <wbr>int)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/512B1CBC">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task by incorporating the element's index with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -765,11 +735,11 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/350B7FF0">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/512B1CBC">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task by incorporating the element's index, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task by incorporating the element's index with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -780,6 +750,36 @@ class Type type-node
 								<td>
 									<div>
             Projects each element of an observable sequence to a task by incorporating the element's index, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/350B7FF0">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task by incorporating the element's index, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/480876A3">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>, <wbr>int)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/4DD65A6E">MergeMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -828,16 +828,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/31A89977">SwitchMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/C208642F">SwitchMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>IEnumerable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>int, <wbr>TCollection, <wbr>int, <wbr>TResult&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -858,6 +848,16 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/31A89977">SwitchMap<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TCollection&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TCollection, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to an observable sequence, invokes the result selector for the source element and each of the corresponding inner sequence's elements, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/F27BEEA9">SwitchMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
@@ -873,26 +873,6 @@ class Type type-node
 								<td>
 									<div>
             Projects each element of an observable sequence to an enumerable sequence and concatenates the resulting enumerable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/78953A01">SwitchMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/74D422D8">SwitchMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
-								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
-								<td>
-									<div>
-            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -938,21 +918,31 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/EB4147CF">SwitchMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/78953A01">SwitchMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>IObservable<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to an observable sequence and merges the resulting observable sequences into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/0212F31A">SwitchMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/74D422D8">SwitchMap<wbr>&lt;TSource, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TResult&gt;<wbr>&gt;<wbr>)<wbr></a></td>
 								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
 								<td>
 									<div>
-            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            Projects each element of an observable sequence to a task and merges all of the task results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/EB4147CF">SwitchMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>CancellationToken, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task with cancellation support, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>
@@ -973,6 +963,16 @@ class Type type-node
 								<td>
 									<div>
             Projects each element of an observable sequence to a task by incorporating the element's index, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/System.Reactive.Linq/ObservableExtensions/0212F31A">SwitchMap<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr><wbr>(IObservable<wbr>&lt;TSource&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>Task<wbr>&lt;TTaskResult&gt;<wbr>&gt;<wbr>, <wbr>Func<wbr>&lt;TSource, <wbr>TTaskResult, <wbr>TResult&gt;<wbr>)<wbr></a></td>
+								<td>IObservable<wbr>&lt;TResult&gt;<wbr></td>
+								<td>
+									<div>
+            Projects each element of an observable sequence to a task, invokes the result selector for the source element and the task result, and merges the results into one observable sequence.
             </div>
 											<div><small><em>static</em></small></div>
 								</td>

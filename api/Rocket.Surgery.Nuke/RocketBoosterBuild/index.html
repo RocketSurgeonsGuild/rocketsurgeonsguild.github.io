@@ -274,10 +274,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -291,14 +291,14 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["RocketBoosterBuild"]
 class Type type-node
-	Derived0["MsBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
+	Derived0["MacBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
 	Derived1["XamarinBuild"]--&gt;Type
 	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
-	Derived2["DotNetCoreBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
-	Derived3["MacBuild"]--&gt;Type
-	click Derived3 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
+	Derived2["MsBuild"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
+	Derived3["DotNetCoreBuild"]--&gt;Type
+	click Derived3 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
 
 						</div>
 					</div>
@@ -441,20 +441,20 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/1AD24DE6">GenerateReadme</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            Loops through the Readme to update sections that are automated to give nuget packages, build histories and more, while keeping the rest of the readme correct.
-            </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/DED59DBB">Generate_<wbr>Code_<wbr>Coverage_<wbr>Reports</a></td>
 								<td>Target</td>
 								<td>
 									<div>
             This will generate code coverage reports from emitted coverage data
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/1AD24DE6">GenerateReadme</a></td>
+								<td>Target</td>
+								<td>
+									<div>
+            Loops through the Readme to update sections that are automated to give nuget packages, build histories and more, while keeping the rest of the readme correct.
             </div>
 								</td>
 							</tr>
