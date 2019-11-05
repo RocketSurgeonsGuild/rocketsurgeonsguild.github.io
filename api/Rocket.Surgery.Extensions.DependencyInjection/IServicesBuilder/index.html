@@ -271,8 +271,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -288,10 +288,10 @@
 	click Interface3 "/api/Rocket.Surgery.Conventions/IConventionContext"
 	Type["IServicesBuilder"]
 class Type type-node
-	Implementing0["ServicesBuilder"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
-	Implementing1["AutofacBuilder"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
+	Implementing0["AutofacBuilder"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
+	Implementing1["ServicesBuilder"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
 
 						</div>
 					</div>
@@ -353,21 +353,21 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/8C57EC82">Get<wbr>&lt;T&gt;<wbr><wbr>()<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-            Get a value by type from the context
-            </div>
-										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions">Convention<wbr>Context<wbr>Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/9C4D9E3D">Get<wbr>&lt;T&gt;<wbr><wbr>(string)<wbr></a></td>
 								<td>T</td>
 								<td>
 									<div>
             Get a value by key from the context
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions">Convention<wbr>Context<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/8C57EC82">Get<wbr>&lt;T&gt;<wbr><wbr>()<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Get a value by type from the context
             </div>
 										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions">Convention<wbr>Context<wbr>Extensions</a></em></small></div>
 								</td>
@@ -403,7 +403,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/1BC4D70B">Set<wbr>&lt;T&gt;<wbr><wbr>(T)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/F2CE2D2F">Set<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>T)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -413,7 +413,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/F2CE2D2F">Set<wbr>&lt;T&gt;<wbr><wbr>(string, <wbr>T)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions/1BC4D70B">Set<wbr>&lt;T&gt;<wbr><wbr>(T)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div>
@@ -493,7 +493,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Microsoft.Extensions.DependencyInjection/MediatRServicesExtensions/CC21070E">UseMediatR<wbr>()<wbr></a></td>
+								<td><a href="/api/Microsoft.Extensions.DependencyInjection/MediatRServicesExtensions/CAACA862">UseMediatR<wbr>(<wbr>Mediat<wbr>R<wbr>Service<wbr>Configuration)<wbr></a></td>
 								<td><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">I<wbr>Service<wbr>Convention<wbr>Context</a></td>
 								<td>
 									<div>
@@ -503,7 +503,7 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Microsoft.Extensions.DependencyInjection/MediatRServicesExtensions/CAACA862">UseMediatR<wbr>(<wbr>Mediat<wbr>R<wbr>Service<wbr>Configuration)<wbr></a></td>
+								<td><a href="/api/Microsoft.Extensions.DependencyInjection/MediatRServicesExtensions/CC21070E">UseMediatR<wbr>()<wbr></a></td>
 								<td><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">I<wbr>Service<wbr>Convention<wbr>Context</a></td>
 								<td>
 									<div>
