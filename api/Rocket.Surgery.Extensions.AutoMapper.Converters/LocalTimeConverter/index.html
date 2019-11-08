@@ -263,9 +263,13 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li>ITypeConverter<wbr>&lt;LocalTime, <wbr>TimeSpan&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;TimeSpan, <wbr>LocalTime&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalTime&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;LocalTime, <wbr>DateTime&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;DateTime&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;DateTime, <wbr>LocalTime&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalTime&gt;<wbr>&gt;<wbr></li>								
 									</ul>
 								</dd>
 							
@@ -284,9 +288,13 @@
 							graph BT
 	Type--&gt;Base0["Object"]
 	Type-.-&gt;Interface0["ITypeConverter&lt;LocalTime, TimeSpan&gt;"]
-	Type-.-&gt;Interface1["ITypeConverter&lt;TimeSpan, LocalTime&gt;"]
-	Type-.-&gt;Interface2["ITypeConverter&lt;LocalTime, DateTime&gt;"]
-	Type-.-&gt;Interface3["ITypeConverter&lt;DateTime, LocalTime&gt;"]
+	Type-.-&gt;Interface1["ITypeConverter&lt;Nullable&lt;LocalTime&gt;, Nullable&lt;TimeSpan&gt;&gt;"]
+	Type-.-&gt;Interface2["ITypeConverter&lt;TimeSpan, LocalTime&gt;"]
+	Type-.-&gt;Interface3["ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;LocalTime&gt;&gt;"]
+	Type-.-&gt;Interface4["ITypeConverter&lt;LocalTime, DateTime&gt;"]
+	Type-.-&gt;Interface5["ITypeConverter&lt;Nullable&lt;LocalTime&gt;, Nullable&lt;DateTime&gt;&gt;"]
+	Type-.-&gt;Interface6["ITypeConverter&lt;DateTime, LocalTime&gt;"]
+	Type-.-&gt;Interface7["ITypeConverter&lt;Nullable&lt;DateTime&gt;, Nullable&lt;LocalTime&gt;&gt;"]
 	Type["LocalTimeConverter"]
 class Type type-node
 
@@ -298,8 +306,10 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class LocalTimeConverter : ITypeConverter&lt;LocalTime, TimeSpan&gt;, 
-    ITypeConverter&lt;TimeSpan, LocalTime&gt;, ITypeConverter&lt;LocalTime, DateTime&gt;, 
-    ITypeConverter&lt;DateTime, LocalTime&gt;</code></pre>
+    ITypeConverter&lt;Nullable&lt;LocalTime&gt;, Nullable&lt;TimeSpan&gt;&gt;, ITypeConverter&lt;TimeSpan, LocalTime&gt;, 
+    ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;LocalTime&gt;&gt;, ITypeConverter&lt;LocalTime, DateTime&gt;, 
+    ITypeConverter&lt;Nullable&lt;LocalTime&gt;, Nullable&lt;DateTime&gt;&gt;, ITypeConverter&lt;DateTime, LocalTime&gt;, 
+    ITypeConverter&lt;Nullable&lt;DateTime&gt;, Nullable&lt;LocalTime&gt;&gt;</code></pre>
 
 
 
@@ -378,6 +388,42 @@ class Type type-node
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalTimeConverter/E3666B09">Convert<wbr>(LocalTime, <wbr>TimeSpan, <wbr>ResolutionContext)<wbr></a></td>
 								<td>TimeSpan</td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalTimeConverter/1252A9A0">Convert<wbr>(Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;LocalTime&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalTimeConverter/231DECE5">Convert<wbr>(Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;DateTime&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalTimeConverter/5EFA6B3F">Convert<wbr>(Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;TimeSpan&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalTimeConverter/7B4FBEA4">Convert<wbr>(Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalTime&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;LocalTime&gt;<wbr></td>
 								<td>
 									<div>
             Performs conversion from source to destination type

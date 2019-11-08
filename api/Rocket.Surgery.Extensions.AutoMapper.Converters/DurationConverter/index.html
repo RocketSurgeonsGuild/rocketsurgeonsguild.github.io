@@ -269,15 +269,25 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li>ITypeConverter<wbr>&lt;Duration, <wbr>TimeSpan&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;TimeSpan, <wbr>Duration&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;Duration, <wbr>long&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;long&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;long, <wbr>Duration&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;long&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;Duration, <wbr>int&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;int, <wbr>Duration&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;Duration, <wbr>double&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;double&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;double, <wbr>Duration&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;double&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;Duration, <wbr>Decimal&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;Decimal&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;Decimal, <wbr>Duration&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Decimal&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>&gt;<wbr></li>								
 									</ul>
 								</dd>
 							
@@ -296,15 +306,25 @@
 							graph BT
 	Type--&gt;Base0["Object"]
 	Type-.-&gt;Interface0["ITypeConverter&lt;Duration, TimeSpan&gt;"]
-	Type-.-&gt;Interface1["ITypeConverter&lt;TimeSpan, Duration&gt;"]
-	Type-.-&gt;Interface2["ITypeConverter&lt;Duration, long&gt;"]
-	Type-.-&gt;Interface3["ITypeConverter&lt;long, Duration&gt;"]
-	Type-.-&gt;Interface4["ITypeConverter&lt;Duration, int&gt;"]
-	Type-.-&gt;Interface5["ITypeConverter&lt;int, Duration&gt;"]
-	Type-.-&gt;Interface6["ITypeConverter&lt;Duration, double&gt;"]
-	Type-.-&gt;Interface7["ITypeConverter&lt;double, Duration&gt;"]
-	Type-.-&gt;Interface8["ITypeConverter&lt;Duration, Decimal&gt;"]
-	Type-.-&gt;Interface9["ITypeConverter&lt;Decimal, Duration&gt;"]
+	Type-.-&gt;Interface1["ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;TimeSpan&gt;&gt;"]
+	Type-.-&gt;Interface2["ITypeConverter&lt;TimeSpan, Duration&gt;"]
+	Type-.-&gt;Interface3["ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;Duration&gt;&gt;"]
+	Type-.-&gt;Interface4["ITypeConverter&lt;Duration, long&gt;"]
+	Type-.-&gt;Interface5["ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;long&gt;&gt;"]
+	Type-.-&gt;Interface6["ITypeConverter&lt;long, Duration&gt;"]
+	Type-.-&gt;Interface7["ITypeConverter&lt;Nullable&lt;long&gt;, Nullable&lt;Duration&gt;&gt;"]
+	Type-.-&gt;Interface8["ITypeConverter&lt;Duration, int&gt;"]
+	Type-.-&gt;Interface9["ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;int&gt;&gt;"]
+	Type-.-&gt;Interface10["ITypeConverter&lt;int, Duration&gt;"]
+	Type-.-&gt;Interface11["ITypeConverter&lt;Nullable&lt;int&gt;, Nullable&lt;Duration&gt;&gt;"]
+	Type-.-&gt;Interface12["ITypeConverter&lt;Duration, double&gt;"]
+	Type-.-&gt;Interface13["ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;double&gt;&gt;"]
+	Type-.-&gt;Interface14["ITypeConverter&lt;double, Duration&gt;"]
+	Type-.-&gt;Interface15["ITypeConverter&lt;Nullable&lt;double&gt;, Nullable&lt;Duration&gt;&gt;"]
+	Type-.-&gt;Interface16["ITypeConverter&lt;Duration, Decimal&gt;"]
+	Type-.-&gt;Interface17["ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;Decimal&gt;&gt;"]
+	Type-.-&gt;Interface18["ITypeConverter&lt;Decimal, Duration&gt;"]
+	Type-.-&gt;Interface19["ITypeConverter&lt;Nullable&lt;Decimal&gt;, Nullable&lt;Duration&gt;&gt;"]
 	Type["DurationConverter"]
 class Type type-node
 
@@ -316,10 +336,16 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class DurationConverter : ITypeConverter&lt;Duration, TimeSpan&gt;, 
-    ITypeConverter&lt;TimeSpan, Duration&gt;, ITypeConverter&lt;Duration, long&gt;, 
-    ITypeConverter&lt;long, Duration&gt;, ITypeConverter&lt;Duration, int&gt;, ITypeConverter&lt;int, Duration&gt;, 
-    ITypeConverter&lt;Duration, double&gt;, ITypeConverter&lt;double, Duration&gt;, 
-    ITypeConverter&lt;Duration, Decimal&gt;, ITypeConverter&lt;Decimal, Duration&gt;</code></pre>
+    ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;TimeSpan&gt;&gt;, ITypeConverter&lt;TimeSpan, Duration&gt;, 
+    ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;Duration&gt;&gt;, ITypeConverter&lt;Duration, long&gt;, 
+    ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;long&gt;&gt;, ITypeConverter&lt;long, Duration&gt;, 
+    ITypeConverter&lt;Nullable&lt;long&gt;, Nullable&lt;Duration&gt;&gt;, ITypeConverter&lt;Duration, int&gt;, 
+    ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;int&gt;&gt;, ITypeConverter&lt;int, Duration&gt;, 
+    ITypeConverter&lt;Nullable&lt;int&gt;, Nullable&lt;Duration&gt;&gt;, ITypeConverter&lt;Duration, double&gt;, 
+    ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;double&gt;&gt;, ITypeConverter&lt;double, Duration&gt;, 
+    ITypeConverter&lt;Nullable&lt;double&gt;, Nullable&lt;Duration&gt;&gt;, ITypeConverter&lt;Duration, Decimal&gt;, 
+    ITypeConverter&lt;Nullable&lt;Duration&gt;, Nullable&lt;Decimal&gt;&gt;, ITypeConverter&lt;Decimal, Duration&gt;, 
+    ITypeConverter&lt;Nullable&lt;Decimal&gt;, Nullable&lt;Duration&gt;&gt;</code></pre>
 
 
 
@@ -452,6 +478,96 @@ class Type type-node
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/B714634A">Convert<wbr>(long, <wbr>Duration, <wbr>ResolutionContext)<wbr></a></td>
 								<td>Duration</td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/C834723B">Convert<wbr>(Nullable<wbr>&lt;Decimal&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Duration&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/94DA8DD9">Convert<wbr>(Nullable<wbr>&lt;double&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Duration&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/4A0D4CA5">Convert<wbr>(Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;Decimal&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Decimal&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/CBFF70C3">Convert<wbr>(Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;double&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;double&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/B8D0ED9D">Convert<wbr>(Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;int&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;int&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/B8149A39">Convert<wbr>(Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;long&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;long&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/488DBE3E">Convert<wbr>(Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;TimeSpan&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/E7AB58B4">Convert<wbr>(Nullable<wbr>&lt;int&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Duration&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/5E008407">Convert<wbr>(Nullable<wbr>&lt;long&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Duration&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/DurationConverter/D7B721DF">Convert<wbr>(Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;Duration&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Duration&gt;<wbr></td>
 								<td>
 									<div>
             Performs conversion from source to destination type

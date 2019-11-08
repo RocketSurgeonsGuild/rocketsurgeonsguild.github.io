@@ -261,7 +261,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li>ITypeConverter<wbr>&lt;LocalDate, <wbr>DateTime&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;LocalDate&gt;<wbr>, <wbr>Nullable<wbr>&lt;DateTime&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;DateTime, <wbr>LocalDate&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalDate&gt;<wbr>&gt;<wbr></li>								
 									</ul>
 								</dd>
 							
@@ -280,7 +282,9 @@
 							graph BT
 	Type--&gt;Base0["Object"]
 	Type-.-&gt;Interface0["ITypeConverter&lt;LocalDate, DateTime&gt;"]
-	Type-.-&gt;Interface1["ITypeConverter&lt;DateTime, LocalDate&gt;"]
+	Type-.-&gt;Interface1["ITypeConverter&lt;Nullable&lt;LocalDate&gt;, Nullable&lt;DateTime&gt;&gt;"]
+	Type-.-&gt;Interface2["ITypeConverter&lt;DateTime, LocalDate&gt;"]
+	Type-.-&gt;Interface3["ITypeConverter&lt;Nullable&lt;DateTime&gt;, Nullable&lt;LocalDate&gt;&gt;"]
 	Type["LocalDateConverter"]
 class Type type-node
 
@@ -292,7 +296,8 @@ class Type type-node
 
 	<h1 id="Syntax">Syntax</h1>
 	<pre><code>public class LocalDateConverter : ITypeConverter&lt;LocalDate, DateTime&gt;, 
-    ITypeConverter&lt;DateTime, LocalDate&gt;</code></pre>
+    ITypeConverter&lt;Nullable&lt;LocalDate&gt;, Nullable&lt;DateTime&gt;&gt;, ITypeConverter&lt;DateTime, LocalDate&gt;, 
+    ITypeConverter&lt;Nullable&lt;DateTime&gt;, Nullable&lt;LocalDate&gt;&gt;</code></pre>
 
 
 
@@ -362,6 +367,24 @@ class Type type-node
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalDateConverter/1303AD01">Convert<wbr>(LocalDate, <wbr>DateTime, <wbr>ResolutionContext)<wbr></a></td>
 								<td>DateTime</td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalDateConverter/9465853C">Convert<wbr>(Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>Nullable<wbr>&lt;LocalDate&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;LocalDate&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/LocalDateConverter/F6524B30">Convert<wbr>(Nullable<wbr>&lt;LocalDate&gt;<wbr>, <wbr>Nullable<wbr>&lt;DateTime&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;DateTime&gt;<wbr></td>
 								<td>
 									<div>
             Performs conversion from source to destination type
