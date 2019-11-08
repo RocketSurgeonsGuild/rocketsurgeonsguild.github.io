@@ -261,7 +261,9 @@
 								<dd>
 									<ul class="list-unstyled">
 											<li>ITypeConverter<wbr>&lt;Offset, <wbr>TimeSpan&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;Offset&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>&gt;<wbr></li>								
 											<li>ITypeConverter<wbr>&lt;TimeSpan, <wbr>Offset&gt;<wbr></li>								
+											<li>ITypeConverter<wbr>&lt;Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;Offset&gt;<wbr>&gt;<wbr></li>								
 									</ul>
 								</dd>
 							
@@ -280,7 +282,9 @@
 							graph BT
 	Type--&gt;Base0["Object"]
 	Type-.-&gt;Interface0["ITypeConverter&lt;Offset, TimeSpan&gt;"]
-	Type-.-&gt;Interface1["ITypeConverter&lt;TimeSpan, Offset&gt;"]
+	Type-.-&gt;Interface1["ITypeConverter&lt;Nullable&lt;Offset&gt;, Nullable&lt;TimeSpan&gt;&gt;"]
+	Type-.-&gt;Interface2["ITypeConverter&lt;TimeSpan, Offset&gt;"]
+	Type-.-&gt;Interface3["ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;Offset&gt;&gt;"]
 	Type["OffsetConverter"]
 class Type type-node
 
@@ -291,7 +295,9 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class OffsetConverter : ITypeConverter&lt;Offset, TimeSpan&gt;, ITypeConverter&lt;TimeSpan, Offset&gt;</code></pre>
+	<pre><code>public class OffsetConverter : ITypeConverter&lt;Offset, TimeSpan&gt;, 
+    ITypeConverter&lt;Nullable&lt;Offset&gt;, Nullable&lt;TimeSpan&gt;&gt;, ITypeConverter&lt;TimeSpan, Offset&gt;, 
+    ITypeConverter&lt;Nullable&lt;TimeSpan&gt;, Nullable&lt;Offset&gt;&gt;</code></pre>
 
 
 
@@ -350,6 +356,24 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/OffsetConverter/165824C4">Convert<wbr>(Nullable<wbr>&lt;Offset&gt;<wbr>, <wbr>Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;TimeSpan&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/OffsetConverter/D48689A6">Convert<wbr>(Nullable<wbr>&lt;TimeSpan&gt;<wbr>, <wbr>Nullable<wbr>&lt;Offset&gt;<wbr>, <wbr>ResolutionContext)<wbr></a></td>
+								<td>Nullable<wbr>&lt;Offset&gt;<wbr></td>
+								<td>
+									<div>
+            Performs conversion from source to destination type
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.AutoMapper.Converters/OffsetConverter/9A905401">Convert<wbr>(Offset, <wbr>TimeSpan, <wbr>ResolutionContext)<wbr></a></td>
 								<td>TimeSpan</td>
 								<td>
