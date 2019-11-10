@@ -393,7 +393,7 @@ class Type type-node
 								<td><a href="/api/Autofac.Extras.Moq/AutoMock">AutoMock</a></td>
 								<td>
 									<div>
-            The AutoFake instance
+            The AutoMock instance
             </div>
 								</td>
 							</tr>
@@ -403,6 +403,15 @@ class Type type-node
 								<td>
 									<div>
             The Configuration if defined otherwise empty.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/A597539C">Container</a></td>
+								<td>IContainer</td>
+								<td>
+									<div>
+            The Autofac container
             </div>
 								</td>
 							</tr>
@@ -437,11 +446,21 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/8331F3CD">LogStream</a></td>
+								<td>IObservable<wbr>&lt;LogEvent&gt;<wbr></td>
+								<td>
+									<div>
+            The <code class="cs">System.IObservable`1</code>
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/F6C4F733">Moq</a></td>
 								<td><a href="/api/Autofac.Extras.Moq/AutoMock">AutoMock</a></td>
 								<td>
 									<div>
-            The AutoFake instance
+            The AutoMock instance
             </div>
 								</td>
 							</tr>
@@ -453,6 +472,15 @@ class Type type-node
             The <code class="cs">Microsoft.Extensions.Logging.ILogger</code>
             </div>
 											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/63B18F20">ServiceProvider</a></td>
+								<td>Autofac<wbr>Service<wbr>Provider</td>
+								<td>
+									<div>
+            The Service Provider
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -481,6 +509,26 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/222543BD">CaptureLogs<wbr>(Func<wbr>&lt;LogEvent, <wbr>bool&gt;<wbr>, <wbr>IEnumerable<wbr>&lt;LogEvent&gt;<wbr>)<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+            Capture log outputs until the item is disposed
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/62F04440">CaptureLogs<wbr>(IEnumerable<wbr>&lt;LogEvent&gt;<wbr>)<wbr></a></td>
+								<td>IDisposable</td>
+								<td>
+									<div>
+            Capture log outputs until the item is disposed
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/3E12F7AD">CreateLoggerFactory<wbr>(ILogger, <wbr>Logger<wbr>Provider<wbr>Collection)<wbr></a></td>
 								<td>ILoggerFactory</td>
 								<td>
@@ -488,6 +536,15 @@ class Type type-node
             Control the way that the serilog logger factory is created.
             </div>
 											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/A9F752DD">Populate<wbr>(IConfiguration, <wbr>IServiceCollection)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Populate the test class with the given configuration and services
+            </div>
 								</td>
 							</tr>
 							<tr>
