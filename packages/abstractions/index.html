@@ -154,6 +154,7 @@
 <li class="header">Categories</li>
 
     <li class="selected"><a href="/packages/abstractions">Abstractions</a></li>
+    <li><a href="/packages/annotations">Annotations</a></li>
     <li><a href="/packages/app.metrics">App.Metrics</a></li>
     <li><a href="/packages/application">Application</a></li>
     <li><a href="/packages/appmetrics">AppMetrics</a></li>
@@ -169,6 +170,7 @@
     <li><a href="/packages/binding">Binding</a></li>
     <li><a href="/packages/build">Build</a></li>
     <li><a href="/packages/cake">Cake</a></li>
+    <li><a href="/packages/ci">CI</a></li>
     <li><a href="/packages/commandline">CommandLine</a></li>
     <li><a href="/packages/configuration">Configuration</a></li>
     <li><a href="/packages/conventions">Conventions</a></li>
@@ -187,6 +189,7 @@
     <li><a href="/packages/forms">Forms</a></li>
     <li><a href="/packages/freshmvvm">FreshMvvm</a></li>
     <li><a href="/packages/functions">Functions</a></li>
+    <li><a href="/packages/gitversion">GitVersion</a></li>
     <li><a href="/packages/hosting">Hosting</a></li>
     <li><a href="/packages/information">Information</a></li>
     <li><a href="/packages/library">Library</a></li>
@@ -200,6 +203,7 @@
     <li><a href="/packages/mocks">Mocks</a></li>
     <li><a href="/packages/moq">Moq</a></li>
     <li><a href="/packages/msbuild">MsBuild</a></li>
+    <li><a href="/packages/msbuild.targets">MSBuild.Targets</a></li>
     <li><a href="/packages/mvvmcross">MvvmCross</a></li>
     <li><a href="/packages/newtonsoftjson">NewtonsoftJson</a></li>
     <li><a href="/packages/nuke">Nuke</a></li>
@@ -212,6 +216,7 @@
     <li><a href="/packages/reflection">Reflection</a></li>
     <li><a href="/packages/scripts">Scripts</a></li>
     <li><a href="/packages/serilog">Serilog</a></li>
+    <li><a href="/packages/sourcelink">SourceLink</a></li>
     <li><a href="/packages/storage">Storage</a></li>
     <li><a href="/packages/surgery">Surgery</a></li>
     <li><a href="/packages/sync">Sync</a></li>
@@ -243,17 +248,33 @@
 
 <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Azure.Sync.Abstractions</h3>
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.App.Metrics.Abstractions</h3>
         </div>
         <div class="panel-body">
                 <p>Package Description</p>
             <dl class="dl-horizontal">	
                     <dt>Author</dt>
-                    <dd>Rocket.Surgery.Azure.Sync.Abstractions</dd>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
                                     <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Azure.Sync.Abstractions">Rocket.Surgery.Azure.Sync.Abstractions</a></dd>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.App.Metrics.Abstractions">Rocket.Surgery.Extensions.App.Metrics.Abstractions</a></dd>
                                     <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync">https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync</a></dd>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions">https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Metrics.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Metrics.Abstractions">Rocket.Surgery.Metrics.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Metrics">https://github.com/RocketSurgeonsGuild/Metrics</a></dd>
             </dl>
         </div>
     </div>
@@ -291,118 +312,6 @@
     </div>
 <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Autofac.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Provides Autofac support for a Rocket Surgery Application</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Autofac.Abstractions">Rocket.Surgery.Extensions.Autofac.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Autofac.Extensions">https://github.com/RocketSurgeonsGuild/Autofac.Extensions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Hosting.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Adds helpers to easily bootstrap an application using conventions by just using the correct extension method.  This adds command line operations, additional configuration, logging and service injections by convention.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Hosting.Abstractions">Rocket.Surgery.Hosting.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.WebJobs.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Adds support for configuring web jobs to the hosted application by convention.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.WebJobs.Abstractions">Rocket.Surgery.Extensions.WebJobs.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Domain.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Domain.Abstractions">Rocket.Surgery.Domain.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Domain">https://github.com/RocketSurgeonsGuild/Domain</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Logging.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Adds support for adding logging to the hosted application by convention.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Logging.Abstractions">Rocket.Surgery.Extensions.Logging.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.App.Metrics.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.App.Metrics.Abstractions">Rocket.Surgery.Extensions.App.Metrics.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions">https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Metrics.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Metrics.Abstractions">Rocket.Surgery.Metrics.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Metrics">https://github.com/RocketSurgeonsGuild/Metrics</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Abstractions</h3>
         </div>
         <div class="panel-body">
@@ -430,6 +339,22 @@
                     <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.CommandLine.Abstractions">Rocket.Surgery.Extensions.CommandLine.Abstractions</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Autofac.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Provides Autofac support for a Rocket Surgery Application</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Autofac.Abstractions">Rocket.Surgery.Extensions.Autofac.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Autofac.Extensions">https://github.com/RocketSurgeonsGuild/Autofac.Extensions</a></dd>
             </dl>
         </div>
     </div>
@@ -483,6 +408,22 @@
     </div>
 <div class="panel panel-default">
         <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Hosting.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Adds helpers to easily bootstrap an application using conventions by just using the correct extension method.  This adds command line operations, additional configuration, logging and service injections by convention.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Hosting.Abstractions">Rocket.Surgery.Hosting.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Conventions.Abstractions</h3>
         </div>
         <div class="panel-body">
@@ -492,6 +433,70 @@
                     <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
                                     <dt>NuGet</dt>
                     <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Conventions.Abstractions">Rocket.Surgery.Conventions.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Azure.Sync.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>Rocket.Surgery.Azure.Sync.Abstractions</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Azure.Sync.Abstractions">Rocket.Surgery.Azure.Sync.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync">https://github.com/RocketSurgeonsGuild/Azure.Offline.Sync</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.WebJobs.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Adds support for configuring web jobs to the hosted application by convention.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.WebJobs.Abstractions">Rocket.Surgery.Extensions.WebJobs.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Domain.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Domain.Abstractions">Rocket.Surgery.Domain.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Domain">https://github.com/RocketSurgeonsGuild/Domain</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Logging.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Adds support for adding logging to the hosted application by convention.</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Logging.Abstractions">Rocket.Surgery.Extensions.Logging.Abstractions</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
             </dl>
