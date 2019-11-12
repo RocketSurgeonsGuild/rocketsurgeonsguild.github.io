@@ -213,6 +213,7 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Nuke/ComputedGitVersionAttribute">Computed<wbr>Git<wbr>Version<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/DownloadFileAttribute">Download<wbr>File<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute">Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/NuGetVerbosityMappingAttribute">Nu<wbr>Get<wbr>Verbosity<wbr>Mapping<wbr>Attribute</a></li>
@@ -276,8 +277,8 @@
 									<ul class="list-unstyled">
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -295,10 +296,10 @@ class Type type-node
 	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
 	Derived1["DotNetCoreBuild"]--&gt;Type
 	click Derived1 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
-	Derived2["MsBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
-	Derived3["MacBuild"]--&gt;Type
-	click Derived3 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
+	Derived2["MacBuild"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
+	Derived3["MsBuild"]--&gt;Type
+	click Derived3 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
 
 						</div>
 					</div>

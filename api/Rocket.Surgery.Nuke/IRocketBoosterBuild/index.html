@@ -212,6 +212,7 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Nuke/ComputedGitVersionAttribute">Computed<wbr>Git<wbr>Version<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/DownloadFileAttribute">Download<wbr>File<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute">Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/NuGetVerbosityMappingAttribute">Nu<wbr>Get<wbr>Verbosity<wbr>Mapping<wbr>Attribute</a></li>
@@ -262,18 +263,18 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild">IMsBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild">IMacBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/IDotNetCoreBuild">IDotNetCoreBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild">IMsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild">IMacBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild">IXamarinBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -283,30 +284,30 @@
 							graph BT
 	Type["IRocketBoosterBuild"]
 class Type type-node
-	Implementing0["RocketBoosterBuild"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Nuke/RocketBoosterBuild"
-	Implementing1["IMsBuild"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild"
+	Implementing0["iOSBuild"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
+	Implementing1["FormsBuild"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
 	Implementing2["AndroidBuild"]-.-&gt;Type
 	click Implementing2 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
-	Implementing3["XamarinBuild"]-.-&gt;Type
-	click Implementing3 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
-	Implementing4["iOSBuild"]-.-&gt;Type
-	click Implementing4 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
-	Implementing5["IMacBuild"]-.-&gt;Type
-	click Implementing5 "/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild"
-	Implementing6["FormsBuild"]-.-&gt;Type
-	click Implementing6 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
-	Implementing7["IDotNetCoreBuild"]-.-&gt;Type
-	click Implementing7 "/api/Rocket.Surgery.Nuke.DotNetCore/IDotNetCoreBuild"
-	Implementing8["DotNetCoreBuild"]-.-&gt;Type
-	click Implementing8 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
-	Implementing9["MsBuild"]-.-&gt;Type
-	click Implementing9 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
-	Implementing10["IXamarinBuild"]-.-&gt;Type
-	click Implementing10 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild"
-	Implementing11["MacBuild"]-.-&gt;Type
-	click Implementing11 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
+	Implementing3["IDotNetCoreBuild"]-.-&gt;Type
+	click Implementing3 "/api/Rocket.Surgery.Nuke.DotNetCore/IDotNetCoreBuild"
+	Implementing4["XamarinBuild"]-.-&gt;Type
+	click Implementing4 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
+	Implementing5["RocketBoosterBuild"]-.-&gt;Type
+	click Implementing5 "/api/Rocket.Surgery.Nuke/RocketBoosterBuild"
+	Implementing6["DotNetCoreBuild"]-.-&gt;Type
+	click Implementing6 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
+	Implementing7["IMsBuild"]-.-&gt;Type
+	click Implementing7 "/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild"
+	Implementing8["IMacBuild"]-.-&gt;Type
+	click Implementing8 "/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild"
+	Implementing9["IXamarinBuild"]-.-&gt;Type
+	click Implementing9 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild"
+	Implementing10["MacBuild"]-.-&gt;Type
+	click Implementing10 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
+	Implementing11["MsBuild"]-.-&gt;Type
+	click Implementing11 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
 
 						</div>
 					</div>

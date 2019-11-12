@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - PackageSync.MoveVersions(PathConstruction.AbsolutePath, PathConstruction.AbsolutePath, CancellationToken) Method</title>
+        <title>Rocket Surgeons Guild - API - EnsurePackageSourceHasCredentialsAttribute Class</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -141,10 +141,13 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Parameters">Parameters</a></p>
-<p><a href="#ReturnValue">Return Value</a></p>
+<p><a href="#Constructors">Constructors</a></p>
+<p><a href="#Properties">Properties</a></p>
+<p><a href="#Methods">Methods</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -206,14 +209,21 @@
 			<li class="header">Assembly</li>
 		<li><a href="/api/Rocket.Surgery.Nuke.dll">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Rocket.Surgery.Nuke.SyncPackages">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.SyncPackages</a></li>
-		<li class="header">Type</li>
-		<li><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync">PackageSync</a></li>
+		<li><a href="/api/Rocket.Surgery.Nuke">Rocket<wbr>.Surgery<wbr>.Nuke</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Method Members</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync/187C63A8">AddMissingPackages<wbr>(PathConstruction<wbr>.AbsolutePath, <wbr>PathConstruction<wbr>.AbsolutePath, <wbr>CancellationToken)<wbr></a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync/8FEFCDAE">MoveVersions<wbr>(PathConstruction<wbr>.AbsolutePath, <wbr>PathConstruction<wbr>.AbsolutePath, <wbr>CancellationToken)<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync/1738D660">RemoveExtraPackages<wbr>(PathConstruction<wbr>.AbsolutePath, <wbr>PathConstruction<wbr>.AbsolutePath, <wbr>CancellationToken)<wbr></a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke/ComputedGitVersionAttribute">Computed<wbr>Git<wbr>Version<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/DownloadFileAttribute">Download<wbr>File<wbr>Attribute</a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute">Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/LoggingExtensions">LoggingExtensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/NuGetVerbosityMappingAttribute">Nu<wbr>Get<wbr>Verbosity<wbr>Mapping<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/PackageIconAttribute">PackageIconAttribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/SolutionExtensions">SolutionExtensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/ToolSettingsExtensions">Tool<wbr>Settings<wbr>Extensions</a></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild">IRocketBoosterBuild</a></li>
 
 
                     </ul>
@@ -228,31 +238,63 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync">PackageSync</a>.</h3>
-	<h1>MoveVersions<wbr>(PathConstruction<wbr>.AbsolutePath, <wbr>PathConstruction<wbr>.AbsolutePath, <wbr>CancellationToken)<wbr> <small>Method</small></h1>
+	<h1>Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute <small>Class</small></h1>
 </section>
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Ensures that the package source name has credentials set
+            This is useful to ensure that credentials are defined on a users local environment
+            </div>
+
 		<div class="panel panel-default">
-  			<div class="panel-body">	
-				<dl class="dl-horizontal">	
-						<dt>Assembly</dt>
-						<dd><a href="/api/Rocket.Surgery.Nuke.dll">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.dll</a></dd>
-						
-						<dt>Namespace</dt>
-						<dd><a href="/api/Rocket.Surgery.Nuke.SyncPackages">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.SyncPackages</a></dd>
-					
-						<dt>Containing Type</dt>
-						<dd><a href="/api/Rocket.Surgery.Nuke.SyncPackages/PackageSync">PackageSync</a></dd>		
-					
-				</dl>
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Rocket.Surgery.Nuke.dll">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Rocket.Surgery.Nuke">Rocket<wbr>.Surgery<wbr>.Nuke</a></dd>
+											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IOnBeforeLogo</li>								
+											<li>IBuildExtension</li>								
+									</ul>
+								</dd>
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>Attribute</li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph BT
+	Type--&gt;Base0["Attribute"]
+	Type-.-&gt;Interface0["IOnBeforeLogo"]
+	Type-.-&gt;Interface1["IBuildExtension"]
+	Type["EnsurePackageSourceHasCredentialsAttribute"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static Task MoveVersions(PathConstruction.AbsolutePath solutionPath, PathConstruction.AbsolutePath packagesProps, CancellationToken cancellationToken)</code></pre>
+	<pre><code>public class EnsurePackageSourceHasCredentialsAttribute : Attribute, IOnBeforeLogo, IBuildExtension</code></pre>
 
 
 
@@ -267,7 +309,23 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>Async<wbr>State<wbr>Machine<wbr>Attribute</td>
+						<td>Nullable<wbr>Context<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>NullableAttribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>PublicAPIAttribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Used<wbr>Implicitly<wbr>Attribute</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>Attribute<wbr>Usage<wbr>Attribute</td>
 						<td></td>
 					</tr>
 			</tbody></table>
@@ -275,54 +333,116 @@
 	</div>	
 
 
-	<h1 id="Parameters">Parameters</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover three-cols">
-				<thead>
-					<tr>
-						<th>Name</th>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>solutionPath</td>
-						<td>PathConstruction<wbr>.AbsolutePath</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>packagesProps</td>
-						<td>PathConstruction<wbr>.AbsolutePath</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>cancellationToken</td>
-						<td>CancellationToken</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
-	<h1 id="ReturnValue">Return Value</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-				<tbody><tr>
-					<td>Task</td>
-					<td></td>
-				</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
+			<h1 id="Constructors">Constructors</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover two-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+									<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute/02DFB629">Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute<wbr>(string)<wbr></a></td>
+									<td>
+            Ensures that the package source name has credentials set
+            This is useful to ensure that credentials are defined on a users local environment
+            </td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+			<h1 id="Properties">Properties</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute/30C78957">SourceName</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The nuget source name
+            </div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+			<h1 id="Methods">Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute/19069F99">OnBeforeLogo<wbr>(NukeBuild, <wbr>IReadOnlyCollection<wbr>&lt;<wbr>Executable<wbr>Target&gt;<wbr>)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Reflection.Extensions/ValueExtensions/C6E2C8D2">SetBackingValue<wbr>&lt;<wbr>Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute, <wbr>V&gt;<wbr><wbr>(Expression<wbr>&lt;Func<wbr>&lt;<wbr>Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute, <wbr>V&gt;<wbr>&gt;<wbr>, <wbr>V)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Sets the backing value.
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Reflection.Extensions/ValueExtensions">ValueExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions/2353A7F1">With<wbr>&lt;<wbr>Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute, <wbr>TKey, <wbr>TField&gt;<wbr><wbr>(Dictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>, <wbr>IDictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>)<wbr></a></td>
+								<td>TBuilder</td>
+								<td>
+									<div>
+            Adds the specified dictionary to the provided dictionary.
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions">Test<wbr>Fixture<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 	
 </section>
