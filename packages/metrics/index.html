@@ -154,6 +154,7 @@
 <li class="header">Categories</li>
 
     <li><a href="/packages/abstractions">Abstractions</a></li>
+    <li><a href="/packages/annotations">Annotations</a></li>
     <li><a href="/packages/app.metrics">App.Metrics</a></li>
     <li><a href="/packages/application">Application</a></li>
     <li><a href="/packages/appmetrics">AppMetrics</a></li>
@@ -169,6 +170,7 @@
     <li><a href="/packages/binding">Binding</a></li>
     <li><a href="/packages/build">Build</a></li>
     <li><a href="/packages/cake">Cake</a></li>
+    <li><a href="/packages/ci">CI</a></li>
     <li><a href="/packages/commandline">CommandLine</a></li>
     <li><a href="/packages/configuration">Configuration</a></li>
     <li><a href="/packages/conventions">Conventions</a></li>
@@ -187,6 +189,7 @@
     <li><a href="/packages/forms">Forms</a></li>
     <li><a href="/packages/freshmvvm">FreshMvvm</a></li>
     <li><a href="/packages/functions">Functions</a></li>
+    <li><a href="/packages/gitversion">GitVersion</a></li>
     <li><a href="/packages/hosting">Hosting</a></li>
     <li><a href="/packages/information">Information</a></li>
     <li><a href="/packages/library">Library</a></li>
@@ -200,6 +203,7 @@
     <li><a href="/packages/mocks">Mocks</a></li>
     <li><a href="/packages/moq">Moq</a></li>
     <li><a href="/packages/msbuild">MsBuild</a></li>
+    <li><a href="/packages/msbuild.targets">MSBuild.Targets</a></li>
     <li><a href="/packages/mvvmcross">MvvmCross</a></li>
     <li><a href="/packages/newtonsoftjson">NewtonsoftJson</a></li>
     <li><a href="/packages/nuke">Nuke</a></li>
@@ -212,6 +216,7 @@
     <li><a href="/packages/reflection">Reflection</a></li>
     <li><a href="/packages/scripts">Scripts</a></li>
     <li><a href="/packages/serilog">Serilog</a></li>
+    <li><a href="/packages/sourcelink">SourceLink</a></li>
     <li><a href="/packages/storage">Storage</a></li>
     <li><a href="/packages/surgery">Surgery</a></li>
     <li><a href="/packages/sync">Sync</a></li>
@@ -241,54 +246,6 @@
     
 <p>This page contain information about the Package provided by the Rocket Surgerons Guild.</p>
 
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Metrics</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Metrics">Rocket.Surgery.Extensions.Metrics</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions">https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Metrics.Abstractions</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Metrics.Abstractions">Rocket.Surgery.Extensions.Metrics.Abstractions</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions">https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Metrics</h3>
-        </div>
-        <div class="panel-body">
-                <p>Package Description</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Metrics">Rocket.Surgery.Metrics</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Metrics">https://github.com/RocketSurgeonsGuild/Metrics</a></dd>
-            </dl>
-        </div>
-    </div>
 <div class="panel panel-default">
         <div class="panel-heading">
             <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.App.Metrics.Abstractions</h3>
@@ -334,6 +291,54 @@
                     <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.App.Metrics">Rocket.Surgery.Extensions.App.Metrics</a></dd>
                                     <dt>Repository</dt>
                     <dd><a href="https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions">https://github.com/RocketSurgeonsGuild/App.Metrics.Extensions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Metrics</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Metrics">Rocket.Surgery.Extensions.Metrics</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions">https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Extensions.Metrics.Abstractions</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Extensions.Metrics.Abstractions">Rocket.Surgery.Extensions.Metrics.Abstractions</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions">https://github.com/RocketSurgeonsGuild/AppMetrics.Extensions</a></dd>
+            </dl>
+        </div>
+    </div>
+<div class="panel panel-default">
+        <div class="panel-heading">
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Metrics</h3>
+        </div>
+        <div class="panel-body">
+                <p>Package Description</p>
+            <dl class="dl-horizontal">	
+                    <dt>Author</dt>
+                    <dd>David Driscoll</dd>
+                                    <dt>NuGet</dt>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Metrics">Rocket.Surgery.Metrics</a></dd>
+                                    <dt>Repository</dt>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Metrics">https://github.com/RocketSurgeonsGuild/Metrics</a></dd>
             </dl>
         </div>
     </div>
