@@ -305,25 +305,25 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/IAutofacConventionContext">I<wbr>Autofac<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder">Web<wbr>Jobs<wbr>Convention<wbr>Builder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionBuilder">I<wbr>Web<wbr>Jobs<wbr>Convention<wbr>Builder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext">I<wbr>Logging<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder">IServicesBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting/IHostingConventionContext">I<wbr>Hosting<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Serilog/ISerilogConventionContext">I<wbr>Serilog<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder">SerilogBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">I<wbr>Service<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.App.Metrics/IAppMetricsConventionContext">I<wbr>App<wbr>Metrics<wbr>Convention<wbr>Context</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionContext">I<wbr>Web<wbr>Jobs<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Serilog/ISerilogConventionContext">I<wbr>Serilog<wbr>Convention<wbr>Context</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Configuration/IConfigurationConventionContext">I<wbr>Configuration<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext">I<wbr>Command<wbr>Line<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder">AppMetricsBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Configuration/ConfigurationBuilder">ConfigurationBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder">LoggingBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/IAutofacConventionContext">I<wbr>Autofac<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Configuration/ConfigurationBuilder">ConfigurationBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder">IServicesBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext">I<wbr>Logging<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">I<wbr>Service<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionBuilder">I<wbr>Web<wbr>Jobs<wbr>Convention<wbr>Builder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.App.Metrics/IAppMetricsConventionContext">I<wbr>App<wbr>Metrics<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext">I<wbr>Command<wbr>Line<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder">SerilogBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder">CommandLineBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder">AppMetricsBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder">Web<wbr>Jobs<wbr>Convention<wbr>Builder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/ConventionContext">ConventionContext</a></li>								
 									</ul>
 								</dd>				
@@ -334,44 +334,44 @@
 							graph BT
 	Type["IConventionContext"]
 class Type type-node
-	Implementing0["IHostingConventionContext"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
-	Implementing1["ISerilogConventionContext"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Extensions.Serilog/ISerilogConventionContext"
-	Implementing2["IWebJobsConventionContext"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionContext"
-	Implementing3["IConfigurationConventionContext"]-.-&gt;Type
-	click Implementing3 "/api/Rocket.Surgery.Extensions.Configuration/IConfigurationConventionContext"
-	Implementing4["AutofacBuilder"]-.-&gt;Type
-	click Implementing4 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
-	Implementing5["LoggingBuilder"]-.-&gt;Type
-	click Implementing5 "/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder"
-	Implementing6["IAutofacConventionContext"]-.-&gt;Type
-	click Implementing6 "/api/Rocket.Surgery.Extensions.Autofac/IAutofacConventionContext"
-	Implementing7["ServicesBuilder"]-.-&gt;Type
-	click Implementing7 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
-	Implementing8["ConfigurationBuilder"]-.-&gt;Type
-	click Implementing8 "/api/Rocket.Surgery.Extensions.Configuration/ConfigurationBuilder"
-	Implementing9["IServicesBuilder"]-.-&gt;Type
-	click Implementing9 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder"
-	Implementing10["ILoggingConventionContext"]-.-&gt;Type
-	click Implementing10 "/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext"
-	Implementing11["IServiceConventionContext"]-.-&gt;Type
-	click Implementing11 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext"
-	Implementing12["IWebJobsConventionBuilder"]-.-&gt;Type
-	click Implementing12 "/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionBuilder"
-	Implementing13["IAppMetricsConventionContext"]-.-&gt;Type
-	click Implementing13 "/api/Rocket.Surgery.Extensions.App.Metrics/IAppMetricsConventionContext"
-	Implementing14["ICommandLineConventionContext"]-.-&gt;Type
-	click Implementing14 "/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext"
-	Implementing15["SerilogBuilder"]-.-&gt;Type
-	click Implementing15 "/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder"
-	Implementing16["CommandLineBuilder"]-.-&gt;Type
-	click Implementing16 "/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder"
-	Implementing17["AppMetricsBuilder"]-.-&gt;Type
-	click Implementing17 "/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder"
-	Implementing18["WebJobsConventionBuilder"]-.-&gt;Type
-	click Implementing18 "/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder"
+	Implementing0["ServicesBuilder"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
+	Implementing1["IAutofacConventionContext"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Extensions.Autofac/IAutofacConventionContext"
+	Implementing2["WebJobsConventionBuilder"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder"
+	Implementing3["IWebJobsConventionBuilder"]-.-&gt;Type
+	click Implementing3 "/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionBuilder"
+	Implementing4["ILoggingConventionContext"]-.-&gt;Type
+	click Implementing4 "/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext"
+	Implementing5["IServicesBuilder"]-.-&gt;Type
+	click Implementing5 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder"
+	Implementing6["IHostingConventionContext"]-.-&gt;Type
+	click Implementing6 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
+	Implementing7["SerilogBuilder"]-.-&gt;Type
+	click Implementing7 "/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder"
+	Implementing8["IServiceConventionContext"]-.-&gt;Type
+	click Implementing8 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext"
+	Implementing9["IAppMetricsConventionContext"]-.-&gt;Type
+	click Implementing9 "/api/Rocket.Surgery.Extensions.App.Metrics/IAppMetricsConventionContext"
+	Implementing10["IWebJobsConventionContext"]-.-&gt;Type
+	click Implementing10 "/api/Rocket.Surgery.Extensions.WebJobs/IWebJobsConventionContext"
+	Implementing11["ISerilogConventionContext"]-.-&gt;Type
+	click Implementing11 "/api/Rocket.Surgery.Extensions.Serilog/ISerilogConventionContext"
+	Implementing12["IConfigurationConventionContext"]-.-&gt;Type
+	click Implementing12 "/api/Rocket.Surgery.Extensions.Configuration/IConfigurationConventionContext"
+	Implementing13["ICommandLineConventionContext"]-.-&gt;Type
+	click Implementing13 "/api/Rocket.Surgery.Extensions.CommandLine/ICommandLineConventionContext"
+	Implementing14["AppMetricsBuilder"]-.-&gt;Type
+	click Implementing14 "/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder"
+	Implementing15["ConfigurationBuilder"]-.-&gt;Type
+	click Implementing15 "/api/Rocket.Surgery.Extensions.Configuration/ConfigurationBuilder"
+	Implementing16["AutofacBuilder"]-.-&gt;Type
+	click Implementing16 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
+	Implementing17["LoggingBuilder"]-.-&gt;Type
+	click Implementing17 "/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder"
+	Implementing18["CommandLineBuilder"]-.-&gt;Type
+	click Implementing18 "/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder"
 	Implementing19["ConventionContext"]-.-&gt;Type
 	click Implementing19 "/api/Rocket.Surgery.Conventions/ConventionContext"
 
