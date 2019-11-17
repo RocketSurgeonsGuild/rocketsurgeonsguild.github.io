@@ -213,7 +213,9 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Nuke/ComputedGitVersionAttribute">Computed<wbr>Git<wbr>Version<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/DownloadFileAttribute">Download<wbr>File<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/EnsureGitHooksAttribute">Ensure<wbr>Git<wbr>Hooks<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/EnsurePackageSourceHasCredentialsAttribute">Ensure<wbr>Package<wbr>Source<wbr>Has<wbr>Credentials<wbr>Attribute</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke/GitHook">GitHook</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/LoggingExtensions">LoggingExtensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/MSBuildBinaryLogImports">M<wbr>S<wbr>Build<wbr>Binary<wbr>Log<wbr>Imports</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke/NuGetVerbosityMappingAttribute">Nu<wbr>Get<wbr>Verbosity<wbr>Mapping<wbr>Attribute</a></li>
@@ -275,10 +277,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -292,14 +294,14 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["RocketBoosterBuild"]
 class Type type-node
-	Derived0["DotNetCoreBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
-	Derived1["MacBuild"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
-	Derived2["MsBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
-	Derived3["XamarinBuild"]--&gt;Type
-	click Derived3 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
+	Derived0["MsBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
+	Derived1["DotNetCoreBuild"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
+	Derived2["XamarinBuild"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
+	Derived3["MacBuild"]--&gt;Type
+	click Derived3 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
 
 						</div>
 					</div>
@@ -474,6 +476,33 @@ class Type type-node
 								<td>
 									<div>
             The Git Version information either computed by GitVersion itself, or as defined by environment variables of the format `GITVERSION_*`
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/8DD22EE0">Lint</a></td>
+								<td>Target</td>
+								<td>
+									<div>
+            Applies code cleanup tasks
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/6AF2726E">LintFiles</a></td>
+								<td>string[]</td>
+								<td>
+									<div>
+            The files to lint, if not given lints all files
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/D8755350">LintProfile</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The files to lint, if not given lints all files
             </div>
 								</td>
 							</tr>
