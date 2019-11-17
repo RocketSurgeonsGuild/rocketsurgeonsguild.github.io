@@ -1,0 +1,482 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Rocket Surgeons Guild - API - CleanupCodeSettingsExtensions.ResetProject(CleanupCodeSettings) Method</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Rocket Surgeons Guild">
+<meta name="application-name" content="Rocket Surgeons Guild">
+<meta name="msapplication-TileColor" content="#e4b931">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="/assets/css/custom.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    function tify() {
+        var pattern = Trianglify({
+            cell_size: 60,
+            variance: 1,
+            x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
+            //y_colors: false,
+            y_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#FFFFFF'],
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            // seed: null,
+        });
+        var element = pattern.canvas();
+        element.style.position = 'fixed';
+        element.style.top = 0;
+        element.style.left = 0;
+        element.style.bottom = 0;
+        element.style.right = 0;
+        element.style.zIndex = -1;
+        document.body.appendChild(element);
+        //document.body.style.background="url(" + pattern.png() + ")";
+    };
+    window.addEventListener('resize', tify);
+    setTimeout(tify, 1);
+</script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
+
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/api">API</a></li>
+        <li><a href="/conventions">Conventions</a></li>
+        <li><a href="/packages">Packages</a></li>
+        <li><a href="/faq">FAQ</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Attributes">Attributes</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Rocket.Surgery.Nuke.dll">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Temp.CleanupCode">Temp<wbr>.CleanupCode</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions">Cleanup<wbr>Code<wbr>Settings<wbr>Extensions</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/FF161E4D">Add<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/F5BDDA8E">Add<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;<wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/01648928">AddExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/82A32E08">AddExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/9B446449">AddExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/D99F8C87">AddExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/1CCE1C94">AddInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/9A8CB412">AddInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/D136739D">AddProperty<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/FCA4FC79">Clear<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/8DEDD59B">ClearExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/C7D849E2">ClearExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/760A1857">ClearInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/1118B4E7">ClearProperties<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/B4C17335">Disable<wbr>No<wbr>Builtin<wbr>Settings<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/288EA3A0">Enable<wbr>No<wbr>Builtin<wbr>Settings<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/CE4F4008">Remove<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/F33344A3">Remove<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;<wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/7F753BEF">RemoveExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/9E90D0E3">RemoveExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/B6F0BD61">RemoveExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/0D7FDE3C">RemoveExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/62DFAE53">RemoveInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/86BF4AF9">RemoveInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/68FB5284">RemoveProperty<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/A2167AE6">ResetCachesHome<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/C82F978D">ResetDotNetPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/761C746C">ResetMonoPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/CDE12BE1">Reset<wbr>No<wbr>Builtin<wbr>Settings<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/4D7E62E4">ResetProfile<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li class="selected"><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/9C5739C2">ResetProject<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/63E40BA6">ResetTargetPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/DC4A4784">ResetToolset<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/F018E355">SetCachesHome<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/D8C9368D">Set<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/A0E934C9">Set<wbr>Disable<wbr>Settings<wbr>Layers<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;<wbr>Cleanup<wbr>Code<wbr>Settings<wbr>Layers&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/FFB92A2E">SetDotNetPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/64812F99">SetExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/AD2C2CB1">SetExclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/954CC41B">SetExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/157B88E6">SetExtensions<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/792BBA25">SetInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string[])<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/B503B6AB">SetInclude<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/C4D5EB04">SetMonoPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/1AF3DDF0">SetNoBuiltinSettings<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>Nullable<wbr>&lt;bool&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/1A8EC33A">SetProfile<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/98B19F14">SetProject<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/6FE08682">SetProperties<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>IDictionary<wbr>&lt;string, <wbr>string&gt;<wbr>)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/68BB6526">SetProperty<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/39D94319">SetTargetPath<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/EE2D1B59">SetToolset<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings, <wbr>Cleanup<wbr>Code<wbr>M<wbr>S<wbr>Build<wbr>Toolset)<wbr></a></li>
+				<li><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions/95AADEB0">Toggle<wbr>No<wbr>Builtin<wbr>Settings<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr></a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions">Cleanup<wbr>Code<wbr>Settings<wbr>Extensions</a>.</h3>
+	<h1>ResetProject<wbr>(<wbr>Cleanup<wbr>Code<wbr>Settings)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+              <p><em>Resets <see cref="P:Temp.CleanupCode.CleanupCodeSettings.Project"></see></em></p>
+              <p>Allows analyzing particular project(s) instead of the whole solution. After this parameter, you can type a project name or a wildcard that matches several projects within your solution. For example, <c>--project=*Billing</c></p>
+            </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Rocket.Surgery.Nuke.dll">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Temp.CleanupCode">Temp<wbr>.CleanupCode</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Temp.CleanupCode/CleanupCodeSettingsExtensions">Cleanup<wbr>Code<wbr>Settings<wbr>Extensions</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public static CleanupCodeSettings ResetProject(this CleanupCodeSettings toolSettings)</code></pre>
+
+
+
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>PureAttribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>toolSettings</td>
+						<td><a href="/api/Temp.CleanupCode/CleanupCodeSettings">CleanupCodeSettings</a></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td><a href="/api/Temp.CleanupCode/CleanupCodeSettings">CleanupCodeSettings</a></td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    //setTimeout(function() {
+        /*
+        var pattern = Trianglify({
+            cell_size: 40,
+            variance: 1,
+            x_colors: ['#E4B931', '#053247', '#FFFFFF', '#E0C882', '#FFFFFF', '#053247', '#E4B931'],
+            y_colors: false,
+            //y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            // seed: null,
+        });
+
+        document.body.style.background="url(" + pattern.png() + ")";*/
+    //}, 1000);
+</script>
+
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

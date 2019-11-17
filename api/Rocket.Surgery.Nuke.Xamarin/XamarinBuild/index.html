@@ -273,8 +273,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>								
 									</ul>
 								</dd>			
@@ -291,10 +291,10 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["XamarinBuild"]
 class Type type-node
-	Derived0["AndroidBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
-	Derived1["iOSBuild"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
+	Derived0["iOSBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
+	Derived1["AndroidBuild"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
 	Derived2["FormsBuild"]--&gt;Type
 	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
 
@@ -462,6 +462,36 @@ class Type type-node
 								<td>
 									<div>
             The Git Version information either computed by GitVersion itself, or as defined by environment variables of the format `GITVERSION_*`
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/8DD22EE0">Lint</a></td>
+								<td>Target</td>
+								<td>
+									<div>
+            Applies code cleanup tasks
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/6AF2726E">LintFiles</a></td>
+								<td>string[]</td>
+								<td>
+									<div>
+            The files to lint, if not given lints all files
+            </div>
+											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/D8755350">LintProfile</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            The files to lint, if not given lints all files
             </div>
 											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
 								</td>
