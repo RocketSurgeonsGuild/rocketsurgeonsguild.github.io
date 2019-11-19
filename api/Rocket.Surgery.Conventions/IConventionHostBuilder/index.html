@@ -306,12 +306,12 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Hosting/IHostingConventionContext">I<wbr>Hosting<wbr>Convention<wbr>Context</a></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions.TestHost/ConventionTestHost">ConventionTestHost</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting/IRocketHostBuilder">IRocketHostBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1">Convention<wbr>Host<wbr>Builder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1#typeparam-TSelf">TSelf</a>&gt;<wbr></li>								
-											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketWebJobsContext">I<wbr>Rocket<wbr>Web<wbr>Jobs<wbr>Context</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder">I<wbr>Rocket<wbr>Function<wbr>Host<wbr>Builder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions.TestHost/ConventionTestHost">ConventionTestHost</a></li>								
+											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketWebJobsContext">I<wbr>Rocket<wbr>Web<wbr>Jobs<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Hosting/IHostingConventionContext">I<wbr>Hosting<wbr>Convention<wbr>Context</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -321,18 +321,18 @@
 							graph BT
 	Type["IConventionHostBuilder"]
 class Type type-node
-	Implementing0["IHostingConventionContext"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
-	Implementing1["ConventionTestHost"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Conventions.TestHost/ConventionTestHost"
-	Implementing2["IRocketHostBuilder"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Hosting/IRocketHostBuilder"
-	Implementing3["ConventionHostBuilder&lt;TSelf&gt;"]-.-&gt;Type
-	click Implementing3 "/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1"
+	Implementing0["IRocketHostBuilder"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Hosting/IRocketHostBuilder"
+	Implementing1["ConventionHostBuilder&lt;TSelf&gt;"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1"
+	Implementing2["IRocketFunctionHostBuilder"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder"
+	Implementing3["ConventionTestHost"]-.-&gt;Type
+	click Implementing3 "/api/Rocket.Surgery.Conventions.TestHost/ConventionTestHost"
 	Implementing4["IRocketWebJobsContext"]-.-&gt;Type
 	click Implementing4 "/api/Rocket.Surgery.Hosting.Functions/IRocketWebJobsContext"
-	Implementing5["IRocketFunctionHostBuilder"]-.-&gt;Type
-	click Implementing5 "/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder"
+	Implementing5["IHostingConventionContext"]-.-&gt;Type
+	click Implementing5 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
 
 						</div>
 					</div>
