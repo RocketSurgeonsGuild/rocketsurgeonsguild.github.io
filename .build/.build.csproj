@@ -12,7 +12,7 @@
   <ItemGroup>
     <PackageReference Include="Buildalyzer" Version="2.4.0" />
     <PackageReference Include="Humanizer.Core" Version="2.7.9" />
-    <PackageReference Include="Nuke.Common" Version="0.23.3" />
+    <PackageReference Include="Nuke.Common" Version="0.23.4" />
     <PackageReference Include="Octokit.Reactive" Version="0.36.0" />
     <PackageReference Include="System.Reactive" Version="4.2.0" />
     <PackageReference Include="System.Reactive.Core" Version="4.2.0" />
