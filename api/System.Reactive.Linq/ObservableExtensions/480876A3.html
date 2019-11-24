@@ -143,7 +143,6 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Remarks">Remarks</a></p>
 <p><a href="#TypeParameters">Type Parameters</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
@@ -326,8 +325,6 @@
 	<pre><code>public static IObservable&lt;TResult&gt; MergeMap&lt;TSource, TTaskResult, TResult&gt;(this IObservable&lt;TSource&gt; source, Func&lt;TSource, Task&lt;TTaskResult&gt;&gt; taskSelector, Func&lt;TSource, TTaskResult, TResult&gt; resultSelector, int maxConcurrent)</code></pre>
 
 
-	<h1 id="Remarks">Remarks</h1>
-	<div>This overload supports using LINQ query comprehension syntax in C# and Visual Basic to compose observable sequences and tasks, without requiring manual conversion of the tasks to observable sequences using <code class="cs">System.Reactive.Threading.Tasks.TaskObservableExtensions.ToObservable``1(System.Threading.Tasks.Task{``0})</code>.</div>
 
 
 	<h1 id="TypeParameters">Type Parameters</h1>
