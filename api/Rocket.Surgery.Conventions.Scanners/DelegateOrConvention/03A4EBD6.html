@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - DiagnosticsCommand Class</title>
+        <title>Rocket Surgeons Guild - API - DelegateOrConvention.ToDelegate() Method</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -143,10 +143,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Constructors">Constructors</a></p>
-<p><a href="#Methods">Methods</a></p>
-<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -206,12 +203,24 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Rocket.Surgery.Conventions.Diagnostics.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics<wbr>.dll</a></li>
+		<li><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Rocket.Surgery.Conventions.Diagnostics">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics</a></li>
+		<li><a href="/api/Rocket.Surgery.Conventions.Scanners">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Scanners</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention">DelegateOrConvention</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Conventions.Diagnostics/DiagnosticsCommand">DiagnosticsCommand</a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/5A8E802E">Deconstruct<wbr>(IConvention, <wbr>Delegate)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/535BAF78">Equals<wbr>(object)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/2E96F12F">Equals<wbr>(<wbr>Delegate<wbr>Or<wbr>Convention)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/E0482A2F">GetHashCode<wbr>()<wbr></a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/03A4EBD6">ToDelegate<wbr>()<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/0BDEC828">To<wbr>Delegate<wbr>Or<wbr>Convention<wbr>()<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/DB3BB378">ToString<wbr>()<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/BC99CC1B">Convention</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/6613FCE2">Delegate</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention/9CB8C20E">None</a></li>
 
 
                     </ul>
@@ -226,57 +235,42 @@
 
 
 <section class="content-header">
-	<h1>DiagnosticsCommand <small>Class</small></h1>
+			<h3><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention">DelegateOrConvention</a>.</h3>
+	<h1>ToDelegate<wbr>()<wbr> <small>Method</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            A common diagnostics command to attach multiple commands to.
+            Get the delegate if it is a delegate
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-								<dt>Assembly</dt>
-								<dd><a href="/api/Rocket.Surgery.Conventions.Diagnostics.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics<wbr>.dll</a></dd>
-
-								<dt>Namespace</dt>
-								<dd><a href="/api/Rocket.Surgery.Conventions.Diagnostics">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>Object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["Object"]
-	Type["DiagnosticsCommand"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions.Scanners">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Scanners</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions.Scanners/DelegateOrConvention">DelegateOrConvention</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class DiagnosticsCommand</code></pre>
+	<pre><code>public Delegate ToDelegate()</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
+
+
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -286,110 +280,14 @@ class Type type-node
 						<th>Description</th>
 					</tr>
 				</thead>
-					<tbody><tr>
-						<td>Nullable<wbr>Context<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>NullableAttribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>CommandAttribute</td>
-						<td></td>
-					</tr>
+				<tbody><tr>
+					<td>Delegate</td>
+					<td></td>
+				</tr>
 			</tbody></table>
 		</div>
 	</div>	
 
-
-
-
-			<h1 id="Constructors">Constructors</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover two-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-									<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Conventions.Diagnostics/DiagnosticsCommand/8A804322">DiagnosticsCommand<wbr>(<wbr>Command<wbr>Line<wbr>Application)<wbr></a></td>
-									<td>
-            Initializes a new instance of the <code class="cs"><a href="/api/Rocket.Surgery.Conventions.Diagnostics/DiagnosticsCommand">DiagnosticsCommand</a></code> class.
-            </td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Conventions.Diagnostics/DiagnosticsCommand/846637D2">OnExecute<wbr>()<wbr></a></td>
-								<td>int</td>
-								<td>
-									<div>
-            Called when [execute].
-            </div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
-
-			<h1 id="ExtensionMethods">Extension Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Reflection.Extensions/ValueExtensions/C6E2C8D2">SetBackingValue<wbr>&lt;<wbr>Diagnostics<wbr>Command, <wbr>V&gt;<wbr><wbr>(Expression<wbr>&lt;Func<wbr>&lt;<wbr>Diagnostics<wbr>Command, <wbr>V&gt;<wbr>&gt;<wbr>, <wbr>V)<wbr></a></td>
-								<td>T</td>
-								<td>
-									<div>
-            Sets the backing value.
-            </div>
-										<div><small><em>From <a href="/api/Rocket.Surgery.Reflection.Extensions/ValueExtensions">ValueExtensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions/2353A7F1">With<wbr>&lt;<wbr>Diagnostics<wbr>Command, <wbr>TKey, <wbr>TField&gt;<wbr><wbr>(Dictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>, <wbr>IDictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>)<wbr></a></td>
-								<td>TBuilder</td>
-								<td>
-									<div>
-            Adds the specified dictionary to the provided dictionary.
-            </div>
-										<div><small><em>From <a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions">Test<wbr>Fixture<wbr>Builder<wbr>Extensions</a></em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
 
 	
 </section>
