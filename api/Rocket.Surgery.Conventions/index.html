@@ -290,8 +290,12 @@
 				<li class="treeview active selected">
 				<a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a> <a href="#" class="expand"></a>
 				<ul class="treeview-menu">
-						<li><a href="/api/Rocket.Surgery.Conventions.Diagnostics">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics</a></li>
-			<li><a href="/api/Rocket.Surgery.Conventions.Reflection">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Reflection</a></li>
+			
+				<li class="treeview">
+				<a href="/api/Rocket.Surgery.Conventions.Diagnostics">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics</a> <a href="#" class="expand"></a>
+				<ul class="treeview-menu">
+						<li><a href="/api/Rocket.Surgery.Conventions.Diagnostics.Commands">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Diagnostics<wbr>.Commands</a></li>
+</ul></li>			<li><a href="/api/Rocket.Surgery.Conventions.Reflection">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Reflection</a></li>
 			<li><a href="/api/Rocket.Surgery.Conventions.Scanners">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Scanners</a></li>
 			<li><a href="/api/Rocket.Surgery.Conventions.TestHost">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.TestHost</a></li>
 </ul></li>			<li><a href="/api/Rocket.Surgery.Domain">Rocket<wbr>.Surgery<wbr>.Domain</a></li>
@@ -616,8 +620,10 @@
 								<td><a href="/api/Rocket.Surgery.Conventions/HostType">HostType</a></td>
 									<td>
             The underlying host type (currently only checked for test host)
-            This is so that conventions can avoid adding behaviors that might cause issues with unit testing such as writing to the console or debug pipes, or ensuring that something is configured in a correct way for testing.
-            Careful consideration is needed to make sure that your system doesn't behave extremely differently in a live scenario vs a testing scenario
+            This is so that conventions can avoid adding behaviors that might cause issues with unit testing such as writing to the
+            console or debug pipes, or ensuring that something is configured in a correct way for testing.
+            Careful consideration is needed to make sure that your system doesn't behave extremely differently in a live scenario
+            vs a testing scenario
             </td>
 							</tr>
 							<tr>
@@ -696,7 +702,7 @@
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/ServiceProviderDictionary">Service<wbr>Provider<wbr>Dictionary</a></td>
 									<td>
-             ServiceProviderDictionary.
+            ServiceProviderDictionary.
             Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IServiceProviderDictionary">IServiceProviderDictionary</a></code>
             </td>
 							</tr>
@@ -751,7 +757,7 @@
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3">IConventionBuilder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3#typeparam-TBuilder">TBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3#typeparam-TConvention">TConvention</a>, <wbr><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3#typeparam-TDelegate">TDelegate</a>&gt;<wbr></td>
 									<td>
-             IConventionBuilder
+            IConventionBuilder
             Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3">IConventionContainer&lt;TBuilder, TConvention, TDelegate&gt;</a></code>
             </td>
 							</tr>
@@ -772,7 +778,7 @@
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3">IConventionContainer</a><wbr>&lt;<a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3#typeparam-TBuilder">TBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3#typeparam-TConvention">TConvention</a>, <wbr><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3#typeparam-TDelegate">TDelegate</a>&gt;<wbr></td>
 									<td>
-             IConventionContainer
+            IConventionContainer
             </td>
 							</tr>
 							<tr>
@@ -790,19 +796,19 @@
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></td>
 									<td>
-             IConventionHostBuilder
+            IConventionHostBuilder
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment">IRocketEnvironment</a></td>
 									<td>
-             IRocketEnvironment
+            IRocketEnvironment
             </td>
 							</tr>
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/IServiceProviderDictionary">I<wbr>Service<wbr>Provider<wbr>Dictionary</a></td>
 									<td>
-             IServiceProviderDictionary
+            IServiceProviderDictionary
             Implements the <code class="cs">System.Collections.Generic.IDictionary`2</code>
             Implements the <code class="cs">System.IServiceProvider</code>
             </td>
