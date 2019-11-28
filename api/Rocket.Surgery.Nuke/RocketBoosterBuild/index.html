@@ -277,10 +277,10 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild">DotNetCoreBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -294,14 +294,14 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["RocketBoosterBuild"]
 class Type type-node
-	Derived0["XamarinBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
+	Derived0["MsBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
 	Derived1["MacBuild"]--&gt;Type
 	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/MacBuild"
-	Derived2["DotNetCoreBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
-	Derived3["MsBuild"]--&gt;Type
-	click Derived3 "/api/Rocket.Surgery.Nuke.MsBuild/MsBuild"
+	Derived2["XamarinBuild"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild"
+	Derived3["DotNetCoreBuild"]--&gt;Type
+	click Derived3 "/api/Rocket.Surgery.Nuke.DotNetCore/DotNetCoreBuild"
 
 						</div>
 					</div>
