@@ -274,8 +274,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention">Serilog<wbr>Debug<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConsoleLoggingConvention">Serilog<wbr>Console<wbr>Logging<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention">Serilog<wbr>Debug<wbr>Logging<wbr>Convention</a></li>								
 									</ul>
 								</dd>			
 							
@@ -292,10 +292,10 @@
 	click Interface2 "/api/Rocket.Surgery.Conventions/IConvention"
 	Type["SerilogConditionallyAsyncLoggingConvention"]
 class Type type-node
-	Derived0["SerilogDebugLoggingConvention"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention"
-	Derived1["SerilogConsoleLoggingConvention"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConsoleLoggingConvention"
+	Derived0["SerilogConsoleLoggingConvention"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConsoleLoggingConvention"
+	Derived1["SerilogDebugLoggingConvention"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention"
 
 						</div>
 					</div>
