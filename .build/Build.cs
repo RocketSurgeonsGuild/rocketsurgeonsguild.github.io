@@ -66,7 +66,7 @@ partial class Build : NukeBuild
                     @"
                     <Project Sdk=""Microsoft.NET.Sdk"">
                         <PropertyGroup>
-                            <TargetFramework>netcoreapp3.0</TargetFramework>
+                            <TargetFramework>netcoreapp3.1</TargetFramework>
                         </PropertyGroup>
                     </Project>"
                 );
@@ -133,7 +133,7 @@ partial class Build : NukeBuild
                     Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
                     return (path, repo);
                 })
-                .ForEachAsync(x => {});
+                .ForEachAsync(x => { });
 
             var solutions = repos
                 .Select(repo => (path: TemporaryDirectory / repo.Name, repo))

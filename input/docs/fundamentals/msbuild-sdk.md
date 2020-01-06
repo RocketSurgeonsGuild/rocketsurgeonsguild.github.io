@@ -47,7 +47,7 @@ The following examples are examples of this in action.  We understand if you cho
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" />
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IncludeRocketSurgeryAspNetCore>true</IncludeRocketSurgeryAspNetCore>
     </PropertyGroup>
 </Project>
@@ -74,7 +74,7 @@ This will passively add references for...
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" />
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IncludeRocketSurgeryHosting>true</IncludeRocketSurgeryHosting>
     </PropertyGroup>
 </Project>
@@ -97,7 +97,7 @@ This will passively add references for...
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" />
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IncludeRocketSurgery>true</IncludeRocketSurgery>
     </PropertyGroup>
 </Project>
@@ -123,7 +123,7 @@ This will passively add references for...
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" />
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IncludeRocketSurgery>true</IncludeRocketSurgery>
         <EnableCommandLine>true</EnableCommandLine>
     </PropertyGroup>
@@ -152,7 +152,7 @@ This will passively add references for...
 <Project Sdk="Microsoft.NET.Sdk.Web">
     <Sdk Name="Rocket.Surgery.Meta.Packages" Version="3.0.0" />
     <PropertyGroup>
-        <TargetFramework>netcoreapp3.0</TargetFramework>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
         <IncludeRocketSurgery>true</IncludeRocketSurgery>
         <EnableMediatR>false</EnableMediatR>
     </PropertyGroup>
