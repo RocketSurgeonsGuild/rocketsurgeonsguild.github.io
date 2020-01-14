@@ -58,7 +58,6 @@ This will passively add references for...
 <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
 <PackageReference Include="Rocket.Surgery.AspNetCore" />
 <PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation" />
-<PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation.MediatR" />
 <PackageReference Include="Rocket.Surgery.AspNetCore.FluentValidation.NewtonsoftJson"  />
 <PackageReference Include="Rocket.Surgery.AspNetCore.Serilog" />
 <PackageReference Include="Rocket.Surgery.Conventions.Diagnostics" />
@@ -84,7 +83,6 @@ This will passively add references for...
 ```xml
 <PackageReference Include="Rocket.Surgery.Extensions.AutoMapper" />
 <PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  />
-<PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  />
 <PackageReference Include="Rocket.Surgery.Extensions.MediatR" />
 <PackageReference Include="Rocket.Surgery.Hosting" />
 <PackageReference Include="Rocket.Surgery.Hosting.Serilog" />
@@ -109,7 +107,6 @@ This will passively add references for...
 <PackageReference Include="Rocket.Surgery.Extensions.Configuration" />
 <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" />
 <PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  />
-<PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  />
 <PackageReference Include="Rocket.Surgery.Extensions.Logging" />
 <PackageReference Include="Rocket.Surgery.Extensions.MediatR" />
 <PackageReference Include="Rocket.Surgery.Hosting" />
@@ -137,7 +134,6 @@ This will passively add references for...
 <PackageReference Include="Rocket.Surgery.Extensions.CommandLine" />
 <PackageReference Include="Rocket.Surgery.Extensions.DependencyInjection" />
 <PackageReference Include="Rocket.Surgery.Extensions.FluentValidation"  />
-<PackageReference Include="Rocket.Surgery.Extensions.FluentValidation.MediatR"  />
 <PackageReference Include="Rocket.Surgery.Extensions.Logging" />
 <PackageReference Include="Rocket.Surgery.Extensions.MediatR" />
 <PackageReference Include="Rocket.Surgery.Hosting" />
