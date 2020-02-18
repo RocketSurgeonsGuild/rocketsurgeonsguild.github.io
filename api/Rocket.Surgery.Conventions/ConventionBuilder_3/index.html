@@ -215,6 +215,7 @@
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AppMetricsHostBuilderExtensions">App<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AutoMapperHostBuilderExtensions">Auto<wbr>Mapper<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/BeforeConventionAttribute">Before<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/CommandLineHostBuilderExtensions">Command<wbr>Line<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
@@ -238,6 +239,7 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/HostingConventionExtensions">Hosting<wbr>Convention<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/HostingMetricsHostBuilderExtensions">Hosting<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/HostType">HostType</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/LiveConventionAttribute">Live<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/LoggingHostBuilder2Extensions">Logging<wbr>Host<wbr>Builder2<wbr>Extensions</a></li>
@@ -246,6 +248,8 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenFunctionsUnitOfWorkConventionHostExtensions">Marten<wbr>Functions<wbr>Unit<wbr>Of<wbr>Work<wbr>Convention<wbr>Host<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenHostBuilderExtensions">Marten<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MediatRHostBuilderExtensions">Mediat<wbr>R<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/OperationalBuilderExtensions">Operational<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/OperationalMediatRBuilderExtensions">Operational<wbr>Mediat<wbr>R<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions">Rocket<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironments">RocketEnvironments</a></li>
@@ -253,6 +257,8 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/SerilogHostBuilderExtensions">Serilog<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/ServiceProviderDictionary">Service<wbr>Provider<wbr>Dictionary</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/ServicesHostBuilderExtensions">Services<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleBuilderExtensions">Swashbuckle<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleNewtonsoftJsonBuilderExtensions">Swashbuckle<wbr>Newtonsoft<wbr>Json<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/UnitTestConventionAttribute">Unit<wbr>Test<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/WebJobsHostBuilderExtensions">Web<wbr>Jobs<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 			<li class="header">Interface Types</li>
@@ -323,13 +329,14 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder">LoggingBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder">SerilogBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder">AppMetricsBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder">CommandLineBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder">LoggingBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder">Web<wbr>Jobs<wbr>Convention<wbr>Builder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsBuilder">MetricsBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder">CommandLineBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
 									</ul>
 								</dd>			
 							
@@ -344,20 +351,22 @@
 	Type-.-&gt;Interface1["IConventionContainer&lt;TBuilder, TConvention, TDelegate&gt;"]
 	Type["ConventionBuilder&lt;TBuilder, TConvention, TDelegate&gt;"]
 class Type type-node
-	Derived0["LoggingBuilder"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder"
-	Derived1["ServicesBuilder"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
-	Derived2["SerilogBuilder"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder"
-	Derived3["AutofacBuilder"]--&gt;Type
-	click Derived3 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
-	Derived4["AppMetricsBuilder"]--&gt;Type
-	click Derived4 "/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder"
-	Derived5["CommandLineBuilder"]--&gt;Type
-	click Derived5 "/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder"
-	Derived6["WebJobsConventionBuilder"]--&gt;Type
-	click Derived6 "/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder"
+	Derived0["SerilogBuilder"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Extensions.Serilog/SerilogBuilder"
+	Derived1["AppMetricsBuilder"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Extensions.App.Metrics/AppMetricsBuilder"
+	Derived2["LoggingBuilder"]--&gt;Type
+	click Derived2 "/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder"
+	Derived3["WebJobsConventionBuilder"]--&gt;Type
+	click Derived3 "/api/Rocket.Surgery.Extensions.WebJobs/WebJobsConventionBuilder"
+	Derived4["ServicesBuilder"]--&gt;Type
+	click Derived4 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
+	Derived5["MetricsBuilder"]--&gt;Type
+	click Derived5 "/api/Rocket.Surgery.Extensions.Metrics/MetricsBuilder"
+	Derived6["CommandLineBuilder"]--&gt;Type
+	click Derived6 "/api/Rocket.Surgery.Extensions.CommandLine/CommandLineBuilder"
+	Derived7["AutofacBuilder"]--&gt;Type
+	click Derived7 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
 
 						</div>
 					</div>

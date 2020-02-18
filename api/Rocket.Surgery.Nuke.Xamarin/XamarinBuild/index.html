@@ -211,15 +211,17 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Nuke.Xamarin">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.Xamarin</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>
 			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild">IMacBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild">IXamarinAndroidBuild</a></li>
 				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild">IXamarinBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild">IXamariniOSBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild">IXamarinMacBuild</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/TargetPlatform">TargetPlatform</a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinConfiguration">XamarinConfiguration</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamariniOSBuild">XamariniOSBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinMacBuild">XamarinMacBuild</a></li>
 
 
                     </ul>
@@ -258,6 +260,7 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild_1">IRocketBoosterBuild</a><wbr>&lt;<a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinConfiguration">XamarinConfiguration</a>&gt;<wbr></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild">IRocketBoosterBuild</a></li>								
 									</ul>
 								</dd>
@@ -266,16 +269,15 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>NukeBuild</li>								
-											<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild_1">RocketBoosterBuild</a><wbr>&lt;<a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinConfiguration">XamarinConfiguration</a>&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>								
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamariniOSBuild">XamariniOSBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinMacBuild">XamarinMacBuild</a></li>								
 									</ul>
 								</dd>			
 							
@@ -284,19 +286,17 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type--&gt;Base0["RocketBoosterBuild"]
-	click Base0 "/api/Rocket.Surgery.Nuke/RocketBoosterBuild"
+	Type--&gt;Base0["RocketBoosterBuild&lt;XamarinConfiguration&gt;"]
 	Base0--&gt;Base1["NukeBuild"]
-	Type-.-&gt;Interface0["IRocketBoosterBuild"]
-	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
+	Type-.-&gt;Interface0["IRocketBoosterBuild&lt;XamarinConfiguration&gt;"]
+	Type-.-&gt;Interface1["IRocketBoosterBuild"]
+	click Interface1 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["XamarinBuild"]
 class Type type-node
-	Derived0["FormsBuild"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild"
-	Derived1["iOSBuild"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild"
-	Derived2["AndroidBuild"]--&gt;Type
-	click Derived2 "/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild"
+	Derived0["XamariniOSBuild"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Nuke.Xamarin/XamariniOSBuild"
+	Derived1["XamarinMacBuild"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Nuke.Xamarin/XamarinMacBuild"
 
 						</div>
 					</div>
@@ -305,7 +305,8 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract class XamarinBuild : RocketBoosterBuild, IRocketBoosterBuild</code></pre>
+	<pre><code>public abstract class XamarinBuild : RocketBoosterBuild&lt;XamarinConfiguration&gt;, 
+    IRocketBoosterBuild&lt;XamarinConfiguration&gt;, IRocketBoosterBuild</code></pre>
 
 
 
@@ -346,7 +347,9 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild/F31DE9BC">XamarinBuild<wbr>()<wbr></a></td>
-									<td></td>
+									<td>
+            Initializes a new instance of the <code class="cs"><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></code> class.
+            </td>
 							</tr>
 					</tbody></table>
 				</div>
@@ -367,264 +370,12 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/EE758088">ArtifactsDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild/FD659A81">IsOsx</a></td>
+								<td>Expression<wbr>&lt;Func<wbr>&lt;bool&gt;<wbr>&gt;<wbr></td>
 								<td>
 									<div>
-            The directory where artifacts are to be dropped
+            A value indicated whether the build host is OSX.
             </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/F51B4785">BuildVersion</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            prints the build information.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/8B1C8F65">Clean</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            clean all artifact directories
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/2195C9CA">Configuration</a></td>
-								<td>Configuration</td>
-								<td>
-									<div>
-            Configuration to build - Default is 'Debug' (local) or 'Release' (server)
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/2BA2065B">CoverageDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where coverage artifacts are to be dropped
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/EA325703">Force</a></td>
-								<td>bool</td>
-								<td>
-									<div>
-            Force a clean build, otherwise leave some incremental build pieces
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/DED59DBB">Generate_<wbr>Code_<wbr>Coverage_<wbr>Reports</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            This will generate code coverage reports from emitted coverage data
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/1AD24DE6">GenerateReadme</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            Loops through the Readme to update sections that are automated to give nuget packages, build histories and more, while keeping the rest of the readme correct.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/F1E1F618">GitRepository</a></td>
-								<td>GitRepository</td>
-								<td>
-									<div>
-            The Git Repository currently being built
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/3C95A7E9">GitVersion</a></td>
-								<td>GitVersion</td>
-								<td>
-									<div>
-            The Git Version information either computed by GitVersion itself, or as defined by environment variables of the format `GITVERSION_*`
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/8DD22EE0">Lint</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            Applies code cleanup tasks
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/6AF2726E">LintFiles</a></td>
-								<td>string[]</td>
-								<td>
-									<div>
-            The files to lint, if not given lints all files
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/D8755350">LintProfile</a></td>
-								<td>string</td>
-								<td>
-									<div>
-            The files to lint, if not given lints all files
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/5F89C1E8">LogsDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where logs will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/F4873314">Nu<wbr>Get<wbr>Package<wbr>Directory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where nuget packages will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/6FDFC6C7">OutputDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where packaged output should be placed (zip, webdeploy, etc)
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/CC80C40F">PublishDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where publish output should be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/DE1ACBF2">Readme</a></td>
-								<td><a href="/api/Rocket.Surgery.Nuke.Readme/ReadmeUpdater">ReadmeUpdater</a></td>
-								<td>
-									<div>
-            The readme updater that ensures that all the badges are in sync.
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/19E60A97">SampleDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where samples will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/A5D9A046">Solution</a></td>
-								<td>Solution</td>
-								<td>
-									<div>
-            The solution currently being build
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/77AC56CD">SourceDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where sources will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/849A6119">SyncVersions</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            Attempts to add any missing packages that are referenced but do not have a version.
-            Then also removes any packages that no longer have a reference
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/A4D099B9">TemplatesDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where templates will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/B9B80110">TestDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where tests will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/20CEE66A">TestResultsDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where test results will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild/F4CEC447">TestsDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where tests will be placed
-            </div>
-											<div><small><em>Inherited from <a href="/api/Rocket.Surgery.Nuke/RocketBoosterBuild">RocketBoosterBuild</a></em></small></div>
 								</td>
 							</tr>
 					</tbody></table>
@@ -668,7 +419,7 @@ class Type type-node
 								<td>ITargetDefinition</td>
 								<td>
 									<div>
-            xunit test
+            test
             </div>
 											<div><small><em>static</em></small></div>
 								</td>

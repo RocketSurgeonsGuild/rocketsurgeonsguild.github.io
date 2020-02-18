@@ -141,10 +141,7 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
-<p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Properties">Properties</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -210,9 +207,11 @@
 		<li><a href="/api/Rocket.Surgery.Nuke.MsBuild">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.MsBuild</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Interface Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild_1">IMsBuild<wbr>&lt;T&gt;<wbr></a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild">IMsBuild</a></li>
 			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MsBuild">MsBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MSBuild_1">MSBuild<wbr>&lt;T&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/MSBuild">MSBuild</a></li>
 
 
                     </ul>
@@ -232,11 +231,7 @@
 <section class="content">
 	
 	
-		<h1 id="Summary">Summary</h1>
-	<div class="lead">
-            Base build plan for .NET Framework based applications
-            </div>
-
+	
 		<div class="panel panel-default">
   			<div class="panel-body">
 				<div class="row">
@@ -251,6 +246,8 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild_1">IMsBuild</a><wbr>&lt;Configuration&gt;<wbr></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild_1">IRocketBoosterBuild</a><wbr>&lt;Configuration&gt;<wbr></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke/IRocketBoosterBuild">IRocketBoosterBuild</a></li>								
 									</ul>
 								</dd>
@@ -262,8 +259,10 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type-.-&gt;Interface0["IRocketBoosterBuild"]
-	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
+	Type-.-&gt;Interface0["IMsBuild&lt;Configuration&gt;"]
+	Type-.-&gt;Interface1["IRocketBoosterBuild&lt;Configuration&gt;"]
+	Type-.-&gt;Interface2["IRocketBoosterBuild"]
+	click Interface2 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["IMsBuild"]
 class Type type-node
 
@@ -274,27 +273,8 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public interface IMsBuild : IRocketBoosterBuild</code></pre>
-
-
-
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Nullable<wbr>Context<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
+	<pre><code>public interface IMsBuild : IMsBuild&lt;Configuration&gt;, IRocketBoosterBuild&lt;Configuration&gt;, 
+    IRocketBoosterBuild</code></pre>
 
 
 
@@ -302,66 +282,9 @@ class Type type-node
 
 
 
-			<h1 id="Properties">Properties</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild/9178059F">Build</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            msbuild
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild/DC9999CC">NuspecDirectory</a></td>
-								<td>PathConstruction<wbr>.AbsolutePath</td>
-								<td>
-									<div>
-            The directory where templates will be placed
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild/95AD4230">Pack</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            nuget pack
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild/EBC02C80">Restore</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            nuget restore
-            </div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Nuke.MsBuild/IMsBuild/BA8DE37F">Test</a></td>
-								<td>Target</td>
-								<td>
-									<div>
-            xunit test
-            </div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
+
+
+
 
 
 

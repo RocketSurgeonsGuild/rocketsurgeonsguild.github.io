@@ -214,6 +214,7 @@
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ApplicationBase">ApplicationBase</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Airframe.Forms/ContentPageBase_1">ContentPageBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ContentViewBase_1">ContentViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ReactiveCollectionView">Reactive<wbr>Collection<wbr>View</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ReactiveListView">ReactiveListView</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ViewCellBase_1">ViewCellBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 
@@ -247,6 +248,12 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Rocket.Surgery.Airframe.Forms">Rocket<wbr>.Surgery<wbr>.Airframe<wbr>.Forms</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IEnableLogger</li>								
+									</ul>
+								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
@@ -262,6 +269,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["ReactiveContentPage&lt;TViewModel&gt;"]
+	Type-.-&gt;Interface0["IEnableLogger"]
 	Type["ContentPageBase&lt;TViewModel&gt;"]
 class Type type-node
 
@@ -272,7 +280,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract class ContentPageBase&lt;TViewModel&gt; : ReactiveContentPage&lt;TViewModel&gt; 
+	<pre><code>public abstract class ContentPageBase&lt;TViewModel&gt; : ReactiveContentPage&lt;TViewModel&gt;, IEnableLogger 
     where TViewModel : class, IReactiveObject</code></pre>
 
 
@@ -340,6 +348,13 @@ class Type type-node
 							<tr>
 								<td><a href="/api/Rocket.Surgery.Airframe.Forms/ContentPageBase_1/C33B1166">IsDisappearing</a></td>
 								<td>IObservable<wbr>&lt;Unit&gt;<wbr></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Airframe.Forms/ContentPageBase_1/3A6B9E72">Logger</a></td>
+								<td>IFullLogger</td>
 								<td>
 									<div></div>
 								</td>

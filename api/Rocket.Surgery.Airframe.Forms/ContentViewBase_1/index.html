@@ -214,6 +214,7 @@
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ApplicationBase">ApplicationBase</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ContentPageBase_1">ContentPageBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Airframe.Forms/ContentViewBase_1">ContentViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ReactiveCollectionView">Reactive<wbr>Collection<wbr>View</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ReactiveListView">ReactiveListView</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe.Forms/ViewCellBase_1">ViewCellBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 
@@ -247,6 +248,12 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Rocket.Surgery.Airframe.Forms">Rocket<wbr>.Surgery<wbr>.Airframe<wbr>.Forms</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IEnableLogger</li>								
+									</ul>
+								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
@@ -262,6 +269,7 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["ReactiveContentView&lt;TViewModel&gt;"]
+	Type-.-&gt;Interface0["IEnableLogger"]
 	Type["ContentViewBase&lt;TViewModel&gt;"]
 class Type type-node
 
@@ -272,7 +280,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract class ContentViewBase&lt;TViewModel&gt; : ReactiveContentView&lt;TViewModel&gt; 
+	<pre><code>public abstract class ContentViewBase&lt;TViewModel&gt; : ReactiveContentView&lt;TViewModel&gt;, IEnableLogger 
     where TViewModel : class, IReactiveObject</code></pre>
 
 
@@ -331,6 +339,13 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Airframe.Forms/ContentViewBase_1/2D0AE389">Logger</a></td>
+								<td>IFullLogger</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Airframe.Forms/ContentViewBase_1/38A330E3">ViewBindings</a></td>
 								<td>CompositeDisposable</td>
 								<td>
