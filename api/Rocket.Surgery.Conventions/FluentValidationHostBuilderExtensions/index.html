@@ -143,6 +143,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Attributes">Attributes</a></p>
 <p><a href="#Methods">Methods</a></p>
 <hr class="infobar-hidden">
 </div>
@@ -203,13 +204,14 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.FluentValidation.MediatR.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.FluentValidation<wbr>.MediatR<wbr>.dll</a></li>
+		<li><a href="/api/Rocket.Surgery.Extensions.FluentValidation.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.FluentValidation<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AppMetricsHostBuilderExtensions">App<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/AutoMapperHostBuilderExtensions">Auto<wbr>Mapper<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/BeforeConventionAttribute">Before<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/CommandLineHostBuilderExtensions">Command<wbr>Line<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
@@ -233,6 +235,7 @@
 				<li class="selected"><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/HostingConventionExtensions">Hosting<wbr>Convention<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/HostingMetricsHostBuilderExtensions">Hosting<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/HostType">HostType</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/LiveConventionAttribute">Live<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/LoggingHostBuilder2Extensions">Logging<wbr>Host<wbr>Builder2<wbr>Extensions</a></li>
@@ -241,6 +244,8 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenFunctionsUnitOfWorkConventionHostExtensions">Marten<wbr>Functions<wbr>Unit<wbr>Of<wbr>Work<wbr>Convention<wbr>Host<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenHostBuilderExtensions">Marten<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MediatRHostBuilderExtensions">Mediat<wbr>R<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/OperationalBuilderExtensions">Operational<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/OperationalMediatRBuilderExtensions">Operational<wbr>Mediat<wbr>R<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions">Rocket<wbr>Environment<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironments">RocketEnvironments</a></li>
@@ -248,6 +253,8 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/SerilogHostBuilderExtensions">Serilog<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/ServiceProviderDictionary">Service<wbr>Provider<wbr>Dictionary</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/ServicesHostBuilderExtensions">Services<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleBuilderExtensions">Swashbuckle<wbr>Builder<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleNewtonsoftJsonBuilderExtensions">Swashbuckle<wbr>Newtonsoft<wbr>Json<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/UnitTestConventionAttribute">Unit<wbr>Test<wbr>Convention<wbr>Attribute</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/WebJobsHostBuilderExtensions">Web<wbr>Jobs<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 			<li class="header">Interface Types</li>
@@ -283,7 +290,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-             FluentValidationHostBuilderExtensions.
+            FluentValidationHostBuilderExtensions.
             </div>
 
 		<div class="panel panel-default">
@@ -292,7 +299,7 @@
 					<div class="col-md-6">
 						<dl class="dl-horizontal">		
 								<dt>Assembly</dt>
-								<dd><a href="/api/Rocket.Surgery.Extensions.FluentValidation.MediatR.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.FluentValidation<wbr>.MediatR<wbr>.dll</a></dd>
+								<dd><a href="/api/Rocket.Surgery.Extensions.FluentValidation.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.FluentValidation<wbr>.dll</a></dd>
 
 								<dt>Namespace</dt>
 								<dd><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></dd>
@@ -326,6 +333,23 @@ class Type type-node
 
 
 
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>PublicAPIAttribute</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
 
 
 
@@ -346,7 +370,7 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions/AD2E57AB">With<wbr>Fluent<wbr>Validation<wbr>Mediat<wbr>R<wbr>(<wbr>I<wbr>Convention<wbr>Host<wbr>Builder)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions/65C92391">UseFluentValidation<wbr>(<wbr>I<wbr>Convention<wbr>Host<wbr>Builder)<wbr></a></td>
 								<td><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></td>
 								<td>
 									<div>

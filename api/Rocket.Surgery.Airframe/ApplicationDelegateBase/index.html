@@ -143,6 +143,7 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Constructors">Constructors</a></p>
+<p><a href="#Properties">Properties</a></p>
 <p><a href="#Methods">Methods</a></p>
 <p><a href="#ExtensionMethods">Extension Methods</a></p>
 <hr class="infobar-hidden">
@@ -208,18 +209,20 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Airframe">Rocket<wbr>.Surgery<wbr>.Airframe</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Airframe/IViewModel">IViewModel</a></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Airframe/AlertViews">AlertViews</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase">Application<wbr>Delegate<wbr>Base</a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/CollectionViewBase_1">CollectionViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/CollectionViewCellBase_1">Collection<wbr>View<wbr>Cell<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/CollectionViewControllerBase_1">Collection<wbr>View<wbr>Controller<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe/ControlBase_1">ControlBase<wbr>&lt;TVieModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/DefaultExceptionHandler">Default<wbr>Exception<wbr>Handler</a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe/ImageViewBase_1">ImageViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Airframe/ReactivePopover">ReactivePopover</a></li>
-				<li><a href="/api/Rocket.Surgery.Airframe/UserNotificationExtensions">User<wbr>Notification<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/TableViewBase_1">TableViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/TableViewCellBase_1">TableViewCellBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Airframe/TableViewControllerBase_1">Table<wbr>View<wbr>Controller<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe/ViewBase_1">ViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.Airframe/ViewControllerBase_1">ViewControllerBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Airframe/ViewModelBase">ViewModelBase</a></li>
-				<li><a href="/api/Rocket.Surgery.Airframe/WindowControllerBase_1">WindowControllerBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 
 
                     </ul>
@@ -255,7 +258,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>N<wbr>S<wbr>Application<wbr>Delegate</li>								
+											<li>U<wbr>I<wbr>Application<wbr>Delegate</li>								
 									</ul>
 								</dd>				
 							
@@ -265,7 +268,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type--&gt;Base0["NSApplicationDelegate"]
+	Type--&gt;Base0["UIApplicationDelegate"]
 	Type["ApplicationDelegateBase"]
 class Type type-node
 
@@ -276,7 +279,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract class ApplicationDelegateBase : NSApplicationDelegate</code></pre>
+	<pre><code>public abstract class ApplicationDelegateBase : UIApplicationDelegate</code></pre>
 
 
 
@@ -305,6 +308,28 @@ class Type type-node
 
 
 
+			<h1 id="Properties">Properties</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/82043044">Container</a></td>
+								<td>IContainer</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
 
 			<h1 id="Methods">Methods</h1>
 			<div class="box">
@@ -325,21 +350,28 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/E3A3461E">DecomposeDelegate<wbr>()<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/A9531E72">CreateContainer<wbr>()<wbr></a></td>
+								<td>IContainer</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/9ECED6DA">FinishedLaunching<wbr>(UIApplication, <wbr>NSDictionary)<wbr></a></td>
+								<td>bool</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/463DD9F6">FinishedLaunching<wbr>(UIApplication)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/7164229F">DidFinishLaunching<wbr>(NSNotification)<wbr></a></td>
-								<td>void</td>
-								<td>
-									<div></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/B2CEF454">WillTerminate<wbr>(NSNotification)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Airframe/ApplicationDelegateBase/73E36FDC">RegisterServices<wbr>(IContainer)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div></div>

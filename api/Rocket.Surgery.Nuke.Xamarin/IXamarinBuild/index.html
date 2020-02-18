@@ -209,15 +209,17 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Nuke.Xamarin">Rocket<wbr>.Surgery<wbr>.Nuke<wbr>.Xamarin</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/AndroidBuild">AndroidBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/FormsBuild">FormsBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/iOSBuild">iOSBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/MacBuild">MacBuild</a></li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>
 			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IMacBuild">IMacBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild">IXamarinAndroidBuild</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild">IXamarinBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild">IXamariniOSBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild">IXamarinMacBuild</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/TargetPlatform">TargetPlatform</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinBuild">XamarinBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinConfiguration">XamarinConfiguration</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamariniOSBuild">XamariniOSBuild</a></li>
+				<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinMacBuild">XamarinMacBuild</a></li>
 
 
                     </ul>
@@ -262,6 +264,14 @@
 							
 							
 							
+								<dt>Implementing Types</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild">IXamarinAndroidBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild">IXamarinMacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild">IXamariniOSBuild</a></li>								
+									</ul>
+								</dd>				
 						</dl>
 					</div>		
 					<div class="col-md-6">
@@ -271,6 +281,12 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["IXamarinBuild"]
 class Type type-node
+	Implementing0["IXamarinAndroidBuild"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild"
+	Implementing1["IXamarinMacBuild"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild"
+	Implementing2["IXamariniOSBuild"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild"
 
 						</div>
 					</div>
@@ -324,6 +340,33 @@ class Type type-node
 								<td>
 									<div>
             msbuild
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild/D39CEBE2">Configuration</a></td>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/XamarinConfiguration">XamarinConfiguration</a></td>
+								<td>
+									<div>
+            Configuration to build - Default is 'DebugMock' (local) or 'Mock' (release)
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild/08CA22E1">IsOsx</a></td>
+								<td>Expression<wbr>&lt;Func<wbr>&lt;bool&gt;<wbr>&gt;<wbr></td>
+								<td>
+									<div>
+            A value indicated whether the build host is OSX.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild/CB65E6DB">Package</a></td>
+								<td>Target</td>
+								<td>
+									<div>
+            package the application
             </div>
 								</td>
 							</tr>

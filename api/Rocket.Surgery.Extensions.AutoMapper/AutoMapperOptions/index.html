@@ -213,7 +213,10 @@
 				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/AutoMapperConvention">AutoMapperConvention</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.AutoMapper/AutoMapperOptions">AutoMapperOptions</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/AutoMapperProfileExpressionExtensions">Auto<wbr>Mapper<wbr>Profile<wbr>Expression<wbr>Extensions</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/JsonDefaultValue">JsonDefaultValue</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/JsonElementConverter">JsonElementConverter</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/NodaTimeProfile">NodaTimeProfile</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.AutoMapper/SystemJsonTextProfile">System<wbr>Json<wbr>Text<wbr>Profile</a></li>
 
 
                     </ul>
@@ -249,6 +252,13 @@
 								<dt>Namespace</dt>
 								<dd><a href="/api/Rocket.Surgery.Extensions.AutoMapper">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.AutoMapper</a></dd>
 											
+								<dt>Interfaces</dt>
+								<dd>
+									<ul class="list-unstyled">
+											<li>IRuntimeFeature</li>								
+											<li>IGlobalFeature</li>								
+									</ul>
+								</dd>
 							
 								<dt>Base Types</dt>
 								<dd>
@@ -264,6 +274,8 @@
 						<div class="mermaid">
 							graph BT
 	Type--&gt;Base0["Object"]
+	Type-.-&gt;Interface0["IRuntimeFeature"]
+	Type-.-&gt;Interface1["IGlobalFeature"]
 	Type["AutoMapperOptions"]
 class Type type-node
 
@@ -274,7 +286,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public class AutoMapperOptions</code></pre>
+	<pre><code>public class AutoMapperOptions : IRuntimeFeature, IGlobalFeature</code></pre>
 
 
 
