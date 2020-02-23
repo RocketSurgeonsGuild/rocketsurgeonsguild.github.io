@@ -1,0 +1,2234 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Rocket Surgeons Guild - API - Fas.Clipboard Field</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Rocket Surgeons Guild">
+<meta name="application-name" content="Rocket Surgeons Guild">
+<meta name="msapplication-TileColor" content="#e4b931">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="/assets/css/custom.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    function tify() {
+        var pattern = Trianglify({
+            cell_size: 60,
+            variance: 1,
+            x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
+            //y_colors: false,
+            y_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#FFFFFF'],
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            // seed: null,
+        });
+        var element = pattern.canvas();
+        element.style.position = 'fixed';
+        element.style.top = 0;
+        element.style.left = 0;
+        element.style.bottom = 0;
+        element.style.right = 0;
+        element.style.zIndex = -1;
+        document.body.appendChild(element);
+        //document.body.style.background="url(" + pattern.png() + ")";
+    };
+    window.addEventListener('resize', tify);
+    setTimeout(tify, 1);
+</script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
+
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/api">API</a></li>
+        <li><a href="/conventions">Conventions</a></li>
+        <li><a href="/packages">Packages</a></li>
+        <li><a href="/faq">FAQ</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Remarks">Remarks</a></p>
+<p><a href="#Attributes">Attributes</a></p>
+<p><a href="#Value">Constant Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro.Solid.dll">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Pro<wbr>.Solid<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Pro</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas">Fas</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Field Members</li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8286298">Abacus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/84D4FCD4">Acorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/87F303D8">Ad</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3AFD7F15">AddressBook</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D8C68EC8">AddressCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FEB7B610">Adjust</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6E6F6A86">AirConditioner</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A751431">AirFreshener</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E88CC787">AlarmClock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6855BB96">AlarmExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1258732F">AlarmPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/135C5962">AlarmSnooze</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FC900F52">Album</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F9A29F1E">AlbumCollection</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/12C7FABF">Alicorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F63C918D">Alien</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1B57A06C">AlienMonster</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FE48724E">AlignCenter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0CB11A88">AlignJustify</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14F8B2E2">AlignLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1C9DE1ED">AlignRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F9AFE55E">AlignSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/001B3293">Allergies</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35100B51">Ambulance</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/246CD77E">American<wbr>Sign<wbr>Language<wbr>Interpreting</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8B27E8E0">AmpGuitar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9342E9F4">Analytics</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9E28E43C">Anchor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5BB808C3">Angel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/691149C6">AngleDoubleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A66D1A0">AngleDoubleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4DF37531">AngleDoubleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D06DB5AC">AngleDoubleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B532278B">AngleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E645BFED">AngleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91035DBE">AngleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FEC23C38">AngleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/26D856AB">Angry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06B958D9">Ankh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/303A3D0B">AppleAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F1CDF3FE">AppleCrate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/675BA4EC">Archive</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C40D9EEB">Archway</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/84099F8B">ArrowAltCircleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D77E07ED">ArrowAltCircleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90BB83EF">ArrowAltCircleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C9CDA8BE">ArrowAltCircleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB55AAC3">ArrowAltDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FF40FE78">ArrowAltFromBottom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AAAADDC0">ArrowAltFromLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C56C1AC1">ArrowAltFromRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3ED8A274">ArrowAltFromTop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E82232A5">ArrowAltLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F1A3AD59">ArrowAltRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE13AF1F">ArrowAltSquareDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8D643779">ArrowAltSquareLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6033A964">ArrowAltSquareRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F6D2141">ArrowAltSquareUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FA2E6AA4">ArrowAltToBottom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/83E88F11">ArrowAltToLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EBA67983">ArrowAltToRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A00879D">ArrowAltToTop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/58B87FDC">ArrowAltUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4566569F">ArrowCircleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1611CEF9">ArrowCircleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D980F403">ArrowCircleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FB51775A">ArrowCircleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F4136109">ArrowDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3E2F376C">ArrowFromBottom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/98360224">ArrowFromLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D9E22909">ArrowFromRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B2E1F1A5">ArrowFromTop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A764F96F">ArrowLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B63404BF">ArrowRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ADDC0281">Arrows</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E68A1A02">ArrowsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E87B6EE3">ArrowsAltH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8B466119">ArrowsAltV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A6FBE302">ArrowsH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1F7C660B">ArrowSquareDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4C0BFE6D">ArrowSquareLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2908DE88">ArrowSquareRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DF1FEA5">ArrowSquareUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C5C6ECF8">ArrowsV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8B2B540">ArrowToBottom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2795D1F9">ArrowToLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/679F2A52">ArrowToRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD972E7B">ArrowToTop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1CC03FE9">ArrowUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DAF8288C">Assistive<wbr>Listening<wbr>Systems</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DF7B9617">Asterisk</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3E3B4C5">At</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B0289D19">Atlas</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BAEEFDC">Atom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38681024">AtomAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F1CBE469">AudioDescription</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/58D0CCE1">Award</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7732A97A">Axe</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/947FF6B0">AxeBattle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6ECAC37B">Baby</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F2FC2486">BabyCarriage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FBF66326">Backpack</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7426CBA1">Backspace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C3F0D278">Backward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A7F323CF">Bacon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2B66795">Badge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DFD1F8E">BadgeCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BCC1C35A">BadgeDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/41312013">BadgePercent</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14B18E19">BadgerHoney</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4E414996">BadgeSheriff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D1846C5">BagsShopping</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6BA491C3">Bahai</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BE472214">BalanceScale</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E77845EF">BalanceScaleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3AC958C9">BalanceScaleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5ED0298E">Ballot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8E83A4CE">BallotCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/705714AB">BallPile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BEFC3D74">Ban</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/96634B66">BandAid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27A48BCD">Banjo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9D04F6AE">Barcode</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4B1640D5">BarcodeAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28B7CE03">BarcodeRead</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1452A5F">BarcodeScan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2131D4D1">Bars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/795C6979">Baseball</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D1C6773A">BaseballBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/911D1289">BasketballBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/73DF1DD3">BasketballHoop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C4055F89">Bat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4B5FEB0D">Bath</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB8ED227">BatteryBolt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10D05AAA">BatteryEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1CA76DAA">BatteryFull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9D3248B1">BatteryHalf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44BD6E27">BatteryQuarter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/25AA53C5">BatterySlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EACD3C17">BatteryThreeQuarters</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A4D084F0">Bed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01D8A5A5">BedAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D90FAFCE">BedBunk</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EEC075F8">BedEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FD2D59A4">Beer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D7AB948F">Bell</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99B8DF77">BellExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46AB4F13">BellOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1AD4436">BellPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D71C3603">Bells</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D377B52E">BellSchool</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8EC02036">BellSchoolSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10C1B121">BellSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5237DB0D">Betamax</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C5B4B49">BezierCurve</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/343BAAB7">Bible</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/55FC42E1">Bicycle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5211E0B8">Biking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FC508D84">BikingMountain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1C270EA7">Binoculars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1B125962">Biohazard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD6B8A8D">BirthdayCake</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A39BE0B3">Blanket</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6BDF5FA4">Blender</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2A47D0B8">BlenderPhone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F37610C9">Blind</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DB7C733F">Blinds</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3E84881A">BlindsOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C4E7C04">BlindsRaised</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/131ABA3C">Blog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/33A6D88C">Bold</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/57B66F91">Bolt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4732A07C">Bomb</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27F4E9C9">Bone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/128A530B">BoneBreak</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B95E727">Bong</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61E84A37">Book</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/21DF8259">BookAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E4F557DB">BookDead</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA73BEFB">BookHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FE134F0">Bookmark</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/88600F10">BookMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/643F0292">BookOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A79712C5">BookReader</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DD48C21">Books</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6BAD3BF3">BooksMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C011FA81">BookSpells</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/896AE1BB">BookUser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC677964">Boombox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/94E542BA">Boot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5AA6FA9A">BoothCurtain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CB591E07">BorderAll</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C5A6CA25">BorderBottom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0FF65FAC">BorderCenterH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6CCB5056">BorderCenterV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E22A1C44">BorderInner</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/11548F8E">BorderLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B6B3788B">BorderNone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7A29F55D">BorderOuter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F54E79D">BorderRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4199901A">BorderStyle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91EAED31">BorderStyleAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC37DF22">BorderTop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6F3CB769">BowArrow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/789C5EDA">BowlingBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A33D6391">BowlingPins</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61646A1E">Box</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8728DAF5">BoxAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E478093F">BoxBallot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/97CC587C">BoxCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/564C66A6">Boxes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AB391580">BoxesAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3EA68890">BoxFragile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A3614E9">BoxFull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/62A33A20">BoxHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F7AAECED">BoxingGlove</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4E611BAD">BoxOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1F2B29E0">BoxUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D13D183E">BoxUsd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0FE139B">Brackets</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/943CCCF0">BracketsCurly</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CF4DD6A9">Braille</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3E7851D8">Brain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/59142858">BreadLoaf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5EB1547E">BreadSlice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/50DCEB6D">Briefcase</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35D20768">BriefcaseMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2066BB9">BringForward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/05BC729A">BringFront</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44BC252D">BroadcastTower</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/08A39C1D">Broom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1094BE3">Browser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C2C309A">Brush</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F934F23">Bug</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/461239CB">Building</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06A5044A">Bullhorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DF0ADB4">Bullseye</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3B60936">BullseyeArrow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/07AB5B93">BullseyePointer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15C28FDC">BurgerSoda</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5456FDA9">Burn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/17F38E70">Burrito</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/32479539">Bus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A5208B08">BusAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D3D31A6A">BusinessTime</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FB3277FC">BusSchool</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44C316B8">CabinetFiling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1D8E6A21">Cactus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8A7202AE">Calculator</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CB4B9C0F">CalculatorAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D4D2FF44">Calendar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D37AB504">CalendarAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7095EA27">CalendarCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8BA61C9">CalendarDay</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4FC6A9E4">CalendarEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2349B1D">CalendarExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/148EC723">CalendarMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A4F86EF5">CalendarPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/414247AC">CalendarStar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EFD7B306">CalendarTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9571C63E">CalendarWeek</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A59987D6">Camcorder</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E6D7A960">Camera</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8D4B25DC">CameraAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47F84198">CameraHome</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C63DC73">CameraMovie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C363966">CameraPolaroid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A175B6B4">CameraRetro</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A66F308">Campfire</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/20E782A9">Campground</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8034A33">CandleHolder</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/81D0B13B">CandyCane</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5E798A40">CandyCorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B494D79D">Cannabis</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2062B45">Capsules</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6CAFE61">Car</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27A50BEE">CarAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9072DA5B">Caravan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E372596">CaravanAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B24B374">CarBattery</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/63AB7747">CarBuilding</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/76BEA1BD">CarBump</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C52729E9">CarBus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FEC830AA">CarCrash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0340D65E">CaretCircleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/50374E38">CaretCircleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5AE48A9C">CaretCircleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B077026F">CaretCircleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0C549833">CaretDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F230055">CaretLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DFB7580C">CaretRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/595AE6CA">CaretSquareDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0A2D7EAC">CaretSquareLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AA6CA017">CaretSquareRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46D78B90">CaretSquareUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DFF1996">CaretUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6DA932D3">CarGarage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CE142FD7">CarMechanic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DAD0BE3">Carrot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44566869">Cars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A8B27FC">CarSide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6FDAF2F0">CartArrowDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/791999C3">CarTilt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E436ED67">CartPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FEB56406">CarWash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/411D8FFA">CashRegister</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/08046749">CassetteTape</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F36F9D88">Cat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/061AF382">CatSpace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91ADA290">Cauldron</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/23D1DC4C">Cctv</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0A681159">Certificate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3ABA94CE">Chair</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F3977825">ChairOffice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/86B38A18">Chalkboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/19F62866">ChalkboardTeacher</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F8D477A">ChargingStation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/045659AF">ChartArea</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E2425DBC">ChartBar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9ADFD9A9">ChartLine</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2291517">ChartLineDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1B99542">ChartNetwork</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/333AF5E8">ChartPie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A02C6ADE">ChartPieAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2970EB59">ChartScatter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC521957">Check</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/510DF4BB">CheckCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C79AA4B5">CheckDouble</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8100A0A2">CheckSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/20687BB6">Cheese</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/88C6E03C">Cheeseburger</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/585E0910">CheeseSwiss</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ABD8B70E">Chess</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DA023BAA">ChessBishop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/81941A13">ChessBishopAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9FE1223">ChessBoard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C6B3FC5">ChessClock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CBA1BD7D">ChessClockAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9AD3357">ChessKing</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/616AE962">ChessKingAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A2DC043">ChessKnight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D111C6BA">ChessKnightAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/333DE43C">ChessPawn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/419A9BFB">ChessPawnAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5461A9D9">ChessQueen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/746860A8">ChessQueenAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64B4026E">ChessRook</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/69C64031">ChessRookAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36F19F00">ChevronCircleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/65860766">ChevronCircleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C86967CA">ChevronCircleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB87E0F5">ChevronCircleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6891EB3D">ChevronDoubleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3BE6735B">ChevronDoubleLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5B618946">ChevronDoubleRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90A290BC">ChevronDoubleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/55BE195D">ChevronDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06C9813B">ChevronLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/65DF811E">ChevronRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6CEBAF94">ChevronSquareDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F9C37F2">ChevronSquareLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38E14D41">ChevronSquareRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D27690A">ChevronSquareUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B951E0AF">ChevronUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/96AA2449">Child</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7888B9D4">Chimney</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A6E478CB">Church</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A5C028F">Circle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A33817B9">CircleNotch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6449F4D1">City</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06363956">Clarinet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/42E0E71A">ClawMarks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2D91A2B">ClinicMedical</a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8D60F091">Clipboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BCC88152">ClipboardCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FB0AA20">ClipboardList</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DA16E092">ClipboardListCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F3419064">Clipboard<wbr>Prescription</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE9EF1E9">ClipboardUser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D40ECD5">Clock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6713FA87">Clone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CADEDD9D">ClosedCaptioning</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6BE8CB59">Cloud</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/76F78E72">CloudDownload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A662B811">CloudDownloadAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F233F20D">CloudDrizzle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8BE5A5B7">CloudHail</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5A47787B">CloudHailMixed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0715A67">CloudMeatball</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/19FEB132">CloudMoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/25AD22B0">CloudMoonRain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/79BD3907">CloudMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5C330F66">CloudRain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8FA6499">CloudRainbow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/33BC37C1">Clouds</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F1F30347">CloudShowers</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64F209E7">CloudShowersHeavy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/869935C2">CloudSleet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FFEA6011">CloudsMoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/421CDEE7">CloudSnow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A49719BF">CloudsSun</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53CE6AB7">CloudSun</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/979BFE9F">CloudSunRain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/96ECA7A8">CloudUpload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2AE1DE53">CloudUploadAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/22734144">Club</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46671F51">Cocktail</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C87BBA8B">Code</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B1093C50">CodeBranch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/033C6EA5">CodeCommit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C064D5F">CodeMerge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/50103008">Coffee</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AA395726">CoffeePot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4E58A7D7">CoffeeTogo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D4865733">Coffin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46560DBF">CoffinCross</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A303A092">Cog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5A9D4354">Cogs</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DDCC6A9">Coin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A751665">Coins</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4CC69695">Columns</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE918F1F">Comet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/97542CAD">Comment</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/00F56A04">CommentAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/70EEDB6D">CommentAltCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DA59FF1F">CommentAltDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10F696DF">CommentAltDots</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B87770A">CommentAltEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE7203A6">Comment<wbr>Alt<wbr>Exclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F5CE541E">CommentAltLines</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D74ED9A1">CommentAltMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14F5F669">CommentAltMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2960079C">CommentAltMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C0B9B01B">CommentAltPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/92059B56">CommentAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6C41DF53">CommentAltSmile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EFAC824C">CommentAltTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C29DF8F0">CommentCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/09A80D3A">CommentDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/95EB922E">CommentDots</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AE9A73FB">CommentEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CC713F08">CommentExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47BD7783">CommentLines</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/483F26BE">CommentMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A686D5F4">CommentMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9B132401">CommentMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/45A4B4EA">CommentPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8E5C875">Comments</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9D4DC26D">CommentsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D7DE6951">CommentsAltDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A98CD73B">CommentsDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2076B8CB">CommentSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE32FCCE">CommentSmile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DDFA1D1">CommentTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B30286D7">CompactDisc</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B68A5E69">Compass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A107109">CompassSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8BA06263">Compress</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F4E7E2F0">CompressAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/78F5C442">CompressArrowsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4176816C">CompressWide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/270F19D7">ComputerClassic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EBF5731F">ComputerSpeaker</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/56EBBDAE">ConciergeBell</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4C2E35AA">Construction</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/598E669F">ContainerStorage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/23656CA7">ConveyorBelt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E4E5BC76">ConveyorBeltAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/858355D1">Cookie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A33E382E">CookieBite</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2F015B1">Copy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E8B1AA26">Copyright</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9717F000">Corn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DF98E14F">Couch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C713178F">Cow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/363145FE">Cowbell</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C311820C">CowbellMore</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5BE84DDE">CreditCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6E8A1BC6">CreditCardBlank</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FD2CCB04">CreditCardFront</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E06051EE">Cricket</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D13E4703">Croissant</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CB766D11">Crop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4E15A5C7">CropAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/86EA843C">Cross</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/67BE526D">Crosshairs</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/68E3098F">Crow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5B43EE3B">Crown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3717A5E5">Crutch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CD6D8B83">Crutches</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E8FA51CC">Cube</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BBF413B5">Cubes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E6AAC9D8">Curling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A6B833A6">Cut</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1C16A890">Dagger</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC7505E3">Database</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/586384FF">Deaf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/18B93207">Debug</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/21723281">Deer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C88B81F1">DeerRudolph</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0963B38">Democrat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F033930">Desktop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1D1DF103">DesktopAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B858FBA5">Dewpoint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04E3EB8D">Dharmachakra</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2AE44FCC">Diagnoses</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B7F1026B">Diamond</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04A9A15D">Dice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4FF74BB1">DiceD10</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6396455F">DiceD12</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8CA4669A">DiceD20</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2EF1E3F">DiceD4</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8E8E10D1">DiceD6</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/89A3A836">DiceD8</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC328D67">DiceFive</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A98FECB">DiceFour</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4EFC3C9B">DiceOne</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/445C47A2">DiceSix</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0134895">DiceThree</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D9F09AF0">DiceTwo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7BC97B16">Digging</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6855694E">DigitalTachograph</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC8F79D5">Diploma</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A48523C3">Directions</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5941170A">DiscDrive</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A6C6336">Disease</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ABF42BD8">Divide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C4D54622">Dizzy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/52819767">Dna</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2615EF97">Dog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B3B9D2FA">DogLeashed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A87DC7A7">DollarSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DE01E03">Dolly</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F04A7CBA">DollyEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/88E07E26">DollyFlatbed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A24ADC16">DollyFlatbedAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D56E5E63">DollyFlatbedEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/923D1786">Donate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/32DBEE5D">DoNotEnter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/25FAB2F2">DoorClosed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10C39D39">DoorOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DEE7988A">DotCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A233996E">Dove</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E2F14C52">Download</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0764F6A2">DraftingCompass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/57106D7C">Dragon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B4AFF38">DrawCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D794379">DrawPolygon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DB47AB21">DrawSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/608C8B99">Dreidel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DBEF1C85">Drone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53C6025C">DroneAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/70D8915F">Drum</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BCCEAF04">DrumSteelpan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/37C87B94">Drumstick</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A0663DE8">DrumstickBite</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/156C90FD">Dryer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E2799333">DryerAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/17DE25AF">Duck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04FA62A0">Dumbbell</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7141CE64">Dumpster</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7ED99145">DumpsterFire</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6B19A206">Dungeon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/74B67365">Ear</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC7E27F6">EarMuffs</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44320D84">Eclipse</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3FA26BF4">EclipseAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A959A7D">Edit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/19F5F45E">Egg</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F40498F">EggFried</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/726258FF">Eject</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64D71321">Elephant</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C4534B1">EllipsisH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AB5FD48D">EllipsisHAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F783B4B">EllipsisV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/077F123D">EllipsisVAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F731410D">EmptySet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D57F542">EngineWarning</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FA0BC3A0">Envelope</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD12CDD7">EnvelopeOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/31E7D874">EnvelopeOpenDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D7F0C636">EnvelopeOpenText</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/797A16B4">EnvelopeSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/48EB3C45">Equal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9B7CF042">Eraser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EC27B0B6">Ethernet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2250AF2A">EuroSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EBC36DF9">Exchange</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB095A66">ExchangeAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/540D70E3">Exclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7A200F7C">ExclamationCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AA2D5B65">ExclamationSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3230CF2">ExclamationTriangle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/444F67E8">Expand</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AE2D9DC3">ExpandAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38297192">ExpandArrows</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90C50559">ExpandArrowsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61B10CE7">ExpandWide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DF4D7B0D">ExternalLink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9744EC14">ExternalLinkAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53EBA23D">ExternalLinkSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5CD791FB">External<wbr>Link<wbr>Square<wbr>Alt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EAABBB64">Eye</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/59C4B7EE">EyeDropper</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/835FC80C">EyeEvil</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD969BF6">EyeSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/62543473">Fan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E37B05B7">FanTable</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/159BB9A4">Farm</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7118A525">FastBackward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/87993AC1">FastForward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA251AC9">Faucet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/02A8AC53">FaucetDrip</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/33E1E087">Fax</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EF4221B4">Feather</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9B05A13C">FeatherAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FB3C111">Female</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F2BFBCC">FieldHockey</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FA9F0715">FighterJet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/407D3070">File</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CC15EBDC">FileAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C17E823">FileArchive</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FFA54E13">FileAudio</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/18139EF0">FileCertificate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F7D6857F">FileChartLine</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/93BF5F62">FileChartPie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/793FBD37">FileCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/577B599F">FileCode</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6BDE7349">FileContract</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10AE3BFC">FileCsv</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4274E6D8">FileDownload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D5957969">FileEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D1D35724">FileExcel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4676FF4A">FileExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/41ADE0EF">FileExport</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35970ECE">FileImage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8752230">FileImport</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A45D7166">FileInvoice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A5116E11">FileInvoiceDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BA4DCF81">FileMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/453AFC96">FileMedicalAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1D249033">FileMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/20B161C6">FileMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CB276FFA">FilePdf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3EABBE78">FilePlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0753C167">FilePowerpoint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C88A0B9A">FilePrescription</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/72609C19">FileSearch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/37ACFF66">FileSignature</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C63C7D3B">FilesMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BAE0E892">FileSpreadsheet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E67DE416">FileTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CA5DD1BA">FileUpload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/869DDF65">FileUser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4649F477">FileVideo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE3EBD2B">FileWord</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E4C5EC09">Fill</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A8B13C3">FillDrip</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/72F5EB7E">Film</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/233D5F19">FilmAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/50508C27">FilmCanister</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FE667124">Filter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0AC78684">Fingerprint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9F4271A4">Fire</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2F3C3B03">FireAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/95744875">FireExtinguisher</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/30080E89">Fireplace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/839D9475">FireSmoke</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B79FA3D4">FirstAid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/630FDBC3">Fish</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6E3C7238">FishCooked</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9F08E8D8">FistRaised</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CAA05B2D">Flag</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4588BFDE">FlagAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DB8C88AF">FlagCheckered</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C691765">FlagUsa</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DEE2A96E">Flame</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F7C00187">Flashlight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06F0505D">Flask</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E1DDCCF">FlaskPoison</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9AB41E7C">FlaskPotion</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/39F862FC">Flower</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/546CA0F4">FlowerDaffodil</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6E081EEE">FlowerTulip</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8DAF4D6F">Flushed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A4086EE">Flute</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AE3D7370">FluxCapacitor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/48C16B94">Fog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2E3017B7">Folder</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/37D3C779">FolderDownload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D7C55C5">FolderMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BEB34230">FolderOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EBD0C004">FolderPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F4D56FC7">Folders</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C62521E0">FolderTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C66E0C23">FolderTree</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5AB84981">FolderUpload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/82433B2C">Font</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CC6EBCD0">FontAwesomeLogoFull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8F8DCE3">FontCase</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FCE12EED">FootballBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D846E634">FootballHelmet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D123FDE">Forklift</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D29C9DE">Forward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04DC8DBB">Fragile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A2DBE54">FrenchFries</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3E0360A5">Frog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C26E2FD">FrostyHead</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BCC0EF3">Frown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9E5F351">FrownOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AF65F8E0">Function</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/404382B7">FunnelDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2669870C">Futbol</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/952A0EAD">Galaxy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6FBC8C31">GameBoard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F80DCCFF">GameBoardAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F1A97A26">GameConsoleHandheld</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B541F26">Gamepad</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E993FE77">GamepadAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E85893C4">Garage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0334E5F3">GarageCar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35E543B3">GarageOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C12C9E8E">GasPump</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/279913AA">GasPumpSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA94CF09">Gavel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EBAA938F">Gem</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/26ED7FDF">Genderless</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1E6EC468">Ghost</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DD2D358">Gift</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D64EE9CE">GiftCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90318C0E">Gifts</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3E402DA">GingerbreadMan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0415C73">Glass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/710A07DC">GlassChampagne</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8DDC16A3">GlassCheers</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F5E6FB20">GlassCitrus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D5CFACF">Glasses</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D73CA6B">GlassesAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/40AE8CD7">GlassMartini</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/107C29B4">GlassMartiniAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3BF0D44">GlassWhiskey</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1918854">GlassWhiskeyRocks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ABFACFDE">Globe</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2E448749">GlobeAfrica</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FD5958E9">GlobeAmericas</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DEBE1D5">GlobeAsia</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53125997">GlobeEurope</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD568199">GlobeSnow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A561CCE">GlobeStand</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E04CA474">GolfBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C93C78B8">GolfClub</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D5D24AE">Gopuram</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CF79C827">GraduationCap</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B2E7009">Gramophone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D67CA785">GreaterThan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C588F552">GreaterThanEqual</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6231BCCB">Grimace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/797B5A32">Grin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/51E46C0C">GrinAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9B8DB0D7">GrinBeam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04E92998">GrinBeamSweat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5C32DB74">GrinHearts</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6712EB69">GrinSquint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/24D8D35A">GrinSquintTears</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1CB57B04">GrinStars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F659FE5E">GrinTears</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C01D3EE5">GrinTongue</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D691DE7E">GrinTongueSquint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FE3590E2">GrinTongueWink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A86A96D7">GrinWink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7C406E63">GripHorizontal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D9ABB73">GripLines</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D915F66">GripLinesVertical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3441861E">GripVertical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EEFA8F19">Guitar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6CC0CC9">GuitarElectric</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8E8FA55C">Guitars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B5EDC012">H1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0FBCC98B">H2</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/998CCEFC">H3</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A19AA62">H4</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A7E598B7">Hamburger</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D5B34085">Hammer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64E02966">HammerWar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C086C5F9">Hamsa</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27523B2C">HandHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1CD1560E">HandHolding</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F54F33F">HandHoldingBox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1137676C">HandHoldingHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D91D8D05">HandHoldingMagic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B274970E">HandHoldingSeedling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8E0ECD4">HandHoldingUsd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DE0B8F7">HandHoldingWater</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D301B8AC">HandLizard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1F9A7C4A">HandMiddleFinger</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D7F1CD02">HandPaper</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/868DC245">HandPeace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A1A15921">HandPointDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A261ED67">HandPointer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F2D6C147">HandPointLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7FA92DA4">HandPointRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D36A556">HandPointUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7534DB74">HandReceiving</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8324C889">HandRock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47CDB90D">Hands</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6563AE62">HandScissors</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/878A10F9">Handshake</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/32C29828">HandshakeAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B2E5F8B0">HandsHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01F68529">HandsHelping</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F6508388">HandSpock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5E83C762">HandsUsd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1062D9F6">Hanukiah</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8E794BD">HardHat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A2CED63">Hashtag</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3377A9A0">HatChef</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D16656FF">HatCowboy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BAC8E290">HatCowboySide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/18318E3E">HatSanta</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2925D6B0">HatWinter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3A55463">HatWitch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BDB51784">HatWizard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/336408E4">Hdd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A39EC3B">Heading</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D44D678C">Headphones</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8F7B80C">HeadphonesAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8987174D">Headset</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/52121998">HeadSide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D732AB60">HeadSideBrain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/958245C9">HeadSideHeadphones</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/70593657">HeadSideMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/12F4ACC1">HeadVr</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/593D7B0B">Heart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C2495614">Heartbeat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36445C27">HeartBroken</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3B8D4011">HeartCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/59DF71BE">HeartRate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EB801408">HeartSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A8ADEB46">Heat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/19C41B2F">Helicopter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8A418041">HelmetBattle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14989B0B">Hexagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C44FF7AC">Highlighter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/34327B19">Hiking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8E01AE4">Hippo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B076E21E">History</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CD902CAD">HockeyMask</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7206B25E">HockeyPuck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/248AEC20">HockeySticks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/692D0A82">HollyBerry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8047798D">Home</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3CA4ED67">HomeAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D8905C3">HomeHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0C27F81D">HomeLg</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/599E8070">HomeLgAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/57546773">HoodCloak</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B2690776">HorizontalRule</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A7D10D09">Horse</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0E14497">HorseHead</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3EA3B7DD">HorseSaddle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C9BBD468">Hospital</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7263C808">HospitalAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A461DEF9">Hospitals</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0F16655">HospitalSymbol</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7B20D249">HospitalUser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F22828F">Hotdog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/66A0C468">Hotel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8BC9AE6B">HotTub</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A3A0130">Hourglass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28BDAE7B">HourglassEnd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F38F272">HourglassHalf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9B1FA35">HourglassStart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/22C7420C">House</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7EA8323F">HouseDamage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C79C4DFA">HouseDay</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/02F06004">HouseFlood</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AD1341D5">HouseLeave</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA9C2B5F">HouseNight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1DC36489">HouseReturn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E769F65A">HouseSignal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/396DD22C">Hryvnia</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3B17E067">HSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5004AA43">Humidity</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0D5E36F4">Hurricane</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BCDB2BBD">IceCream</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D192BDCE">IceSkate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B66D8019">Icicles</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1AEFD61">Icons</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB4CDC73">IconsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A81E0BC9">ICursor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FB0D6CD0">IdBadge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AEFF5C3E">IdCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/923F2632">IdCardAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1EAC3E1">Igloo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0FAAAAE">Image</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53438DDE">ImagePolaroid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8987AABB">Images</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/860D8615">Inbox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1AFC00D9">InboxIn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06146AD5">InboxOut</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6D95C0B5">Indent</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/321FACE7">Industry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2F7FEC25">IndustryAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DDCA3EF">Infinity</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/077A2637">Info</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6EAB01D9">InfoCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BEA655C0">InfoSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C5AF7045">Inhaler</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28935E53">Integral</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9F33140D">Intersection</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DEE06AF">Inventory</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FAF07B2D">IslandTropical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F3C20D6B">Italic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/62D45631">JackOLantern</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BFFD93F2">Jedi</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B88262F6">Joint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1E1159B2">JournalWhills</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/42AD15D6">Joystick</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F7C25C2D">Jug</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6426A6E4">Kaaba</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BF39C3A6">Kazoo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/912EF942">Kerning</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F287539C">Key</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/07F322A9">Keyboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C5F8876F">Keynote</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7FBCBD4A">KeySkeleton</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/74D2F1DB">Khanda</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4725D8CC">Kidneys</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/521ED4BB">Kiss</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2E22FBDF">KissBeam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/56DE3FFB">KissWinkHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C43D4100">Kite</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/49EF137F">KiwiBird</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E82EE174">KnifeKitchen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61C62888">Lambda</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36195865">Lamp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/51F6512C">LampDesk</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F34CD106">LampFloor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/94CC8DFC">Landmark</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64D8651E">LandmarkAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27028DFE">Language</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D86FB4BB">Laptop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/758356AB">LaptopCode</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/24A9DCF6">LaptopMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D8345FD">Lasso</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/39BD0249">Laugh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC40336C">LaughBeam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8CA5FB56">LaughSquint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FA7156C">LaughWink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8226AAF">LayerGroup</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7AD109FA">LayerMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D4A6BED">LayerPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B74B303A">Leaf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/33DC1D4E">LeafHeart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E128AAA">LeafMaple</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14BF44D7">LeafOak</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9BF7EFF5">Lemon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E98B3DF6">LessThan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9F9EA39E">LessThanEqual</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/776DB4CC">LevelDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DB3D85D">LevelDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CA99751C">LevelUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0108ED0C">LevelUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1781CB57">LifeRing</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2A71D482">Lightbulb</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4337BBE5">LightbulbDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A49B2C38">LightbulbExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3C025BD4">LightbulbOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8CFFC81D">LightbulbSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/51CE8C50">LightCeiling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D501D441">LightsHoliday</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F649A9E">LightSwitch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/696D8D2D">LightSwitchOff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8D1C338E">LightSwitchOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/55FA8396">LineColumns</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6EC9260D">LineHeight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A1D203CA">Link</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28752E0D">Lips</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D203AE2A">LiraSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/48B367B8">List</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B7A8E72">ListAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A706530A">ListMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1AF3F418">ListOl</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C109D9A8">ListUl</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/59FAC874">Location</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/49E1C111">LocationArrow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E9771F1A">LocationCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/864838CE">LocationSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5ED0207B">Lock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D494DCC">LockAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DED4AF0">LockOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/075F755D">LockOpenAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B0B4C167">LongArrowAltDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3C35901">LongArrowAltLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9811DBCE">LongArrowAltRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ACDB2F29">LongArrowAltUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3B0C656">LongArrowDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0C75E30">LongArrowLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4257544A">LongArrowRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F8B11A5">LongArrowUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/98DA7F25">Loveseat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8BA4675A">LowVision</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/193368C1">Luchador</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5B74BF58">LuggageCart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8CF86F0C">Lungs</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36B7BA2E">Mace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91179162">Magic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6ED91551">Magnet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0E4C79F">Mailbox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/683C6D2A">MailBulk</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F9AB22A9">Male</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C7A8AA4B">Mandolin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0866E85">Map</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/72975265">MapMarked</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/353F29FC">MapMarkedAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/23228691">MapMarker</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/76375B89">MapMarkerAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D15FC957">MapMarkerAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1F6DF7FC">MapMarkerCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/657F9842">MapMarkerEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/52C7D2BF">MapMarkerExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7B76DAF8">MapMarkerMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8E415F53">MapMarkerPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D9FD544">MapMarkerQuestion</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FD86B7C7">MapMarkerSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/03C2F3C2">MapMarkerSmile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/802FAEDD">MapMarkerTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A4C8F9E3">MapPin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99E50E64">MapSigns</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1D197AD9">Marker</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7721B789">Mars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/389A8C59">MarsDouble</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A533218A">MarsStroke</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7B50330C">MarsStrokeH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/186D3CF6">MarsStrokeV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6088C083">Mask</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A5D3571">Meat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06A9D3B7">Medal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A75D5E1C">Medkit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CDB6D1C2">Megaphone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B2DB6EF2">Meh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/98EB7B02">MehBlank</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B83FFDFE">MehRollingEyes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D60DD8B1">Memory</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/824BD13B">Menorah</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5CF907DA">Mercury</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8125E0F9">Meteor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F1411F6">Microchip</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/148974E3">Microphone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/03323FB6">MicrophoneAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C892546">MicrophoneAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A5C095E5">MicrophoneSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E29FE286">MicrophoneStand</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1A4B94A7">Microscope</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6D053C86">Microwave</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6152A33A">MindShare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8493453">Minus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B139F06A">MinusCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3193C2A7">MinusHexagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3A3CC71">MinusOctagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6134A473">MinusSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F957E60B">Mistletoe</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/02B51ACF">Mitten</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/031AC667">Mobile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B8C55D0">MobileAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1066000E">MobileAndroid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/34C0B83F">MobileAndroidAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7F26E0D0">MoneyBill</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8AE1402C">MoneyBillAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/17A907AD">MoneyBillWave</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3088F1E8">MoneyBillWaveAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/43B29DC5">MoneyCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F4BFA83A">MoneyCheckAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E16E9D41">MoneyCheckEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6DBCD9CD">MoneyCheckEditAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/00CDDB37">MonitorHeartRate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D39657EB">Monkey</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/11F1EE51">Monument</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B80C431F">Moon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BAF87A26">MoonCloud</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/422E3B15">MoonStars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/462D5BC3">MortarPestle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/29715606">Mosque</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A96298AB">Motorcycle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AE7AF4B7">Mountain</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9EB5D72A">Mountains</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5248A2C4">Mouse</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B852797F">MouseAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0C943059">MousePointer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E926A24E">Mp3Player</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/72D41328">Mug</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F43A5A02">MugHot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B7D69A10">MugMarshmallows</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/816C5480">MugTea</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F5DCC5A6">Music</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DAA2B565">MusicAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A7D3739">MusicAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DFE6045">MusicSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/45F4C9B7">Narwhal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9CA5C35F">NetworkWired</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8711C320">Neuter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9D42C9D8">Newspaper</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47A0104E">NotEqual</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6741BDE1">NotesMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8995BC14">ObjectGroup</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/37663817">ObjectUngroup</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/86A895DD">Octagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/685D3752">OilCan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BFD4D620">OilTemp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AD665C3F">Om</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/85638E21">Omega</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/203AA280">Ornament</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8B91F3A7">Otter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/67A539D8">Outdent</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/386595C8">Outlet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46B4525C">Oven</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/51BD7CE2">Overline</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04B77709">PageBreak</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5C2BE43C">Pager</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64537AA6">PaintBrush</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/845AA17E">PaintBrushAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/32F31332">PaintRoller</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/85A1BDFE">Palette</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/449BD83A">Pallet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7A83177D">PalletAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53E5E7AF">Paperclip</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C031C421">PaperPlane</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DAD1873">ParachuteBox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/793CF863">Paragraph</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/20E29B04">ParagraphRtl</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/81546F8B">Parking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DDD4145">ParkingCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B791F716">ParkingCircleSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BFA41A95">ParkingSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9A1DF49F">Passport</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/54B45396">Pastafarianism</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2786C1F7">Paste</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/526C0DBC">Pause</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/568CB1F0">PauseCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6023F40F">Paw</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2025975C">PawAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1430656">PawClaws</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F8E28262">Peace</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/40D71E75">Pegasus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A44EF30F">Pen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F59B0684">PenAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6865D4D1">Pencil</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DBCC9CF">PencilAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/806DBAF9">PencilPaintbrush</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A1D44588">PencilRuler</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5A1A3D79">PenFancy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/408C9D08">Pennant</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC9DF906">PenNib</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3B268E30">PenSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DB252F1E">PeopleCarry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A8EA02C">PepperHot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C286EE58">Percent</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/76A27019">Percentage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9484AB63">PersonBooth</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/406D0096">PersonCarry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6770606">PersonDolly</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AA4C6C6B">PersonDollyEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6902117B">PersonSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6269D82F">Phone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/023A5D67">PhoneAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CB7842E6">PhoneLaptop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F2451272">PhoneOffice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A6F2D904">PhonePlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35879173">PhoneRotary</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B4A855F2">PhoneSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5946A0CB">PhoneSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F4F1A103">PhoneSquareAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2EE3D9BF">PhoneVolume</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FD569EB">PhotoVideo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2AAC6BF5">Pi</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/13CA2F7D">Piano</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5387E317">PianoKeyboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/20D89434">Pie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0CB99ADA">Pig</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9FC81131">PiggyBank</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8D67C053">Pills</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D07C4AA4">Pizza</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/274615E3">PizzaSlice</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9980EB87">PlaceOfWorship</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3FD324AA">Plane</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/617F18A9">PlaneAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B7AE4E48">PlaneArrival</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2915773D">PlaneDeparture</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A705D6D4">PlanetMoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2F3B0D48">PlanetRinged</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA9526A2">Play</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27898722">PlayCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC7F8776">Plug</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A1AB5D6C">Plus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8E9067E">PlusCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/45DD0ADE">PlusHexagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D7ED0408">PlusOctagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/68E45267">PlusSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4603B0EE">Podcast</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B0753E68">Podium</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1CE30D24">PodiumStar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1064687F">PoliceBox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15B11378">Poll</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/75D1A0C7">PollH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/051C4849">PollPeople</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8961B82">Poo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99BE3F47">Poop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B4B41791">PooStorm</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35D73795">Popcorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9CEAEFD7">PortalEnter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99912560">PortalExit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/694716BF">Portrait</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/80605EFF">PoundSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/856EA9F4">PowerOff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/901B9EB4">Pray</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6022418D">PrayingHands</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FB741B69">Prescription</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/87231C18">PrescriptionBottle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5889EB5E">Prescription<wbr>Bottle<wbr>Alt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B124C2ED">Presentation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D982417E">Print</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/860A8C30">PrintSearch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E2B85EC5">PrintSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0A1CE11C">Procedures</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2A0817C3">ProjectDiagram</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99F2B245">Projector</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CC3E9943">Pumpkin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2B053F2">PuzzlePiece</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0F1A4AFF">Qrcode</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC3AA19C">Question</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C823A85C">QuestionCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/182EFC45">QuestionSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BC4DC02">Quidditch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7BE4C4BC">QuoteLeft</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C997B230">QuoteRight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F43A7FB4">Quran</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7A2FE431">Rabbit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0D910BD9">RabbitFast</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/608EA20C">Racquet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61030E20">Radar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/096F5225">Radiation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/71D3E878">RadiationAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B0E5D18B">Radio</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1BB4BA07">RadioAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CDDDE734">Rainbow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28F0DA1E">Raindrops</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/740E12F1">Ram</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E5AEAC8F">RampLoading</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36E38E4D">Random</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/289922AB">Raygun</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BEB0C16A">Receipt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/962FF00F">RecordVinyl</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1265A430">RectangleLandscape</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ED7CA305">RectanglePortrait</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7F3AB645">RectangleWide</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0A05EF1">Recycle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FA275D8E">Redo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CFC67567">RedoAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1763BD30">Refrigerator</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/280385C1">Registered</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F6C32598">RemoveFormat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/238AE2F3">Repeat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F7C4821">Repeat1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EF9A7290">Repeat1Alt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B4A45AA5">RepeatAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F383F96">Reply</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0CF4CC5">ReplyAll</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/389A145C">Republican</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B3EEB0AA">Restroom</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/487BBE7C">Retweet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D94DA28E">RetweetAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/473AACAA">Ribbon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/26BE7373">Ring</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/32497932">RingsWedding</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E18F6F69">Road</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5B80BCB3">Robot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FD820C95">Rocket</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/557E3FAD">RocketLaunch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6DE5369">Route</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/94F916AA">RouteHighway</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7072A8AB">RouteInterstate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6CB671E">Router</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C443E973">Rss</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1FCBA5A2">RssSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1E4F02EE">RubleSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15570A95">Ruler</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B21930D4">RulerCombined</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE24DAE7">RulerHorizontal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A16CB54C">RulerTriangle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BA75543B">RulerVertical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/948F7916">Running</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/31934C39">RupeeSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DC3554A">Rv</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9DBAC479">Sack</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EA063995">SackDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F338DB31">SadCry</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/89C5301E">SadTear</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38CEA9E7">Salad</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FA7B71A2">Sandwich</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C8EEC71">Satellite</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C0F8C9E1">SatelliteDish</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A166D5AC">Sausage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8E71C9A9">Save</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/942F9CA6">SaxHot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/83AC0589">Saxophone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/40A2092A">Scalpel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9D87F7E0">ScalpelPath</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D2D9B76C">Scanner</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F3DCCA5">ScannerImage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B56C6C5B">ScannerKeyboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D4EFDEE">ScannerTouchscreen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7F8C7307">Scarecrow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5EB599CA">Scarf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/58E32BA2">School</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7EFE2F81">Screwdriver</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6007A2B6">Scroll</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/900D5E38">ScrollOld</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B100D0DC">Scrubber</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/50B1606C">Scythe</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/53DE119C">SdCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44E245EF">Search</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1BDA1004">SearchDollar</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/655B116B">SearchLocation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/414FD087">SearchMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C2C06B33">SearchPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/681CF09E">Seedling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7857D106">SendBack</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36B9577F">SendBackward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/532E33E7">Sensor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/313A70DE">SensorAlert</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC7F82D9">SensorFire</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01E972D1">SensorOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8A95CB80">SensorSmoke</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15ECD801">Server</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F19C6EC8">Shapes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E5639184">Share</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44BEA465">ShareAll</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1226C876">ShareAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A0C65529">ShareAltSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AEDF94B1">ShareSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44ABC6EB">Sheep</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A0C47D98">ShekelSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0BEB2645">Shield</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15EFEB73">ShieldAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DF52F3A">ShieldCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/074DB251">ShieldCross</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/74A09F06">Ship</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6CA66166">ShippingFast</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E474A46">ShippingTimed</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BD4065D2">ShishKebab</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C33FD54A">ShoePrints</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3D33E06">ShoppingBag</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/947F109B">ShoppingBasket</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5817BA45">ShoppingCart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/859A34A1">Shovel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B1149A6">ShovelSnow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D1CDF95A">Shower</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A7E0D19F">Shredder</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4AFDBFEC">Shuttlecock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C46AF711">ShuttleVan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/433F626A">Sickle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B5B297F2">Sigma</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AEDAD163">Sign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/16ACB92F">Signal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4AE32777">Signal1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F0B22EEE">Signal2</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/66822999">Signal3</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C5174D07">Signal4</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4B889DB8">SignalAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/27EA6A62">SignalAlt1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9DBB63FB">SignalAlt2</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B8B648C">SignalAlt3</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A901618">SignalAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/985181F6">SignalSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F62876C4">SignalStream</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5AA5A3B0">Signature</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9063EA9C">SignIn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/052425E3">SignInAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4178299A">SignLanguage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A79442D8">SignOut</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F48BF141">SignOutAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC168FA0">SimCard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B7441CB0">Siren</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/80000746">SirenOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/367F093A">Sitemap</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1C72634">Skating</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8DA8EF7">Skeleton</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/875BA3A0">Skiing</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F5F04EBB">SkiingNordic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A28F60A9">SkiJump</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B897AE7D">SkiLift</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DC409620">Skull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7CCC1FCC">SkullCow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/544A3ABF">SkullCrossbones</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4EB9596C">Slash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5471DCCE">Sledding</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F79E2819">Sleigh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9ECB6C45">SlidersH</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F6C44774">SlidersHSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FDF663BF">SlidersV</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6523A643">SlidersVSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B0FD1D69">Smile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9B1ACC7A">SmileBeam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3654AC5B">SmilePlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A8FDEA7A">SmileWink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE40DDD5">Smog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C517D122">Smoke</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/54DD3555">Smoking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D6F2353">SmokingBan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C166AA6">Sms</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2195FA3A">Snake</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0410589">Snooze</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D4442DB0">SnowBlowing</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/25C3499C">Snowboarding</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A3B0F20A">Snowflake</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E9CFDB54">Snowflakes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A4B2330">Snowman</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/62309B4D">Snowmobile</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F8D8402">Snowplow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7B931675">Socks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9AF74BE">SolarPanel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2ACEE4F6">SolarSystem</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/72B98BAD">Sort</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01CFCFA1">SortAlphaDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5DD14256">SortAlphaDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6FEBBFE6">SortAlphaUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AAA7E6B5">SortAlphaUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A15C2108">SortAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FDEF3615">SortAmountDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/473579BB">SortAmountDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3C59741A">SortAmountUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BDE05901">SortAmountUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E959DE63">SortCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FBFCD7BF">SortCircleDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F9081B4B">SortCircleUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/580C64C7">SortDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EF500CDC">SortNumericDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/55298A01">SortNumericDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/96DCAA86">SortNumericUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4AAB29F2">SortNumericUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/21EAAFE3">SortShapesDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/40264ECB">SortShapesDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/493F7656">SortShapesUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47E7CA8E">SortShapesUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5B371F61">SortSizeDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9AC3DF6D">SortSizeDownAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E6668C2">SortSizeUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B8CF983E">SortSizeUpAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0577A479">SortUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ACEBA7E5">Soup</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/780BBFAA">Spa</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D320DAE7">SpaceShuttle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A52E3831">SpaceStationMoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/63818FEC">SpaceStationMoonAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/42A9A40D">Spade</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D17815BD">Sparkles</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9ADDDD42">Speaker</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8C68960B">Speakers</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15446A14">SpellCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/67536231">Spider</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5CF4474C">SpiderBlackWidow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6AD3652">SpiderWeb</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/26E285D9">Spinner</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4AFB0060">SpinnerThird</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/69725013">Splotch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2D27CD1">SprayCan</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D4539E4">Sprinkler</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A515696">Square</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E34B172C">SquareFull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/18669CDA">SquareRoot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/374E12C8">SquareRootAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E10EB422">Squirrel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D0DF929">Staff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B761D93E">Stamp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/44117435">Star</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/037E488D">StarAndCrescent</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AD812186">StarChristmas</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B87FFED3">StarExclamation</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/340D61C9">Starfighter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6DCD40BC">StarfighterAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3901A4F">StarHalf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BDB2BE37">StarHalfAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C3F79EC2">StarOfDavid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D333B1CE">StarOfLife</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/933E8A6A">Stars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D89542EE">Starship</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C7B91D44">StarshipFreighter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2722EDFA">StarShooting</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8B4F001F">Steak</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D1D3E755">SteeringWheel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B74AE319">StepBackward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A38E8C84">StepForward</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FE54F032">Stethoscope</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/853C0074">StickyNote</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DD4C35D1">Stocking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BFE3857F">Stomach</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E65DF945">Stop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC85BA5E">StopCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/395CE3F9">Stopwatch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8A6C094">Store</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D8B1BCEC">StoreAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FF875CAB">Stream</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99D0DBC5">StreetView</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AC845CFF">Stretcher</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01EFA910">Strikethrough</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8FD396F2">Stroopwafel</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/04ABD664">Subscript</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B35A5DC3">Subway</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/819B1EA9">Suitcase</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4F726B24">SuitcaseRolling</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ACE27747">Sun</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E365BAD4">SunCloud</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ACBC6F11">SunDust</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1E051460">Sunglasses</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0393E4FB">SunHaze</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3761A3BB">Sunrise</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6EF45F94">Sunset</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/13F3B6DA">Superscript</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5BAE39D3">Surprise</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F173A829">Swatchbook</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/29C373D4">Swimmer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FFF7A96B">SwimmingPool</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B03972F1">Sword</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3558BBEF">SwordLaser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A735481C">SwordLaserAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BE0E9ED0">Swords</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6B1A1011">SwordsLaser</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90A76DF0">Synagogue</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2ABE84D0">Sync</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/82A870B5">SyncAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/81CA88C5">Syringe</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F971BE9D">Table</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61AE9641">Tablet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BA9C470">TabletAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9655382E">TabletAndroid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/887A6906">TabletAndroidAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A916C56D">TableTennis</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DBEB469D">TabletRugged</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6B08FA21">Tablets</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DDD9F75A">Tachometer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BB104BE6">TachometerAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/98786D91">TachometerAltAverage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/925DE509">TachometerAltFast</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B016C5C3">TachometerAltFastest</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8B658419">TachometerAltSlow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6A6318FD">TachometerAltSlowest</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0C5A7FCD">TachometerAverage</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91467103">TachometerFast</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2434D79F">TachometerFastest</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/887E1013">TachometerSlow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FE410AA1">TachometerSlowest</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D467EE3">Taco</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D89B4A15">Tag</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/76DF1393">Tags</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC002183">Tally</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4BF31A89">Tanakh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B1EE4462">Tape</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/289BCF3B">Tasks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F83409BF">TasksAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/92282BA3">Taxi</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CF1439EB">Teeth</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C6F1F08">TeethOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0596C41F">Telescope</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C325F937">TemperatureDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/78E9457E">TemperatureFrigid</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AD5103DA">TemperatureHigh</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7DEB67BE">TemperatureHot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1B126720">TemperatureLow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C97CF511">TemperatureUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/01C632F8">Tenge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F21282FA">TennisBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D3662DA5">Terminal</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/97EC24C7">Text</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B05416A4">TextHeight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38CD7523">TextSize</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1EC0AB09">TextWidth</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B85900E6">Th</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F785C931">TheaterMasks</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/465FA0EC">Thermometer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5D4168C6">ThermometerEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4807699E">ThermometerFull</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C9924C85">ThermometerHalf</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EC43B1E5">ThermometerQuarter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B45B6BF9">Thermometer<wbr>Three<wbr>Quarters</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B6748F60">Theta</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2D513C06">ThLarge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/21633816">ThList</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E6EAFE19">ThumbsDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/312F2BB5">ThumbsUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2F485386">Thumbtack</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C09580B8">Thunderstorm</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3EDF7230">ThunderstormMoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/90E3D819">ThunderstormSun</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/409415CC">Ticket</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/92895318">TicketAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/14FE4D9A">Tilde</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/33104076">Times</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/11CE7DFA">TimesCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2EBD8471">TimesHexagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC8D8AA7">TimesOctagon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C1C329E3">TimesSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/24A0A6D2">Tint</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7B7EDED1">TintSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8BDD615E">Tire</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B971E9E2">Tired</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36B444BA">TireFlat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5A67FCB4">TirePressureWarning</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/73832098">TireRugged</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3E82CCBB">ToggleOff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C7C574C6">ToggleOn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0197A729">Toilet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B16B5D0A">ToiletPaper</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/63A47647">ToiletPaperAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38E1F92C">Tombstone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7A9345B9">TombstoneAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DA9CBD8">Toolbox</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C8206D81">Tools</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7D711389">Tooth</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6F0F47D7">Toothbrush</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4AA758AA">Torah</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/61F2D5A5">ToriiGate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D0D0D388">Tornado</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9320AE78">Tractor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CC6B5E13">Trademark</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/43C952E7">TrafficCone</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/84951C77">TrafficLight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/6CFA66FC">TrafficLightGo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/563CC024">TrafficLightSlow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3D5B91A8">TrafficLightStop</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B5DAC9FF">Trailer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1C1AF137">Train</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BA582621">Tram</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4131318A">Transgender</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9E4FE2F6">TransgenderAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9450BBD8">Transporter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BA036674">Transporter1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/00526FED">Transporter2</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9662689A">Transporter3</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/54C267C6">TransporterEmpty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F245BF6E">Trash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E61DA970">TrashAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B9B970AD">TrashRestore</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/940EB4BF">TrashRestoreAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E37B2BD0">TrashUndo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3F98EADB">TrashUndoAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46AB0F85">TreasureChest</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8C15914B">Tree</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0208AB48">TreeAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/06CBC461">TreeChristmas</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5891BF27">TreeDecorated</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8DB82764">TreeLarge</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC03216D">TreePalm</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/15914BFF">Trees</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/151EC1F5">Triangle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9FDCF3ED">TriangleMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0AC39F4A">Trophy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AF20C99D">TrophyAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B50D5BA6">Truck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/05B13232">TruckContainer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E3CC4E57">TruckCouch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F2CACD71">TruckLoading</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B234F302">TruckMonster</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B60AF24B">TruckMoving</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CDD35C35">TruckPickup</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B4DE0EC3">TruckPlow</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4D728DCD">TruckRamp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/81839419">Trumpet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9ACC4337">Tshirt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AF40F0D8">Tty</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/84A211FF">Turkey</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EB6ADFC8">Turntable</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CFA1A82D">Turtle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DB640F1C">Tv</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/94C6CB00">TvAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3239D9AB">TvMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/CAFFBFBC">TvRetro</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A151EF99">Typewriter</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1AEF1255">Ufo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/ACF44FEF">UfoBeam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C4434339">Umbrella</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F78C2945">UmbrellaBeach</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FCAAF5D3">Underline</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A2F0DF1F">Undo</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/820815C8">UndoAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C4DEA361">Unicorn</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B52D1748">Union</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3ABD2390">UniversalAccess</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A467012A">University</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F38B7280">Unlink</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0C895131">Unlock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5E140EEF">UnlockAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FCDF084C">Upload</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E7A865C">UsbDrive</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4609E97D">UsdCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9604BD64">UsdSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/199D3C71">User</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8475481E">UserAlien</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35BF4EE8">UserAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1D87C06">UserAltSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0E7007C4">UserAstronaut</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E79D181D">UserChart</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DE1BC0C4">UserCheck</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C3959A31">UserCircle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F093546">UserClock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46795944">UserCog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EAF5EAB7">UserCowboy</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/290A37A8">UserCrown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C77A2CAD">UserEdit</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0B07BF0A">UserFriends</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/243309AB">UserGraduate</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/21969DAF">UserHardHat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/10F61E5F">UserHeadset</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DF76AE10">UserInjured</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D33F96AB">UserLock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BB16F5B">UserMd</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/981EDC68">UserMdChat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BA00EDC0">UserMinus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/87951C35">UserMusic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BC05AEB9">UserNinja</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8EDA302A">UserNurse</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2C44EBBC">UserPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/29C96520">UserRobot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/565B147F">Users</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C6EA5D34">UsersClass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/876B8A97">UsersCog</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/BD4E6F89">UsersCrown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5F188FB9">UserSecret</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5222BEFB">UserShield</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3CF080FF">UserSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F79B1638">UsersMedical</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DE1B3C3">UserTag</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/190A64E5">UserTie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/415999E5">UserTimes</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5540C98F">UserUnlock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/475C0904">UserVisor</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AD886C24">UtensilFork</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8F5868A2">UtensilKnife</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/026B10F3">Utensils</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FED90388">UtensilsAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/13BAA300">UtensilSpoon</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/614ABC89">Vacuum</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3293146F">VacuumRobot</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/201751AF">value__</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35655515">ValueAbsolute</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A086AB79">VectorSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E350D20E">Venus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/260D4BF3">VenusDouble</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E58FEA29">VenusMars</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8220D6DD">Vhs</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/36EC5BEC">Vial</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7E0158D4">Vials</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/93245017">Video</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2A371999">VideoPlus</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/7AA7C616">VideoSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E1571533">Vihara</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/002A939F">Violin</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5647AEC3">Voicemail</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4DD819C8">Volcano</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0F2212AA">VolleyballBall</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3DF42FE2">Volume</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4C7F5950">VolumeDown</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2B9C1F80">VolumeMute</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/627443E4">VolumeOff</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/8105E3C9">VolumeSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/46562806">VolumeUp</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/91F3BFFD">VoteNay</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/361BD693">VoteYea</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4A01997A">VrCardboard</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/938E724A">WagonCovered</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4C18F1CB">Walker</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/C435E640">WalkieTalkie</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/EC431891">Walking</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FCABDD27">Wallet</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/164EB7D3">Wand</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/4FF5A836">WandMagic</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E72F98F2">Warehouse</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A74A5C50">WarehouseAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DCE1CDC1">Washer</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/99B49C3B">Watch</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B6F15991">WatchCalculator</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D5D33209">WatchFitness</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/65EAA490">Water</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/E0727B88">WaterLower</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/96EF65AC">WaterRise</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9147453B">Waveform</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/D16B4AE7">WaveformPath</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/DFE69110">WaveSine</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/51B640FE">WaveSquare</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/42CA9962">WaveTriangle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/F650D939">Webcam</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AF41AA46">WebcamSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A26C785C">Weight</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/066A0621">WeightHanging</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FAFA50A5">Whale</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/990C477D">Wheat</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/47864DC7">Wheelchair</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/A9D19C23">Whistle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/1BE9CC6B">Wifi</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B2EAD209">Wifi1</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/08BBDB90">Wifi2</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9C1DF464">WifiSlash</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/AE1FA4DD">Wind</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3EC051D0">Window</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/0DD15AE9">WindowAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B9C7DA56">WindowClose</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B07A23F0">WindowFrame</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/FB0A4243">WindowFrameOpen</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/817417FD">WindowMaximize</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/60DB771B">WindowMinimize</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/3A89F982">WindowRestore</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/38813207">Windsock</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/B1610936">WindTurbine</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/35E57E3B">WindWarning</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2BFF8C8B">WineBottle</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2E6BDC3F">WineGlass</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2DE8862B">WineGlassAlt</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/5FA2534C">WonSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/28E59532">Wreath</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/83264A3C">Wrench</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/9F756749">XRay</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/64FAF7BD">YenSign</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas/2E888503">YinYang</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas">Fas</a>.</h3>
+	<h1>Clipboard <small>Field</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Clipboard
+            </div>
+
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<dl class="dl-horizontal">				
+						<dt>Assembly</dt>
+						<dd><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro.Solid.dll">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Pro<wbr>.Solid<wbr>.dll</a></dd>
+
+						<dt>Namespace</dt>
+						<dd><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Pro</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Pro/Fas">Fas</a></dd>		
+				</dl>
+			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public const Fas Clipboard</code></pre>
+
+
+	<h1 id="Remarks">Remarks</h1>
+	<div>
+            clipboard - Available in Solid, Regular, Light, Duotone
+            </div>
+
+	<h1 id="Attributes">Attributes</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5/FontAwesomeAttribute">FontAwesomeAttribute</a></td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	<h1 id="Value">Constant Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Value</th>
+						<th>Type</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>373</td>
+					<td>Int32</td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    //setTimeout(function() {
+        /*
+        var pattern = Trianglify({
+            cell_size: 40,
+            variance: 1,
+            x_colors: ['#E4B931', '#053247', '#FFFFFF', '#E0C882', '#FFFFFF', '#053247', '#E4B931'],
+            y_colors: false,
+            //y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            // seed: null,
+        });
+
+        document.body.style.background="url(" + pattern.png() + ")";*/
+    //}, 1000);
+</script>
+
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>

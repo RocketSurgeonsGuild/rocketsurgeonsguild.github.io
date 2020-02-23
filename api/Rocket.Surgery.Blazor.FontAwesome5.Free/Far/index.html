@@ -1,0 +1,1976 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Rocket Surgeons Guild - API - Far Class</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Rocket Surgeons Guild">
+<meta name="application-name" content="Rocket Surgeons Guild">
+<meta name="msapplication-TileColor" content="#e4b931">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="/assets/css/custom.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    function tify() {
+        var pattern = Trianglify({
+            cell_size: 60,
+            variance: 1,
+            x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
+            //y_colors: false,
+            y_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#FFFFFF'],
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            // seed: null,
+        });
+        var element = pattern.canvas();
+        element.style.position = 'fixed';
+        element.style.top = 0;
+        element.style.left = 0;
+        element.style.bottom = 0;
+        element.style.right = 0;
+        element.style.zIndex = -1;
+        document.body.appendChild(element);
+        //document.body.style.background="url(" + pattern.png() + ")";
+    };
+    window.addEventListener('resize', tify);
+    setTimeout(tify, 1);
+</script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
+
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/api">API</a></li>
+        <li><a href="/conventions">Conventions</a></li>
+        <li><a href="/packages">Packages</a></li>
+        <li><a href="/faq">FAQ</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
+<p><a href="#fields">Fields</a></p>
+<p><a href="#ExtensionMethods">Extension Methods</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free.Regular.dll">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Free<wbr>.Regular<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Free</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Class Types</li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far">Far</a></li>
+				<li><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Fas">Fas</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+	<h1>Far <small>Class</small></h1>
+</section>
+<section class="content">
+	
+	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Font Awesome Far Icons
+            </div>
+
+		<div class="panel panel-default">
+  			<div class="panel-body">
+				<div class="row">
+					<div class="col-md-6">
+						<dl class="dl-horizontal">		
+								<dt>Assembly</dt>
+								<dd><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free.Regular.dll">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Free<wbr>.Regular<wbr>.dll</a></dd>
+
+								<dt>Namespace</dt>
+								<dd><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free">Rocket<wbr>.Surgery<wbr>.Blazor<wbr>.FontAwesome5<wbr>.Free</a></dd>
+											
+							
+								<dt>Base Types</dt>
+								<dd>
+									<ul class="list-unstyled">										
+											<li>Enum</li>								
+									</ul>
+								</dd>				
+							
+							
+						</dl>
+					</div>		
+					<div class="col-md-6">
+						<div class="mermaid">
+							graph BT
+	Type--&gt;Base0["Enum"]
+	Type["Far"]
+class Type type-node
+
+						</div>
+					</div>
+				</div>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public sealed class Far : Enum</code></pre>
+
+
+
+
+
+
+
+
+
+			<h1 id="fields">Fields</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Constant Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/847F7FB7">AddressBook</a></td>
+								<td>0</td>
+								<td>
+									<div>
+            Address Book
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/66448E6A">AddressCard</a></td>
+								<td>1</td>
+								<td>
+									<div>
+            Address Card
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/DB183A68">Angry</a></td>
+								<td>2</td>
+								<td>
+									<div>
+            Angry Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2459CF4F">ArrowAltCircleDown</a></td>
+								<td>3</td>
+								<td>
+									<div>
+            Alternate Arrow Circle Down
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/772E5729">ArrowAltCircleLeft</a></td>
+								<td>4</td>
+								<td>
+									<div>
+            Alternate Arrow Circle Left
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/28489139">ArrowAltCircleRight</a></td>
+								<td>5</td>
+								<td>
+									<div>
+            Alternate Arrow Circle Right
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/67DB3ECA">ArrowAltCircleUp</a></td>
+								<td>6</td>
+								<td>
+									<div>
+            Alternate Arrow Circle Up
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2AF7DAEF">Bell</a></td>
+								<td>7</td>
+								<td>
+									<div>
+            Bell
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/8B2E370F">BellSlash</a></td>
+								<td>8</td>
+								<td>
+									<div>
+            Bell Slash
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/F2FBD6C2">Bookmark</a></td>
+								<td>9</td>
+								<td>
+									<div>
+            Bookmark
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/3B08DBF9">Building</a></td>
+								<td>10</td>
+								<td>
+									<div>
+            Building
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A9C81D76">Calendar</a></td>
+								<td>11</td>
+								<td>
+									<div>
+            Calendar
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6DF8B5A6">CalendarAlt</a></td>
+								<td>12</td>
+								<td>
+									<div>
+            Alternate Calendar
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4A561A5E">CalendarCheck</a></td>
+								<td>13</td>
+								<td>
+									<div>
+            Calendar Check
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2E4D375A">CalendarMinus</a></td>
+								<td>14</td>
+								<td>
+									<div>
+            Calendar Minus
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/AD6615D9">CalendarPlus</a></td>
+								<td>15</td>
+								<td>
+									<div>
+            Calendar Plus
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D514437F">CalendarTimes</a></td>
+								<td>16</td>
+								<td>
+									<div>
+            Calendar Times
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/DA6E22ED">CaretSquareDown</a></td>
+								<td>17</td>
+								<td>
+									<div>
+            Caret Square Down
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/8919BA8B">CaretSquareLeft</a></td>
+								<td>18</td>
+								<td>
+									<div>
+            Caret Square Left
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/047A3663">CaretSquareRight</a></td>
+								<td>19</td>
+								<td>
+									<div>
+            Caret Square Right
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7C147BE9">CaretSquareUp</a></td>
+								<td>20</td>
+								<td>
+									<div>
+            Caret Square Up
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9F58BF8E">ChartBar</a></td>
+								<td>21</td>
+								<td>
+									<div>
+            Bar Chart
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/EF8FF419">CheckCircle</a></td>
+								<td>22</td>
+								<td>
+									<div>
+            Check Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/3F82A000">CheckSquare</a></td>
+								<td>23</td>
+								<td>
+									<div>
+            Check Square
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/FBBECD4C">Circle</a></td>
+								<td>24</td>
+								<td>
+									<div>
+            Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/168F76BF">Clipboard</a></td>
+								<td>25</td>
+								<td>
+									<div>
+            Clipboard
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D0808016">Clock</a></td>
+								<td>26</td>
+								<td>
+									<div>
+            Clock
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9AD39644">Clone</a></td>
+								<td>27</td>
+								<td>
+									<div>
+            Clone
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/64C84BE9">ClosedCaptioning</a></td>
+								<td>28</td>
+								<td>
+									<div>
+            Closed Captioning
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/BBCA5A97">Comment</a></td>
+								<td>29</td>
+								<td>
+									<div>
+            Comment
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/23399963">CommentAlt</a></td>
+								<td>30</td>
+								<td>
+									<div>
+            Alternate Comment
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2B69928C">CommentDots</a></td>
+								<td>31</td>
+								<td>
+									<div>
+            Comment Dots
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C5FF2A47">Comments</a></td>
+								<td>32</td>
+								<td>
+									<div>
+            Comments
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9A142853">Compass</a></td>
+								<td>33</td>
+								<td>
+									<div>
+            Compass
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2FAC5BD1">Copy</a></td>
+								<td>34</td>
+								<td>
+									<div>
+            Copy
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/735E2C08">Copyright</a></td>
+								<td>35</td>
+								<td>
+									<div>
+            Copyright
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7824BEB9">CreditCard</a></td>
+								<td>36</td>
+								<td>
+									<div>
+            Credit Card
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/39152AE1">Dizzy</a></td>
+								<td>37</td>
+								<td>
+									<div>
+            Dizzy Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/45081EA4">DotCircle</a></td>
+								<td>38</td>
+								<td>
+									<div>
+            Dot Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/B7C9D41D">Edit</a></td>
+								<td>39</td>
+								<td>
+									<div>
+            Edit
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/87112192">Envelope</a></td>
+								<td>40</td>
+								<td>
+									<div>
+            Envelope
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D48CB6FB">EnvelopeOpen</a></td>
+								<td>41</td>
+								<td>
+									<div>
+            Envelope Open
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7583699A">Eye</a></td>
+								<td>42</td>
+								<td>
+									<div>
+            Eye
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A08C79C4">EyeSlash</a></td>
+								<td>43</td>
+								<td>
+									<div>
+            Eye Slash
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/BD217E10">File</a></td>
+								<td>44</td>
+								<td>
+									<div>
+            File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E08B9DE6">FileAlt</a></td>
+								<td>45</td>
+								<td>
+									<div>
+            Alternate File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C295E881">FileArchive</a></td>
+								<td>46</td>
+								<td>
+									<div>
+            Archive File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/644AC83D">FileAudio</a></td>
+								<td>47</td>
+								<td>
+									<div>
+            Audio File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2A61BBAD">FileCode</a></td>
+								<td>48</td>
+								<td>
+									<div>
+            Code File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4A3CD10A">FileExcel</a></td>
+								<td>49</td>
+								<td>
+									<div>
+            Excel File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/AE7888E0">FileImage</a></td>
+								<td>50</td>
+								<td>
+									<div>
+            Image File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E7B919C0">FilePdf</a></td>
+								<td>51</td>
+								<td>
+									<div>
+            PDF File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/767AB4A1">FilePowerpoint</a></td>
+								<td>52</td>
+								<td>
+									<div>
+            Powerpoint File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/DDA67259">FileVideo</a></td>
+								<td>53</td>
+								<td>
+									<div>
+            Video File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A3245F19">FileWord</a></td>
+								<td>54</td>
+								<td>
+									<div>
+            Word File
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/37FC154D">Flag</a></td>
+								<td>55</td>
+								<td>
+									<div>
+            Flag
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A1313B55">Flushed</a></td>
+								<td>56</td>
+								<td>
+									<div>
+            Flushed Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4FD2D874">Folder</a></td>
+								<td>57</td>
+								<td>
+									<div>
+            Folder
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9D7FB157">FolderOpen</a></td>
+								<td>58</td>
+								<td>
+									<div>
+            Folder Open
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/749DAE06">FontAwesomeLogoFull</a></td>
+								<td>59</td>
+								<td>
+									<div>
+            Font Awesome Full Logo
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D60C6230">Frown</a></td>
+								<td>60</td>
+								<td>
+									<div>
+            Frowning Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/320A757F">FrownOpen</a></td>
+								<td>61</td>
+								<td>
+									<div>
+            Frowning Face With Open Mouth
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/478B48CF">Futbol</a></td>
+								<td>62</td>
+								<td>
+									<div>
+            Futbol
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/74824171">Gem</a></td>
+								<td>63</td>
+								<td>
+									<div>
+            Gem
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4EAFCAF1">Grimace</a></td>
+								<td>64</td>
+								<td>
+									<div>
+            Grimacing Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/84271452">Grin</a></td>
+								<td>65</td>
+								<td>
+									<div>
+            Grinning Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7D7A1A36">GrinAlt</a></td>
+								<td>66</td>
+								<td>
+									<div>
+            Alternate Grinning Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E69752E5">GrinBeam</a></td>
+								<td>67</td>
+								<td>
+									<div>
+            Grinning Face With Smiling Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/3E2AD9E1">GrinBeamSweat</a></td>
+								<td>68</td>
+								<td>
+									<div>
+            Grinning Face With Sweat
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7FFE2813">GrinHearts</a></td>
+								<td>69</td>
+								<td>
+									<div>
+            Smiling Face With Heart Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/44DE180E">GrinSquint</a></td>
+								<td>70</td>
+								<td>
+									<div>
+            Grinning Squinting Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A7EC177D">GrinSquintTears</a></td>
+								<td>71</td>
+								<td>
+									<div>
+            Rolling On The Floor Laughing
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/875AFD2A">GrinStars</a></td>
+								<td>72</td>
+								<td>
+									<div>
+            Star Struck
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6DB67870">GrinTears</a></td>
+								<td>73</td>
+								<td>
+									<div>
+            Face With Tears Of Joy
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E3D1CD82">GrinTongue</a></td>
+								<td>74</td>
+								<td>
+									<div>
+            Face With Tongue
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7887480A">GrinTongueSquint</a></td>
+								<td>75</td>
+								<td>
+									<div>
+            Squinting Face With Tongue
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/8F1CE524">GrinTongueWink</a></td>
+								<td>76</td>
+								<td>
+									<div>
+            Winking Face With Tongue
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D57074E5">GrinWink</a></td>
+								<td>77</td>
+								<td>
+									<div>
+            Grinning Winking Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/F0CD4BCB">HandLizard</a></td>
+								<td>78</td>
+								<td>
+									<div>
+            Lizard Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4C1E4B2C">HandPaper</a></td>
+								<td>79</td>
+								<td>
+									<div>
+            Paper Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/1D62446B">HandPeace</a></td>
+								<td>80</td>
+								<td>
+									<div>
+            Peace Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9B62A958">HandPointDown</a></td>
+								<td>81</td>
+								<td>
+									<div>
+            Hand Pointing Down
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/1CE3EDC5">HandPointer</a></td>
+								<td>85</td>
+								<td>
+									<div>
+            Pointer Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C815313E">HandPointLeft</a></td>
+								<td>82</td>
+								<td>
+									<div>
+            Hand Pointing Left
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/0E805862">HandPointRight</a></td>
+								<td>83</td>
+								<td>
+									<div>
+            Hand Pointing Right
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C3B4A5F4">HandPointUp</a></td>
+								<td>84</td>
+								<td>
+									<div>
+            Hand Pointing Up
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/FE3E2ABB">HandRock</a></td>
+								<td>86</td>
+								<td>
+									<div>
+            Rock Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6CFDD54E">HandScissors</a></td>
+								<td>87</td>
+								<td>
+									<div>
+            Scissors Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/1C6596D7">Handshake</a></td>
+								<td>89</td>
+								<td>
+									<div>
+            Handshake
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6DBF05A6">HandSpock</a></td>
+								<td>88</td>
+								<td>
+									<div>
+            Spock Hand
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/AC4CDA1A">Hdd</a></td>
+								<td>90</td>
+								<td>
+									<div>
+            HDD
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A4FD17C8">Heart</a></td>
+								<td>91</td>
+								<td>
+									<div>
+            Heart
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/B4A1365A">Hospital</a></td>
+								<td>92</td>
+								<td>
+									<div>
+            Hospital
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/81D5871E">Hourglass</a></td>
+								<td>93</td>
+								<td>
+									<div>
+            Hourglass
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/D7931AEA">IdBadge</a></td>
+								<td>94</td>
+								<td>
+									<div>
+            Identification Badge
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/CF1D93FD">IdCard</a></td>
+								<td>95</td>
+								<td>
+									<div>
+            Identification Card
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/1D3AC66D">Image</a></td>
+								<td>96</td>
+								<td>
+									<div>
+            Image
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E8656578">Images</a></td>
+								<td>97</td>
+								<td>
+									<div>
+            Images
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7AE9C09B">Keyboard</a></td>
+								<td>98</td>
+								<td>
+									<div>
+            Keyboard
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/AF429ADB">Kiss</a></td>
+								<td>99</td>
+								<td>
+									<div>
+            Kissing Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/533819ED">KissBeam</a></td>
+								<td>100</td>
+								<td>
+									<div>
+            Kissing Face With Smiling Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6C1DCF82">KissWinkHeart</a></td>
+								<td>101</td>
+								<td>
+									<div>
+            Face Blowing A Kiss
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C47D6E8A">Laugh</a></td>
+								<td>102</td>
+								<td>
+									<div>
+            Grinning Face With Big Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/27AFB542">LaughBeam</a></td>
+								<td>103</td>
+								<td>
+									<div>
+            Laugh Face With Beaming Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/3227FBF4">LaughSquint</a></td>
+								<td>104</td>
+								<td>
+									<div>
+            Laughing Squinting Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/14489342">LaughWink</a></td>
+								<td>105</td>
+								<td>
+									<div>
+            Laughing Winking Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/66378336">Lemon</a></td>
+								<td>106</td>
+								<td>
+									<div>
+            Lemon
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/6A9B2965">LifeRing</a></td>
+								<td>107</td>
+								<td>
+									<div>
+            Life Ring
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/B19E52AC">Lightbulb</a></td>
+								<td>108</td>
+								<td>
+									<div>
+            Lightbulb
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/07E4F848">ListAlt</a></td>
+								<td>109</td>
+								<td>
+									<div>
+            Alternate List
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/7FAEBC7B">Map</a></td>
+								<td>110</td>
+								<td>
+									<div>
+            Map
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2DF3BC0C">Meh</a></td>
+								<td>111</td>
+								<td>
+									<div>
+            Neutral Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E5F19930">MehBlank</a></td>
+								<td>112</td>
+								<td>
+									<div>
+            Face Without Mouth
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C9168838">MehRollingEyes</a></td>
+								<td>113</td>
+								<td>
+									<div>
+            Face With Rolling Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/DFB6A4D1">MinusSquare</a></td>
+								<td>114</td>
+								<td>
+									<div>
+            Minus Square
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/837F3B00">MoneyBillAlt</a></td>
+								<td>115</td>
+								<td>
+									<div>
+            Alternate Money Bill
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/45500D7F">Moon</a></td>
+								<td>116</td>
+								<td>
+									<div>
+            Moon
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/06AD4FF6">Newspaper</a></td>
+								<td>117</td>
+								<td>
+									<div>
+            Newspaper
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/3717BCB6">ObjectGroup</a></td>
+								<td>118</td>
+								<td>
+									<div>
+            Object Group
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/0DA5C86E">ObjectUngroup</a></td>
+								<td>119</td>
+								<td>
+									<div>
+            Object Ungroup
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E3FD3746">PaperPlane</a></td>
+								<td>120</td>
+								<td>
+									<div>
+            Paper Plane
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E80EB152">PauseCircle</a></td>
+								<td>121</td>
+								<td>
+									<div>
+            Pause Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/04457445">PlayCircle</a></td>
+								<td>122</td>
+								<td>
+									<div>
+            Play Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4B28A100">PlusSquare</a></td>
+								<td>123</td>
+								<td>
+									<div>
+            Plus Square
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/B90ADD9A">QuestionCircle</a></td>
+								<td>124</td>
+								<td>
+									<div>
+            Question Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/0BCF76A6">Registered</a></td>
+								<td>125</td>
+								<td>
+									<div>
+            Registered Trademark
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/92DA14F2">SadCry</a></td>
+								<td>126</td>
+								<td>
+									<div>
+            Crying Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A55B4624">SadTear</a></td>
+								<td>127</td>
+								<td>
+									<div>
+            Loudly Crying Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/732D87C9">Save</a></td>
+								<td>128</td>
+								<td>
+									<div>
+            Save
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/105D9413">ShareSquare</a></td>
+								<td>129</td>
+								<td>
+									<div>
+            Share Square
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4D3D71AA">Smile</a></td>
+								<td>130</td>
+								<td>
+									<div>
+            Smiling Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/00F54A54">SmileBeam</a></td>
+								<td>131</td>
+								<td>
+									<div>
+            Beaming Face With Smiling Eyes
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/33126C54">SmileWink</a></td>
+								<td>132</td>
+								<td>
+									<div>
+            Winking Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/385F7424">Snowflake</a></td>
+								<td>133</td>
+								<td>
+									<div>
+            Snowflake
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/2BB39955">Square</a></td>
+								<td>134</td>
+								<td>
+									<div>
+            Square
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/B94D3A55">Star</a></td>
+								<td>135</td>
+								<td>
+									<div>
+            Star
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9E8AF87D">StarHalf</a></td>
+								<td>136</td>
+								<td>
+									<div>
+            Star Half
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/A6F0F313">StickyNote</a></td>
+								<td>137</td>
+								<td>
+									<div>
+            Sticky Note
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/8F494939">StopCircle</a></td>
+								<td>138</td>
+								<td>
+									<div>
+            Stop Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/33CAA5B9">Sun</a></td>
+								<td>139</td>
+								<td>
+									<div>
+            Sun
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/26B4DBE1">Surprise</a></td>
+								<td>140</td>
+								<td>
+									<div>
+            Hushed Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/C5260D7E">ThumbsDown</a></td>
+								<td>141</td>
+								<td>
+									<div>
+            Thumbs Down
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/4C35C987">ThumbsUp</a></td>
+								<td>142</td>
+								<td>
+									<div>
+            Thumbs Up
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/AF4C7D58">TimesCircle</a></td>
+								<td>143</td>
+								<td>
+									<div>
+            Times Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/44B18521">Tired</a></td>
+								<td>144</td>
+								<td>
+									<div>
+            Tired Face
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/9B074B42">TrashAlt</a></td>
+								<td>145</td>
+								<td>
+									<div>
+            Alternate Trash
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E4C17211">User</a></td>
+								<td>146</td>
+								<td>
+									<div>
+            User
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/E0596956">UserCircle</a></td>
+								<td>147</td>
+								<td>
+									<div>
+            User Circle
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/0C892795">value__</a></td>
+								<td></td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/0745DAF4">WindowClose</a></td>
+								<td>148</td>
+								<td>
+									<div>
+            Window Close
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/F05D623B">WindowMaximize</a></td>
+								<td>149</td>
+								<td>
+									<div>
+            Window Maximize
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/11F202DD">WindowMinimize</a></td>
+								<td>150</td>
+								<td>
+									<div>
+            Window Minimize
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Blazor.FontAwesome5.Free/Far/004A09FB">WindowRestore</a></td>
+								<td>151</td>
+								<td>
+									<div>
+            Window Restore
+            </div>
+											<div><small><em>static</em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+
+
+
+			<h1 id="ExtensionMethods">Extension Methods</h1>
+			<div class="box">
+				<div class="box-body no-padding table-responsive">
+					<table class="table table-striped table-hover three-cols">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Value</th>
+								<th>Summary</th>
+							</tr>
+						</thead>
+							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Reflection/ValueExtensions/F29E7B18">SetBackingValue<wbr>&lt;Far, <wbr>TV&gt;<wbr><wbr>(Expression<wbr>&lt;Func<wbr>&lt;Far, <wbr>TV&gt;<wbr>&gt;<wbr>, <wbr>TV)<wbr></a></td>
+								<td>T</td>
+								<td>
+									<div>
+            Sets the backing value.
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Reflection/ValueExtensions">ValueExtensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions/2353A7F1">With<wbr>&lt;Far, <wbr>TKey, <wbr>TField&gt;<wbr><wbr>(Dictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>, <wbr>IDictionary<wbr>&lt;TKey, <wbr>TField&gt;<wbr>)<wbr></a></td>
+								<td>TBuilder</td>
+								<td>
+									<div>
+            Adds the specified dictionary to the provided dictionary.
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Extensions.Testing.Fixtures/TestFixtureBuilderExtensions">Test<wbr>Fixture<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+					</tbody></table>
+				</div>
+			</div>
+		
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    //setTimeout(function() {
+        /*
+        var pattern = Trianglify({
+            cell_size: 40,
+            variance: 1,
+            x_colors: ['#E4B931', '#053247', '#FFFFFF', '#E0C882', '#FFFFFF', '#053247', '#E4B931'],
+            y_colors: false,
+            //y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            // seed: null,
+        });
+
+        document.body.style.background="url(" + pattern.png() + ")";*/
+    //}, 1000);
+</script>
+
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
