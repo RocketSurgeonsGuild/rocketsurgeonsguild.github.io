@@ -267,8 +267,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild">IXamarinAndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild">IXamarinMacBuild</a></li>								
+											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild">IXamarinAndroidBuild</a></li>								
 											<li><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild">IXamariniOSBuild</a></li>								
 									</ul>
 								</dd>				
@@ -281,10 +281,10 @@
 	click Interface0 "/api/Rocket.Surgery.Nuke/IRocketBoosterBuild"
 	Type["IXamarinBuild"]
 class Type type-node
-	Implementing0["IXamarinAndroidBuild"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild"
-	Implementing1["IXamarinMacBuild"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild"
+	Implementing0["IXamarinMacBuild"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinMacBuild"
+	Implementing1["IXamarinAndroidBuild"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Nuke.Xamarin/IXamarinAndroidBuild"
 	Implementing2["IXamariniOSBuild"]-.-&gt;Type
 	click Implementing2 "/api/Rocket.Surgery.Nuke.Xamarin/IXamariniOSBuild"
 
@@ -335,6 +335,15 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
+								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild/B3AB16EC">BaseBundleIdentifier</a></td>
+								<td>string</td>
+								<td>
+									<div>
+            Gets the base bundle identifier for the application.
+            </div>
+								</td>
+							</tr>
+							<tr>
 								<td><a href="/api/Rocket.Surgery.Nuke.Xamarin/IXamarinBuild/46CC0256">Build</a></td>
 								<td>Target</td>
 								<td>
