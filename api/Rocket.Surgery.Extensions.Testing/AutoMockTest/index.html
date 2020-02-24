@@ -213,7 +213,9 @@
 		<li><a href="/api/Rocket.Surgery.Extensions.Testing">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Testing</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFake">AutoFake</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMock">AutoMock</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest">LoggerTest</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Testing/TestDiagnosticListenerLoggingAdapter">Test<wbr>Diagnostic<wbr>Listener<wbr>Logging<wbr>Adapter</a></li>
@@ -239,7 +241,7 @@
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            A base class with AutoFake wired in for Autofac
+            A base class with AutoFake wired in for DryIoc
             </div>
 
 		<div class="panel panel-default">
@@ -390,7 +392,7 @@ class Type type-node
 						</thead>
 							<tbody><tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/7D0072DD">AutoMock</a></td>
-								<td><a href="/api/Autofac.Extras.Moq/AutoMock">AutoMock</a></td>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMock">AutoMock</a></td>
 								<td>
 									<div>
             The AutoMock instance
@@ -403,6 +405,15 @@ class Type type-node
 								<td>
 									<div>
             The Configuration if defined otherwise empty.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/A597539C">Container</a></td>
+								<td>IContainer</td>
+								<td>
+									<div>
+            The DryIoc container
             </div>
 								</td>
 							</tr>
@@ -447,15 +458,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/F6C4F733">Moq</a></td>
-								<td><a href="/api/Autofac.Extras.Moq/AutoMock">AutoMock</a></td>
-								<td>
-									<div>
-            The AutoMock instance
-            </div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/34A95613">SerilogLogger</a></td>
 								<td>ILogger</td>
 								<td>
@@ -491,8 +493,8 @@ class Type type-node
 							</tr>
 						</thead>
 							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/E66C10BB">BuildContainer<wbr>(ContainerBuilder)<wbr></a></td>
-								<td>void</td>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest/7C879B9D">BuildContainer<wbr>(IContainer)<wbr></a></td>
+								<td>IContainer</td>
 								<td>
 									<div>
             A method that allows you to override and update the behavior of building the container
