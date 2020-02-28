@@ -208,16 +208,16 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Extensions.Logging">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Logging</a></li>
 		<li role="separator" class="divider"></li>
+			<li class="header">Interface Types</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingBuilder">ILoggingBuilder</a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConvention">ILoggingConvention</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext">I<wbr>Logging<wbr>Convention<wbr>Context</a></li>
 			<li class="header">Class Types</li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingAbstractionsExtensions">Logging<wbr>Abstractions<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingBuilder">LoggingBuilder</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingConventionDelegate">Logging<wbr>Convention<wbr>Delegate</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention">Logging<wbr>Service<wbr>Convention</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Logging/RocketLoggingOptions">RocketLoggingOptions</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingBuilder">ILoggingBuilder</a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConvention">ILoggingConvention</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Logging/ILoggingConventionContext">I<wbr>Logging<wbr>Convention<wbr>Context</a></li>
 
 
                     </ul>
@@ -267,8 +267,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention">Request<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention">Logging<wbr>Service<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention">Request<wbr>Logging<wbr>Convention</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -281,10 +281,10 @@
 	click Interface1 "/api/Rocket.Surgery.Conventions/IConvention"
 	Type["ILoggingConvention"]
 class Type type-node
-	Implementing0["RequestLoggingConvention"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention"
-	Implementing1["LoggingServiceConvention"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention"
+	Implementing0["LoggingServiceConvention"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention"
+	Implementing1["RequestLoggingConvention"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention"
 
 						</div>
 					</div>
