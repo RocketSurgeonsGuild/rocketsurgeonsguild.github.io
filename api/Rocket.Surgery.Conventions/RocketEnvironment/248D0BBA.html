@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - SerilogReadFromConfigurationConvention.Register(IConfigurationConventionContext) Method</title>
+        <title>Rocket Surgeons Guild - API - RocketEnvironment.RocketEnvironment(IHostEnvironment) Constructor</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -141,8 +141,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -204,17 +204,21 @@
                     <ul class="sidebar-menu">
                         
 			<li class="header">Assembly</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Serilog.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Serilog<wbr>.dll</a></li>
+		<li><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Serilog<wbr>.Conventions</a></li>
+		<li><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></li>
 		<li class="header">Type</li>
-		<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention">Serilog<wbr>Read<wbr>From<wbr>Configuration<wbr>Convention</a></li>
+		<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
 		<li role="separator" class="divider"></li>
 			<li class="header">Constructors</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention/680005E9">Serilog<wbr>Read<wbr>From<wbr>Configuration<wbr>Convention<wbr>()<wbr></a></li>
-			<li class="header">Method Members</li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention/C4923EB7">Register<wbr>(<wbr>I<wbr>Configuration<wbr>Convention<wbr>Context)<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention/123A7F33">Register<wbr>(<wbr>I<wbr>Serilog<wbr>Convention<wbr>Context)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/A45ED214">RocketEnvironment<wbr>(string, <wbr>string, <wbr>string, <wbr>IFileProvider)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/AA4B278D">RocketEnvironment<wbr>(<wbr>I<wbr>Hosting<wbr>Environment)<wbr></a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/248D0BBA">RocketEnvironment<wbr>(IHostEnvironment)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/8B70D6D8">ApplicationName</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/8B2138C2">Content<wbr>Root<wbr>File<wbr>Provider</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/6042DE3E">ContentRootPath</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/EBA4CFCA">EnvironmentName</a></li>
 
 
                     </ul>
@@ -229,51 +233,38 @@
 
 
 <section class="content-header">
-			<h3><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention">Serilog<wbr>Read<wbr>From<wbr>Configuration<wbr>Convention</a>.</h3>
-	<h1>Register<wbr>(<wbr>I<wbr>Configuration<wbr>Convention<wbr>Context)<wbr> <small>Method</small></h1>
+			<h3><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a>.</h3>
+	<h1>RocketEnvironment<wbr>(IHostEnvironment)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Initializes a new instance of the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></code> class.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
 						<dt>Assembly</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Serilog.dll">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Serilog<wbr>.dll</a></dd>
+						<dd><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></dd>
 						
 						<dt>Namespace</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.Serilog<wbr>.Conventions</a></dd>
+						<dd><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></dd>
 					
 						<dt>Containing Type</dt>
-						<dd><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention">Serilog<wbr>Read<wbr>From<wbr>Configuration<wbr>Convention</a></dd>		
+						<dd><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></dd>		
 					
 				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public void Register(IConfigurationConventionContext context)</code></pre>
+	<pre><code>public RocketEnvironment(IHostEnvironment environment)</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
-	<div class="box">
-		<div class="box-body no-padding table-responsive">
-			<table class="table table-striped table-hover two-cols">
-				<thead>
-					<tr>
-						<th>Type</th>
-						<th>Description</th>
-					</tr>
-				</thead>
-					<tbody><tr>
-						<td>Nullable<wbr>Context<wbr>Attribute</td>
-						<td></td>
-					</tr>
-			</tbody></table>
-		</div>
-	</div>	
 
 
 	<h1 id="Parameters">Parameters</h1>
@@ -288,9 +279,9 @@
 					</tr>
 				</thead>
 					<tbody><tr>
-						<td>context</td>
-						<td><a href="/api/Rocket.Surgery.Extensions.Configuration/IConfigurationConventionContext">I<wbr>Configuration<wbr>Convention<wbr>Context</a></td>
-						<td></td>
+						<td>environment</td>
+						<td>IHostEnvironment</td>
+						<td>The environment.</td>
 					</tr>
 			</tbody></table>
 		</div>
