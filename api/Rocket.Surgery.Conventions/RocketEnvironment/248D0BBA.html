@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - API - RocketEnvironmentExtensions Class</title>
+        <title>Rocket Surgeons Guild - API - RocketEnvironment.RocketEnvironment(IHostEnvironment) Constructor</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
@@ -143,8 +143,8 @@
                     	
 	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
 <p><a href="#Syntax">Syntax</a></p>
-<p><a href="#Attributes">Attributes</a></p>
-<p><a href="#Methods">Methods</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
 </div>
 
@@ -207,68 +207,18 @@
 		<li><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></li>
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/AppMetricsHostBuilderExtensions">App<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/AutoMapperHostBuilderExtensions">Auto<wbr>Mapper<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/BeforeConventionAttribute">Before<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/CommandLineHostBuilderExtensions">Command<wbr>Line<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/Composer">Composer</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConfigurationHostBuilderExtensions">Configuration<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionAttribute">ConventionAttribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionBuilder_3">ConventionBuilder<wbr>&lt;TBuilder, <wbr>TConvention, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionComposer_3">ConventionComposer<wbr>&lt;TContext, <wbr>TContribution, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionComposer">ConventionComposer</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionComposerExtensions">Convention<wbr>Composer<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionContainerBuilder_3">Convention<wbr>Container<wbr>Builder<wbr>&lt;TBuilder, <wbr>TConvention, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionContext">ConventionContext</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionContextExtensions">Convention<wbr>Context<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1">Convention<wbr>Host<wbr>Builder<wbr>&lt;TSelf&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilderExtensions">Convention<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/DependencyDirection">DependencyDirection</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute">Dependent<wbr>Of<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute">Depends<wbr>On<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/DiagnosticListenerLoggingAdapter">Diagnostic<wbr>Listener<wbr>Logging<wbr>Adapter</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/DiagnosticLogger">DiagnosticLogger</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/FluentValidationHostBuilderExtensions">Fluent<wbr>Validation<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/HostingConventionExtensions">Hosting<wbr>Convention<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/HostingMetricsHostBuilderExtensions">Hosting<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/HostType">HostType</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/LiveConventionAttribute">Live<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/LoggingHostBuilder2Extensions">Logging<wbr>Host<wbr>Builder2<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/LoggingHostBuilderExtensions">Logging<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/MartenAspNetCoreConventionHostExtensions">Marten<wbr>Asp<wbr>Net<wbr>Core<wbr>Convention<wbr>Host<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/MartenFunctionsUnitOfWorkConventionHostExtensions">Marten<wbr>Functions<wbr>Unit<wbr>Of<wbr>Work<wbr>Convention<wbr>Host<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/MartenHostBuilderExtensions">Marten<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/MediatRHostBuilderExtensions">Mediat<wbr>R<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/OperationalBuilderExtensions">Operational<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/OperationalMediatRBuilderExtensions">Operational<wbr>Mediat<wbr>R<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
-				<li class="selected"><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions">Rocket<wbr>Environment<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironments">RocketEnvironments</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/SerilogAbstractionsHostBuilderExtensions">Serilog<wbr>Abstractions<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/SerilogHostBuilderExtensions">Serilog<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ServiceProviderDictionary">Service<wbr>Provider<wbr>Dictionary</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/ServicesHostBuilderExtensions">Services<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleBuilderExtensions">Swashbuckle<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/SwashbuckleNewtonsoftJsonBuilderExtensions">Swashbuckle<wbr>Newtonsoft<wbr>Json<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/UnitTestConventionAttribute">Unit<wbr>Test<wbr>Convention<wbr>Attribute</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/WebJobsHostBuilderExtensions">Web<wbr>Jobs<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConvention">IConvention</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention<wbr>&lt;TContext&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3">IConventionBuilder<wbr>&lt;TBuilder, <wbr>TConvention, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionComposer_3">IConventionComposer<wbr>&lt;TContext, <wbr>TContribution, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionComposer">IConventionComposer</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3">IConventionContainer<wbr>&lt;TBuilder, <wbr>TConvention, <wbr>TDelegate&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionContext">IConventionContext</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionDependency">I<wbr>Convention<wbr>Dependency</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment">IRocketEnvironment</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/IServiceProviderDictionary">I<wbr>Service<wbr>Provider<wbr>Dictionary</a></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/A45ED214">RocketEnvironment<wbr>(string, <wbr>string, <wbr>string, <wbr>IFileProvider)<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/AA4B278D">RocketEnvironment<wbr>(<wbr>I<wbr>Hosting<wbr>Environment)<wbr></a></li>
+				<li class="selected"><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/248D0BBA">RocketEnvironment<wbr>(IHostEnvironment)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/8B70D6D8">ApplicationName</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/8B2138C2">Content<wbr>Root<wbr>File<wbr>Provider</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/6042DE3E">ContentRootPath</a></li>
+				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment/EBA4CFCA">EnvironmentName</a></li>
 
 
                     </ul>
@@ -283,57 +233,61 @@
 
 
 <section class="content-header">
-	<h1>Rocket<wbr>Environment<wbr>Extensions <small>Class</small></h1>
+			<h3><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a>.</h3>
+	<h1>RocketEnvironment<wbr>(IHostEnvironment)<wbr> <small>Constructor</small></h1>
 </section>
 <section class="content">
 	
 	
 		<h1 id="Summary">Summary</h1>
 	<div class="lead">
-            Extension methods for <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment">IRocketEnvironment</a></code>.
+            Initializes a new instance of the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></code> class.
             </div>
 
 		<div class="panel panel-default">
-  			<div class="panel-body">
-				<div class="row">
-					<div class="col-md-6">
-						<dl class="dl-horizontal">		
-								<dt>Assembly</dt>
-								<dd><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></dd>
-
-								<dt>Namespace</dt>
-								<dd><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></dd>
-											
-							
-								<dt>Base Types</dt>
-								<dd>
-									<ul class="list-unstyled">										
-											<li>Object</li>								
-									</ul>
-								</dd>				
-							
-							
-						</dl>
-					</div>		
-					<div class="col-md-6">
-						<div class="mermaid">
-							graph BT
-	Type--&gt;Base0["Object"]
-	Type["RocketEnvironmentExtensions"]
-class Type type-node
-
-						</div>
-					</div>
-				</div>
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions.Abstractions.dll">Rocket<wbr>.Surgery<wbr>.Conventions<wbr>.Abstractions<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions">Rocket<wbr>.Surgery<wbr>.Conventions</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></dd>		
+					
+				</dl>
   			</div>
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public static class RocketEnvironmentExtensions</code></pre>
+	<pre><code>public RocketEnvironment(IHostEnvironment environment)</code></pre>
 
 
 
-	<h1 id="Attributes">Attributes</h1>
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>environment</td>
+						<td>IHostEnvironment</td>
+						<td>The environment.</td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
 	<div class="box">
 		<div class="box-body no-padding table-responsive">
 			<table class="table table-striped table-hover two-cols">
@@ -343,101 +297,13 @@ class Type type-node
 						<th>Description</th>
 					</tr>
 				</thead>
-					<tbody><tr>
-						<td>Nullable<wbr>Context<wbr>Attribute</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>NullableAttribute</td>
-						<td></td>
-					</tr>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
 			</tbody></table>
 		</div>
 	</div>	
-
-
-
-
-
-
-
-
-			<h1 id="Methods">Methods</h1>
-			<div class="box">
-				<div class="box-body no-padding table-responsive">
-					<table class="table table-striped table-hover three-cols">
-						<thead>
-							<tr>
-								<th>Name</th>
-								<th>Value</th>
-								<th>Summary</th>
-							</tr>
-						</thead>
-							<tbody><tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/AB2579D0">Convert<wbr>(IHostEnvironment)<wbr></a></td>
-								<td><a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment">IRocketEnvironment</a></td>
-								<td>
-									<div>
-            Converts the specified environment.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/8C319BBF">Convert<wbr>(<wbr>I<wbr>Hosting<wbr>Environment)<wbr></a></td>
-								<td><a href="/api/Rocket.Surgery.Conventions/IRocketEnvironment">IRocketEnvironment</a></td>
-								<td>
-									<div>
-            Converts the specified environment.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/8EAA6554">IsDevelopment<wbr>(IRocketEnvironment)<wbr></a></td>
-								<td>bool</td>
-								<td>
-									<div>
-            Checks if the current host environment name is <code class="cs">Microsoft.Extensions.Hosting.EnvironmentName.Development</code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/5E501CEC">IsEnvironment<wbr>(<wbr>I<wbr>Rocket<wbr>Environment, <wbr>string)<wbr></a></td>
-								<td>bool</td>
-								<td>
-									<div>
-            Compares the current host environment name against the specified value.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/8E2DF9E1">IsProduction<wbr>(IRocketEnvironment)<wbr></a></td>
-								<td>bool</td>
-								<td>
-									<div>
-            Checks if the current host environment name is <code class="cs">Microsoft.Extensions.Hosting.EnvironmentName.Production</code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions/D648049D">IsStaging<wbr>(IRocketEnvironment)<wbr></a></td>
-								<td>bool</td>
-								<td>
-									<div>
-            Checks if the current host environment name is <code class="cs">Microsoft.Extensions.Hosting.EnvironmentName.Staging</code>.
-            </div>
-											<div><small><em>static</em></small></div>
-								</td>
-							</tr>
-					</tbody></table>
-				</div>
-			</div>
-		
-
 
 
 	
