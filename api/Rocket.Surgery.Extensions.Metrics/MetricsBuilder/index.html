@@ -214,12 +214,7 @@
 		<li role="separator" class="divider"></li>
 			<li class="header">Class Types</li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsBuilder">MetricsBuilder</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsConventionDelegate">Metrics<wbr>Convention<wbr>Delegate</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.Metrics/RocketMetricsOptions">RocketMetricsOptions</a></li>
-			<li class="header">Interface Types</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConventionContext">I<wbr>Metrics<wbr>Convention<wbr>Context</a></li>
 
 
                     </ul>
@@ -243,9 +238,9 @@
 	<div class="lead">
             Logging Builder
             Implements the <code class="cs"><a href="/api/Rocket.Surgery.Conventions/ConventionBuilder_3">ConventionBuilder&lt;TBuilder, TConvention, TDelegate&gt;</a></code>
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a></code>
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a></code>
-            Implements the <code class="cs"><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConventionContext">IMetricsConventionContext</a></code>
+            Implements the <code class="cs">Rocket.Surgery.Extensions.Metrics.IMetricsBuilder</code>
+            Implements the <code class="cs">Rocket.Surgery.Extensions.Metrics.IMetricsConvention</code>
+            Implements the <code class="cs">Rocket.Surgery.Extensions.Metrics.IMetricsConventionContext</code>
             </div>
 
 		<div class="panel panel-default">
@@ -262,10 +257,10 @@
 								<dt>Interfaces</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3">IConventionBuilder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsConventionDelegate">Metrics<wbr>Convention<wbr>Delegate</a>&gt;<wbr></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3">IConventionContainer</a><wbr>&lt;<a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsConventionDelegate">Metrics<wbr>Convention<wbr>Delegate</a>&gt;<wbr></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConventionContext">I<wbr>Metrics<wbr>Convention<wbr>Context</a></li>								
+											<li>IMetricsBuilder</li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/IConventionBuilder_3">IConventionBuilder</a><wbr>&lt;IMetricsBuilder, <wbr>IMetricsConvention, <wbr>Metrics<wbr>Convention<wbr>Delegate&gt;<wbr></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/IConventionContainer_3">IConventionContainer</a><wbr>&lt;IMetricsBuilder, <wbr>IMetricsConvention, <wbr>Metrics<wbr>Convention<wbr>Delegate&gt;<wbr></li>								
+											<li>I<wbr>Metrics<wbr>Convention<wbr>Context</li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/IConventionContext">IConventionContext</a></li>								
 									</ul>
 								</dd>
@@ -274,8 +269,8 @@
 								<dd>
 									<ul class="list-unstyled">										
 											<li>Object</li>								
-											<li><a href="/api/Rocket.Surgery.Conventions/ConventionContainerBuilder_3">Convention<wbr>Container<wbr>Builder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsConventionDelegate">Metrics<wbr>Convention<wbr>Delegate</a>&gt;<wbr></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions/ConventionBuilder_3">ConventionBuilder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a>, <wbr><a href="/api/Rocket.Surgery.Extensions.Metrics/MetricsConventionDelegate">Metrics<wbr>Convention<wbr>Delegate</a>&gt;<wbr></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/ConventionContainerBuilder_3">Convention<wbr>Container<wbr>Builder</a><wbr>&lt;IMetricsBuilder, <wbr>IMetricsConvention, <wbr>Metrics<wbr>Convention<wbr>Delegate&gt;<wbr></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/ConventionBuilder_3">ConventionBuilder</a><wbr>&lt;IMetricsBuilder, <wbr>IMetricsConvention, <wbr>Metrics<wbr>Convention<wbr>Delegate&gt;<wbr></li>								
 									</ul>
 								</dd>				
 							
@@ -289,11 +284,9 @@
 	Base0--&gt;Base1["ConventionContainerBuilder&lt;IMetricsBuilder, IMetricsConvention, MetricsConventionDelegate&gt;"]
 	Base1--&gt;Base2["Object"]
 	Type-.-&gt;Interface0["IMetricsBuilder"]
-	click Interface0 "/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder"
 	Type-.-&gt;Interface1["IConventionBuilder&lt;IMetricsBuilder, IMetricsConvention, MetricsConventionDelegate&gt;"]
 	Type-.-&gt;Interface2["IConventionContainer&lt;IMetricsBuilder, IMetricsConvention, MetricsConventionDelegate&gt;"]
 	Type-.-&gt;Interface3["IMetricsConventionContext"]
-	click Interface3 "/api/Rocket.Surgery.Extensions.Metrics/IMetricsConventionContext"
 	Type-.-&gt;Interface4["IConventionContext"]
 	click Interface4 "/api/Rocket.Surgery.Conventions/IConventionContext"
 	Type["MetricsBuilder"]
@@ -484,9 +477,9 @@ class Type type-node
 	<h1 id="SeeAlso">See Also</h1>
 	<ul class="list-unstyled">
 			<li><code><a href="/api/Rocket.Surgery.Conventions/ConventionBuilder_3">ConventionBuilder&lt;TBuilder, TConvention, TDelegate&gt;</a></code></li>
-			<li><code><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsBuilder">IMetricsBuilder</a></code></li>
-			<li><code><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConvention">IMetricsConvention</a></code></li>
-			<li><code><a href="/api/Rocket.Surgery.Extensions.Metrics/IMetricsConventionContext">IMetricsConventionContext</a></code></li>
+			<li>Rocket.Surgery.Extensions.Metrics.IMetricsBuilder</li>
+			<li>Rocket.Surgery.Extensions.Metrics.IMetricsConvention</li>
+			<li>Rocket.Surgery.Extensions.Metrics.IMetricsConventionContext</li>
 	</ul>
 
 	
