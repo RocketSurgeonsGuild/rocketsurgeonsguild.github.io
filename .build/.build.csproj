@@ -13,14 +13,14 @@
   <ItemGroup>
     <PackageReference Include="Rocket.Surgery.MSBuild.CI" Version="0.3.1" />
     <PackageReference Include="Rocket.Surgery.MSBuild.Metadata" Version="0.3.1" />
-    <PackageReference Include="Buildalyzer" Version="2.5.1" />
-    <PackageReference Include="Humanizer.Core" Version="2.7.9" />
-    <PackageReference Include="Nuke.Common" Version="0.24.2" />
-    <PackageReference Include="Octokit.Reactive" Version="0.40.0" />
-    <PackageReference Include="System.Reactive" Version="4.3.2" />
-    <PackageReference Include="System.Reactive.Core" Version="4.3.2" />
-    <PackageReference Include="System.Reactive.Interfaces" Version="4.3.2" />
-    <PackageReference Include="System.Reactive.Linq" Version="4.3.2" />
+    <PackageReference Include="Buildalyzer" Version="3.0.0" />
+    <PackageReference Include="Humanizer.Core" Version="2.8.26" />
+    <PackageReference Include="Nuke.Common" Version="0.24.11" />
+    <PackageReference Include="Octokit.Reactive" Version="0.47.0" />
+    <PackageReference Include="System.Reactive" Version="4.4.1" />
+    <PackageReference Include="System.Reactive.Core" Version="4.4.1" />
+    <PackageReference Include="System.Reactive.Interfaces" Version="4.4.1" />
+    <PackageReference Include="System.Reactive.Linq" Version="4.4.1" />
     <!-- <PackageReference Include="System.Reactive.PlatformServices" Version="4.2.0" /> -->
     <PackageReference Include="Wyam.CodeAnalysis" Version="2.2.9" />
     <PackageReference Include="Wyam.Configuration" Version="2.2.9" />
@@ -35,7 +35,7 @@
     <PackageReference Include="Wyam.SearchIndex" Version="2.2.9" />
     <PackageReference Include="Wyam.Tables" Version="2.2.9" />
     <PackageReference Include="Wyam.Xmp" Version="2.2.9" />
-    <PackageReference Include="YamlDotNet" Version="8.1.0" />
+    <PackageReference Include="YamlDotNet" Version="8.1.2" />
   </ItemGroup>
 
   <ItemGroup>
