@@ -1,0 +1,524 @@
+﻿<!DOCTYPE html><html><head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+        <meta name="description">
+        <meta name="keywords" content="static content generator,static site generator,static site,HTML,web development,.NET,C#,Razor,Markdown,YAML">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
+        <title>Rocket Surgeons Guild - API - TestDBEngine.BuildSysSettingsIntegrityCheckModifyTriggerBody(StringBuilder, EntitySchema) Method</title>
+        <link href="/assets/css/highlight.css" rel="stylesheet">
+        <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet">
+        <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet">
+        <link href="/assets/css/theme/theme.css" rel="stylesheet">
+        <link href="//fonts.googleapis.com/css?family=Roboto+Mono:400,700|Roboto:400,400i,700,700i" rel="stylesheet">
+        <link href="/assets/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="/assets/css/override.css" rel="stylesheet">
+        <script src="/assets/js/jquery-2.2.3.min.js"></script>
+        <script src="/assets/js/bootstrap.min.js"></script>        
+        <script src="/assets/js/app.min.js"></script>         
+        <script src="/assets/js/highlight.pack.js"></script>   
+        <script src="/assets/js/jquery.slimscroll.min.js"></script>
+        <script src="/assets/js/jquery.sticky-kit.min.js"></script>
+        <script src="/assets/js/mermaid.min.js"></script>
+        <script src="/assets/js/svg-pan-zoom.min.js"></script>
+        <!--[if lt IE 9]>
+        <script src="/assets/js/html5shiv.min.js"></script>
+        <script src="/assets/js/respond.min.js"></script>
+        <![endif]-->  
+
+        <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon-16x16.png">
+<link rel="manifest" href="/assets/img/site.webmanifest">
+<link rel="mask-icon" href="/assets/img/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="apple-mobile-web-app-title" content="Rocket Surgeons Guild">
+<meta name="application-name" content="Rocket Surgeons Guild">
+<meta name="msapplication-TileColor" content="#e4b931">
+<meta name="msapplication-config" content="/assets/img/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+<link href="/assets/css/custom.css" rel="stylesheet">
+<script src="//cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    function tify() {
+        var pattern = Trianglify({
+            cell_size: 60,
+            variance: 1,
+            x_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#053247'],
+            //y_colors: false,
+            y_colors: ['#053247', '#E4B931', '#E4B931',  '#FFFFFF', '#E4B931', '#E4B931', '#FFFFFF'],
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: window.innerWidth,
+            height: window.innerHeight,
+            // seed: null,
+        });
+        var element = pattern.canvas();
+        element.style.position = 'fixed';
+        element.style.top = 0;
+        element.style.left = 0;
+        element.style.bottom = 0;
+        element.style.right = 0;
+        element.style.zIndex = -1;
+        document.body.appendChild(element);
+        //document.body.style.background="url(" + pattern.png() + ")";
+    };
+    window.addEventListener('resize', tify);
+    setTimeout(tify, 1);
+</script>
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/dark.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/monokai.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atom-one-light.min.css"> -->
+<!-- <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-light.min.css"> -->
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/atelier-savanna-dark.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/bash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/css.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/dockerfile.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/fsharp.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/handlebars.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/http.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/java.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/kotlin.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/less.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/pgsql.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/powershell.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/protobuf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/typescript.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/yaml.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/languages/xml.min.js"></script>
+
+    </head>
+    <body class="hold-transition wyam layout-boxed  ">    
+        <div class="top-banner"></div>
+        <div class="wrapper with-container">
+            <!-- Header -->
+            <header class="main-header">   
+                     
+                <a href="/" class="logo">
+
+                                <!-- mini logo for sidebar mini 50x50 pixels -->
+                                <span class="logo-mini"><img src="/assets/img/logo.png"></span>
+                                <!-- logo for regular state and mobile devices -->
+                                <span class="logo-lg"><img src="/assets/img/logo.png"></span>
+                                            </a>   
+                         
+                <nav class="navbar navbar-static-top" role="navigation">
+                    <!-- Sidebar toggle button-->
+                        <a href="#" class="sidebar-toggle visible-xs-block" data-toggle="offcanvas" role="button">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-right"></i>
+                        </a>
+                                        
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse">
+                            <span class="sr-only">Toggle side menu</span>
+                            <i class="fa fa-chevron-circle-down"></i>
+                        </button>
+                    </div>
+            
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse pull-left" id="navbar-collapse">
+                        <ul class="nav navbar-nav">                            
+                                    <li><a href="/blog">Blog</a></li>
+        <li><a href="/docs">Documentation</a></li>
+        <li class="active"><a href="/api">API</a></li>
+        <li><a href="/conventions">Conventions</a></li>
+        <li><a href="/packages">Packages</a></li>
+        <li><a href="/faq">FAQ</a></li>
+ 
+                        </ul>       
+                    </div>
+                    <!-- /.navbar-collapse -->
+                
+                    <!-- Navbar Right Menu -->
+                </nav>
+            </header>
+            
+            <!-- Left side column. contains the logo and sidebar -->
+            <aside class="main-sidebar ">
+                <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
+                    	
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+<p><a href="#Parameters">Parameters</a></p>
+<p><a href="#ReturnValue">Return Value</a></p>
+<hr class="infobar-hidden">
+</div>
+
+                </section>
+                <section class="sidebar">    
+                                     
+                    	
+	    <script src="/assets/js/lunr.min.js"></script>
+    <script src="/assets/js/searchIndex.js"></script>
+    <div class="sidebar-form">
+        <div class="input-group">
+            <input type="text" name="search" id="search" class="form-control" placeholder="Search Types...">
+            <span class="input-group-btn">
+                <button class="btn btn-flat"><i class="fa fa-search"></i></button>
+            </span>
+        </div>
+    </div>
+    <div id="search-results">
+    </div>
+    <script>
+        function runSearch(query){
+            $("#search-results").empty();			
+            if( query.length < 2 ){
+                return;
+            }			
+            var results = searchModule.search("*" + query + "*");
+            var listHtml = "<ul class='sidebar-menu'>";	
+            listHtml += "<li class='header'>Type Results</li>";	
+            if(results.length == 0 ){
+                listHtml += "<li>No results found</li>";
+            } else {					
+                for(var i = 0; i < results.length; ++i){
+                    var res = results[i];
+                    listHtml += "<li><a href='" + res.url + "'>" + htmlEscape(res.title) + "</a></li>";
+                }				
+            }
+            listHtml += "</ul>";				
+            $("#search-results").append(listHtml);
+        }
+
+        $(document).ready(function(){
+            $("#search").on('input propertychange paste', function() {
+                runSearch($("#search").val());
+            });
+        });
+
+        function htmlEscape(html) {
+            return document.createElement('div')
+                .appendChild(document.createTextNode(html))
+                .parentNode
+                .innerHTML;
+        }
+    </script>
+	
+    <hr>
+
+                    <ul class="sidebar-menu">
+                        
+			<li class="header">Assembly</li>
+		<li><a href="/api/UnitTest.dll">UnitTest<wbr>.dll</a></li>
+		<li class="header">Namespace</li>
+		<li><a href="/api/Terrasoft.UnitTest">Terrasoft<wbr>.UnitTest</a></li>
+		<li class="header">Type</li>
+		<li><a href="/api/Terrasoft.UnitTest/TestDBEngine">TestDBEngine</a></li>
+		<li role="separator" class="divider"></li>
+			<li class="header">Constructors</li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/AD7C5413">TestDBEngine<wbr>()<wbr></a></li>
+			<li class="header">Method Members</li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/49EF0225">Build<wbr>Binary<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>BinaryDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/24F8C424">Build<wbr>Boolean<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Boolean<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/387A2ECF">Build<wbr>Boolean<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/22E39E62">Build<wbr>Create<wbr>Def<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>EntitySchema, <wbr>EntitySchemaColumn)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/8E480E4D">Build<wbr>Create<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A4732F4C">Build<wbr>Create<wbr>Weak<wbr>Nullable<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>EntitySchema, <wbr>EntitySchemaColumn, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/749D2034">Build<wbr>Current<wbr>Value<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/E4EC70BC">Build<wbr>Date<wbr>Time<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Date<wbr>Time<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/939523E9">Build<wbr>Date<wbr>Time<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>DateTime)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/9D6D62ED">Build<wbr>Date<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>DateTime)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/0ABD6E2F">Build<wbr>D<wbr>B<wbr>Object<wbr>Name<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>D<wbr>B<wbr>Object<wbr>Name<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C77EF204">Build<wbr>Drop<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/2354F848">Build<wbr>Edit<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Check<wbr>Modify<wbr>Body<wbr>(StringBuilder, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/93853906">Build<wbr>Edit<wbr>Nullable<wbr>Column<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/0AAA4F07">Build<wbr>Exist<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/4E205B67">Build<wbr>First<wbr>Page<wbr>With<wbr>Hierarchy<wbr>Select<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Select, <wbr>Select, <wbr>Pageable<wbr>Select<wbr>Options, <wbr>Hierarchical<wbr>Select<wbr>Options)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/5F41AFF9">Build<wbr>Float<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>FloatDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/949B08FC">Build<wbr>Float<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>double)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1B16CB3B">Build<wbr>Force<wbr>Seek<wbr>Hint<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>ForceSeekHint)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/0C0E3EE3">Build<wbr>Guid<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>GuidDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/72B7BF99">Build<wbr>Hierarchical<wbr>Select<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Select, <wbr>Hierarchical<wbr>Select<wbr>Options)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/802C67AF">Build<wbr>Index<wbr>Hint<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>IndexHint)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/F68F7521">Build<wbr>Integrity<wbr>Check<wbr>Delete<wbr>Trigger<wbr>Footer<wbr>Body<wbr>(StringBuilder)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/D88005EB">Build<wbr>Integrity<wbr>Check<wbr>Delete<wbr>Trigger<wbr>Header<wbr>Body<wbr>(StringBuilder)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/D6473A99">Build<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Check<wbr>Modify<wbr>Body<wbr>(StringBuilder, <wbr>string, <wbr>string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/93A21F3A">Build<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Footer<wbr>Body<wbr>(StringBuilder, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/88A4D2EC">Build<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Header<wbr>Body<wbr>(StringBuilder)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/79C74FE9">Build<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Modify<wbr>Body<wbr>Check<wbr>For<wbr>Null<wbr>Column<wbr>(StringBuilder, <wbr>string, <wbr>Entity<wbr>Schema<wbr>Column<wbr>Requirement<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1047F73F">Build<wbr>Next<wbr>Value<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/CE2F9EA8">Build<wbr>No<wbr>Lock<wbr>Hint<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>NoLockHint)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1A078190">Build<wbr>Nullable<wbr>Column<wbr>Definition<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>EntitySchema, <wbr>string, <wbr>EntitySchemaColumn, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/0D3C5A55">Build<wbr>Query<wbr>Expression<wbr>Full<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Query<wbr>Source<wbr>Expression)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/177C98B7">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>IsNullQueryFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/8C68A0E6">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Date<wbr>Part<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/27144DAF">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Date<wbr>Add<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/CBF049FB">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Date<wbr>Diff<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/0FF21D4F">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Create<wbr>Guid<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/28F47EFE">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Current<wbr>Date<wbr>Time<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/50051C1C">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Data<wbr>Length<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/D8BF69B5">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>TrimQueryFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A0588AEA">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>CustomQueryFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/29E9EF93">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>LengthQueryFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/894E3C92">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Substring<wbr>Query<wbr>Function)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/9070847C">Build<wbr>Query<wbr>Function<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>ConcatQueryFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/9675FC69">BuildQuerySqlText<wbr>(StringBuilder, <wbr>StoredProcedure)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C7FBC481">BuildQuerySqlText<wbr>(StringBuilder, <wbr>UserDefinedFunction)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C680A433">Build<wbr>Re<wbr>Create<wbr>Sequence<wbr>Query<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>Sequence)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/199C62F9">Build<wbr>Row<wbr>Lock<wbr>Hint<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>RowLockHint)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/7639B89F">Build<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Delete<wbr>Trigger<wbr>Body<wbr>(StringBuilder, <wbr>string, <wbr>string, <wbr>Guid)<wbr></a></li>
+				<li class="selected"><a href="/api/Terrasoft.UnitTest/TestDBEngine/43AB9C09">Build<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Body<wbr>(StringBuilder, <wbr>EntitySchema)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/465444DC">Build<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Body<wbr>(StringBuilder, <wbr>Guid, <wbr>Sys<wbr>Settings<wbr>Reference<wbr>Schema<wbr>Collection)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/72D9F263">Build<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Header<wbr>Body<wbr>(StringBuilder)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/AB162808">Build<wbr>Temporary<wbr>Table<wbr>Source<wbr>Expression<wbr>Sql<wbr>Text<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/66723E96">Build<wbr>Text<wbr>Data<wbr>Value<wbr>Type<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>TextDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/D63A9C78">Build<wbr>Time<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>DateTime)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A55E2080">Build<wbr>Time<wbr>Value<wbr>Sql<wbr>Text<wbr>(StringBuilder, <wbr>TimeSpan)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/DD1B8242">Create<wbr>Cast<wbr>To<wbr>Short<wbr>Text<wbr>Expression<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/ECAFDD03">FormatException<wbr>(DbException)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/FEDA779E">GetAppendBlobSqlText<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/6B0B9CE0">Get<wbr>Bitwise<wbr>Operation<wbr>Sql<wbr>Text<wbr>(string, <wbr>BitwiseOperation, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/F4A7777C">GetColumnDefValue<wbr>(EntitySchemaColumn)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/EE383159">GetColumnDefValue<wbr>(<wbr>Entity<wbr>Schema<wbr>Column, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/04D3CE38">GetColumnDefValue<wbr>(<wbr>Entity<wbr>Schema<wbr>Column, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/B7C033F9">Get<wbr>Column<wbr>Foreign<wbr>Key<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C16F7C3B">Get<wbr>Column<wbr>Indexes<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A1EBDFCE">Get<wbr>Column<wbr>List<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/505D8A49">Get<wbr>Column<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/7D0BDD21">Get<wbr>Columns<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/F4561902">Get<wbr>Constraint<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/87FF2DF0">Get<wbr>Constraints<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/50848CAE">Get<wbr>Dangling<wbr>Reference<wbr>Query<wbr>Sql<wbr>Text<wbr>(string, <wbr>string, <wbr>string, <wbr>string, <wbr>bool)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/CF8AB345">GetDaysOfWeekSqlText<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A5987056">Get<wbr>Edit<wbr>Primary<wbr>Column<wbr>Definition<wbr>Sql<wbr>Text<wbr>(IDataReader, <wbr>EntitySchema, <wbr>EntitySchemaColumn)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/6B197714">Get<wbr>Foreign<wbr>Key<wbr>Parameter<wbr>Value<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/4752B46C">Get<wbr>Foreign<wbr>Key<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/B5B02BA2">Get<wbr>Foreign<wbr>Keys<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/739F51E4">Get<wbr>Image<wbr>Lookup<wbr>After<wbr>Delete<wbr>Trigger<wbr>Body<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/04038E8A">Get<wbr>Image<wbr>Lookup<wbr>After<wbr>Insert<wbr>Update<wbr>Trigger<wbr>Body<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C1CD708B">Get<wbr>Indexes<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/7ACF8FCD">GetIndexQuerySqlText<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/D7B9BB7A">GetIsBinaryDataType<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/FC39BB30">Get<wbr>Is<wbr>Entity<wbr>Schema<wbr>Exist<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/83D6873C">Get<wbr>Is<wbr>Not<wbr>Null<wbr>Column<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/E257CDA5">Get<wbr>Is<wbr>Only<wbr>Like<wbr>Comparison<wbr>(DataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/FE54DCE0">Get<wbr>Is<wbr>Text<wbr>Column<wbr>Contain<wbr>Guid<wbr>Query<wbr>Sql<wbr>Text<wbr>(string, <wbr>string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/22446532">Get<wbr>Primary<wbr>Key<wbr>Parameter<wbr>Value<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/F7EEE260">Get<wbr>Primary<wbr>Key<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/69E1D1B6">Get<wbr>Server<wbr>Unique<wbr>Id<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/255DAF96">Get<wbr>Start<wbr>Check<wbr>Integrity<wbr>Block<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/AF40C2CD">Get<wbr>Sys<wbr>Schema<wbr>Parents<wbr>In<wbr>Package<wbr>Hierarchy<wbr>Select<wbr>Sql<wbr>Text<wbr>(bool)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/CCBE3EAB">Get<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Block<wbr>Name<wbr>(Guid)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1788585E">Get<wbr>System<wbr>Value<wbr>Sql<wbr>Text<wbr>(SystemValue)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/C04021C5">Get<wbr>Trigger<wbr>Query<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/BCAB4A9E">GetTriggerTypeName<wbr>(TriggerType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/A47DEF16">Get<wbr>Update<wbr>Sys<wbr>Solution<wbr>Right<wbr>After<wbr>Unit<wbr>Delete<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/4615273B">Get<wbr>Workspace<wbr>Id<wbr>By<wbr>Number<wbr>Select<wbr>Sql<wbr>Text<wbr>()<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/16F70174">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(<wbr>D<wbr>B<wbr>Object<wbr>Name<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/58907228">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(TextDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/42B35B27">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(<wbr>Integer<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/BC40D6CA">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(FloatDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/B151FC5C">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(<wbr>Boolean<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/BBA10324">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(<wbr>Date<wbr>Time<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/E07C622F">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(DateDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1FB82BF7">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(GuidDataValueType)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/4F2AB169">Initialize<wbr>Data<wbr>Value<wbr>D<wbr>B<wbr>Data<wbr>(<wbr>Binary<wbr>Data<wbr>Value<wbr>Type)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/1EC414E3">SetCurrentSchemaName<wbr>(string)<wbr></a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/3A4BB519">Trigger<wbr>Body<wbr>Has<wbr>Integrity<wbr>Check<wbr>Blocks<wbr>(StringBuilder)<wbr></a></li>
+			<li class="header">Property Members</li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/E40BDEDB">Can<wbr>Order<wbr>By<wbr>Max<wbr>Size<wbr>Text<wbr>Column</a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/101DC105">DBEngineType</a></li>
+				<li><a href="/api/Terrasoft.UnitTest/TestDBEngine/FCA93D4C">Need<wbr>Wrap<wbr>In<wbr>Upper<wbr>Function</a></li>
+
+
+                    </ul>
+                            
+                </section>                
+            </aside>
+            
+            <!-- Content Wrapper. Contains page content -->
+            <div class="content-wrapper">
+                
+
+
+
+<section class="content-header">
+			<h3><a href="/api/Terrasoft.UnitTest/TestDBEngine">TestDBEngine</a>.</h3>
+	<h1>Build<wbr>Sys<wbr>Settings<wbr>Integrity<wbr>Check<wbr>Modify<wbr>Trigger<wbr>Body<wbr>(StringBuilder, <wbr>EntitySchema)<wbr> <small>Method</small></h1>
+</section>
+<section class="content">
+	
+	
+	
+		<div class="panel panel-default">
+  			<div class="panel-body">	
+				<dl class="dl-horizontal">	
+						<dt>Assembly</dt>
+						<dd><a href="/api/UnitTest.dll">UnitTest<wbr>.dll</a></dd>
+						
+						<dt>Namespace</dt>
+						<dd><a href="/api/Terrasoft.UnitTest">Terrasoft<wbr>.UnitTest</a></dd>
+					
+						<dt>Containing Type</dt>
+						<dd><a href="/api/Terrasoft.UnitTest/TestDBEngine">TestDBEngine</a></dd>		
+					
+				</dl>
+  			</div>
+		</div>
+
+	<h1 id="Syntax">Syntax</h1>
+	<pre><code>public override void BuildSysSettingsIntegrityCheckModifyTriggerBody(StringBuilder sb, EntitySchema referenceSchema)</code></pre>
+
+
+
+
+
+	<h1 id="Parameters">Parameters</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover three-cols">
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+					<tbody><tr>
+						<td>sb</td>
+						<td>StringBuilder</td>
+						<td></td>
+					</tr>
+					<tr>
+						<td>referenceSchema</td>
+						<td>EntitySchema</td>
+						<td></td>
+					</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+	<h1 id="ReturnValue">Return Value</h1>
+	<div class="box">
+		<div class="box-body no-padding table-responsive">
+			<table class="table table-striped table-hover two-cols">
+				<thead>
+					<tr>
+						<th>Type</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody><tr>
+					<td>void</td>
+					<td></td>
+				</tr>
+			</tbody></table>
+		</div>
+	</div>	
+
+
+	
+</section>
+                
+            </div>           
+            
+            <!-- Footer -->
+            <footer class="main-footer">
+            </footer>
+            
+        </div>
+        <div class="wrapper bottom-wrapper">
+            <footer class="bottom-footer">
+                Generated by <a href="https://wyam.io">Wyam</a>
+            </footer>
+        </div>
+        <a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/2.0.0/trianglify.min.js"></script>
+<script>
+    //setTimeout(function() {
+        /*
+        var pattern = Trianglify({
+            cell_size: 40,
+            variance: 1,
+            x_colors: ['#E4B931', '#053247', '#FFFFFF', '#E0C882', '#FFFFFF', '#053247', '#E4B931'],
+            y_colors: false,
+            //y_colors: 'match_x',
+            palette: Trianglify.colorbrewer,
+            color_space: 'lab',
+            color_function: false,
+            stroke_width: 1.51,
+            width: document.body.clientWidth,
+            height: document.body.clientHeight,
+            // seed: null,
+        });
+
+        document.body.style.background="url(" + pattern.png() + ")";*/
+    //}, 1000);
+</script>
+
+        <script>           
+            // Close the sidebar if we select an anchor link
+            $(".main-sidebar a[href^='#']:not('.expand')").click(function(){
+                $(document.body).removeClass('sidebar-open');
+            });
+            
+            $(document).ready(function() {
+                mermaid.initialize(
+                {
+                    flowchart:
+                    {
+                        useMaxWidth: false
+                    },
+					startOnLoad: false,
+					cloneCssStyles: false
+                });     
+                mermaid.init(undefined, ".mermaid");
+
+                // Remove the max-width setting that Mermaid sets
+                var mermaidSvg = $('.mermaid svg');
+                mermaidSvg.addClass('img-responsive');
+                mermaidSvg.css('max-width', '');
+
+                // Make it scrollable
+				var target = document.querySelector(".mermaid svg");
+				if(target !== null)
+				{
+					var panZoom = window.panZoom = svgPanZoom(target, {
+						zoomEnabled: true,
+						controlIconsEnabled: true,
+						fit: true,
+						center: true,
+                        maxZoom: 20,
+                        zoomScaleSensitivity: 0.6
+					});			                          
+
+                    // Do the reset once right away to fit the diagram
+                    panZoom.resize();
+                    panZoom.fit();
+                    panZoom.center();
+                    
+                    $(window).resize(function(){
+                        panZoom.resize();
+                        panZoom.fit();
+                        panZoom.center();
+                    });
+				}
+                
+                $('pre code').each(function(i, block) {
+                    hljs.highlightBlock(block);
+                });  
+            });
+
+            hljs.initHighlightingOnLoad();
+
+            // Back to top
+            $(window).scroll(function() {
+                if ($(this).scrollTop() >= 200) {        // If page is scrolled more than 50px
+                    $('#return-to-top').fadeIn(1000);    // Fade in the arrow
+                } else {
+                    $('#return-to-top').fadeOut(1000);   // Else fade out the arrow
+                }
+            });
+            $('#return-to-top').click(function() {      // When arrow is clicked
+                $('body,html').animate({
+                    scrollTop : 0                       // Scroll to top of body
+                }, 500);
+            });
+        </script>
+    
+</body></html>
