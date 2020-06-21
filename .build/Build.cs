@@ -195,14 +195,14 @@ partial class Build : NukeBuild
                         {
                             var assemblyTitle = x.projectBuild.GetProperty("AssemblyTitle");
                             var projectUrl = x.projectBuild.GetProperty("PackageProjectUrl");
-                            var authors = ( x.projectBuild.GetProperty("Authors") ?? "" ).Split(',');
+                            var authors = ( x.projectBuild.GetProperty("Authors") ?? string.Empty ).Split(',');
                             var copyright = x.projectBuild.GetProperty("Copyright");
 
                             var assemblyName = x.projectBuild.GetProperty("AssemblyName");
-                            var tags = ( x.projectBuild.GetProperty("PackageTags") ?? "" ).Split(';');
+                            var tags = ( x.projectBuild.GetProperty("PackageTags") ?? string.Empty ).Split(';');
                             var targetFrameworks =
                                 ( x.projectBuild.GetProperty("TargetFrameworks") ??
-                                    x.projectBuild.GetProperty("TargetFramework") ).Split(';');
+                                    x.projectBuild.GetProperty("TargetFramework") ?? string.Empty ).Split(';');
                             var description = x.projectBuild.GetProperty("PackageDescription");
 
                             var serializer = new SerializerBuilder().Build();
