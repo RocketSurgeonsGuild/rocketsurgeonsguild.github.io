@@ -171,12 +171,21 @@ partial class Build : NukeBuild
                                     {
                                         return ( path, repo, solutionFilePath, analyzerManager,
                                                  projectFilePath: project.Key, project: project.Value,
-                                                 projectBuild: project.Value.Build().First() );
+                                                 projectBuild: project.Value.Build().FirstOrDefault() );
                                     }
                                 )
                                .ToObservable();
                         }
                     )
+                   .Do(
+                        z =>
+                        {
+                            if (z.projectBuild == null)
+                            {
+                                Logger.Warn("Unable to build project {0}", z.projectFilePath);
+                            }
+                        })
+                   .Where(z => z.projectBuild != null)
                    .Distinct(x => x.projectFilePath);
 
                 await projects
