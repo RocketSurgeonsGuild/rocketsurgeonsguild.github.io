@@ -32,188 +32,228 @@ partial class Build : NukeBuild
     ///   - JetBrains Rider            https://nuke.build/rider
     ///   - Microsoft VisualStudio     https://nuke.build/visualstudio
     ///   - Microsoft VSCode           https://nuke.build/vscode
-
     public static int Main() => Execute<Build>(x => x.Compile);
 
     [Parameter("Configuration to build - Default is 'Debug' (local) or 'Release' (server)")]
     readonly Configuration Configuration = IsLocalBuild ? Configuration.Debug : Configuration.Release;
-    [Parameter("Branch to deploy to")]
-    public readonly string DeployToBranch = "local";
+
+    [Parameter("Branch to deploy to")] public readonly string DeployToBranch = "local";
 
     public IEnumerable<PackageSpec> PackageSpecs => GlobFiles(RootDirectory / "packages", "*.yml", "*.yaml")
-        .Select(File.ReadAllText)
-        .Select(x => new DeserializerBuilder().Build().Deserialize<PackageSpec>(x))
-        .ToArray();
+       .Select(File.ReadAllText)
+       .Select(x => new DeserializerBuilder().Build().Deserialize<PackageSpec>(x))
+       .ToArray();
 
     Target Clean => _ => _
-        .Executes(() =>
-        {
-        });
+       .Executes(() => { });
 
     Target Restore => _ => _
-        .DependsOn(RefreshPackages)
-        .Executes(() =>
-        {
-            var projectDirectory = TemporaryDirectory / "_project";
-            var packagesDirectory = TemporaryDirectory / "_packages";
-            var project = projectDirectory / "project.csproj";
-            EnsureExistingDirectory(projectDirectory);
-            EnsureExistingDirectory(packagesDirectory);
-            if (!FileExists(project))
+       .DependsOn(RefreshPackages)
+       .Executes(
+            () =>
             {
-                System.IO.File.WriteAllText(
-                    project,
-                    @"
+                var projectDirectory = TemporaryDirectory / "_project";
+                var packagesDirectory = TemporaryDirectory / "_packages";
+                var project = projectDirectory / "project.csproj";
+                EnsureExistingDirectory(projectDirectory);
+                EnsureExistingDirectory(packagesDirectory);
+                if (!FileExists(project))
+                {
+                    System.IO.File.WriteAllText(
+                        project,
+                        @"
                     <Project Sdk=""Microsoft.NET.Sdk"">
                         <PropertyGroup>
                             <TargetFramework>netcoreapp3.1</TargetFramework>
                         </PropertyGroup>
                     </Project>"
-                );
+                    );
 
-                foreach (var packageSpec in PackageSpecs)
-                {
-                    DotNet($"add package {packageSpec.Name} --no-restore", projectDirectory);
+                    foreach (var packageSpec in PackageSpecs)
+                    {
+                        DotNet($"add package {packageSpec.Name} --no-restore", projectDirectory);
+                    }
                 }
-            }
 
-            try
-            {
-                DotNetRestore(x => x
-                    .EnableNoDependencies()
-                    .SetPackageDirectory(packagesDirectory)
-                    .SetWorkingDirectory(projectDirectory)
-                );
+                try
+                {
+                    DotNetRestore(
+                        x => x
+                           .EnableNoDependencies()
+                           .SetPackageDirectory(packagesDirectory)
+                           .SetWorkingDirectory(projectDirectory)
+                    );
+                }
+                catch { }
             }
-            catch { }
-        });
+        );
 
     Target Compile => _ => _
-        .DependsOn(Restore)
-        .Executes(() =>
-        {
-            Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
-            Wyam.Common.Tracing.Trace.Level = SourceLevels.All;
-            var engine = new Engine();
-            new WyamConfiguration(engine, this);
-            engine.Execute();
-        });
+       .DependsOn(Restore)
+       .Executes(
+            () =>
+            {
+                Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
+                Wyam.Common.Tracing.Trace.Level = SourceLevels.All;
+                var engine = new Engine();
+                new WyamConfiguration(engine, this);
+                engine.Execute();
+            }
+        );
 
     Target Preview => _ => _
-        .Executes(() =>
-        {
-            Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
-            Wyam.Common.Tracing.Trace.Level = SourceLevels.All;
-            PreviewServer.Preview(() =>
+       .Executes(
+            () =>
             {
-                var engine = new Engine();
-                engine.Settings[Keys.CleanOutputPath] = false;
-                new WyamConfiguration(engine, this);
-                return engine;
-            }, this);
-        });
+                Wyam.Common.Tracing.Trace.AddListener(new NukeTraceListener());
+                Wyam.Common.Tracing.Trace.Level = SourceLevels.All;
+                PreviewServer.Preview(
+                    () =>
+                    {
+                        var engine = new Engine();
+                        engine.Settings[Keys.CleanOutputPath] = false;
+                        new WyamConfiguration(engine, this);
+                        return engine;
+                    },
+                    this
+                );
+            }
+        );
 
     [Parameter("Github Token - To use when syncing packages")]
     readonly string GithubToken = EnvironmentInfo.GetVariable<string>("GITHUB_TOKEN") ?? string.Empty;
 
     Target RefreshPackages => _ => _
-        .Executes(async () =>
-        {
-            var client = string.IsNullOrWhiteSpace(GithubToken)
-                ? new ObservableGitHubClient(new ProductHeaderValue("internaltooling.to.update.repo"))
-                : new ObservableGitHubClient(new ProductHeaderValue("internaltooling.to.update.repo"), new Octokit.Internal.InMemoryCredentialStore(new Credentials(GithubToken)));
-            var repos = client.Repository.GetAllForOrg("RocketSurgeonsGuild")
-                .Where(repo => !repo.Archived)
-                .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild);
-
-            await repos
-                .Select(repo =>
-                {
-                    var path = TemporaryDirectory / repo.Name;
-                    Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
-                    return (path, repo);
-                })
-                .ForEachAsync(x => { });
-
-            var solutions = repos
-                .Select(repo => (path: TemporaryDirectory / repo.Name, repo))
-                .SelectMany(x =>
-                    Directory.EnumerateFiles(x.path, "*.sln")
-                        .ToObservable()
-                        .Select(solutionFilePath => (x.path, x.repo, solutionFilePath))
-                );
-
-            var projects = solutions
-                .Select(x => (x.path, x.repo, x.solutionFilePath, new AnalyzerManager(x.solutionFilePath)))
-                .SelectMany(x =>
-                {
-                    var (path, repo, solutionFilePath, analyzerManager) = x;
-                    return analyzerManager.Projects
-                        .Where(z => z.Key.Contains("/src/") || z.Key.Contains(@"\src\"))
-                        .Select(project =>
-                        {
-                            return (path, repo, solutionFilePath, analyzerManager, projectFilePath: project.Key, project: project.Value, projectBuild: project.Value.Build().First());
-                        })
-                        .ToObservable();
-                })
-                .Distinct(x => x.projectFilePath);
-
-            await projects
-            .SubscribeOn(TaskPoolScheduler.Default)
-            .ForEachAsync(x =>
+       .Executes(
+            async () =>
             {
-                var assemblyTitle = x.projectBuild.GetProperty("AssemblyTitle");
-                var projectUrl = x.projectBuild.GetProperty("PackageProjectUrl");
-                var authors = (x.projectBuild.GetProperty("Authors") ?? "").Split(',');
-                var copyright = x.projectBuild.GetProperty("Copyright");
+                var client = string.IsNullOrWhiteSpace(GithubToken)
+                    ? new ObservableGitHubClient(new ProductHeaderValue("internaltooling.to.update.repo"))
+                    : new ObservableGitHubClient(
+                        new ProductHeaderValue("internaltooling.to.update.repo"),
+                        new Octokit.Internal.InMemoryCredentialStore(new Credentials(GithubToken))
+                    );
+                var repos = client.Repository.GetAllForOrg("RocketSurgeonsGuild")
+                   .Where(repo => !repo.Archived)
+                   .Where(repo => IsLocalBuild && !DirectoryExists(TemporaryDirectory / repo.Name) || !IsLocalBuild);
 
-                var assemblyName = x.projectBuild.GetProperty("AssemblyName");
-                var tags = (x.projectBuild.GetProperty("PackageTags") ?? "").Split(';');
-                var targetFrameworks = (x.projectBuild.GetProperty("TargetFrameworks") ?? x.projectBuild.GetProperty("TargetFramework")).Split(';');
-                var description = x.projectBuild.GetProperty("PackageDescription");
+                await repos
+                   .ObserveOn(TaskPoolScheduler.Default)
+                   .Select(
+                        repo =>
+                        {
+                            var path = TemporaryDirectory / repo.Name;
+                            Git($"clone --depth 1 --single-branch {repo.CloneUrl} {path}", logOutput: false);
+                            return ( path, repo );
+                        }
+                    )
+                   .ForEachAsync(x => { });
 
-                var serializer = new SerializerBuilder().Build();
-                var categories = new List<string>();
-                if (x.repo.Name.Contains(".Extensions"))
-                {
-                    categories.Add("Extensions");
-                }
-                if (assemblyName.Contains(".Extensions"))
-                {
-                    categories.Add("Extensions");
-                }
-                if (assemblyName.Contains(".Abstractions"))
-                {
-                    categories.Add("Abstractions");
-                }
-                if (assemblyName.Contains(".AspNetCore"))
-                {
-                    categories.Add("AspNetCore");
-                }
-                if (assemblyName.Contains(".Hosting"))
-                {
-                    categories.Add("Hosting");
-                }
-                var yaml = serializer.Serialize(new
-                {
-                    Name = assemblyName,
-                    NuGet = assemblyName,
-                    Assemblies = new[] { $"/{assemblyName.ToLowerInvariant()}/**/{assemblyName}.dll" },
-                    Repository = x.repo.HtmlUrl,
-                    GitName = x.repo.Name,
-                    GitUrl = x.repo.CloneUrl,
-                    Author = x.projectBuild.GetProperty("Authors") ?? "",
-                    Description = description,
-                    Categories = categories.Concat(new[] {
-                        x.repo.Name.Replace(".Extensions", "").Replace(".Abstractions", ""),
-                        assemblyName.Replace(".Extensions", "").Replace(".Abstractions", "").Split('.').Last()
-                    }).Distinct().OrderBy(z => z)
-                });
+                var solutions = repos
+                   .Select(repo => ( path: TemporaryDirectory / repo.Name, repo ))
+                   .SelectMany(
+                        x =>
+                            Directory.EnumerateFiles(x.path, "*.sln")
+                               .ToObservable()
+                               .Select(solutionFilePath => ( x.path, x.repo, solutionFilePath ))
+                    );
 
-                EnsureExistingDirectory(RootDirectory / "packages");
-                File.WriteAllText(Path.Combine(RootDirectory / "packages", assemblyName.ToLower() + ".yml"), yaml);
-            });
-        });
+                var projects = solutions
+                   .Select(x => ( x.path, x.repo, x.solutionFilePath, new AnalyzerManager(x.solutionFilePath) ))
+                   .SelectMany(
+                        x =>
+                        {
+                            var (path, repo, solutionFilePath, analyzerManager) = x;
+                            return analyzerManager.Projects
+                               .Where(z => z.Key.Contains("/src/") || z.Key.Contains(@"\src\"))
+                               .Select(
+                                    project =>
+                                    {
+                                        return ( path, repo, solutionFilePath, analyzerManager,
+                                                 projectFilePath: project.Key, project: project.Value,
+                                                 projectBuild: project.Value.Build().First() );
+                                    }
+                                )
+                               .ToObservable();
+                        }
+                    )
+                   .Distinct(x => x.projectFilePath);
+
+                await projects
+                   .ObserveOn(TaskPoolScheduler.Default)
+                   .ForEachAsync(
+                        x =>
+                        {
+                            var assemblyTitle = x.projectBuild.GetProperty("AssemblyTitle");
+                            var projectUrl = x.projectBuild.GetProperty("PackageProjectUrl");
+                            var authors = ( x.projectBuild.GetProperty("Authors") ?? "" ).Split(',');
+                            var copyright = x.projectBuild.GetProperty("Copyright");
+
+                            var assemblyName = x.projectBuild.GetProperty("AssemblyName");
+                            var tags = ( x.projectBuild.GetProperty("PackageTags") ?? "" ).Split(';');
+                            var targetFrameworks =
+                                ( x.projectBuild.GetProperty("TargetFrameworks") ??
+                                    x.projectBuild.GetProperty("TargetFramework") ).Split(';');
+                            var description = x.projectBuild.GetProperty("PackageDescription");
+
+                            var serializer = new SerializerBuilder().Build();
+                            var categories = new List<string>();
+                            if (x.repo.Name.Contains(".Extensions"))
+                            {
+                                categories.Add("Extensions");
+                            }
+
+                            if (assemblyName.Contains(".Extensions"))
+                            {
+                                categories.Add("Extensions");
+                            }
+
+                            if (assemblyName.Contains(".Abstractions"))
+                            {
+                                categories.Add("Abstractions");
+                            }
+
+                            if (assemblyName.Contains(".AspNetCore"))
+                            {
+                                categories.Add("AspNetCore");
+                            }
+
+                            if (assemblyName.Contains(".Hosting"))
+                            {
+                                categories.Add("Hosting");
+                            }
+
+                            var yaml = serializer.Serialize(
+                                new
+                                {
+                                    Name = assemblyName,
+                                    NuGet = assemblyName,
+                                    Assemblies = new[] { $"/{assemblyName.ToLowerInvariant()}/**/{assemblyName}.dll" },
+                                    Repository = x.repo.HtmlUrl,
+                                    GitName = x.repo.Name,
+                                    GitUrl = x.repo.CloneUrl,
+                                    Author = x.projectBuild.GetProperty("Authors") ?? "",
+                                    Description = description,
+                                    Categories = categories.Concat(
+                                        new[]
+                                        {
+                                            x.repo.Name.Replace(".Extensions", "").Replace(".Abstractions", ""),
+                                            assemblyName.Replace(".Extensions", "").Replace(".Abstractions", "")
+                                               .Split('.').Last()
+                                        }
+                                    ).Distinct().OrderBy(z => z)
+                                }
+                            );
+
+                            EnsureExistingDirectory(RootDirectory / "packages");
+                            File.WriteAllText(
+                                Path.Combine(RootDirectory / "packages", assemblyName.ToLower() + ".yml"),
+                                yaml
+                            );
+                        }
+                    );
+            }
+        );
 }
 
 class PackageSpec
