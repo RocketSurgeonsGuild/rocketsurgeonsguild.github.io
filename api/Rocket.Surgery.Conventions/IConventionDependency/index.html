@@ -246,7 +246,6 @@
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenFunctionsUnitOfWorkConventionHostExtensions">Marten<wbr>Functions<wbr>Unit<wbr>Of<wbr>Work<wbr>Convention<wbr>Host<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MartenHostBuilderExtensions">Marten<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/MediatRHostBuilderExtensions">Mediat<wbr>R<wbr>Host<wbr>Builder<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.Conventions/OperationalBuilderExtensions">Operational<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/OperationalMediatRBuilderExtensions">Operational<wbr>Mediat<wbr>R<wbr>Builder<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironment">RocketEnvironment</a></li>
 				<li><a href="/api/Rocket.Surgery.Conventions/RocketEnvironmentExtensions">Rocket<wbr>Environment<wbr>Extensions</a></li>
@@ -312,9 +311,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute">Depends<wbr>On<wbr>Convention<wbr>Attribute</a></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute">Dependent<wbr>Of<wbr>Convention<wbr>Attribute</a></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute">Depends<wbr>On<wbr>Convention<wbr>Attribute</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/BeforeConventionAttribute">Before<wbr>Convention<wbr>Attribute</a></li>								
 									</ul>
 								</dd>				
@@ -325,12 +324,12 @@
 							graph BT
 	Type["IConventionDependency"]
 class Type type-node
-	Implementing0["DependsOnConventionAttribute"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute"
+	Implementing0["DependentOfConventionAttribute"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute"
 	Implementing1["AfterConventionAttribute"]-.-&gt;Type
 	click Implementing1 "/api/Rocket.Surgery.Conventions/AfterConventionAttribute"
-	Implementing2["DependentOfConventionAttribute"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute"
+	Implementing2["DependsOnConventionAttribute"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute"
 	Implementing3["BeforeConventionAttribute"]-.-&gt;Type
 	click Implementing3 "/api/Rocket.Surgery.Conventions/BeforeConventionAttribute"
 
