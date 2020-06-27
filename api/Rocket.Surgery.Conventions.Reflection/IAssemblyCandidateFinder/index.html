@@ -262,9 +262,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyCandidateFinder">Dependency<wbr>Context<wbr>Assembly<wbr>Candidate<wbr>Finder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyCandidateFinder">App<wbr>Domain<wbr>Assembly<wbr>Candidate<wbr>Finder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyCandidateFinder">Default<wbr>Assembly<wbr>Candidate<wbr>Finder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyCandidateFinder">Dependency<wbr>Context<wbr>Assembly<wbr>Candidate<wbr>Finder</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -274,12 +274,12 @@
 							graph BT
 	Type["IAssemblyCandidateFinder"]
 class Type type-node
-	Implementing0["DependencyContextAssemblyCandidateFinder"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyCandidateFinder"
-	Implementing1["AppDomainAssemblyCandidateFinder"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyCandidateFinder"
-	Implementing2["DefaultAssemblyCandidateFinder"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyCandidateFinder"
+	Implementing0["AppDomainAssemblyCandidateFinder"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyCandidateFinder"
+	Implementing1["DefaultAssemblyCandidateFinder"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyCandidateFinder"
+	Implementing2["DependencyContextAssemblyCandidateFinder"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyCandidateFinder"
 
 						</div>
 					</div>
@@ -332,7 +332,9 @@ class Type type-node
 								<td><a href="/api/Rocket.Surgery.Conventions.Reflection/IAssemblyCandidateFinder/2F351035">Get<wbr>Candidate<wbr>Assemblies<wbr>(IEnumerable<wbr>&lt;string&gt;<wbr>)<wbr></a></td>
 								<td>IEnumerable<wbr>&lt;Assembly&gt;<wbr></td>
 								<td>
-									<div></div>
+									<div>
+            Get the candidates for a given set
+            </div>
 								</td>
 							</tr>
 					</tbody></table>
