@@ -269,9 +269,9 @@
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConditionallyAsyncLoggingConvention">Serilog<wbr>Conditionally<wbr>Async<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention">Serilog<wbr>Debug<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention">Serilog<wbr>Read<wbr>From<wbr>Configuration<wbr>Convention</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichLoggingConvention">Serilog<wbr>Enrich<wbr>Logging<wbr>Convention</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichEnvironmentLoggingConvention">Serilog<wbr>Enrich<wbr>Environment<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/EnvironmentLoggingConvention">Environment<wbr>Logging<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichEnvironmentLoggingConvention">Serilog<wbr>Enrich<wbr>Environment<wbr>Logging<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichLoggingConvention">Serilog<wbr>Enrich<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConsoleLoggingConvention">Serilog<wbr>Console<wbr>Logging<wbr>Convention</a></li>								
 									</ul>
 								</dd>				
@@ -291,12 +291,12 @@ class Type type-node
 	click Implementing1 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogDebugLoggingConvention"
 	Implementing2["SerilogReadFromConfigurationConvention"]-.-&gt;Type
 	click Implementing2 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogReadFromConfigurationConvention"
-	Implementing3["SerilogEnrichLoggingConvention"]-.-&gt;Type
-	click Implementing3 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichLoggingConvention"
+	Implementing3["EnvironmentLoggingConvention"]-.-&gt;Type
+	click Implementing3 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/EnvironmentLoggingConvention"
 	Implementing4["SerilogEnrichEnvironmentLoggingConvention"]-.-&gt;Type
 	click Implementing4 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichEnvironmentLoggingConvention"
-	Implementing5["EnvironmentLoggingConvention"]-.-&gt;Type
-	click Implementing5 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/EnvironmentLoggingConvention"
+	Implementing5["SerilogEnrichLoggingConvention"]-.-&gt;Type
+	click Implementing5 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogEnrichLoggingConvention"
 	Implementing6["SerilogConsoleLoggingConvention"]-.-&gt;Type
 	click Implementing6 "/api/Rocket.Surgery.Extensions.Serilog.Conventions/SerilogConsoleLoggingConvention"
 
