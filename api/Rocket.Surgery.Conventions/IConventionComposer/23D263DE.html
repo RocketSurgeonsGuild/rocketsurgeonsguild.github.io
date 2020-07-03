@@ -141,7 +141,8 @@
             <aside class="main-sidebar ">
                 <section class="infobar" data-spy="affix" data-offset-top="60" data-offset-bottom="200"> 
                     	
-	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Syntax">Syntax</a></p>
+	<div id="infobar-headings"><h6>On This Page</h6><p><a href="#Summary">Summary</a></p>
+<p><a href="#Syntax">Syntax</a></p>
 <p><a href="#Parameters">Parameters</a></p>
 <p><a href="#ReturnValue">Return Value</a></p>
 <hr class="infobar-hidden">
@@ -231,7 +232,11 @@
 <section class="content">
 	
 	
-	
+		<h1 id="Summary">Summary</h1>
+	<div class="lead">
+            Uses all the conventions and calls the register method for all of them.
+            </div>
+
 		<div class="panel panel-default">
   			<div class="panel-body">	
 				<dl class="dl-horizontal">	
@@ -269,12 +274,15 @@
 					<tbody><tr>
 						<td>context</td>
 						<td><a href="/api/Rocket.Surgery.Conventions/IConventionContext">IConventionContext</a></td>
-						<td></td>
+						<td>The valid context for the types</td>
 					</tr>
 					<tr>
 						<td>types</td>
 						<td>IEnumerable<wbr>&lt;Type&gt;<wbr></td>
-						<td></td>
+						<td>
+            The types to compose with.  This type will either be a <code class="cs">System.Delegate</code> that takes
+            <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConventionContext">IConventionContext</a></code>, or a type that implements <code class="cs"><a href="/api/Rocket.Surgery.Conventions/IConvention_1">IConvention&lt;TContext&gt;</a></code>
+            </td>
 					</tr>
 			</tbody></table>
 		</div>
