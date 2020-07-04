@@ -260,10 +260,12 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Airframe.Synthetic/DrinkDataService">DrinkDataService</a></li>								
+											<li><a href="/api/Rocket.Surgery.Airframe.Synthetic/CoffeeDataService">CoffeeDataService</a></li>								
 											<li><a href="/api/Data/IDataService_1">IDataService</a><wbr>&lt;<a href="/api/Data/IDataService_1#typeparam-T">T</a>&gt;<wbr></li>								
 											<li><a href="/api/Rocket.Surgery.Airframe.Synthetic/ICoffeeDataService">ICoffeeDataService</a></li>								
-											<li><a href="/api/Rocket.Surgery.Airframe.Synthetic/CoffeeDataService">CoffeeDataService</a></li>								
 											<li><a href="/api/Data/DataServiceBase_1">DataServiceBase</a><wbr>&lt;<a href="/api/Data/DataServiceBase_1#typeparam-T">T</a>&gt;<wbr></li>								
+											<li><a href="/api/Rocket.Surgery.Airframe.Synthetic/IDrinkService">IDrinkService</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -273,14 +275,18 @@
 							graph BT
 	Type["IDataService"]
 class Type type-node
-	Implementing0["IDataService&lt;T&gt;"]-.-&gt;Type
-	click Implementing0 "/api/Data/IDataService_1"
-	Implementing1["ICoffeeDataService"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Airframe.Synthetic/ICoffeeDataService"
-	Implementing2["CoffeeDataService"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Airframe.Synthetic/CoffeeDataService"
-	Implementing3["DataServiceBase&lt;T&gt;"]-.-&gt;Type
-	click Implementing3 "/api/Data/DataServiceBase_1"
+	Implementing0["DrinkDataService"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Airframe.Synthetic/DrinkDataService"
+	Implementing1["CoffeeDataService"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Airframe.Synthetic/CoffeeDataService"
+	Implementing2["IDataService&lt;T&gt;"]-.-&gt;Type
+	click Implementing2 "/api/Data/IDataService_1"
+	Implementing3["ICoffeeDataService"]-.-&gt;Type
+	click Implementing3 "/api/Rocket.Surgery.Airframe.Synthetic/ICoffeeDataService"
+	Implementing4["DataServiceBase&lt;T&gt;"]-.-&gt;Type
+	click Implementing4 "/api/Data/DataServiceBase_1"
+	Implementing5["IDrinkService"]-.-&gt;Type
+	click Implementing5 "/api/Rocket.Surgery.Airframe.Synthetic/IDrinkService"
 
 						</div>
 					</div>
