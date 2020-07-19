@@ -275,8 +275,8 @@
 								<dt>Derived Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoMockTest">AutoMockTest</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest">AutoFakeTest</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Testing/AutoSubstituteTest">AutoSubstituteTest</a></li>								
 									</ul>
 								</dd>			
@@ -290,10 +290,10 @@
 	Type-.-&gt;Interface0["IDisposable"]
 	Type["LoggerTest"]
 class Type type-node
-	Derived0["AutoFakeTest"]--&gt;Type
-	click Derived0 "/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest"
-	Derived1["AutoMockTest"]--&gt;Type
-	click Derived1 "/api/Rocket.Surgery.Extensions.Testing/AutoMockTest"
+	Derived0["AutoMockTest"]--&gt;Type
+	click Derived0 "/api/Rocket.Surgery.Extensions.Testing/AutoMockTest"
+	Derived1["AutoFakeTest"]--&gt;Type
+	click Derived1 "/api/Rocket.Surgery.Extensions.Testing/AutoFakeTest"
 	Derived2["AutoSubstituteTest"]--&gt;Type
 	click Derived2 "/api/Rocket.Surgery.Extensions.Testing/AutoSubstituteTest"
 
@@ -492,6 +492,24 @@ class Type type-node
 								<td>
 									<div>
             Control the way that the serilog logger factory is created.
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/6B1E42BB">ExcludeSourceContext<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Filter a given source context from serilog
+            </div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Extensions.Testing/LoggerTest/DB132607">IncludeSourceContext<wbr>(string)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div>
+            Filter a given source context from serilog
             </div>
 								</td>
 							</tr>
