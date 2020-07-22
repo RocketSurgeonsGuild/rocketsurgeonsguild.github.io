@@ -210,14 +210,14 @@
 		<li class="header">Namespace</li>
 		<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection">Rocket<wbr>.Surgery<wbr>.Extensions<wbr>.DependencyInjection</a></li>
 		<li role="separator" class="divider"></li>
-			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/NodaTimeConvention">NodaTimeConvention</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServiceConventionDelegate">Service<wbr>Convention<wbr>Delegate</a></li>
-				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConvention">IServiceConvention</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServiceConventionContext">I<wbr>Service<wbr>Convention<wbr>Context</a></li>
 				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder">IServicesBuilder</a></li>
+			<li class="header">Class Types</li>
+				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/NodaTimeConvention">NodaTimeConvention</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServiceConventionDelegate">Service<wbr>Convention<wbr>Delegate</a></li>
+				<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>
 
 
                     </ul>
@@ -266,9 +266,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
-											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder">IServicesBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder">ServicesBuilder</a></li>								
+											<li><a href="/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder">AutofacBuilder</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -280,12 +280,12 @@
 	click Interface0 "/api/Rocket.Surgery.Conventions/IConventionContext"
 	Type["IServiceConventionContext"]
 class Type type-node
-	Implementing0["AutofacBuilder"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
+	Implementing0["IServicesBuilder"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder"
 	Implementing1["ServicesBuilder"]-.-&gt;Type
 	click Implementing1 "/api/Rocket.Surgery.Extensions.DependencyInjection/ServicesBuilder"
-	Implementing2["IServicesBuilder"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Extensions.DependencyInjection/IServicesBuilder"
+	Implementing2["AutofacBuilder"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Extensions.Autofac/AutofacBuilder"
 
 						</div>
 					</div>
