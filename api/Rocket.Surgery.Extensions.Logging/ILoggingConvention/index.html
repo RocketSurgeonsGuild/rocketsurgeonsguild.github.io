@@ -267,8 +267,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention">Request<wbr>Logging<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention">Logging<wbr>Service<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention">Request<wbr>Logging<wbr>Convention</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -281,10 +281,10 @@
 	click Interface1 "/api/Rocket.Surgery.Conventions/IConvention"
 	Type["ILoggingConvention"]
 class Type type-node
-	Implementing0["RequestLoggingConvention"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention"
-	Implementing1["LoggingServiceConvention"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention"
+	Implementing0["LoggingServiceConvention"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Extensions.Logging/LoggingServiceConvention"
+	Implementing1["RequestLoggingConvention"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.AspNetCore.Serilog.Conventions/RequestLoggingConvention"
 
 						</div>
 					</div>
