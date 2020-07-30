@@ -211,20 +211,16 @@
 			<li class="header">Interface Types</li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/IViewModel">IViewModel</a></li>
 			<li class="header">Class Types</li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/AlertViews">AlertViews</a></li>
 				<li class="selected"><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase">Application<wbr>Delegate<wbr>Base</a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/CollectionViewBase_1">CollectionViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/CollectionViewCellBase_1">Collection<wbr>View<wbr>Cell<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/CollectionViewControllerBase_1">Collection<wbr>View<wbr>Controller<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/ControlBase_1">ControlBase<wbr>&lt;TVieModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/ImageViewBase_1">ImageViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/IReactiveObjectExtensions">I<wbr>Reactive<wbr>Object<wbr>Extensions</a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/TableViewBase_1">TableViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/TableViewCellBase_1">TableViewCellBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
-				<li><a href="/api/Rocket.Surgery.ReactiveUI/TableViewControllerBase_1">Table<wbr>View<wbr>Controller<wbr>Base<wbr>&lt;TViewModel&gt;<wbr></a></li>
+				<li><a href="/api/Rocket.Surgery.ReactiveUI/ReactivePopover">ReactivePopover</a></li>
+				<li><a href="/api/Rocket.Surgery.ReactiveUI/UserNotificationExtensions">User<wbr>Notification<wbr>Extensions</a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/ViewBase_1">ViewBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/ViewControllerBase_1">ViewControllerBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 				<li><a href="/api/Rocket.Surgery.ReactiveUI/ViewModelBase">ViewModelBase</a></li>
+				<li><a href="/api/Rocket.Surgery.ReactiveUI/WindowControllerBase_1">WindowControllerBase<wbr>&lt;TViewModel&gt;<wbr></a></li>
 
 
                     </ul>
@@ -260,7 +256,7 @@
 								<dt>Base Types</dt>
 								<dd>
 									<ul class="list-unstyled">										
-											<li>U<wbr>I<wbr>Application<wbr>Delegate</li>								
+											<li>N<wbr>S<wbr>Application<wbr>Delegate</li>								
 									</ul>
 								</dd>				
 							
@@ -270,7 +266,7 @@
 					<div class="col-md-6">
 						<div class="mermaid">
 							graph BT
-	Type--&gt;Base0["UIApplicationDelegate"]
+	Type--&gt;Base0["NSApplicationDelegate"]
 	Type["ApplicationDelegateBase"]
 class Type type-node
 
@@ -281,7 +277,7 @@ class Type type-node
 		</div>
 
 	<h1 id="Syntax">Syntax</h1>
-	<pre><code>public abstract class ApplicationDelegateBase : UIApplicationDelegate</code></pre>
+	<pre><code>public abstract class ApplicationDelegateBase : NSApplicationDelegate</code></pre>
 
 
 
@@ -330,14 +326,21 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase/BC29FD2B">FinishedLaunching<wbr>(UIApplication, <wbr>NSDictionary)<wbr></a></td>
-								<td>bool</td>
+								<td><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase/8B4185E4">DecomposeDelegate<wbr>()<wbr></a></td>
+								<td>void</td>
 								<td>
 									<div></div>
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase/339FF03F">FinishedLaunching<wbr>(UIApplication)<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase/E1C732B2">DidFinishLaunching<wbr>(NSNotification)<wbr></a></td>
+								<td>void</td>
+								<td>
+									<div></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.ReactiveUI/ApplicationDelegateBase/EC48643E">WillTerminate<wbr>(NSNotification)<wbr></a></td>
 								<td>void</td>
 								<td>
 									<div></div>
