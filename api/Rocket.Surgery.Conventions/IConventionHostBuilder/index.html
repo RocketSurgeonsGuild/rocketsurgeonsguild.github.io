@@ -311,8 +311,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder">I<wbr>Rocket<wbr>Function<wbr>Host<wbr>Builder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting/IHostingConventionContext">I<wbr>Hosting<wbr>Convention<wbr>Context</a></li>								
+											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder">I<wbr>Rocket<wbr>Function<wbr>Host<wbr>Builder</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1">Convention<wbr>Host<wbr>Builder</a><wbr>&lt;<a href="/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1#typeparam-TSelf">TSelf</a>&gt;<wbr></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting.Functions/IRocketWebJobsContext">I<wbr>Rocket<wbr>Web<wbr>Jobs<wbr>Context</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting/IRocketHostBuilder">IRocketHostBuilder</a></li>								
@@ -326,10 +326,10 @@
 							graph BT
 	Type["IConventionHostBuilder"]
 class Type type-node
-	Implementing0["IRocketFunctionHostBuilder"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder"
-	Implementing1["IHostingConventionContext"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
+	Implementing0["IHostingConventionContext"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Hosting/IHostingConventionContext"
+	Implementing1["IRocketFunctionHostBuilder"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Hosting.Functions/IRocketFunctionHostBuilder"
 	Implementing2["ConventionHostBuilder&lt;TSelf&gt;"]-.-&gt;Type
 	click Implementing2 "/api/Rocket.Surgery.Conventions/ConventionHostBuilder_1"
 	Implementing3["IRocketWebJobsContext"]-.-&gt;Type
@@ -942,16 +942,6 @@ class Type type-node
 								</td>
 							</tr>
 							<tr>
-								<td><a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions/49797D87">UseMetrics<wbr>()<wbr></a></td>
-								<td><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></td>
-								<td>
-									<div>
-            Uses the application metrics.
-            </div>
-										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></em></small></div>
-								</td>
-							</tr>
-							<tr>
 								<td><a href="/api/Rocket.Surgery.Conventions/HostingMetricsHostBuilderExtensions/DF0D7B27">UseMetrics<wbr>()<wbr></a></td>
 								<td><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></td>
 								<td>
@@ -959,6 +949,16 @@ class Type type-node
             Uses the application metrics.
             </div>
 										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/HostingMetricsHostBuilderExtensions">Hosting<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></em></small></div>
+								</td>
+							</tr>
+							<tr>
+								<td><a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions/49797D87">UseMetrics<wbr>()<wbr></a></td>
+								<td><a href="/api/Rocket.Surgery.Conventions/IConventionHostBuilder">I<wbr>Convention<wbr>Host<wbr>Builder</a></td>
+								<td>
+									<div>
+            Uses the application metrics.
+            </div>
+										<div><small><em>From <a href="/api/Rocket.Surgery.Conventions/AspNetCoreMetricsHostBuilderExtensions">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Host<wbr>Builder<wbr>Extensions</a></em></small></div>
 								</td>
 							</tr>
 							<tr>
