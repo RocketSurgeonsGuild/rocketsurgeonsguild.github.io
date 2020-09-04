@@ -8,7 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="/assets/img/favicon.ico" type="image/x-icon">
         <link rel="icon" href="/assets/img/favicon.ico" type="image/x-icon">
-        <title>Rocket Surgeons Guild - Package - Build</title>
+        <title>Rocket Surgeons Guild - Package - DependencyModel</title>
         <link href="/assets/css/highlight.css" rel="stylesheet">
         <link href="/assets/css/bootstrap/bootstrap.css" rel="stylesheet" />
         <link href="/assets/css/adminlte/AdminLTE.css" rel="stylesheet" />
@@ -174,7 +174,7 @@
     <li><a href="/packages/blazor">Blazor</a></li>
     <li><a href="/packages/blazor.fontawesome5">Blazor.FontAwesome5</a></li>
     <li><a href="/packages/brands">Brands</a></li>
-    <li class="selected"><a href="/packages/build">Build</a></li>
+    <li><a href="/packages/build">Build</a></li>
     <li><a href="/packages/cake">Cake</a></li>
     <li><a href="/packages/ci">CI</a></li>
     <li><a href="/packages/cli">Cli</a></li>
@@ -186,7 +186,7 @@
     <li><a href="/packages/coverlet">Coverlet</a></li>
     <li><a href="/packages/data">Data</a></li>
     <li><a href="/packages/dependencyinjection">DependencyInjection</a></li>
-    <li><a href="/packages/dependencymodel">DependencyModel</a></li>
+    <li class="selected"><a href="/packages/dependencymodel">DependencyModel</a></li>
     <li><a href="/packages/diagnostics">Diagnostics</a></li>
     <li><a href="/packages/dockercompose">DockerCompose</a></li>
     <li><a href="/packages/domain">Domain</a></li>
@@ -286,7 +286,7 @@
 
 
 <section class="content-header">
-	<h1>Build</h1>
+	<h1>DependencyModel</h1>
 </section>
 <section class="content">
     
@@ -294,33 +294,17 @@
 
 <div class="panel panel-default">
         <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Build.Metadata</h3>
+            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Conventions.DependencyModel</h3>
         </div>
         <div class="panel-body">
-                <p>&#xD;&#xA;          * Adds ci environment based metadata to the assembly via the AssemblyMetadata attribute&#xD;&#xA;          * Sets version information using GitVerison variables if availalbe&#xD;&#xA;          * Enables sane defaults and work arounds for SourceLink support&#xD;&#xA;          * Ensures that JetBrains.Annotations is made available via source (and not publicly exported)&#xD;&#xA;          * Adds support for InternalsVisibleTo as an ItemGroup allowing you to annotate assemblies that should be able to see internals of given assembly.&#xD;&#xA;          * Adds support for AssemblyMetadata as an ItemGroup allowing you to set assembly metadata easily through msbuild&#xD;&#xA;    </p>
+                <p>Adds support for loading configuration, services, logging, command line and more via simple and easy to setup assembly attributes</p>
             <dl class="dl-horizontal">	
                     <dt>Author</dt>
                     <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
                                     <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Build.Metadata">Rocket.Surgery.Build.Metadata</a></dd>
+                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Conventions.DependencyModel">Rocket.Surgery.Conventions.DependencyModel</a></dd>
                                     <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Build">https://github.com/RocketSurgeonsGuild/Build</a></dd>
-            </dl>
-        </div>
-    </div>
-<div class="panel panel-default">
-        <div class="panel-heading">
-            <h3 class="panel-title"><i class="fa fa-puzzle-piece"></i> Rocket.Surgery.Build.Information</h3>
-        </div>
-        <div class="panel-body">
-                <p>Includes classes to extract GitVersion and other assembly information from any assembly that has been built with the Rocket.Surgery.Build.Metadata package.</p>
-            <dl class="dl-horizontal">	
-                    <dt>Author</dt>
-                    <dd>David Driscoll,Rocket Surgeons Guild contributors</dd>
-                                    <dt>NuGet</dt>
-                    <dd><a href="https://www.nuget.org/packages/Rocket.Surgery.Build.Information">Rocket.Surgery.Build.Information</a></dd>
-                                    <dt>Repository</dt>
-                    <dd><a href="https://github.com/RocketSurgeonsGuild/Build">https://github.com/RocketSurgeonsGuild/Build</a></dd>
+                    <dd><a href="https://github.com/RocketSurgeonsGuild/Conventions">https://github.com/RocketSurgeonsGuild/Conventions</a></dd>
             </dl>
         </div>
     </div>
