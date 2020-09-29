@@ -311,8 +311,8 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute">Dependent<wbr>Of<wbr>Convention<wbr>Attribute</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/AfterConventionAttribute">After<wbr>Convention<wbr>Attribute</a></li>								
+											<li><a href="/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute">Dependent<wbr>Of<wbr>Convention<wbr>Attribute</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute">Depends<wbr>On<wbr>Convention<wbr>Attribute</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions/BeforeConventionAttribute">Before<wbr>Convention<wbr>Attribute</a></li>								
 									</ul>
@@ -324,10 +324,10 @@
 							graph BT
 	Type["IConventionDependency"]
 class Type type-node
-	Implementing0["DependentOfConventionAttribute"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute"
-	Implementing1["AfterConventionAttribute"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Conventions/AfterConventionAttribute"
+	Implementing0["AfterConventionAttribute"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Conventions/AfterConventionAttribute"
+	Implementing1["DependentOfConventionAttribute"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Conventions/DependentOfConventionAttribute"
 	Implementing2["DependsOnConventionAttribute"]-.-&gt;Type
 	click Implementing2 "/api/Rocket.Surgery.Conventions/DependsOnConventionAttribute"
 	Implementing3["BeforeConventionAttribute"]-.-&gt;Type
