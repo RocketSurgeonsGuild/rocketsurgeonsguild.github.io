@@ -261,9 +261,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
+											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyProvider">App<wbr>Domain<wbr>Assembly<wbr>Provider</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyProvider">Default<wbr>Assembly<wbr>Provider</a></li>								
 											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyProvider">Dependency<wbr>Context<wbr>Assembly<wbr>Provider</a></li>								
-											<li><a href="/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyProvider">App<wbr>Domain<wbr>Assembly<wbr>Provider</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -273,12 +273,12 @@
 							graph BT
 	Type["IAssemblyProvider"]
 class Type type-node
-	Implementing0["DefaultAssemblyProvider"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyProvider"
-	Implementing1["DependencyContextAssemblyProvider"]-.-&gt;Type
-	click Implementing1 "/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyProvider"
-	Implementing2["AppDomainAssemblyProvider"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyProvider"
+	Implementing0["AppDomainAssemblyProvider"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Conventions.Reflection/AppDomainAssemblyProvider"
+	Implementing1["DefaultAssemblyProvider"]-.-&gt;Type
+	click Implementing1 "/api/Rocket.Surgery.Conventions.Reflection/DefaultAssemblyProvider"
+	Implementing2["DependencyContextAssemblyProvider"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.Conventions.Reflection/DependencyContextAssemblyProvider"
 
 						</div>
 					</div>
