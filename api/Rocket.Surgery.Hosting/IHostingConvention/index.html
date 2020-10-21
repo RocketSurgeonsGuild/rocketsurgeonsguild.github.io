@@ -266,9 +266,9 @@
 								<dt>Implementing Types</dt>
 								<dd>
 									<ul class="list-unstyled">
-											<li><a href="/api/Rocket.Surgery.AspNetCore.Metrics/AspNetCoreMetricsConvention">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Convention</a></li>								
-											<li><a href="/api/Rocket.Surgery.Hosting.Serilog.Conventions/SerilogHostingConvention">Serilog<wbr>Hosting<wbr>Convention</a></li>								
 											<li><a href="/api/Rocket.Surgery.Hosting.Metrics/HostingMetricsConvention">Hosting<wbr>Metrics<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.Hosting.Serilog.Conventions/SerilogHostingConvention">Serilog<wbr>Hosting<wbr>Convention</a></li>								
+											<li><a href="/api/Rocket.Surgery.AspNetCore.Metrics/AspNetCoreMetricsConvention">Asp<wbr>Net<wbr>Core<wbr>Metrics<wbr>Convention</a></li>								
 									</ul>
 								</dd>				
 						</dl>
@@ -281,12 +281,12 @@
 	click Interface1 "/api/Rocket.Surgery.Conventions/IConvention"
 	Type["IHostingConvention"]
 class Type type-node
-	Implementing0["AspNetCoreMetricsConvention"]-.-&gt;Type
-	click Implementing0 "/api/Rocket.Surgery.AspNetCore.Metrics/AspNetCoreMetricsConvention"
+	Implementing0["HostingMetricsConvention"]-.-&gt;Type
+	click Implementing0 "/api/Rocket.Surgery.Hosting.Metrics/HostingMetricsConvention"
 	Implementing1["SerilogHostingConvention"]-.-&gt;Type
 	click Implementing1 "/api/Rocket.Surgery.Hosting.Serilog.Conventions/SerilogHostingConvention"
-	Implementing2["HostingMetricsConvention"]-.-&gt;Type
-	click Implementing2 "/api/Rocket.Surgery.Hosting.Metrics/HostingMetricsConvention"
+	Implementing2["AspNetCoreMetricsConvention"]-.-&gt;Type
+	click Implementing2 "/api/Rocket.Surgery.AspNetCore.Metrics/AspNetCoreMetricsConvention"
 
 						</div>
 					</div>
